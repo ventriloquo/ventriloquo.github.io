@@ -42,8 +42,13 @@ body {
 }
 
 ul, ol {
-    padding-inline-start: 1.5em;
-    padding-inline-end: 1.5em;
+    padding-inline-start: 1em;
+    padding-inline-end: 1em;
+}
+
+.navbar > ul {
+    padding-inline-start: 0;
+    padding-inline-end: 0;
 }
 
 .content {
@@ -58,9 +63,6 @@ ul, ol {
   z-index: 100;
   border: var(--border);
   max-width: 60ch;
-}
-
-.content > div {
 }
 
 .sidebar {
@@ -87,6 +89,13 @@ ul, ol {
   border: var(--border);
 }
 
+time {
+  background-color: var(--accent);
+  color: var(--bg-1);
+  padding: 5px;
+  float: right;
+}
+
 a {
     color: var(--accent);
     text-decoration: none;
@@ -98,12 +107,13 @@ a:hover {
 
 .navbar a {
   color: var(--fg-1);
-  padding: 5px;
+  padding: 16px;
 }
 
 .navbar a:hover {
   background-color: var(--accent);
   color: var(--bg-1);
+  opacity: 100%;
 }
 
 .navbar ul {
@@ -111,13 +121,8 @@ a:hover {
   list-style: none;
 }
 
-.navbar ul > li {
-  margin: 0 1em;
-}
-
 hgroup {
-  margin-bottom: 2em;
-  padding-bottom: 2em;
+  margin-bottom: 1em;
   overflow: hidden;
 }
 
@@ -178,22 +183,18 @@ th, td {
     margin: 0;
 }
 
-
-tr:hover {
-    color: var(--accent);
-}
-
 th {
     font-weight: bold;
     background-color: var(--bg-1);
 }
 
 tr {
-    background-color: var(--bg-obs);
+    background-color: var(--bg-1);
 }
 
 tr:nth-of-type(even) {
-    background-color: var(--bg-1);
+    background-color: var(--fg-2);
+    color: var(--bg-1);
 }
 
 thead > tr > th {
@@ -284,7 +285,7 @@ colgroup {
     padding: 1em;
 }
 
-#table-of-contents, .note, code, pre, .navbar, .sidebar, .content, .verse, blockquote, img, .navbar a:hover {
+#table-of-contents, .note, code, pre, .navbar, .sidebar, .content, .verse, blockquote, img, .navbar a:hover, time {
     border-radius: 5px;
 }
 
@@ -299,6 +300,7 @@ colgroup {
 
   .content {
     margin-left: 1em;
+    margin-right: 1em;
   }
 }
 
