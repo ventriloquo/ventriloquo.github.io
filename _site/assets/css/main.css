@@ -5,8 +5,8 @@
 
 
 @font-face {
-  src: url('/assets/Electrolize-Regular.ttf');
-  font-family: "Eva";
+  src: url('/assets/AOTFShinGoProRegular.otf');
+  font-family: "Nintendo Switch Font";
 }
 
 ::-webkit-scrollbar {
@@ -15,26 +15,18 @@
 
 :root {
   /* Main colors */
-  --bg-1: #1d2021;
-  --bg-2: #282828;
-  --fg-1: #ebdbb2;
-  --fg-2: #fe8019;
-  --accent: #98971a;
-  
-  /* Standard border */
+  --bg-0: #323232;
+  --bg-1: #505050;
+  --bg-2: #2d2d2d;
+  --fg-1: #ffffff;
+  --fg-2: #ababab;
+  --accent: #2de9b6;
   --border: solid 2px var(--fg-2);
-  
-  /* Notes */
-  --border-aviso: #db7a1f;
-  --border-obs: #eddfea;
-  --bg-aviso: #c20f0f;
-  --bg-dica: #1d446c;
-  --bg-obs: #1d1b27
 }
 
 html {
-  font-family: "Eva", sans-serif;
-  background-color: var(--bg-1);
+  font-family: "Nintendo Switch Font", sans-serif;
+  background-color: var(--bg-0);
 }
 
 body {
@@ -55,44 +47,25 @@ ul, ol {
   background-color: var(--bg-2);
   display: block;
   margin-top: 0;
-  margin-bottom: 1em;
+  margin-bottom: 0;
   margin-left: auto;
   margin-right: auto;
   padding: 1em;
   position: relative;
   z-index: 100;
-  border: var(--border);
   max-width: 60ch;
-}
-
-.sidebar {
-  position: absolute;
-  display: block;
-  padding: 1em;
-  padding-top: 0;
-  max-width: 30ch;
-  z-index: 50;
-  top: 5.5em;
-}
-
-.sidebar > .note {
-  margin: 0;
 }
 
 .navbar {
   background-color: var(--bg-2);
   color: var(--fg-1);
-  margin: 1em;
-  padding: 1em;
+  padding: 1em 0;
   display: flex;
   justify-content: space-between;
-  border: var(--border);
 }
 
 time {
-  background-color: var(--accent);
   color: var(--bg-1);
-  padding: 5px;
   float: right;
 }
 
@@ -107,7 +80,7 @@ a:hover {
 
 .navbar a {
   color: var(--fg-1);
-  padding: 16px;
+  padding: 22px 16px;
 }
 
 .navbar a:hover {
@@ -134,11 +107,6 @@ p {
   padding-bottom: 1em;
 }
 
-summary {
-  font-size: larger;
-  color: var(--accent);
-}
-
 pre {
   padding: 1em;
   background-color: #1d2021;
@@ -151,8 +119,8 @@ code {
 
 blockquote {
     background-color: var(--bg-1);
-    color: var(--fg-2);
-    border-left: solid 5px var(--fg-2);
+    color: var(--fg-1);
+    border-left: solid 5px var(--accent);
     padding: 10px 20px;
     margin: 10px auto;
 }
@@ -206,98 +174,30 @@ colgroup {
     border: solid 2px var(--fg-2);
 }
 
-.note::before {
-  margin: 0;
-  padding: 0 1em;
-  border-end-end-radius: 5px;
-}
-
-.note {
-  margin: 1em 0;
-  border-left: solid 5px;
-  color: var(--fg-1);
-}
-
-.note > hgroup, .note > img {
-  margin: 1em;
-  padding: 0;
-  border: none;
-}
-
-.note.aviso::before {
-  content: "aviso";
-  background-color: var(--border-aviso);
-}
-
-.note.aviso {
-  background-color: var(--bg-aviso);
-  border-left-color: var(--border-aviso);
-}
-
-.note.dica::before {
-  content: "dica";
-  background-color: var(--fg-1);
-  color: var(--bg-1);
-}
-
-.note.dica {
-  background-color: var(--bg-dica);
-  border-left-color: 	var(--fg-1);
-}
-
-.note.obs::before {
-  content: "ObservaÃ§Ã£o";
-  background-color: var(--border-obs);
-  color: var(--bg-obs);
-}
-
-.note.obs {
-  background-color: var(--bg-obs);
-  border-left-color: var(--border-obs);
-}
-
-
-.note.recomendacao::before {
-  content: "RecomendaÃ§Ã£o";
-  background-color: var(--fg-2);
-  color: var(--bg-obs);
-}
-
-.note.recomendacao {
-  background-color: var(--bg-2);
-  border-left-color: var(--fg-2);
-}
-
-.verse {
-    background-color: var(--bg-1);
-    color: var(--accent);
-    font-style: italic;
-    padding: 1em;
-}
-
-.org-center {
-    text-align: center
-}
-
-#table-of-contents {
-    background-color: var(--bg-1);
-    color: var(--fg-2);
-    padding: 1em;
-}
-
-#table-of-contents, .note, code, pre, .navbar, .sidebar, .content, .verse, blockquote, img, .navbar a:hover, time {
-    border-radius: 5px;
-}
-
-#table-of-contents, pre, blockquote, .verse {
+pre, blockquote {
     margin-bottom: 1em;
 }
 
-@media only screen and (orientation: portrait) {
-  .sidebar {
-    display: none;
-  }
+.colection {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
 
+.colection img {
+  max-width: 200px;
+  max-height: 200px;
+  display: initial;
+  margin: 5px;
+  border: solid 3px transparent;
+}
+
+.colection img:hover {
+  border: solid 3px var(--accent);
+}
+
+@media only screen and (orientation: portrait) {
   .content {
     margin-left: 1em;
     margin-right: 1em;
