@@ -179,6 +179,10 @@ hgroup {
   overflow: hidden;
 }
 
+hgroup > h1 {
+  margin-bottom: -0.5em;
+}
+
 b {
   text-decoration: underline;
 }
