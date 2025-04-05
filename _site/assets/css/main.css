@@ -20,7 +20,7 @@
   --bg-2: #2d2d2d;
   --fg-1: #ffffff;
   --fg-2: #ababab;
-  --accent: #2de9b6;
+  --accent: #19bbfd;
   --border: solid 2px var(--fg-2);
 }
 
@@ -36,6 +36,10 @@ body {
 ul, ol {
     padding-inline-start: 1em;
     padding-inline-end: 1em;
+}
+
+.content ul {
+  margin-bottom: 1em;
 }
 
 .navbar > ul {
@@ -56,6 +60,73 @@ ul, ol {
   max-width: 80ch;
 }
 
+.post {
+  background-color: var(--bg-2);
+  display: block;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: auto;
+  padding: 1em;
+  position: relative;
+  z-index: 100;
+  max-width: 70ch;
+}
+
+.cards a {
+  color: var(--fg-1);
+}
+
+.cards a:hover {
+  opacity: 100%;
+}
+
+.card {
+  margin: 5px;
+  background-color: var(--bg-1);
+  box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.3);
+  width: 256px;
+  height: 220px;
+  border: solid 3px transparent;
+  justify-contents: center;
+}
+
+.card:hover {
+  border: solid 3px var(--accent);
+}
+
+.card_image {
+  background-color: var(--fg-2);
+  color: var(--bg-1);
+  height: 130px;
+}
+
+.card_image img {
+  width: 100%;
+  margin: 0;
+  height: 130px;
+  object-fit: cover;
+}
+
+.card_image p {
+  text-align: center;
+}
+
+.card_title {
+  padding: 10px;
+}
+
+.related {
+  position: absolute;
+  top: 1em;
+  left: 75ch;
+}
+
+.related h4 {
+  color: var(--fg-1);
+  margin-left: 6px;
+}
+
 .navbar {
   background-color: var(--bg-2);
   color: var(--fg-1);
@@ -67,6 +138,7 @@ ul, ol {
 time {
   color: var(--bg-1);
   float: right;
+  font-size: small;
 }
 
 a {
@@ -182,7 +254,7 @@ pre, blockquote {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: center;
+  text-align: center;
 }
 
 .colection img {
@@ -198,9 +270,11 @@ pre, blockquote {
 }
 
 @media only screen and (orientation: portrait) {
-  .content {
-    margin-left: 1em;
-    margin-right: 1em;
+  h1 {
+    font-size: larger;
+  }
+  h2, h3 {
+    font-size: large;
   }
 }
 

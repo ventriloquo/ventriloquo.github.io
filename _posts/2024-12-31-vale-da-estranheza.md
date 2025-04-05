@@ -1,5 +1,7 @@
 ---
-tags: etc 
+title: O vale da estranheza
+tags: etc
+thumbnail: Backrooms.png
 ---
 
 Esse é um assunto que volta e meia me vem à cabeça. Mas, por qual razão?
