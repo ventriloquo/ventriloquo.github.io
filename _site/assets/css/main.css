@@ -291,15 +291,15 @@ pre, blockquote {
   .related {
     position: initial;
   }
-  .card {
+  .related .card {
     margin: 5px;
     width: 96%;
     height: 220px;
   }
-  .card_image {
+  .related .card_image {
     height: 130px;
   }
-  .card_image img {
+  .related .card_image img {
     margin: 0;
     height: 130px;
     object-fit: cover;
