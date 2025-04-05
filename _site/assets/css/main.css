@@ -276,6 +276,9 @@ pre, blockquote {
   h2, h3 {
     font-size: large;
   }
+  .related {
+    position: initial;
+  }
 }
 
 .highlight table td { padding: 5px; }
