@@ -1,12 +1,7 @@
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>{{ page.title }}</title>
-  <meta name="author" content="{{site.author}}" />
-  <meta name="description" content="{{site.description}}" />
-  <meta name="generator" content="Jekyll" />
-  <link rel=icon type="image/webp" href="/assets/fav.webp"> <link rel=stylesheet href="/assets/css/main.css" />
-</head>
+{% include head.html %}
+<header>
+  <p>/<a href="/blog">blog</a>/{{ page.title | slugify }}</p>
+</header>
 <body>
   <div class="post">
   <time>{{ page.date | date: "%d/%m/%Y" }}</time>
@@ -27,7 +22,7 @@
     >Feedback</a>
   </div>
   <div class="cards related">
-  <h4>Outros posts...</h4>
+  <h4>Posts mais recentes</h4>
   {% for related in site.related_posts limit: 3 %}
   <a href="{{ related.url }}">
     <div class="card">

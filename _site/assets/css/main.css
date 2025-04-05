@@ -102,7 +102,7 @@ ul, ol {
 }
 
 .card_image img {
-  width: 100%;
+  min-width: 100%;
   margin: 0;
   height: 130px;
   object-fit: cover;
@@ -133,6 +133,14 @@ ul, ol {
   padding: 1em 0;
   display: flex;
   justify-content: space-between;
+}
+
+header {
+  padding: 10px;
+}
+
+header > p {
+  padding: 0;
 }
 
 time {
@@ -278,6 +286,19 @@ pre, blockquote {
   }
   .related {
     position: initial;
+  }
+  .card {
+    margin: 5px;
+    width: 96%;
+    height: 220px;
+  }
+  .card_image {
+    height: 130px;
+  }
+  .card_image img {
+    margin: 0;
+    height: 130px;
+    object-fit: cover;
   }
 }
 
