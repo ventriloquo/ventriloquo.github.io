@@ -3,7 +3,6 @@
   margin: 0;
 }
 
-
 @font-face {
   src: url('/assets/AOTFShinGoProRegular.otf');
   font-family: "Nintendo Switch Font";
@@ -20,7 +19,7 @@
   --bg-2: #2d2d2d;
   --fg-1: #ffffff;
   --fg-2: #ababab;
-  --accent: #19bbfd;
+  --accent-1: #19bbfd;
   --accent-2: #27e9bc;
   --border: solid 2px var(--fg-2);
 }
@@ -43,18 +42,10 @@ ul, ol {
   margin-bottom: 1em;
 }
 
-.navbar > ul {
-    padding-inline-start: 0;
-    padding-inline-end: 0;
-}
-
 .content {
   background-color: var(--bg-2);
   display: block;
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   padding: 1em;
   position: relative;
   z-index: 100;
@@ -64,10 +55,6 @@ ul, ol {
 .post {
   background-color: var(--bg-2);
   display: block;
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-left: 0;
-  margin-right: auto;
   padding: 1em;
   position: relative;
   z-index: 100;
@@ -94,7 +81,7 @@ ul, ol {
 }
 
 .card:hover {
-  border: solid 3px var(--accent);
+  border: solid 3px var(--accent-1);
 }
 
 .card_image {
@@ -129,14 +116,6 @@ ul, ol {
   margin-left: 6px;
 }
 
-.navbar {
-  background-color: var(--bg-2);
-  color: var(--fg-1);
-  padding: 1em 0;
-  display: flex;
-  justify-content: space-between;
-}
-
 header {
   padding: 10px;
 }
@@ -152,12 +131,20 @@ time {
 }
 
 a {
-    color: var(--accent);
+    color: var(--accent-1);
     text-decoration: none;
 }
 
 a:hover {
   opacity: 80%;
+}
+
+.navbar {
+  background-color: var(--bg-2);
+  color: var(--fg-1);
+  padding: 1em 0;
+  display: flex;
+  justify-content: space-between;
 }
 
 .navbar a {
@@ -175,6 +162,11 @@ a:hover {
 .navbar ul {
   display: flex;
   list-style: none;
+}
+
+.navbar > ul {
+    padding-inline-start: 0;
+    padding-inline-end: 0;
 }
 
 hgroup {
@@ -207,7 +199,7 @@ code {
 blockquote {
     background-color: var(--bg-1);
     color: var(--fg-1);
-    border-left: solid 5px var(--accent);
+    border-left: solid 5px var(--accent-1);
     padding: 10px 20px;
     margin: 10px auto;
 }
@@ -283,7 +275,7 @@ pre, blockquote {
 }
 
 .colection img:hover {
-  border: solid 3px var(--accent);
+  border: solid 3px var(--accent-1);
 }
 
 @media only screen and (orientation: portrait) {
