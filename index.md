@@ -8,7 +8,7 @@ layout: "base"
 
 # Tukain
 
-(O nome é uma mistura de "Tukan", o alemão para "tucano" e "Nein", o alemão para "não".)
+> O nome é uma mistura de "Tukan", o alemão para "tucano" e "Nein", o alemão para "não".
 
 Sou alguém que busca por músicas que me relaxam ou que dão adrenalina…
 Só depende do dia.
