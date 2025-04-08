@@ -50,6 +50,7 @@ ul, ol {
   position: relative;
   z-index: 100;
   max-width: 80ch;
+  min-height: 100vh;
 }
 
 .post {

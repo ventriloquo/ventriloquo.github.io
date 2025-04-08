@@ -2,8 +2,6 @@
 title: "Blog"
 ---
 
-# Aqui estão os meus posts!
-
 <div class="cards" style="
     display: flex;
     flex-wrap: wrap;
