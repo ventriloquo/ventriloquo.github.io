@@ -49,7 +49,7 @@ ul, ol {
   padding: 1em;
   position: relative;
   z-index: 100;
-  max-width: 80ch;
+  /*max-width: 80ch;*/
   min-height: 100vh;
 }
 
