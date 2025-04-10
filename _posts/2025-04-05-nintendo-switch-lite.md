@@ -22,7 +22,7 @@ padrão, mas isso está longe de ser verdade.
 
 Se tratando dos componentes internos, o Switch Lite é idêntico ao modelo padrão
 de primeira geração (o v1), já que a versão atualizada do modelo padrão só
-lanchou depois do Switch Lite.
+lançou depois do Switch Lite.
 
 O exterior é onde a coisa muda... e muito.
 
@@ -89,7 +89,7 @@ para usar a do Switch para achar algum diamante no oceano de promoções de jogo
 mobile super-faturados.
 
 > Na real qualquer coisa lá é super-faturada. A porra de um calendário tá
-> custando R$80,00. **UM CALENDÁRIO CACETE**.
+> custando R$80,00. **UM CALENDÁRIO, CACETE**.
 > ![](/assets/img/nday.png)
 > Onde que eu vou precisar de um **CALENDÁRIO** em um **VIDEO-GAME**???
 
