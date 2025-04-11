@@ -46,7 +46,7 @@ ul, ol {
   background-color: var(--bg-2);
   display: block;
   margin: 0 auto;
-  padding: 1em;
+  /*padding: 1em;*/
   position: relative;
   z-index: 100;
   /*max-width: 80ch;*/
