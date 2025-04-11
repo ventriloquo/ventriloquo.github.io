@@ -5,6 +5,7 @@ title: "Blog"
 <div class="cards" style="
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 ">
 {% for post in site.posts %}
   <a href="{{ post.url }}">
