@@ -1,16 +1,15 @@
 ---
 title: "Tukain"
-layout: "base"
 ---
 
-# Tukain
+{% include head.html %}
 
-> O nome é uma mistura de "Tukan", o alemão para "tucano" e "Nein", o alemão para "não".
+<div class="content">
+<div>
+<h1>Bem-vindo!</h1>
 
-Sou alguém que busca por músicas que me relaxam ou que dão adrenalina…
-Só depende do dia.
+<p>Este site é o lugar onde parte de mim reside, seja respeitoso por favor.</p>
 
-Sinta-se livre para explorar o meu espaço neste vasto mundo chamado internet!
-
-E que gosta de [Evangelion](https://www.netflix.com/br/title/81033445?source=35).
-
+<a href="/home">Entrar</a>
+</div>
+</div>

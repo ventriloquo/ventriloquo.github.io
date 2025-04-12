@@ -1,5 +1,6 @@
 ---
 title: "Blog"
+layout: "base"
 ---
 
 <div class="cards" style="

@@ -9,11 +9,6 @@ plugins:
 defaults:
   -
     scope:
-      path: ""
-    values:
-      layout: "base"
-  -
-    scope:
       path: "_posts"
     values:
       layout: "post"

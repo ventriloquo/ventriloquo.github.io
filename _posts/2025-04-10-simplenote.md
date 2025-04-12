@@ -2,6 +2,7 @@
 title: Simplenote
 description: Eita servicinho bom
 thumbnail: simplenote.png
+tags: etc serviços web
 ---
 
 Essa semana eu decidi tirar a poeira de uma conta que eu tinha no
