@@ -1,7 +1,6 @@
 ---
 title: Simplenote
 description: Eita servicinho bom
-thumbnail: simplenote.png
 tags: etc serviços web
 ---
 
@@ -41,7 +40,7 @@ a primeira linha que prossegue o título.
 Lembra muito o design do Apple Notes na realidade, pode ser que ele tenha sido
 uma inspiração ou vice-versa.
 
-![Simplenote rodando no MacOS](/assets/img/simplenote.jpg)
+![Simplenote rodando no MacOS](/assets/img/simplenote.webp)
 
 Enfim, é um bom design.
 

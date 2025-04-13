@@ -1,7 +1,6 @@
 ---
 title: O vale da estranheza
 tags: etc
-thumbnail: Backrooms.png
 ---
 
 Esse é um assunto que volta e meia me vem à cabeça. Mas, por qual razão?
@@ -24,7 +23,7 @@ de dar calafrios, eu tenho uma curiosidade que aumenta cada vez mais.
 A minha primeira exposição ao vale da estranheza foi, provavelmente como
 muitas outras pessoas, com o meme do senhor incrível.
 
-![](/assets/img/sr_incrivel.png)
+![](/assets/img/sr_incrivel.webp)
 
 É óbvio que esse meme não é a **melhor** representação do Vale da
 estranheza, mas ele já é uma boa demonstração do que ele pode ser. O
@@ -64,7 +63,7 @@ dizer se o que tá na sua frente é uma mancha de sujeira, uma queimadura
 ou então até mesmo sangue ressecado. Literalmente o seu cérebo é quem
 vai decidir da hora.
 
-![](/assets/img/SH1_rifle.jpg)
+![](/assets/img/SH1_rifle.webp)
 
 Outra coisa boa a se comentar é a visão extremamente limitada. Isso é
 uma limitação do próprio hardware do Playstation, mas a equipe que fez
@@ -73,7 +72,7 @@ se tem uma coisa que me assusta, é não saber se o que tá na minha frente
 é um ser humano, ou outra coisa que provavelmente não tá afim de
 conversar.
 
-![](/assets/img/silent_hill_screenshot_03.jpg)
+![](/assets/img/silent_hill_screenshot_03.webp)
 
 Infelizmente eu perdi o meu save do jogo, eu estava na seção do parque
 de diversões, por conta da frustração de ter perdido o save e também por
@@ -99,7 +98,7 @@ maior estilo [Junji Ito](https://en.wikipedia.org/wiki/Junji_Ito), as
 partes de terror focam (e muito) na estranheza. Não sei dizer se chega a
 poder ser considerado algo do Vale, mas no mínimo chega perto.
 
-![](/assets/img/dandadan-manga-primo-capitolo-05.jpg)
+![](/assets/img/dandadan-manga-primo-capitolo-05.webp)
 
 Uma outra aparição de algo que me lembra o vale da estranheza foi no
 anime [Chainsaw Man](https://en.wikipedia.org/wiki/Chainsaw_Man), no
@@ -155,7 +154,7 @@ tema que mais me intrigou foram as
 
 ## The Backrooms
 
-![](/assets/img/HobbyTown_USA_Oshkosh_interior_under_construction_2002_(The_Backrooms).jpg)
+![](/assets/img/HobbyTown_USA_Oshkosh_interior_under_construction_2002_(The_Backrooms).webp)
 
 Tudo começou com um post na aba paranormal do 4chan, a mensagem do
 usuário em si não tinha nada de mais, porém a resposta é uma coisa
@@ -200,7 +199,7 @@ de cair o queixo.
 Ele não só conseguiu fazer uma combinação de Analog Horror com The
 Backrooms, como fez isso beirando a perfeição.
 
-![](/assets/img/The-Backrooms-Kane-Pixels-01.jpg)
+![](/assets/img/The-Backrooms-Kane-Pixels-01.webp)
 
 Foi basicamente dos vídeos dele que surgiu a inspiração de diversos
 jogos que se vê por aí na Steam ou Itch.io.
@@ -235,7 +234,7 @@ que me fez ter interesse nesse gênero.
 
 ## Nephthys Media
 
-![](/assets/img/hqdefault.jpg)
+![](/assets/img/hqdefault.webp)
 
 Apesar de não lembrar de praticamente nada do Nephthys Media, uma coisa
 que não tem como eu me esquecer é a atmosfera presente nele, é algo que
