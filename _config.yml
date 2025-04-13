@@ -1,7 +1,31 @@
-title: Ventriloquo
-author: "ventriloquo"
+title: Tukain
 description: >- # this means to ignore newlines until "baseurl:"
-  Um blog simples, feito utilizando o Jekyll.
+  Sou alguém que busca por músicas que me relaxam ou que dão adrenalina… Só depende do dia.
+  Sinta-se livre para explorar o meu espaço neste vasto mundo chamado internet!
+  E que gosta de Evangelion.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+author:
+  name: Tukain
+  email: "persona.umpire392@passinbox.com"
+  github_username: ventriloquo
+
+# Build settings
+theme: "minima"
+
+minima:
+  skin: solarized
+  show_excerpts: true
+  nav_pages:
+    - tags.md
+    - about.md
+  social_links:
+    - title: Meu Github
+      icon: github
+      url: "https://github.com/ventriloquo"
+    - title: Minha coleção de músicas
+      icon: bandcamp
+      url: "https://bandcamp.com/ventriloquo"
 
 plugins:
   - jekyll-feed
@@ -9,6 +33,12 @@ plugins:
 defaults:
   -
     scope:
+      path: ""
+    values:
+      layout: "page"
+  -
+    scope:
       path: "_posts"
     values:
       layout: "post"
+

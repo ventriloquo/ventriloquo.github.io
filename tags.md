@@ -1,12 +1,13 @@
 ---
-layout: "base"
+title: Tags
+permalink: /tags/
 ---
 
 {% for tag in site.tags %}
-  <h1>{{ tag[0] }}</h1>
+  <h3>{{ tag[0] }}</h3>
   <ul>
     {% for post in tag[1] %}
-      <li><h3><a href="{{ post.url }}">{{ post.title }}</a></h3></li>
+      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
   </ul>
 {% endfor %}
