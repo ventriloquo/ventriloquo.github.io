@@ -1,12 +1,12 @@
-title: Tukain
+title: Ventriloquo
 description: >- # this means to ignore newlines until "baseurl:"
   Sou alguém que busca por músicas que me relaxam ou que dão adrenalina… Só depende do dia.
+  E que também gosta de Evangelion.
   Sinta-se livre para explorar o meu espaço neste vasto mundo chamado internet!
-  E que gosta de Evangelion.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 author:
-  name: Tukain
+  name: Ventriloquo
   email: "persona.umpire392@passinbox.com"
   github_username: ventriloquo
 
