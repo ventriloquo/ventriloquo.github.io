@@ -8,25 +8,9 @@ author:
   email: "persona.umpire392@passinbox.com"
   github_username: ventriloquo
 
-# Build settings
-theme: "minima"
-
-minima:
-  skin: solarized
-  show_excerpts: true
-  nav_pages:
-    - tags.md
-    - about.md
-  social_links:
-    - title: Meu Github
-      icon: github
-      url: "https://github.com/ventriloquo"
-    - title: Minha coleção de músicas
-      icon: bandcamp
-      url: "https://bandcamp.com/ventriloquo"
-
-plugins:
-  - jekyll-feed
+nav_pages:
+  - tags.md
+  - about.md
 
 defaults:
   -

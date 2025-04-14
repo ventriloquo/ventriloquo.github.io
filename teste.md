@@ -1,10 +1,9 @@
 ---
 title: Teste
+layout: post
+description: Essa página não contém nada de útil para o leitor, como o próprio nome dela já diz, ela é uma página de testes. Para ser mais específico, ela é uma página de testes do CSS do site.
 ---
 
-Essa página não contém nada de útil para o leitor, como o próprio nome
-dela já diz, ela é uma página de testes. Para ser mais específico, ela é
-uma página de testes do CSS do site.
 
 # Blockquote
 
