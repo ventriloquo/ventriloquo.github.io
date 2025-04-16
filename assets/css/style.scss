@@ -10,7 +10,7 @@
   position: relative;
 }
 
-.highlighter-rouge::before {
+div.highlighter-rouge::before {
   content: "";
   background-color: var(--solarized-mono2);
   position: absolute;
