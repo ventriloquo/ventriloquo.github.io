@@ -5,3 +5,16 @@
 @import
   "minima/skins/{{ site.minima.skin | default: 'classic' }}",
   "minima/initialize";
+
+.highlighter-rouge {
+  position: relative;
+}
+
+.highlighter-rouge::before {
+  content: "";
+  background-color: var(--solarized-mono2);
+  position: absolute;
+  right: 0;
+  padding: 0.2em 0.5em;
+  border-end-start-radius: 5px;
+}
