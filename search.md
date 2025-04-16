@@ -29,6 +29,11 @@ title: Pesquisar
 		input[type=text] {
 			 width: 250px;
 			}
+			#search-container {
+				max-width: 250px;
+				display: block;
+				margin: auto;
+			}
 	}
 </style>
 
