@@ -8,7 +8,7 @@ uma página de testes do CSS do site.
 
 # Blockquote
 
-> Não há nada a ser fazido \~ Napoleon
+> Não há nada a ser fazido --- Napoleon
 
 # Code-block
 
@@ -21,6 +21,17 @@ int main() {
 }
 ```
 
+```hare
+use fmt;
+
+export fn main() void = {
+  fmt::println("Olá, mundo!")!;
+};
+```
+
+```javascript
+console.log("Olá, mundo!");
+```
 
 # Inline-code
 
