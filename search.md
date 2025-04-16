@@ -14,7 +14,9 @@ title: Pesquisar
 	    padding: 1rem;
 		background: var(--solarized-mono2);
 		color: var(--solarized-mono01);
-	    width: 100%;
+		   display: block;
+					margin: auto;
+	    width: 350px;
 		-webkit-appearance: none;
 		font-family: inherit;
 		font-size: 100%;
