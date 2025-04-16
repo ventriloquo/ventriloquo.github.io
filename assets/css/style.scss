@@ -18,3 +18,64 @@
   padding: 0.2em 0.5em;
   border-end-start-radius: 5px;
 }
+
+.language-c::before {
+  content: "c";
+}
+.language-docker::before {
+  content: "docker";
+}
+.language-xml::before {
+  content: "xml";
+}
+.language-javascript::before {
+  content: "javascript";
+}
+.language-liquid::before {
+  content: "liquid";
+}
+.language-make::before {
+  content: "make";
+}
+.language-conf::before {
+  content: "conf"
+}
+.language-markdown::before {
+  content: "markdown";
+}
+.language-html::before {
+  content: "html";
+}
+.language-css::before {
+  content: "css";
+}
+.language-lua::before {
+  content: "lua";
+}
+.language-go::before {
+  content: "go";
+}
+.language-json::before {
+  content: "json";
+}
+.language-yaml::before {
+  content: "yaml";
+}
+.language-toml::before {
+  content: "toml";
+}
+.language-shell::before {
+  content: "shell";
+}
+.language-rust::before {
+  content: "rust";
+}
+.language-zig::before {
+  content: "zig";
+}
+.language-python::before {
+  content: "python";
+}
+.language-ruby::before {
+  content: "ruby";
+}
