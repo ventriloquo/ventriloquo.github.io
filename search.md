@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Search
+title: Pesquisar
 ---
 
 <style>
@@ -13,6 +13,7 @@ title: Search
 	    outline: none;
 	    padding: 1rem;
 		background: var(--solarized-mono2);
+		color: var(--solarized-mono01);
 	    width: 100%;
 		-webkit-appearance: none;
 		font-family: inherit;
