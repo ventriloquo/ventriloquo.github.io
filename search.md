@@ -5,7 +5,7 @@ title: Pesquisar
 
 <style>
 	#search-container {
-	    max-width: 100%;
+	    max-width: 80ch;
 	}
 
 	input[type=text] {
