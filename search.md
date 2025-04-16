@@ -10,13 +10,13 @@ title: Pesquisar
 
 	input[type=text] {
 		font-size: normal;
-	    outline: none;
-	    padding: 1rem;
+	 outline: none;
+	 padding: 1rem;
 		background: var(--solarized-mono2);
 		color: var(--solarized-mono01);
-		   display: block;
-					margin: auto;
-	    width: 500px;
+		display: block;
+		margin: auto;
+		width: calc(100% - 36px);
 		-webkit-appearance: none;
 		font-family: inherit;
 		font-size: 100%;
@@ -25,16 +25,6 @@ title: Pesquisar
 	}
 	#results-container {
 		margin: .5rem 0;
-	}
-	@media only screen and (orientation: portrait) {
-		input[type=text] {
-			 width: 250px;
-			}
-			#search-container {
-				max-width: 250px;
-				display: block;
-				margin: auto;
-			}
 	}
 </style>
 
