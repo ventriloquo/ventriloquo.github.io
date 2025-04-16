@@ -20,7 +20,7 @@ title: Pesquisar
 		-webkit-appearance: none;
 		font-family: inherit;
 		font-size: 100%;
-		border: solid 2px var(--solarized-mono2);
+		border: solid 2px var(--solarized-mono1);
 	}
 	#results-container {
 		margin: .5rem 0;
