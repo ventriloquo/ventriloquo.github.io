@@ -16,7 +16,7 @@ title: Pesquisar
 		color: var(--solarized-mono01);
 		   display: block;
 					margin: auto;
-	    width: 350px;
+	    width: 500px;
 		-webkit-appearance: none;
 		font-family: inherit;
 		font-size: 100%;
@@ -24,6 +24,11 @@ title: Pesquisar
 	}
 	#results-container {
 		margin: .5rem 0;
+	}
+	@media only screen and (orientation: portrait) {
+		input[type=text] {
+			 width: 250px;
+			}
 	}
 </style>
 
