@@ -15,6 +15,7 @@ minima:
   skin: solarized
   show_excerpts: true
   nav_pages:
+    - search.md
     - tags.md
     - about.md
   social_links:
