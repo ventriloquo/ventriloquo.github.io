@@ -41,7 +41,7 @@ title: Pesquisar
 <!-- Html Elements for Search -->
 <div id="search-container">
 <input type="text" id="search-input" placeholder="Search...">
-<ol id="results-container"></ol>
+<ul id="results-container"></ul>
 </div>
 
 <!-- Script pointing to search-script.js -->
