@@ -21,6 +21,7 @@ title: Pesquisar
 		font-family: inherit;
 		font-size: 100%;
 		border: solid 2px var(--solarized-mono1);
+		border-radius: 5px;
 	}
 	#results-container {
 		margin: .5rem 0;
