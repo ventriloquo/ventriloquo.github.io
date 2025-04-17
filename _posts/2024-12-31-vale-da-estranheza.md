@@ -1,5 +1,6 @@
 ---
 title: O vale da estranheza
+description: Aqui estão os meus 10 centavos para o halloween.
 tags: etc
 ---
 

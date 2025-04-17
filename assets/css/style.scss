@@ -6,6 +6,30 @@
   "minima/skins/{{ site.minima.skin | default: 'classic' }}",
   "minima/initialize";
 
+#search-container {
+    max-width: 800px;
+}
+
+input[type=text] {
+  font-size: normal;
+  outline: none;
+  padding: 1rem;
+  background: var(--solarized-mono2);
+  color: var(--solarized-mono01);
+  display: block;
+  margin: auto;
+  width: calc(100% - 36px);
+  -webkit-appearance: none;
+  font-family: inherit;
+  font-size: 100%;
+  border: solid 2px var(--solarized-mono1);
+  border-radius: 5px;
+}
+
+#results-container {
+  margin: .5rem 0;
+}
+
 .highlighter-rouge {
   position: relative;
 }
