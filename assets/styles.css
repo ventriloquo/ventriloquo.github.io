@@ -112,8 +112,7 @@ h3, h4 {
 }
 
 .comment {
-  color: var(--color);
-  font-weight: bold;
+  color: var(--pink);
 }
 
 .heading-body {
