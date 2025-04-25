@@ -5,4 +5,3 @@ blog:
 	@cat temp >> index.html
 	@cat 02_script.html >> index.html
 	@rm temp
-
