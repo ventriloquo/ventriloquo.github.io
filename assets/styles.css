@@ -172,10 +172,6 @@ h4+pre {
   display: block;
 }
 
-.decl {
-  display: none;
-}
-
 .member:has(h4:target) {
   display: block;
 }
