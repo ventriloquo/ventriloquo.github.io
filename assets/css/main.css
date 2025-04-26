@@ -282,14 +282,7 @@ pre, blockquote {
     margin-bottom: 1em;
 }
 
-.colection {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  text-align: center;
-}
-
-.colection img {
+.collection img {
   max-width: 200px;
   max-height: 200px;
   display: initial;
@@ -298,7 +291,7 @@ pre, blockquote {
   transition: all 0.2s;
 }
 
-.colection img:hover {
+.collection img:hover {
   border: solid 3px var(--accent-1);
 }
 
