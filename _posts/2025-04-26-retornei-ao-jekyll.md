@@ -20,7 +20,7 @@ minhas de meses (ou semanas) atrás.
 <center><sup>Eu sei que você já está com a frase na cabeça</sup></center>
 
 Bom, para começar, eu quero falar um pouco sobre o Neocities, o mesmo que eu
-[comentei antiormente](/2025/04/19/apoiador_neocities.html) que havia me tornado um apoiador.
+[comentei anteriormente](/2025/04/19/apoiador_neocities.html) que havia me tornado um apoiador.
 
 Advinha? Não sou mais! Hahah... ;-;
 
@@ -28,7 +28,7 @@ Mas calma, eu não estou falindo nem nada do gênero, foi só um reajuste dos me
 gastos mensais.
 
 O motivo disso dessa vez não foi algo vindo de mim, mas sim algo relacionado ao
-meu irmão mais novo. Aconteceram algumas coisas relacionadas à saúde deles esse
+meu irmão mais novo. Aconteceram algumas coisas relacionadas à saúde dele esse
 ano e por consequência disso eu e a minha família vamos precisar dar uma
 atenção maior à ele.
 
