@@ -1,6 +1,7 @@
 ---
 layout: collection
 title: Minha coleção de jogos
+description: Tenho muito orgulho e felicidade por conseguir não só por comprar um Switch, mas também por conseguir ter montado essa coleção! Isso é basicamente um sonho de infância meu.
 ---
 
 ![sonic mania](/assets/img/collection/sonic-mania-icon.jpg)

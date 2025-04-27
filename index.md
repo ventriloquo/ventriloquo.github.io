@@ -1,36 +1,41 @@
 ---
-title: "Blog"
+title: Menu inicial
+layout: base
+description:  Sou alguém que busca por músicas que me relaxam ou que dão adrenalina… Só depende do dia. Sinta-se livre para explorar o meu espaço neste vasto mundo chamado internet!
 ---
-# Tukain
-Sou alguém que busca por músicas que me relaxam ou que dão adrenalina… Só depende do dia.
-Sinta-se livre para explorar o meu espaço neste vasto mundo chamado internet!
-
----
-
-<center>
-<h2>Meus posts</h2>
-<br>
-</center>
-
-<div class="cards" style="
+<style>
+.horizontal {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     justify-content: center;
-">
-{% for post in site.posts %}
-  <a href="{{ post.url }}">
-    <div class="card">
-      <div class="card_image">
-        {% if post.thumbnail %}
-          <img src="/assets/img/thumbnails/{{post.thumbnail}}">
-          {% else %}
-          <p>Imagem não encontrada</p>
-        {% endif %}
-      </div>
-      <div class="card_title">
-        <h3>{{ post.title }}</h3>
-      </div>
-    </div>
-  </a>
-{% endfor %}
+}
+</style>
+
+# Tukain
+Sou alguém que busca por músicas que me relaxam ou que dão adrenalina… Só depende do dia.  
+Sinta-se livre para explorar o meu espaço neste vasto mundo chamado internet!
+
+
+<div class="horizontal cards">
+    <a href="/blog">
+        <div class="card">
+          <div class="card_image">
+              <img src="/assets/img/thumbnails/notebook.png">
+          </div>
+          <div class="card_title">
+            <h3>Blog</h3>
+          </div>
+        </div>
+    </a>
+    <a href="/collection">
+        <div class="card">
+          <div class="card_image">
+              <img src="/assets/img/thumbnails/collection.jpg">
+          </div>
+          <div class="card_title">
+            <h3>Coleção</h3>
+          </div>
+        </div>
+    </a>
 </div>
