@@ -1,5 +1,6 @@
 ---
 layout: "base"
+title: "teste"
 ---
 
 Essa página não contém nada de útil para o leitor, como o próprio nome
@@ -10,12 +11,13 @@ uma página de testes do CSS do site.
 
 > Não há nada a ser fazido \~ Napoleon
 
-# Verse
+# Table
 
-| 2345Meia78
-| Tá na hora de molhar o biscoito
-| Eu tô no osso mas eu não me canso
-| Tá na hora de afogar o ganço
+| Item    | Nível |
+| ---     | ---:  |
+| Espada  | 3     |
+| Escudo  | 2     |
+| Enchada | 69    |
 
 # Example
 
@@ -38,14 +40,6 @@ int main() {
 # Inline-code
 
 `int` significa \"Integer\".
-
-# Table
-
-  | Item      |            Lvl |
-  |---|---|
-  |Capacete de goblin  |  9 |
-  |Armadura de ouro    |  7 |
-  |Espada de cavaleiro |  11|
 
 # Organized list
 

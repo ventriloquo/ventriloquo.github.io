@@ -1,0 +1,21 @@
+:root {
+  /* Gruvbox */  
+  --red:      #cc241d;
+  --green:    #98971a;
+  --yellow:   #d79921;
+  --blue:     #458588;
+  --purple:   #b16286;
+  --cyan:     #689d6a;
+  --orange:   #d65d0e;
+  --grey:     #a89984;
+
+  --bg-0:     #1d2021;
+  --bg-1:     #3c3836;
+  --bg-2:     #282828;
+  --fg-1:     #ebdbb2;
+  --fg-2:     #d5c4a1;
+  --accent-1: #98971a;
+  --accent-2: #b8bb26;
+
+  --border: solid 2px var(--fg-2);
+}

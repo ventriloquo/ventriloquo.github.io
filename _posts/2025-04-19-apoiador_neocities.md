@@ -7,7 +7,7 @@ tags: web compras etc
 É oficial, eu me tornei um apoiador do Neocities. O valor é algo que não me
 atrapalha, $5 mensais, o que vale +/- R$30 depois de pagar as taxas de câmbio.
 Em comparação com outras opções de hostings, como por exemplo a opção do meu
-próprio "registrar", a Hostinger, que é uns R$20 reais... em um plano de 2
+próprio `registrar`, a Hostinger, que é uns R$20 reais... em um plano de 2
 anos... que você tem que pagar tudo.
 
 Pois é, em relação a custo, isso aqui é bem mais em conta. E sim, eu sei que o
@@ -19,8 +19,8 @@ estética dos anos 90 e 2000, que lembram a internet na época que ela ainda
 estava engatinhando.
 
 A conveniência também é um fator muito presente no Neocities. Ele te dá acesso
-a uma "dashboard" em que você pode gerenciar todos os arquivos do site e também
-te da acesso a um editor de código com capacidade de "code completion".
+a uma `dashboard` em que você pode gerenciar todos os arquivos do site e também
+te da acesso a um editor de código com capacidade de `code completion`.
 Basicamente um editor de código com um LSP. E que é muito rápido inclusive.
 
 Outra coisa que é rápida é a velocidade que o site atualiza, você aperta o

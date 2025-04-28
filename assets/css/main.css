@@ -1,28 +1,21 @@
-* {
-  padding: 0;
-  margin: 0;
-}
+@import url("/assets/css/themes/kanagawa.css");
+@import url("/assets/css/code.css");
 
 @font-face {
   src: url('/assets/AOTFShinGoProRegular.otf');
   font-family: "Nintendo Switch Font";
 }
 
+* {
+  padding: 0;
+  margin: 0;
+}
+
+
 ::-webkit-scrollbar {
   display: none;
 }
 
-:root {
-  /* Main colors */
-  --bg-0: #323232;
-  --bg-1: #505050;
-  --bg-2: #2d2d2d;
-  --fg-1: #ffffff;
-  --fg-2: #ababab;
-  --accent-1: #19bbfd;
-  --accent-2: #27e9bc;
-  --border: solid 2px var(--fg-2);
-}
 
 html {
   font-family: "Nintendo Switch Font", sans-serif;
@@ -38,12 +31,7 @@ ul, ol {
     padding-inline-end: 1em;
 }
 
-.content ul {
-  margin-bottom: 1em;
-}
-
 .content {
-  background-color: var(--bg-2);
   display: block;
   margin: 0 auto;
   padding: 1em;
@@ -52,6 +40,11 @@ ul, ol {
   max-width: 80ch;
   min-height: 100vh;
 }
+
+.content ul {
+  margin-bottom: 1em;
+}
+
 
 .post {
   background-color: var(--bg-2);
@@ -156,16 +149,18 @@ a:hover {
 }
 
 .navbar {
-  background-color: var(--bg-2);
+  background-color: var(--bg-0);
   color: var(--fg-1);
-  padding: 1em 0;
+  padding: .5em 0;
   display: flex;
   justify-content: space-between;
+  max-width: 82.5ch;
+  margin: auto;
 }
 
 .navbar a {
   color: var(--accent-2);
-  padding: 20px 16px;
+  padding: 1em;
   transition: all 0.2s;
 }
 
@@ -210,11 +205,11 @@ p {
 
 pre {
   padding: 1em;
-  background-color: #1d2021;
+  background-color: var(--bg-0);
 }
 
 code {
-    background-color: #1d2021;
+    background-color: var(--bg-0);
     padding: 3px;
 }
 
@@ -230,7 +225,7 @@ img {
   max-width: 100%;
   max-height: 400px;
   display: block;
-  margin: 1em auto;
+  margin: auto;
 }
 
 table, th, td {
@@ -283,6 +278,14 @@ pre, blockquote {
     margin-bottom: 1em;
 }
 
+sup {
+  color: var(--purple);
+}
+
+.collection a:hover {
+  opacity: 100%;
+}
+
 .collection img {
   max-width: 200px;
   max-height: 200px;
@@ -307,8 +310,8 @@ pre, blockquote {
     position: initial;
   }
   .related .card {
-    margin: 5px;
-    width: 96%;
+    margin: 1em auto;
+    width: 256px;
     height: 220px;
   }
   .related .card_image {
@@ -319,94 +322,9 @@ pre, blockquote {
     height: 130px;
     object-fit: cover;
   }
+  .collection img {
+    max-width: 300px;
+    max-height: 300px;
+  }
 }
-
-.highlight table td { padding: 5px; }
-.highlight table pre { margin: 0; }
-.highlight, .highlight .w {
-  color: #fbf1c7;
-  background-color: #282828;
-}
-.highlight .err {
-  color: #fb4934;
-  background-color: #282828;
-  font-weight: bold;
-}
-.highlight .c, .highlight .ch, .highlight .cd, .highlight .cm, .highlight .cpf, .highlight .c1, .highlight .cs {
-  color: #928374;
-  font-style: italic;
-}
-.highlight .cp {
-  color: #8ec07c;
-}
-.highlight .nt {
-  color: #fb4934;
-}
-.highlight .o, .highlight .ow {
-  color: #fbf1c7;
-}
-.highlight .p, .highlight .pi {
-  color: #fbf1c7;
-}
-.highlight .gi {
-  color: #b8bb26;
-  background-color: #282828;
-}
-.highlight .gd {
-  color: #fb4934;
-  background-color: #282828;
-}
-.highlight .gh {
-  color: #b8bb26;
-  font-weight: bold;
-}
-.highlight .k, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kv {
-  color: #fb4934;
-}
-.highlight .kc {
-  color: #d3869b;
-}
-.highlight .kt {
-  color: #fabd2f;
-}
-.highlight .kd {
-  color: #fe8019;
-}
-.highlight .s, .highlight .sb, .highlight .sc, .highlight .dl, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .s1 {
-  color: #b8bb26;
-  font-style: italic;
-}
-.highlight .si {
-  color: #b8bb26;
-  font-style: italic;
-}
-.highlight .sr {
-  color: #b8bb26;
-  font-style: italic;
-}
-.highlight .sa {
-  color: #fb4934;
-}
-.highlight .se {
-  color: #fe8019;
-}
-.highlight .nn {
-  color: #8ec07c;
-}
-.highlight .nc {
-  color: #8ec07c;
-}
-.highlight .no {
-  color: #d3869b;
-}
-.highlight .na {
-  color: #b8bb26;
-}
-.highlight .m, .highlight .mb, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mx {
-  color: #d3869b;
-}
-.highlight .ss {
-  color: #83a598;
-}
-
 

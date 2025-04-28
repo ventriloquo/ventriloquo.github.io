@@ -38,4 +38,14 @@ Sinta-se livre para explorar o meu espaço neste vasto mundo chamado internet!
           </div>
         </div>
     </a>
+    <a href="https://github.com/ventriloquo">
+        <div class="card">
+          <div class="card_image">
+              <img src="/assets/img/thumbnails/github.webp">
+          </div>
+          <div class="card_title">
+            <h3>Meu Github</h3>
+          </div>
+        </div>
+    </a>
 </div>

@@ -1,13 +1,6 @@
 ---
 title: "Blog"
 ---
-<center>
-<h2>Meus posts</h2>
-</center>
-
----
-
-
 <div class="cards" style="
     display: flex;
     flex-wrap: wrap;

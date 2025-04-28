@@ -1,16 +1,19 @@
 {% include head.html %}
 <header>
-  <p><a href="/blog">Voltar</a> - /{{ page.date | date: "%Y" }}/{{ page.date |
-  date: "%m"}}/{{ page.date | date: "%d" }}/{{ page.slug }}</p>
+  <p><a class="button" href="/blog">Voltar</a> <a class="button"
+    href="{{page.url}}">{{ page.date | date: "%Y" }}/{{ page.date |
+    date: "%m"}}/{{ page.date | date: "%d" }}/{{ page.slug }}</a></p>
 </header>
 <body>
   <div class="post">
-  <time>{{ page.date | date: "%d/%m/%Y" }}</time>
+  <time style="color: var(--grey)">{{ page.date | date: "%d/%m/%Y" }}</time>
   <hgroup>
       <h1>{{ page.title }}</h1>
       <p>{{ page.description }}</p>
   </hgroup>
-  {{ content }}
+  <div>
+    {{ content }}
+  </div>
   <hr>
   <a class="button" href="mailto:tours_culinaria.10@icloud.com?subject=Feedback sobre o post: {{ page.title }}"
     >Feedback</a>
