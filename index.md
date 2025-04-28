@@ -21,10 +21,10 @@ Sinta-se livre para explorar o meu espaço neste vasto mundo chamado internet!
     <a href="/blog">
         <div class="card">
           <div class="card_image">
-              <img src="/assets/img/thumbnails/notebook.png">
+              <img src="/assets/img/trigun.jpg">
           </div>
           <div class="card_title">
-            <h3>Blog</h3>
+            <h3>Meu blog</h3>
           </div>
         </div>
     </a>
@@ -34,7 +34,7 @@ Sinta-se livre para explorar o meu espaço neste vasto mundo chamado internet!
               <img src="/assets/img/thumbnails/collection.jpg">
           </div>
           <div class="card_title">
-            <h3>Coleção</h3>
+            <h3>Minha coleção de jogos</h3>
           </div>
         </div>
     </a>
