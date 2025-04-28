@@ -1,9 +1,14 @@
-@import url("/assets/css/themes/kanagawa.css");
+@import url("/assets/css/themes/catppuccin.css");
 @import url("/assets/css/code.css");
 
 @font-face {
-  src: url('/assets/AOTFShinGoProRegular.otf');
+  src: url('/assets/shingopro.otf');
   font-family: "Nintendo Switch Font";
+}
+
+@font-face {
+  src: url('/assets/jetbrainsmono.woff2');
+  font-family: "jetbrains";
 }
 
 * {
@@ -50,9 +55,11 @@ ul, ol {
   background-color: var(--bg-2);
   display: block;
   padding: 1em;
+  margin: 0 10px 10px 10px;
   position: relative;
   z-index: 100;
   max-width: 70ch;
+  border-radius: 3px;
 }
 
 .cards a {
@@ -72,6 +79,7 @@ ul, ol {
   border: solid 3px transparent;
   justify-content: center;
   transition: all 0.2s;
+  border-radius: 3px;
 }
 
 .card:hover {
@@ -107,6 +115,7 @@ ul, ol {
 
 .related h4 {
   color: var(--fg-1);
+  font-weight: normal;
   margin-left: 6px;
 }
 
@@ -195,8 +204,7 @@ h1, h2, h3 {
 
 strong, b {
   font-weight: normal;
-  font-size: large;
-  text-decoration: underline;
+  color: var(--red);
 }
 
 p {
@@ -205,12 +213,11 @@ p {
 
 pre {
   padding: 1em;
-  background-color: var(--bg-0);
 }
 
-code {
-    background-color: var(--bg-0);
-    padding: 3px;
+pre, code {
+    background-color: var(--bg-2);
+    font-family: "jetbrains";
 }
 
 blockquote {
@@ -274,12 +281,12 @@ colgroup {
     border: solid 2px var(--fg-2);
 }
 
-pre, blockquote {
+blockquote {
     margin-bottom: 1em;
 }
 
 sup {
-  color: var(--purple);
+  color: var(--grey);
 }
 
 .collection a:hover {
@@ -308,6 +315,7 @@ sup {
   }
   .related {
     position: initial;
+    margin: 10px;
   }
   .related .card {
     margin: 1em auto;
@@ -325,6 +333,10 @@ sup {
   .collection img {
     max-width: 300px;
     max-height: 300px;
+  }
+  .post {
+    margin: 0;
+    border-radius: 0;
   }
 }
 

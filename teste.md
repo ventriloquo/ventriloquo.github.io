@@ -9,33 +9,28 @@ uma página de testes do CSS do site.
 
 # Blockquote
 
-> Não há nada a ser fazido \~ Napoleon
+> Não há mais nada a ser fazido  
+> --- Bonaparte, Napoleon
+> ![napoleon](/assets/img/napoleon.png)
 
 # Table
 
-| Item    | Nível |
-| ---     | ---:  |
-| Espada  | 3     |
-| Escudo  | 2     |
-| Enchada | 69    |
-
-# Example
-
-``` example
-Isso é um exemplo.
-```
+| Item                | Nível | Durabilidade |
+| ---                 | ---:  | ---:         |
+| Espada              | 3     | 7/10         |
+| Escudo              | 2     | 9/10         |
+| Enchada de Diamante | 69    | sim/10       |
 
 # Code-block
 
-{% highlight C %}
+```c
 #include <stdio.h>
 
 int main() {
     printf("Olá, mundo!");
     return 0;
 }
-
-{% endhighlight %}
+```
 
 # Inline-code
 

@@ -14,7 +14,7 @@
   font-style: italic;
 }
 .highlight .cp {
-  color: var(--blue);
+  color: var(--cyan);
 }
 .highlight .nt {
   color: var(--red);
@@ -91,7 +91,7 @@
 }
 
 .highlight .n, .highlight .nf {
-  color: var(--green);
+  color: var(--blue);
 }
 
 
