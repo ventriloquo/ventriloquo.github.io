@@ -135,12 +135,13 @@ ul, ol {
   color: var(--bg-0);
 }
 
-.alternative_button {
+.button:active, .alternative_button {
   box-shadow: inset 0px 1px 2px 0px black;
   background-color: var(--bg-2);
+  color: var(--fg-1);
 }
 
-.alternative_button:hover {
+.button:active, .alternative_button:hover {
   opacity: 100%;
 }
 
