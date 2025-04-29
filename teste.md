@@ -1,11 +1,27 @@
 ---
 layout: "post"
-title: "teste"
+title: "Teste"
 ---
 
 Essa página não contém nada de útil para o leitor, como o próprio nome
 dela já diz, ela é uma página de testes. Para ser mais específico, ela é
 uma página de testes do CSS do site.
+
+# Colors
+
+<span style="display: inline-block; width: 64px; height: 64px; background-color: var(--red)"></span>
+<span style="display: inline-block; width: 64px; height: 64px; background-color: var(--green)"></span>
+<span style="display: inline-block; width: 64px; height: 64px; background-color: var(--blue)"></span>
+<span style="display: inline-block; width: 64px; height: 64px; background-color: var(--yellow)"></span>
+<span style="display: inline-block; width: 64px; height: 64px; background-color: var(--orange)"></span>
+<span style="display: inline-block; width: 64px; height: 64px; background-color: var(--cyan)"></span>
+<span style="display: inline-block; width: 64px; height: 64px; background-color: var(--purple)"></span>
+<span style="display: inline-block; width: 64px; height: 64px; background-color: var(--grey)"></span>
+<span style="display: inline-block; width: 64px; height: 64px; background-color: var(--bg-1)"></span>
+<span style="display: inline-block; width: 64px; height: 64px; background-color: var(--bg-0)"></span>
+<span style="display: inline-block; width: 64px; height: 64px; background-color: var(--fg-1)"></span>
+<span style="display: inline-block; width: 64px; height: 64px; background-color: var(--fg-2)"></span>
+
 
 # Blockquote
 
