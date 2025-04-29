@@ -1,4 +1,4 @@
-@import url("/assets/css/themes/kanagawa.css");
+@import url("/assets/css/themes/base2tonelavender.css");
 @import url("/assets/css/code.css");
 
 @font-face {
@@ -360,9 +360,6 @@ sup {
   .post {
     margin: 0;
     border-radius: 0;
-  }
-  .alternative_button {
-    display: none;
   }
 }
 

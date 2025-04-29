@@ -1,0 +1,30 @@
+
+:root {
+  /* Main colors */
+  --red: rgb(147, 117, 245);
+  --green: rgb(210, 148, 255);
+  --yellow: rgb(236, 209, 255);
+  --blue: rgb(162, 134, 253);
+  --purple: rgb(210, 148, 255);
+  --cyan: rgb(181, 160, 254);
+  --orange: rgb(202, 128, 255);
+  --grey: rgb(98, 90, 124);
+
+  --bg-0: rgb(32, 29, 42);
+  --bg-1: rgb(75, 69, 95);
+  --bg-2: rgb(44, 40, 57);
+  --fg-1: rgb(220, 210, 254);
+  --fg-2: rgb(239, 235, 255);
+  --accent-1: rgb(147, 117, 245);
+  --accent-2: rgb(147, 117, 245);
+
+  --border: solid 2px var(--fg-2);
+}
+
+a {
+  text-decoration: underline !important;
+}
+
+.navbar a, .cards a, .button {
+  text-decoration: none !important;
+}

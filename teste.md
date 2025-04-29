@@ -43,7 +43,12 @@ uma página de testes do CSS do site.
 #include <stdio.h>
 
 int main() {
-    printf("Olá, mundo!");
+    int i;
+
+    for (i = 0; i < 5; i++) {
+      printf("%d\n", i);
+    }
+
     return 0;
 }
 ```
