@@ -1,8 +1,15 @@
 {% include head.html %}
 <header>
-  <p><a class="button" href="/blog">Voltar</a> <a class="button"
-    href="{{page.url}}">{{ page.date | date: "%Y" }}/{{ page.date |
-    date: "%m"}}/{{ page.date | date: "%d" }}/{{ page.slug }}</a></p>
+  <p>
+    <a class="button" href="/blog">Voltar</a>
+    |
+    <a class="button" href="{{page.previous.url}}">Anterior</a>
+    <a class="button" href="{{page.next.url}}">Próximo</a>
+    <a
+      class="alternative_button"
+      href="{{page.url}}">{{page.url | absolute_url}}
+    </a>
+  </p>
 </header>
 <body>
   <div class="post">

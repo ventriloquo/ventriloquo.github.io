@@ -2,7 +2,7 @@
 .highlight table pre { margin: 0; }
 .highlight, .highlight .w {
   color: var(--fb-2);
-  background-color: var(--bg-2);
+  background-color: var(--bg-0);
 }
 .highlight .err {
   color: var(--red);

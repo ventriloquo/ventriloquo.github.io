@@ -15,8 +15,8 @@ hardware.
 
 Gosto de animes e também de video-games, o padrão para os homens da minha
 idade. Com alguns exemplos de animes que gosto sendo Fullmetal Alchemist
-Brotherhood e Evangelion, e no caso de jogos, Resident Evil 4 e Forza Horizon
-(o primeiro).
+Brotherhood, Trigun Stamped e Evangelion, e no caso de jogos, Resident Evil 4,
+Burnout Paradise e Forza Horizon (o primeiro).
 
 Enfim, espero que você ache este site minimamente interessante, se for o caso,
 sinta-se livre para [entrar em contato](mailto:tours_culinaria.10@icloud.com)!
