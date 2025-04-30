@@ -25,13 +25,4 @@ function estilizarCodigo(caractere, cor) {
   }
 }
 
-function substituirCaractere(caractere, substituto) {
-  const paragrafos = document.body.getElementsByTagName('p');
-
-  for (let palavra of paragrafos) {
-    if (palavra.children.length === 0 && palavra.textContent.includes(caractere)) {
-      palavra.innerHTML = palavra.innerHTML.replaceAll(caractere, substituto);
-    }
-  }
-}
 </script>
