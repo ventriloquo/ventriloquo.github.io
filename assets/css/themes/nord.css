@@ -1,0 +1,24 @@
+:root {
+  --red:      #bf616a;
+  --green:    #a3be8c;
+  --blue:     #5e81ac;
+  --yellow:   #ebcb8b;
+  --orange:   #d08770;
+  --cyan:     #8fbcbb;
+  --purple:   #b48ead;
+  --grey:     #4c566a;
+
+  --bg-0:     #2e3440;
+  --bg-1:     #434c5e;
+  --bg-2:     #3b4252;
+  --fg-1:     #d8dee9;
+  --fg-2:     #e5e9f0;
+  --accent-1: #81a1c1;
+  --accent-2: #88c0d0;
+
+  --border: solid 2px var(--fg-2);
+}
+
+time, sup {
+  color: var(--yellow) !important;
+}

@@ -1,0 +1,17 @@
+title: Ventriloquo
+author: "ventriloquo"
+description: >- # this means to ignore newlines until "baseurl:"
+  Um blog simples, feito utilizando o Jekyll.
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "base"
+  -
+    scope:
+      path: "_posts"
+    values:
+      layout: "post"
+      category: "blog"
