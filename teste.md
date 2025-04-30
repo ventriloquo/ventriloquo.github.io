@@ -73,6 +73,27 @@ int main() {
 - B
 - C
 
+# Links
+
+<https://www.markdownguide.org>
+
+<fake@example.com>
+
+[hobbit-hole](https://en.wikipedia.org/wiki/Hobbit#Lifestyle "Hobbit lifestyles")
+
+[fake email](mailto:fake@example.com)
+
+```md
+<https://www.markdownguide.org>
+
+<fake@example.com>
+
+[Markdown Guide](https://www.markdownguide.org "a free and open-source reference guide that explains how to use Markdown")
+
+[fake email](mailto:fake@example.com)
+
+```
+
 # Level 1
 
 ## Level 2

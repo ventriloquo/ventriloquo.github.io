@@ -16,7 +16,7 @@
   --accent-1: var(--purple);
   --accent-2: #938AA9;
 
-  --border: solid 2px var(--fg-2);
+  --border: solid 2px var(--grey);
 }
 
 h1 { color: var(--green) !important; }

@@ -17,5 +17,5 @@
   --accent-1: #19bbfd;
   --accent-2: #27e9bc;
 
-  --border: solid 2px var(--fg-2);
+  --border: solid 2px var(--grey);
 }

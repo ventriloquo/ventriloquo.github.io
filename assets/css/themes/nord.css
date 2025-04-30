@@ -16,7 +16,7 @@
   --accent-1: #81a1c1;
   --accent-2: #88c0d0;
 
-  --border: solid 2px var(--fg-2);
+  --border: solid 2px var(--grey);
 }
 
 time, sup {

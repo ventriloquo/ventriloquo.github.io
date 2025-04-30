@@ -18,7 +18,7 @@
   --accent-1: rgb(147, 117, 245);
   --accent-2: rgb(147, 117, 245);
 
-  --border: solid 2px var(--fg-2);
+  --border: solid 2px var(--grey);
 }
 
 a {

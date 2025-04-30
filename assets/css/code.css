@@ -1,7 +1,10 @@
+.highlight {
+  overflow: scroll;
+}
 .highlight table td { padding: 5px; }
 .highlight table pre { margin: 0; }
 .highlight, .highlight .w {
-  color: var(--fb-2);
+  color: var(--fg-2);
   background-color: var(--bg-0);
 }
 .highlight .err {
@@ -14,16 +17,16 @@
   font-style: italic;
 }
 .highlight .cp {
-  color: var(--cyan);
+  color: var(--purple);
 }
 .highlight .nt {
   color: var(--red);
 }
 .highlight .o, .highlight .ow {
-  color: var(--fb-2);
+  color: var(--fg-2);
 }
 .highlight .p, .highlight .pi {
-  color: var(--fb-2);
+  color: var(--fg-2);
 }
 .highlight .gi {
   color: var(--green);
@@ -44,7 +47,7 @@
   color: var(--purple);
 }
 .highlight .kt {
-  color: var(--yellow);
+  color: var(--cyan);
 }
 .highlight .kd {
   color: var(--orange);
