@@ -1,5 +1,5 @@
 # hare_blog
-<img src="favicon.ico">
+<img src="/assets/favicon.ico">
 
 Este é o meu site atual, eu estou voltando a ter interesse na linguagem de
 programação [Hare](https://harelang.org) e, junto disso, a ter um site feito de
