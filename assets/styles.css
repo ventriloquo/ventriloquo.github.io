@@ -1,0 +1,179 @@
+:root {
+  --color: #dcd7ba;
+  --background-color: #1F1F28;
+  --background-color-alt: #2A2A37;
+
+  --color-red:            #FF5D62;
+  --color-yellow:         #FF9E3B;
+  --color-orange:         #FFA066;
+  --color-blue:           #7e9cd8;
+  --color-green:          #98BB6C;
+  --color-purple:         #957fbb;
+  --color-pink:           #D27E99;
+
+  --color-light-blue:     #7AA89F;
+  --color-light-yellow:   #C0A36E;
+  --color-light-purple:   #9CABCA;
+
+  --border: solid 3px var(--color-purple);
+}
+
+@font-face {
+  src: url("/assets/iosevka.woff2");
+  font-family: "iosevka";
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  font-family: "iosevka", monospace;
+  scroll-behavior: smooth;
+}
+
+body {
+  display: block;
+  margin: 1em auto;
+  padding: 1em;
+  max-width: 80ch;
+  background-color: var(--background-color);
+  border-radius: 5px;
+}
+
+summary {
+  color: var(--color-purple);
+  padding: 0 1em;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-blue);
+}
+
+a:hover {
+  opacity: 80%;
+}
+
+pre {
+  padding: 1em;
+  color: var(--color);
+  background-color: var(--background-color-alt);
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  overflow: scroll;
+}
+
+ol, ul {
+  color: var(--color);
+}
+
+p {
+  color: var(--color);
+  margin: 1em 0;
+}
+
+h1 {
+  color: var(--color);
+}
+
+h2 {
+  color: var(--color);
+}
+
+h2 > .heading-extra {
+  display: none;
+}
+
+h3, h4 {
+  display: none;
+}
+
+.keyword {
+  color: var(--color-purple);
+}
+
+.type {
+  color: var(--color-light-blue);
+}
+
+.comment {
+  color: var(--color-pink);
+}
+
+.heading-body {
+  color: var(--color-purple);
+  font-size: larger;
+}
+
+.heading-extra {
+  color: var(--color-yellow);
+}
+
+.heading-extra a {
+  color: var(--color-pink);
+  float: right;
+}
+
+.readme {
+  background-color: var(--background-color-alt);
+  border: var(--border);
+  border-radius: 5px;
+  padding: 2em 1em 0.5em 1em;
+  position: relative;
+  overflow-x: scroll;
+}
+
+.readme::before {
+  content: "leia-me";
+  position: absolute;
+  color: var(--background-color);
+  background-color: var(--color-purple);
+  left: 0;
+  top: 0;
+  padding: 2px 1em;
+  border-end-end-radius: 10px;
+}
+
+.sample {
+  display: block;
+  background-color: var(--background-color-alt);
+}
+
+.member {
+  border-top: solid 1px var(--background-color-alt);
+}
+
+.member > h4 {
+  color: var(--color);
+  padding-top: 1em;
+  display: block;
+}
+
+.member:has(h4) {
+  display: none;
+}
+
+h4+pre {
+  display: block;
+}
+
+.member:has(h4:target) {
+  display: block;
+}
+
+.red { color: var(--color-red) }
+.blue { color: var(--color-blue) }
+.yellow { color: var(--color-yellow) }
+.green { color: var(--color-green) }
+.purple { color: var(--color-purple) }
+.orange { color: var(--color-orange) }
+
+.lblue { color: var(--color-light-blue) }
+.lpurple { color: var(--color-light-purple) }
+.lyellow { color: var(--color-light-yellow) }
+
+span:has(+ span) {
+  color: inherit;
+}
