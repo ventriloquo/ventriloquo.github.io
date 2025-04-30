@@ -30,4 +30,4 @@
 //
 // Deixando isso de lado, ainda estou trabalhando nesse pequeno projeto, então
 // mudanças são mais do que esperadas.
-export fn post_18_04_2025() (etc, updates);
+export fn post_18_04_2025() (etc, updates, web);

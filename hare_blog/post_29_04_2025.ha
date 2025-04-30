@@ -1,4 +1,4 @@
-// # Olha só que reverteu novamente para a Hare!
+// # Olha só que reverteu novamente para o Haredoc!
 //
 // É, desculpa por isso, eu tenho um problema.
 //
@@ -30,4 +30,23 @@
 // tentado a usar isso aqui de novo!
 //
 // # Arrggghhh! Eu sou o meu maior inimigo!
-export fn post_29_04_2025() (etc, inconsistencia);
+//
+// Sabe a melhor parte? Só tem como saber do quê que eu tô falando se:
+//
+// - você viu o site antes de eu ter essa crise de idêntidade
+// - você tem uma cópia do código-fonte dessa versão
+//
+// E no caso de ser a sua primeira vez aqui, ou no caso de você estar
+// acompanhando esse blog pelo celular e não chegou a ver essa versão da qual eu
+// estou falando, então não tem como entender nada do que eu estou falando.
+//
+// # Enfim
+//
+// Não são só desvantagens, tem coisas boas nessa simplicidade toda. Um exemplo
+// disso é o tamanho do site e o desempenho dele. Como o site todo (após
+// compilado) é composto por 5 arquivos (a página index e 404, o css, a fonte e
+// o favicon), é difícil achar algo que não dê conta de carregar esse site.
+//
+// Tem JavaShit, mas é pouquíssimo e só roda na renderização da página, depois
+// disso, não tem mais nada relacionado a isso em execução.
+export fn post_29_04_2025() (etc, updates, web);
