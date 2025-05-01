@@ -36,6 +36,24 @@ ul, ol {
     padding-inline-end: 1em;
 }
 
+dl {
+  padding: 1em;
+}
+
+dt {
+  font-style: italic;
+  font-size: large;
+  color: var(--blue);
+}
+
+dt::before { content: "\"" }
+dt::after { content: "\"" }
+
+dd {
+  padding-inline-start: 2em;
+  color: var(--cyan);
+}
+
 .content {
   display: block;
   margin: 0 auto;
@@ -49,7 +67,6 @@ ul, ol {
 .content ul {
   margin-bottom: 1em;
 }
-
 
 .post {
   background-color: var(--bg-2);
@@ -205,6 +222,19 @@ a:hover {
 .navbar > ul {
     padding-inline-start: 0;
     padding-inline-end: 0;
+}
+
+.task-list {
+  list-style: none;
+}
+
+.task-list-item-checkbox {
+  margin-left: -1.5em;
+  margin-right: 10px;
+}
+
+ul, ol {
+  margin-left: 10px;
 }
 
 hgroup {

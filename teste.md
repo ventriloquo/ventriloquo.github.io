@@ -29,6 +29,15 @@ uma página de testes do CSS do site.
 > --- Bonaparte, Napoleon
 > ![napoleon](/assets/img/napoleon.png)
 
+# Definitions
+
+Bostileiro
+: Cidadão nativo do Bostil
+
+# Strikethrough
+
+O Xandão é um ~~arrombado~~ lindo.
+
 # Table
 
 | Item                | Nível | Durabilidade |
@@ -72,6 +81,11 @@ int main() {
   - aaa
 - B
 - C
+
+# Task Lists
+
+- [ ] a
+- [x] b
 
 # Links
 
