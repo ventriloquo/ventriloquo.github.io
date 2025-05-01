@@ -264,6 +264,9 @@ span:has(+ span) {
   }
   .member {
     border: none;
-    padding: 0;
+    padding: 1em;
+  }
+  p {
+    overflow-x: scroll;
   }
 }
