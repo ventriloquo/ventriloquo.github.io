@@ -59,6 +59,7 @@ pre {
   padding: 1em;
   color: var(--color);
   background-color: var(--background-color-alt);
+  border: solid 1px var(--background-color-alt);
   margin-left: auto;
   margin-right: auto;
   border-radius: 5px;
@@ -83,11 +84,7 @@ h2 {
   display: none;
 }
 
-h2 > .heading-extra {
-  display: none;
-}
-
-h3, h4 {
+h2 > .heading-extra, h3, h4, h4 .heading-extra {
   display: none;
 }
 
@@ -146,12 +143,15 @@ h3, h4 {
   border: solid 1px var(--background-color-alt);
   border-radius: 5px;
   padding: 15px;
+  position: relative;
 }
 
 .member > h4 {
   color: var(--color);
-  padding-top: 1em;
-  display: block;
+  display: block !important;
+  position: absolute;
+  top: -3em;
+  opacity: 0;
 }
 
 .member:has(h4) {
@@ -256,4 +256,14 @@ span:has(+ span) {
 .caution::before {
   content: "cuidado";
   background-color: var(--color-red);
+}
+
+@media only screen and (max-width: 800px) {
+  pre {
+    border: none;
+  }
+  .member {
+    border: none;
+    padding: 0;
+  }
 }
