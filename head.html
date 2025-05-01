@@ -11,6 +11,7 @@
 </head>
 <style>
 pre {
+  display: none !important;
   background-color: var(--background-color);
 }
 
@@ -18,18 +19,61 @@ pre > .keyword, pre > .lpurple, pre > .type {
   display: none;
 }
 
-pre a {
-  font-size: larger;
-}
-
 pre a::before {
   content: "· "
+}
+
+pre:target {
+  display: block !important;
 }
 
 .sample > .keyword, .sample > .lpurple, .sample > .type {
   display: initial;
 }
+
+.member {
+  margin-top: 1em;
+  z-index: 200;
+}
+
 .member > h4, .decl {
   display: none;
+}
+
+.readme::before {
+  content: "";
+  background-color: var(--background-color-alt);
+}
+
+.readme {
+  position: sticky;
+  z-index: 50;
+  top: 1em;
+  background-color: var(--background-color-alt);
+  border: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 1em;
+}
+
+.readme ul {
+  padding: 0;
+  list-style: none;
+}
+
+@keyframes fade-out {
+  80% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  pre a {
+    font-size: larger;
+  }
 }
 </style>

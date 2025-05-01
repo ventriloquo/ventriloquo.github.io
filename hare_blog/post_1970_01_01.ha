@@ -5,7 +5,7 @@
 //
 // E sim. O design disso aqui é MUITO inspirado no Github.
 //
-// | Não há mais nada a ser fazido
+// | Não há mais nada a ser fazido ~ Bonaparte, Napoleon
 //
 // [!NOTE]
 // Fuma não, pô. Cingaro da câncer.
