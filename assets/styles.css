@@ -20,7 +20,7 @@
 
 @font-face {
   src: url("/assets/jetbrainsmono.woff2");
-  font-family: "iosevka";
+  font-family: "jetbrains";
 }
 
 *::-webkit-scrollbar {
@@ -28,7 +28,7 @@
 }
 
 * {
-  font-family: "iosevka", monospace;
+  font-family: "jetbrains", monospace;
   scroll-behavior: smooth;
 }
 

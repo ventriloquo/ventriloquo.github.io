@@ -1,8 +1,9 @@
 blog:
-	@haredoc -t -Fhtml hare_blog > temp
-	@cat head.html > index.html
-	@cat 01_script.html >> index.html
-	@cat temp >> index.html
-	@cat 02_script.html >> index.html
-	@cat 03_other.html >> index.html
-	@rm temp
+	@haredoc -t -Fhtml posts 		> content
+	@cat body.html 							> index.html
+	@cat 01_script.html 				>> index.html
+	@cat content 								>> index.html
+	@cat 02_script.html 				>> index.html
+	@echo "</body></html>" 			>> index.html
+	@cp 404.html not_found.html
+	@rm content
