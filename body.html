@@ -21,7 +21,7 @@
     }
     
     pre a::before {
-      content: "-> "
+      content: "↪ "
     }
     
     pre:target {
@@ -71,7 +71,12 @@
       list-style: none;
       user-select: none;
     }
-    
+
+    .disappear {
+      color: var(--color-purple);
+      animation: 3s fade-out both;
+    }
+
     @keyframes fade-in {
       from {
         opacity: 0;
@@ -106,13 +111,13 @@
 <body>
 <div class="nav">
   <ul>
-    <li><a href="#list">Blog</a></li>
+    <li><a href="#list">Blog</a><span class="disappear"> &lt;--</span></li>
   </ul>
   <ul>
-    <li style="color: var(--color-purple); animation: 5s fade-out both">&lt;- escolha -&gt;</li>
+    <li class="disappear" > escolha </li>
   </ul>
   <ul>
-    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#sobre"><span class="disappear">--&gt; </span>Sobre</a></li>
   </ul>
 </div>
 <section class="member">
