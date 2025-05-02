@@ -46,14 +46,15 @@ pre:target {
 
 .readme::before {
   content: "";
-  background-color: var(--background-color-alt);
+  background-color: transparent;
 }
 
 .readme {
   position: sticky;
   z-index: 50;
   top: 1em;
-  background-color: var(--background-color-alt);
+  background-color: rgba(42,42,55,.7);
+  backdrop-filter: blur(10px);
   border: none;
   display: flex;
   flex-wrap: wrap;
