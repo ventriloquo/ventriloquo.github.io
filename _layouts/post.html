@@ -1,12 +1,4 @@
 {% include head.html %}
-<header>
-  <p>
-    <a class="button" href="/blog">Voltar</a>
-    |
-    <a class="button" href="{{page.previous.url}}">Anterior</a>
-    <a class="button" href="{{page.next.url}}">Próximo</a>
-  </p>
-</header>
 <body>
   <div class="post">
   <hgroup>
@@ -17,9 +9,17 @@
   <div>
     {{ content }}
   </div>
-  <hr>
-  <a class="button" href="mailto:{{site.email}}?subject=Feedback sobre o post: {{ page.title }}"
-    >Feedback</a>
+  <footer>
+    <hr>
+    <div style="float: right; padding-right: 1em">
+      <a class="button" href="{{page.previous.url}}">Anterior</a>
+      <a class="button" href="{{page.next.url}}">Próximo</a>
+      <span style="visibility: hidden; user-select: none">|</span>
+      <a class="button" href="mailto:{{site.email}}?subject=Feedback sobre o post: {{ page.title }}" >Feedback</a>
+      <span style="visibility: hidden; user-select: none">|</span>
+      <a class="button" href="/blog">Voltar</a>
+    </div>
+  </footer>
   </div>
   <div class="cards related">
   <h4>Leia também</h4>
