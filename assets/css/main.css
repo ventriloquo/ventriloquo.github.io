@@ -416,5 +416,11 @@ footer hr {
     margin: 0;
     border-radius: 0;
   }
+  footer div {
+    float: left !important;
+  }
+  .switcher {
+    display: none;
+  }
 }
 
