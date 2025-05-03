@@ -282,7 +282,7 @@ pre {
 }
 
 pre, code {
-    background-color: var(--bg-0);
+    background-color: #1d2021;
     font-family: "jetbrains";
 }
 
