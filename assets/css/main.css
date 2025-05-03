@@ -1,0 +1,413 @@
+@import url("/assets/css/themes/kanagawa.css");
+@import url("/assets/css/code.css");
+
+@font-face {
+  src: url('/assets/shingopro.otf');
+  font-family: "Nintendo Switch Font";
+}
+
+@font-face {
+  src: url('/assets/jetbrainsmono.woff2');
+  font-family: "jetbrains";
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+
+html {
+  font-family: "Nintendo Switch Font", sans-serif;
+  background-color: var(--bg-0);
+}
+
+body {
+  color: var(--fg-1);
+}
+
+ul, ol {
+    padding-inline-start: 1em;
+    padding-inline-end: 1em;
+}
+
+dl {
+  padding: 1em;
+}
+
+dt {
+  font-style: italic;
+  font-size: large;
+  color: var(--blue);
+}
+
+dt::before { content: "\"" }
+dt::after { content: "\"" }
+
+dd {
+  padding-inline-start: 2em;
+  color: var(--cyan);
+}
+
+del {
+  opacity: 80%;
+  color: var(--bg-3);
+}
+
+.content {
+  display: block;
+  margin: 0 auto;
+  padding: 1em;
+  position: relative;
+  z-index: 100;
+  max-width: 80ch;
+  min-height: 100vh;
+}
+
+.content ul {
+  margin-bottom: 1em;
+}
+
+a {
+    color: var(--cyan);
+    text-decoration: none;
+}
+
+a:hover {
+  opacity: 80%;
+}
+
+.navbar {
+  background-color: var(--bg-0);
+  color: var(--fg-1);
+  padding: .5em 0;
+  display: flex;
+  justify-content: space-between;
+  max-width: 82.5ch;
+  margin: auto;
+}
+
+.navbar a {
+  color: var(--accent-2);
+  padding: 1em;
+  transition: all 0.2s;
+}
+
+.navbar a:hover {
+  background-color: var(--accent-2);
+  color: var(--bg-2);
+  opacity: 100%;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+}
+
+.navbar > ul {
+    padding-inline-start: 0;
+    padding-inline-end: 0;
+}
+
+
+.post {
+  background-color: var(--bg-2);
+  display: block;
+  padding: 1em;
+  margin: 0 10px 10px 10px;
+  position: relative;
+  z-index: 100;
+  max-width: 70ch;
+  border-radius: 3px;
+}
+
+.cards a, .cards h3 {
+  color: var(--fg-1);
+}
+
+.cards a:hover {
+  opacity: 100%;
+}
+
+.card {
+  margin: 5px;
+  background-color: var(--bg-1);
+  box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.3);
+  width: 256px;
+  height: 220px;
+  border: solid 3px transparent;
+  justify-content: center;
+  transition: all 0.2s;
+  border-radius: 3px;
+}
+
+.card:hover {
+  border: solid 3px var(--accent-1);
+}
+
+.card_image {
+  background-color: var(--bg-0);
+  color: var(--bg-1);
+  height: 130px;
+}
+
+.card_image img {
+  min-width: 100%;
+  margin: 0;
+  height: 130px;
+  object-fit: cover;
+}
+
+.card_image p {
+  text-align: center;
+}
+
+.card_title {
+  padding: 10px;
+}
+
+.related {
+  position: absolute;
+  top: 1em;
+  left: 75ch;
+}
+
+.related h4 {
+  color: var(--fg-1);
+  font-weight: normal;
+  margin-left: 6px;
+}
+
+.button, .alternative_button {
+  border-radius: 3px;
+  box-shadow: 0px 1px 2px 0px black;
+  font-size: small;
+  padding: 6px 20px;
+  background-color: var(--bg-1);
+  color: var(--fg-1);
+  transition: all 0.2s;
+}
+
+.button:hover {
+  opacity: 100%;
+  background-color: var(--accent-2);
+  color: var(--bg-0);
+}
+
+.button:active, .alternative_button {
+  box-shadow: inset 0px 1px 2px 0px black;
+  background-color: var(--bg-2);
+  color: var(--fg-1);
+}
+
+.button:active, .alternative_button:hover {
+  opacity: 100%;
+}
+
+header {
+  padding: 10px;
+  max-width: 70ch;
+}
+
+header > p {
+  padding: 0;
+}
+
+hr {
+  border: none;
+  border-bottom: var(--border);
+  margin: 1em 0;
+}
+
+time {
+  color: var(--bg-1);
+  float: right;
+  font-size: small;
+}
+
+.task-list {
+  list-style: none;
+}
+
+.task-list-item-checkbox {
+  margin-left: -1.5em;
+  margin-right: 10px;
+}
+
+ul, ol {
+  margin-left: 10px;
+}
+
+hgroup {
+  margin-bottom: 1em;
+  overflow: hidden;
+}
+
+hgroup > h1 {
+  margin-bottom: -0.5em;
+}
+
+h1, h2, h3 {
+  font-weight: normal;
+}
+
+h1 {
+  color: var(--green);
+}
+
+h2 {
+  color: var(--purple);
+}
+
+h3 {
+  color: var(--blue);
+}
+
+strong, b {
+  font-weight: normal;
+  color: var(--red);
+}
+
+p {
+  padding-bottom: 1em;
+}
+
+pre {
+  padding: 1em;
+}
+
+pre, code {
+    background-color: var(--bg-0);
+    font-family: "jetbrains";
+}
+
+p > code {
+  padding: 5px;
+  border-radius: 3px;
+}
+
+blockquote {
+    background-color: var(--bg-1);
+    color: var(--fg-1);
+    border-left: solid 5px var(--accent-1);
+    padding: 10px 20px;
+    margin: 10px auto;
+}
+
+img {
+  max-width: 100%;
+  max-height: 400px;
+  display: block;
+  margin: auto;
+}
+
+table, th, td {
+    border: var(--border-obs);
+    padding: 5px;
+    border-collapse: collapse;
+}
+
+table {
+    border: none;
+    overflow: scroll;
+    margin: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    border: var(--border);
+}
+
+th, td {
+    padding-left: 1em;
+    padding-right: 1em;
+    margin: 0;
+}
+
+th {
+    font-weight: bold;
+    background-color: var(--bg-1);
+}
+
+tr {
+    background-color: var(--bg-0);
+}
+
+tr:nth-of-type(even) {
+    background-color: var(--fg-2);
+    color: var(--bg-0);
+}
+
+thead > tr > th {
+    background-color: var(--bg-1);
+    color: var(--fg-1);
+    font-weight: normal;
+    border-bottom: var(--border);
+}
+
+colgroup {
+    border: solid 2px var(--fg-2);
+}
+
+blockquote {
+    margin-bottom: 1em;
+}
+
+sup {
+  color: var(--grey);
+}
+
+.collection a:hover {
+  opacity: 100%;
+}
+
+.collection img {
+  max-width: 200px;
+  max-height: 200px;
+  display: initial;
+  margin: 5px;
+  border: solid 3px transparent;
+  transition: all 0.2s;
+}
+
+.collection img:hover {
+  border: solid 3px var(--accent-1);
+}
+
+@media only screen and (max-width: 800px) {
+  h1 {
+    font-size: larger;
+  }
+  h2, h3 {
+    font-size: large;
+  }
+  .related {
+    position: initial;
+    margin: 10px;
+  }
+  .related .card {
+    margin: 1em auto;
+    width: 256px;
+    height: 220px;
+  }
+  .related .card_image {
+    height: 130px;
+  }
+  .related .card_image img {
+    margin: 0;
+    height: 130px;
+    object-fit: cover;
+  }
+  .collection img {
+    max-width: 300px;
+    max-height: 300px;
+  }
+  .post {
+    margin: 0;
+    border-radius: 0;
+  }
+}
+
