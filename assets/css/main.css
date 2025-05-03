@@ -219,6 +219,7 @@ hr {
 time {
   color: var(--bg-1);
   font-size: small;
+  float: right;
 }
 
 .task-list {
