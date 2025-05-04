@@ -395,6 +395,7 @@ footer hr {
   .related {
     position: initial;
     margin: 10px;
+    margin-bottom: 5em;
   }
   .related .card {
     margin: 1em auto;

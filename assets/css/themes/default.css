@@ -7,7 +7,7 @@
   --purple: rgb(78, 90, 183);
   --cyan: var(--accent-2);
   --orange: rgb(243, 189, 9);
-  --grey: rgb(16, 129, 214);
+  --grey: var(--bg-1);
 
   --bg-0: #323232;
   --bg-1: #505050;
