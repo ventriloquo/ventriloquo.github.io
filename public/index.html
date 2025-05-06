@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Um blog... feito usando Hare.">
+  <meta name="author" content="tukain">
+  <meta name="generator" content="Haredoc">
+  <meta name=”robots” content="noindex, nofollow">
+  <link rel="icon" href="/assets/favicon.ico">
+  <link rel="stylesheet" href="/assets/styles.css">
+  <title>Tukain</title>
+  <style>
+    pre {
+      display: none !important;
+      background-color: var(--background-color);
+    }
+    
+    pre > .keyword, pre > .lpurple, pre > .type {
+      display: none;
+    }
+    
+    pre a::before {
+      content: "↪ "
+    }
+    
+    pre:target {
+      display: block !important;
+    }
+    
+    .sample > .keyword, .sample > .lpurple, .sample > .type {
+      display: initial;
+    }
+    
+    .member {
+      margin-top: 1em;
+      z-index: 200;
+    }
+    
+    .member > h4, .decl {
+      display: none;
+      position: absolute;
+      top: -1em;
+      opacity: 0;
+    }
+    
+    pre:target, .member:has(h4:target) {
+      animation: fade-in 2s both;
+    }
+    
+    .sample {
+      display: block !important;
+    }
+    
+    .nav {
+      position: sticky;
+      z-index: 50;
+      top: 1em;
+      background-color: rgba(42,42,55,.7);
+      backdrop-filter: blur(10px);
+      border: none;
+      border-radius: 5px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 0 1em;
+    }
+    
+    .nav ul {
+      padding: 0;
+      list-style: none;
+      user-select: none;
+    }
+
+    .disappear {
+      color: var(--color-purple);
+      animation: 3s fade-out both;
+    }
+
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 100%
+      }
+    }
+    
+    @keyframes fade-out {
+      0% {
+        opacity: 0%;
+      }
+      30% {
+        opacity: 100%;
+      }
+      80% {
+        opacity: 100%;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+    
+    @media only screen and (max-width: 800px) {
+      pre a {
+        font-size: larger;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="nav">
+  <ul>
+    <li><a href="#list">Blog</a><span class="disappear"> &lt;--</span></li>
+  </ul>
+  <ul>
+    <li class="disappear" > escolha </li>
+  </ul>
+  <ul>
+    <li><a href="#sobre"><span class="disappear">--&gt; </span>Sobre</a></li>
+  </ul>
+</div>
+<section class="member">
+  <h4 id="sobre"></h4>
+  <p class="title">
+    Já imaginou usar uma ferramenta que é parte de uma linguagem de programação...
+    para fazer um Blog?
+  </p>
+  <p>
+    Pois é. É possível.
+  </p>
+  <p>
+    E no caso desse blog, eu utilizo a ferramenta "haredoc", um "gerador de
+    documentação" da linguagem de programação <a href="https://harelang.org">Hare</a>
+  </p>
+  <p class="note">
+    Quero também deixar claro que eu não usei puramente o Haredoc para
+    construir este site. Fiz uso de JavaScript em lugares relacionados à Markup
+    e Syntax Highlighting por exemplo, e há também uma Makefile que "compila"
+    os vários arquivos presentes na raíz do código-fonte deste site.
+  </p>
+</section>
+<script>
+function estilizarElementoComCaractere(caractere, estilo) {
+  // Procura todos os elementos no corpo do documento
+  const elementos = document.body.getElementsByTagName('p');
+
+  for (let elemento of elementos) {
+    if (elemento.children.length === 0 && elemento.textContent.includes(caractere)) {
+      elemento.innerHTML = elemento.innerHTML.replace(caractere, '<span style="display:none">' + caractere + '</span>');
+      elemento.classList.add(estilo);
+    }
+  }
+}
+
+function estilizarCodigo(caractere, cor) {
+  // Procura todos os elementos no corpo do documento
+  const elementos = document.body.getElementsByTagName('pre');
+
+  for (let elemento of elementos) {
+    if (elemento.textContent.includes(caractere)) {
+      elemento.innerHTML = elemento.innerHTML.replaceAll(caractere, `<span class="${cor}">` + caractere + '</span>');
+    }
+  }
+}
+
+</script>
+<h2><span class='heading-body'>posts</span><span class='heading-extra'>+x86_64 +linux </span></h2>
+<h3>Index</h3>
+<h4>Functions</h4>
+<pre>
+<span class='keyword'>fn</span> <a href='#post_1970_01_01'>post_1970_01_01</a>() <span class='type'>void</span>;
+<span class='keyword'>fn</span> <a href='#post_2025_04_18'>post_2025_04_18</a>() <span class='type'>(</span><span class='type'>etc</span><span class='type'>,</span> <span class='type'>updates</span><span class='type'>,</span> <span class='type'>web</span><span class='type'>)</span>;
+<span class='keyword'>fn</span> <a href='#post_2025_04_19'>post_2025_04_19</a>() <span class='type'>(</span><span class='type'>etc</span><span class='type'>,</span> <span class='type'>updates</span><span class='type'>,</span> <span class='type'>web</span><span class='type'>)</span>;
+<span class='keyword'>fn</span> <a href='#post_2025_04_21'>post_2025_04_21</a>() <span class='type'>(</span><span class='type'>etc</span><span class='type'>,</span> <span class='type'>web</span><span class='type'>,</span> <span class='type'>programacao</span><span class='type'>)</span>;
+<span class='keyword'>fn</span> <a href='#post_2025_04_22'>post_2025_04_22</a>() <span class='type'>(</span><span class='type'>updates</span><span class='type'>,</span> <span class='type'>web</span><span class='type'>,</span> <span class='type'>programacao</span><span class='type'>)</span>;
+<span class='keyword'>fn</span> <a href='#post_2025_04_26'>post_2025_04_26</a>() <span class='type'>(</span><span class='type'>etc</span><span class='type'>,</span> <span class='type'>updates</span><span class='type'>,</span> <span class='type'>web</span><span class='type'>)</span>;
+<span class='keyword'>fn</span> <a href='#post_2025_04_29'>post_2025_04_29</a>() <span class='type'>(</span><span class='type'>etc</span><span class='type'>,</span> <span class='type'>updates</span><span class='type'>,</span> <span class='type'>web</span><span class='type'>)</span>;
+<span class='keyword'>fn</span> <a href='#post_2025_04_30'>post_2025_04_30</a>() <span class='type'>(</span><span class='type'>linux</span><span class='type'>,</span> <span class='type'>sistema_operacional</span><span class='type'>)</span>;
+<span class='keyword'>fn</span> <a href='#post_2025_05_01'>post_2025_05_01</a>() <span class='type'>void</span>;
+</pre><h3>Functions</h3>
+<section class='member'>
+<h4 id='post_1970_01_01'><span class='heading-body'>fn post_1970_01_01</span><span class='heading-extra'><a href='#post_1970_01_01'>[permalink]</a></span></h4>
+<pre class='decl'>
+<span class='keyword'>fn</span> post_1970_01_01() <span class='type'>void</span>;</pre>
+<p># Teste
+<p>Não liga muito para isso aqui não, é só um monte de pseudo-código pra testar o markup e syntax-highlighting feito na base do &quot;vibe-coding&quot;
+<p>E sim. O design disso aqui é MUITO inspirado no Github.
+<p>| Não há mais nada a ser fazido ~ Bonaparte, Napoleon
+<p>[!NOTE] Fuma não, pô. Cingaro da câncer.
+<p>[!TIP] Se você não sonegar imposto, então o Haddad não vai atrás do seu CPF.
+<p>[!IMPORTANT] Se eu fosse você, eu não sonegaria imposto.
+<p>[!WARNING] CUIDADO AE MAN, SONEGAR DA CADEIA!
+<p>[!CAUTION] BROTHER, TU TÁ NA LISTA DO HADDAD, CORRE!!!
+<pre class='sample'>use fmt;
+
+export fn main() str = {
+	fmt::println(&quot;Olá, mundo!&quot;)!;
+	fmt::println(&quot;1 2 3 4 5 6 7 8 9 0&quot;)!;
+	return &quot;olá, mundo!&quot;;
+};
+
+true
+false
+
+i8 i16 i32 i64
+u8 u16 u32 u64
+f32 f64
+opaque void rune
+
+const xbox: str = &quot;cool&quot;;
+
+let carteira: i32 = 4001;
+
+switch (comprar_ps5) {
+	case true =&gt; carteira - 4000;
+	case false =&gt; fmt::println(&quot;Esse é meu garoto&quot;)!;
+};
+
+@symbol(&quot;InitWindow&quot;) fn InitWindow(int, int, *c::char) void;
+</pre>
+</section>
+<section class='member'>
+<h4 id='post_2025_04_18'><span class='heading-body'>fn post_2025_04_18</span><span class='heading-extra'><a href='#post_2025_04_18'>[permalink]</a></span></h4>
+<pre class='decl'>
+<span class='keyword'>fn</span> post_2025_04_18() <span class='type'>(</span><span class='type'>etc</span><span class='type'>,</span> <span class='type'>updates</span><span class='type'>,</span> <span class='type'>web</span><span class='type'>)</span>;</pre>
+<p># Um novo começo para o site?
+<p>Bom, se essa é a sua primeira vez aqui, eu me chamo Ventriloquo, é um prazer. E você não vai conseguir entender direito quando eu digo &quot;um novo começo&quot;, afinal de contas você nem chegou a conhecer o que antecedeu esse tal novo começo.
+<p>Para isso, eu deixei um backup disponível para visualização:
+<p><a rel='nofollow noopener' href='https://ventriloquo.github.io'>https://ventriloquo.github.io</a>
+<p># Mas enfim, o que eu quero dizer com isso?
+<p>Bom, na verdade eu não sei dizer.
+<p>Essa não é nem de longe a primeira vez que eu mudo a estrutura do meu site, e com certeza não será a última. Por isso, não sei dizer com toda certeza o que eu quero com essa mudança. O site dessa forma fica extremamente simples, rápido, e fácil de portar para qualquer outro serviço de hosting que eu quiser. Com o adicional de ser extremamente conveniente para ser usado no Neocities, afinal, mesmo sem ser um apoiador, é possível enviar arquivos .json, o que significa que você pode fazer um &quot;banco de dados&quot; que contém as informações dos seus posts e exibí-los no site.
+<p>O que, na realidade, foi o objetivo principal de eu ter criado essa estrutura para meu site... no ano passado.
+<p>Pois é, essa estrutura é bem antiga, e montada a base de silver-tape. Apesar disso, ela é funcional. Ah, e sem o uso de qualquer framework.
+<p>Deixando isso de lado, ainda estou trabalhando nesse pequeno projeto, então mudanças são mais do que esperadas.
+</section>
+<section class='member'>
+<h4 id='post_2025_04_19'><span class='heading-body'>fn post_2025_04_19</span><span class='heading-extra'><a href='#post_2025_04_19'>[permalink]</a></span></h4>
+<pre class='decl'>
+<span class='keyword'>fn</span> post_2025_04_19() <span class='type'>(</span><span class='type'>etc</span><span class='type'>,</span> <span class='type'>updates</span><span class='type'>,</span> <span class='type'>web</span><span class='type'>)</span>;</pre>
+<p># Me tornei um apoiador do Neocities
+<p>É oficial, eu me tornei um apoiador do Neocities. O valor é algo que não me atrapalha, $5 mensais, o que vale +/- R$30 depois de pagar as taxas de câmbio. Em comparação com outras opções de hostings, como por exemplo a opção do meu próprio &quot;registrar&quot;, a Hostinger, que é uns R$20 reais... em um plano de 2 anos... que você tem que pagar tudo.
+<p>Pois é, em relação a custo, isso aqui é bem mais em conta. E sim, eu sei que o Github Pages faz algo semelhante só que de graça, mas não é a mesma coisa. No Github, o site não é lá tanto algo pessoal quanto ele é um projeto que a pessoas vão olhar e fazer comparações com outros projetos. No Neocities, a ideia em si é a criação de sites pessoais, sites simples, sites que lembram a estética dos anos 90 e 2000, que lembram a internet na época que ela ainda estava engatinhando.
+<p>A conveniência também é um fator muito presente no Neocities. Ele te dá acesso a uma &quot;dashboard&quot; em que você pode gerenciar todos os arquivos do site e também te da acesso a um editor de código com capacidade de &quot;code completion&quot;. Basicamente um editor de código com um LSP. E que é muito rápido inclusive.
+<p>Outra coisa que é rápida é a velocidade que o site atualiza, você aperta o botão para salvar e o site já está no ar, com todas as mudanças salvas, sem necessidade de reiniciar o Workflow e esperar todo o processo ser concluído.
+</section>
+<section class='member'>
+<h4 id='post_2025_04_21'><span class='heading-body'>fn post_2025_04_21</span><span class='heading-extra'><a href='#post_2025_04_21'>[permalink]</a></span></h4>
+<pre class='decl'>
+<span class='keyword'>fn</span> post_2025_04_21() <span class='type'>(</span><span class='type'>etc</span><span class='type'>,</span> <span class='type'>web</span><span class='type'>,</span> <span class='type'>programacao</span><span class='type'>)</span>;</pre>
+<p># Usando a Hare para criar (e gerenciar) um blog
+<p>Aqui vai mais uma prova de que eu preciso ser estudado por algum psicólogo. Bom, deixa eu primeiro explicar o que é a &quot;Hare&quot;: A Hare é uma linguagem de programação low-level, com o foco em desenvolvimento de sistemas e error-handling.
+<p>Tendo isso dito, como cacetaralhos eu estou criando um site com algo que não tem nada haver com sites?!
+<p>Na realidade é bem simples (nem tanto assim, mas pra um nerdola, até que sim). Na Hare, existe uma ferramenta para que você gere documentação para as funções exportadas de um programa ou biblioteca. Os comentários acima dessas funções são utilizados para gerar tal documentação.
+<p>Porém, essa ferramenta te permite gerar uma documentação em &apos;HTML` e, inclusive, gerar um HTML sem nenhuma template. Permitindo assim que você crie esta template, e é aí que eu tiro proveito para criar essa espécie de blog.
+<p># Mais do que só isso,
+<p>Eu também tiro proveito da própria sintaxe da Hare!
+<p>A Hare é uma linguagem de tipagem estática, ou seja, os tipos dos dados ou tipos retornados por alguma função, devem ser ditos pelo programador. E a hare tem diversos tipos e formas de declarar e utilizar esses tipos.
+<p>E uma dessas formas de utilizar tipos são as &quot;tuples&quot;.
+<p>Resumindo, imagine as tuples como um conjunto de tipos, por exemplo: Digamos que uma função X tenha como resultado o nome e a idade de alguém, você poderia usar um struct (estrutura) que possui os tipos para Strings e Intergers, tipo assim:
+<pre class='sample'>type dados_usuario = struct {
+	nome: str,
+	idade: i32,
+};
+
+export fn usuario() dados_usuario = {...};
+</pre>
+<p>Mas você também poderia usar uma Tuple contendo os dois, e ficaria +/- assim:
+<pre class='sample'>export fn usuario() (str, i32) = {...};
+</pre>
+<p>Tendo isso em mente, eu aproveitei a existência das tuples para pôr &quot;tags&quot; nos posts!
+<p># E para finalizar...
+<p>Tudo pode ser &quot;automatizado&quot; usando uma simples Makefile!
+<pre class='sample'>blog:
+	@haredoc -t -Fhtml hare_blog &gt; temp
+	@cat head.html &gt; index.html
+	@cat temp &gt;&gt; index.html
+	@rm temp
+</pre>
+<p>Isso mesmo, toda a página é &quot;compilada&quot; com 4 comandos!
+</section>
+<section class='member'>
+<h4 id='post_2025_04_22'><span class='heading-body'>fn post_2025_04_22</span><span class='heading-extra'><a href='#post_2025_04_22'>[permalink]</a></span></h4>
+<pre class='decl'>
+<span class='keyword'>fn</span> post_2025_04_22() <span class='type'>(</span><span class='type'>updates</span><span class='type'>,</span> <span class='type'>web</span><span class='type'>,</span> <span class='type'>programacao</span><span class='type'>)</span>;</pre>
+<p># Adicionei uma espécie de &quot;syntax-highlighting&quot; ao blog
+<p>Um ponto fraco que eu não comentei no meu post anterior (<a href='#post_2025_04_21' class='ref'>post_2025_04_21</a>) é que os blocos de códigos (que são chamados de &quot;exemplos&quot; de acordo com a sintáxe do Haredoc) não possuem colorização.
+<p>O que para mim, um ricer amador, é quase que um crime (eita frecura).
+<p>Então eu tomei a decisão lógica de pedir um snippet de código ao ChatGPT para que eu pudesse modificar elementos do HTML usando JavaScript.
+<p>É.
+<p>Bom, na verdade, eu só queria uma coisa para fazer com que os parágrafos que se iniciassem com uma hashtag ficassem com um estilo diferente e que a tal hashtag fosse escondida. O resto eu fiz na gambiarra usando esse snippet como base.
+<p>Isso em si é uma coisa extremamente básica e que não tem aplicação prática alguma fora do contexto de escrever em Hare... o que é a intenção desse blog, não é verdade?
+<p>Eu posso dizer que eu tive um pouco de sorte da Hare ter uma sintaxe com poucas coisas que se interligam no sentido gramatical, porque dessa forma eu não deixo o &quot;int&quot; da função &quot;print&quot; verde porque eu queria deixar o tipo &quot;int&quot; verde. O que eu tenho certeza que seria o caso de eu fazer esse mesmo blog só que focado em C.
+<p>Maassss pelo menos tá funcionando tranquilo. Por enquanto.
+<pre class='sample'>use raylib;
+
+def TITLE = &quot;Window&quot;;
+def SCREEN_RESOLUTION = Vector2 {
+	x = 1280.0,
+	y = 720.0,
+}
+
+export fn main() void = {
+	init_window(SCREEN_RESOLUTION.x: int, SCREEN_RESOLUTION.y: int, TITLE);
+	defer close_window();
+	for (!window_should_close()) {
+		set_window_title(TITLE);
+		begin_drawing();
+		defer end_drawing();
+		clear_background(GRUV_BG_BLACK);
+	};
+};</pre>
+<p><a rel='nofollow noopener' href='https://github.com/ventriloquo/hare_raylib'>https://github.com/ventriloquo/hare_raylib</a>
+</section>
+<section class='member'>
+<h4 id='post_2025_04_26'><span class='heading-body'>fn post_2025_04_26</span><span class='heading-extra'><a href='#post_2025_04_26'>[permalink]</a></span></h4>
+<pre class='decl'>
+<span class='keyword'>fn</span> post_2025_04_26() <span class='type'>(</span><span class='type'>etc</span><span class='type'>,</span> <span class='type'>updates</span><span class='type'>,</span> <span class='type'>web</span><span class='type'>)</span>;</pre>
+<p># Voltei a usar o Jekyll
+<p>Não demorou muito para a conveniência vencer
+<p>Pois é, depois de um total de 10 dias, já voltei a usar o Jekyll. Por quê? Porque o chimpanzé aqui ficou nostálgico com esse tema do Nintendo Switch que eu fiz.
+<p>Cara, sério, eu tenho um problema.
+<p>Mas, não foi só isso que ocorreu nesses curtos 10 dias, não não, nada disso. Eu tomei certas decisões que (como sempre) são contrárias a algumas opiniões minhas de meses (ou semanas) atrás.
+<p># Vamos começar falando de dinheiro
+<p>Bom, para começar, eu quero falar um pouco sobre o Neocities, o mesmo que eu comentei anteriormente que havia me tornado um apoiador.
+<p>Advinha? Não sou mais! Hahah… ;-;
+<p>Mas calma, eu não estou falindo nem nada do gênero, foi só um reajuste dos meus gastos mensais.
+<p>O motivo disso dessa vez não foi algo vindo de mim, mas sim algo relacionado ao meu irmão mais novo. Aconteceram algumas coisas relacionadas à saúde dele esse ano e por consequência disso eu e a minha família vamos precisar dar uma atenção maior à ele.
+<p>E isso também vai envolver dinheiro, querendo ou não, afinal, nada é de graça nesse mundo.
+<p>Uma coisa que ele comprou foi um iPhone 11, por influência de alguns amigos de escola e bem… eu mesmo, e eu vou dar uma ajuda para ele pagar, uns R$60,00. O que é pouco e tecnicamente não seria um impeditivo para pagar o Neocities, mas tem outra coisa que eu vou precisar ajudar.
+<p>Por recomendação médica, o meu irmão vai precisar fazer exercícios diários. Por enquanto ele não pode fazer academia, mas ele também não pode ficar sedentário, por conta do risco da condição dele voltar à tona. Sendo assim, a minha família pensou que pôr ele em um Society seria uma boa opção, afinal ele gosta de futebol e é relativamente bom também. Sendo assim ele se exercitaria e também se divirtiria.
+<p>E isso sim é algo impeditivo, por que além da mensalidade (que é um pouco mais cara que o Neocities), nós teremos que arcar com os custos de fardamento e passagem para ele, afinal ele não tem nem um emprego e nem a idade correta para correr atrás de um.
+<p>E caso ele puder fazer uma academia, eu também terei de ir com ele. O que é mais um gasto mensal que se torna um impeditivo para pagar o Neocities.
+<p>Tendo tudo isso em mente, eu estou planejando um outro arranjo de assinaturas para mim. O atual/anterior é esse aqui:
+<pre class='sample'>Serviço 	| Preço (mensal)
+================================
+Amazon Prime 	| R$13,90
+Crunchyroll 	| R$14,99
+Apple Music 	| R$21,90
+iCloud+  	| R$4,90
+Neocities 	| R$30,00 ($5,00)
+================================
+Total: R$85,69
+</pre>
+<p>Essas foram as minhas assinaturas até essa semana pelo menos, porém já estou organizando uma nova, com reduções e com a troca de 1 dos serviços listados:
+<pre class='sample'>Serviço 	| Preço (mensal)
+================================
+Amazon Prime 	| R$13,90
+Crunchyroll 	| R$14,99
+1Password	| R$19,90
+iCloud+ 	| R$4,90
+================================
+Total: R$53,69
+</pre>
+<p>Sim, eu vou tirar o Apple Music e usar o 1Password no lugar.
+<p># Woah Woah Woah, como assim “1Password”???
+<p>Como o próprio nome já dá a entender, o 1Password é um gerenciador de senhas. Um muito popular inclusive.
+<p>É. Isso é o que eu queria dizer com “tomei certas decisões que são contrárias a algumas opiniões minhas”.
+<p>Isso é correlacionado com uma neura minha em relação à segurança online. E um desses episódios em que eu fico paranoíco do nada veio poucos dias após eu configurar o meu e-mail do iCloud para usar o meu próprio domínio.
+<p>O pensamento foi o seguinte: todas as minhas senhas e chaves de acesso estão no gerenciador de senhas do iCloud, porém eu só consigo ter acesso à essas senhas se eu tiver um iPhone ou Mac, sendo assim, se eu de alguma forma perder o acesso ao meu celular, ou trocar para um Android, eu vou perder minhas senhas.
+<p>Sim, isso é uma paranóia minha. Eu uso a muito tempo um gerenciador de senhas chamado KeePassXC. Um programa gratuito e de código aberto. Porém, ele (e outros clientes do protocolo KeePass) tem um pequeno e chato problema: O banco de dados é um arquivo no seu aparelho. O que de primeira não é um problema, já que é fácil fazer um Backup desse carinha.
+<p>Mas, digamos que você comprou um celular novo e você precise fazer login na sua conta Google/Apple. A menos que a sua senha seja uma senha legível ou que você já saiba de cor… você está encrencado se não tiver um outro aparelho que tenha acesso ao seu banco de dados ou pior, se você não tiver feito um backup dele.
+<p>Você poderia dizer que o mesmo vale ao 1Password, o que não seria mentira, mas, o 1Password tem uma vantagem: ele pode ser acessado de qualquer navegador.
+<p>Quando você cria uma conta para o 1Password ele também te dá um PDF para você imprimir. Nesse PDF estão as informações necessárias para você obter acesso a sua “vault” de senhas.
+<p>Com isso, você mata dois coelhos com uma cajadada só:
+<p> Backups das suas senhas Acesso a elas independente das circunstâcias
+<p>Ele também possui algumas características muito úteis, como por exemplo a criação e integração de chaves ssh!
+<p>Ah, mais uma coisa, eu disse qualquer navegador, mas na verdade ele tem um cliente para praticamente qualquer sistema operacional! E isso inclui o Linux!
+<p>Ele tem pacotes em .deb, .rpm, binários, flatpak e snap. E o cliente de linha de comando dele (sim, ele tem isso também) tem um pacote disponível para o Alpine!
+<p>Disponibilidade não é nem de longe um problema aqui, e olha que eu estou falando de um produto comercial e de código fechado.
+<p># Então… sem músicas?
+<p>Bom, por enquanto, sim, é uma coisa paia, não vou mentir, mas temporária. Falta pouco para que as minhas faturas mais caras sejam quitadas, e quando isso acontecer, eu vou voltar a assinar esse serviço.
+<p>Até agora, o Apple Music está sendo o melhor serviço de streaming de músicas que eu já usei, e não planejo ficar sem ele por muito tempo.
+<p># Largando o Proton e migrando para o iCloud
+<p>Essa é, na minha opinião, a mudança mais radical vindo de mim.
+<p>Eu uso os serviços da Proton desde a pandemia, e eu não tenho muito a reclamar dos serviços prestados. Mas pondo na balança os valores e a conveniência desses serviços com o iCloud, simplesmente não tem como eu manter a Proton.
+<p>Por R$4,90 eu tenho 50Gb na núvem para backup da minha galeria e backups do meu celular, libero o uso de domínios próprios no e-mail e, o que me motivou a ter uma conta na Proton: e-mail aliases.
+<p>Simplesmente não tem pra quê eu manter os dois se eu só vou usar um.
+<p>Eu não digo isso porquê eu estou pagando pelos dois nem nada, é só que pagar pelo iCloud e o 1Password é mais vantajoso para mim do que pagar por R$42,00 para ter a mesma usabilidade do que pagar R$25,00.
+<p>Eu sei que no caso do Proton eu ficaria com 500Gb de armazenamento e etc. Mas eu simplesmente não uso isso tudo de armazenamento. Muito menos isso tudo em armazenamento em núvem!
+<p>Eu também não uso Bitcoin e também não uso VPN, ou seja, eu estaria pagando por serviços que eu simplesmente não uso!
+<p>Se eu, por exemplo, quiser pagar somente pelo Proton Pass (o gerenciador de senhas), isso me custaria R$27,90. Sendo que a ÚNICA vantagem dele em relação ao 1Password são os e-mail aliases, o que eu já consigo com os R$4,90 do iCloud+.
+<p>Financeiramente falando, não tem sentido algum eu preferir ele ao combo iCloud+ e 1Password. Em questão de praticidade, também, pois o Proton Pass só é disponível em navegador e aplicativo mobile.
+<p>Enquanto os valores do Proton forem altos assim sem oferecer algo de real diferencial, eu não vou utilizar essa conta.
+<p>Por isso a migração, afinal eu usava/uso os aliases do Proton em algumas das minhas contas. Eu não acho que isso vá demorar muito, mas além de fazer isso com as contas que eu usei os aliases do Proton, eu também vou fazer isso com as contas que estão com o meu Gmail registrado. E isso sim pode fazer com que eu acabe levando um pouco mais de tempo.
+<p># Algumas mudanças no site
+<p>Bom, além da clara volta do Jekyll no processo e do meu amado tema inspirado no Nintendo Switch, eu vou tentar dar uma simplificada nele e deixar ele mais otimizado.
+<p>Não que ele já não seja, mas tem certas áreas que ele poderia melhorar, como por exemplo no tamanho das imagens que eu uso.
+<p>Estou me referindo ao tamanho relacionado à resolução e armazenamento, só para deixar claro.
+<p>Essa preocupação vem do fato de que agora eu só tenho 1Gb para usar. E isso vale tanto para o Neocities, quanto para o Github Pages.
+<p>Mas parte dessa simplificação também envolve uma simplificação na configuração do Jekyll aqui. O que eu já fiz na realidade, afinal de contas esse site é simples por natureza, então não tive problemas em fazer isso.
+<p># Fin
+<p>Bom, por enquanto, isso é tudo.
+<p>Até o próximo post!
+</section>
+<section class='member'>
+<h4 id='post_2025_04_29'><span class='heading-body'>fn post_2025_04_29</span><span class='heading-extra'><a href='#post_2025_04_29'>[permalink]</a></span></h4>
+<pre class='decl'>
+<span class='keyword'>fn</span> post_2025_04_29() <span class='type'>(</span><span class='type'>etc</span><span class='type'>,</span> <span class='type'>updates</span><span class='type'>,</span> <span class='type'>web</span><span class='type'>)</span>;</pre>
+<p># Olha só quem reverteu novamente para o Haredoc!
+<p>É, desculpa por isso, eu tenho um problema.
+<p>Enfim, não tem muita coisa para falar, só... sei lá cara, tava tudo certo com o Jekyll, tudo ocorrendo do jeito que eu gosto, eu fiz um puta de um post grande do cacete, fiz uma porrada de tema e já tô usando um bagulho limitado de novo.
+<p>Sim, limitado.
+<p>Isso aqui usa um markup beeeem simples. Simples ao ponto de que, como eu mesmo já comentei anteriormente (<a href='#post_2025_04_22' class='ref'>post_2025_04_22</a>):
+<p>| Então eu tomei a decisão lógica de pedir um snippet de código ao ChatGPT para que eu pudesse modificar elementos do HTML usando JavaScript.
+<p>Modificações essas que me permitem gerar uma citação e ter um syntax highlighting para Hare nos blocos de código.
+<p>Eu também não consigo:
+<ul>
+<li>deixar algo em negrito/itálico
+<li>fazer tabelas
+<li>adicionar uma divisória
+<li>fazer links com texto customizado
+<li>fazer listas ordenadas (por mais que eu nunca use)
+<li>adicionar imagens
+</ul>
+<p>E é isso, todo o resto não tem como utilizar aqui, e ainda assim eu fiquei tentado a usar isso aqui de novo!
+<p># Arrggghhh! Eu sou o meu maior inimigo!
+<p>Sabe a melhor parte? Só tem como saber do quê que eu tô falando se:
+<ul>
+<li>você viu o site antes de eu ter essa crise de idêntidade
+<li>você tem uma cópia do código-fonte dessa versão
+</ul>
+<p>E no caso de ser a sua primeira vez aqui, ou no caso de você estar acompanhando esse blog pelo celular e não chegou a ver essa versão da qual eu estou falando, então não tem como entender nada do que eu estou falando.
+<p># Enfim
+<p>Não são só desvantagens, tem coisas boas nessa simplicidade toda. Um exemplo disso é o tamanho do site e o desempenho dele. Como o site todo (após compilado) é composto por 5 arquivos (a página index e 404, o css, a fonte e o favicon), é difícil achar algo que não dê conta de carregar esse site.
+<p>Tem JavaShit, mas é pouquíssimo e só roda na renderização da página, depois disso, não tem mais nada relacionado a isso em execução.
+</section>
+<section class='member'>
+<h4 id='post_2025_04_30'><span class='heading-body'>fn post_2025_04_30</span><span class='heading-extra'><a href='#post_2025_04_30'>[permalink]</a></span></h4>
+<pre class='decl'>
+<span class='keyword'>fn</span> post_2025_04_30() <span class='type'>(</span><span class='type'>linux</span><span class='type'>,</span> <span class='type'>sistema_operacional</span><span class='type'>)</span>;</pre>
+<p># Estou usando o Xubuntu agora...
+<p>Esse não é o tipo de assunto que eu costumo fazer um post sobre, mas acho que vale a penar comentar um pouco.
+<p>Bom, para começar, a minha distro favorita é a Alpine. Ela é simples, rápida, versátil e também é beeem pequena. Mas tem umas coisas que são um pouco chatas nela, pelo menos por enquanto. Coisas como:
+<ul>
+<li>pacotes não disponíveis para ela
+<li>a musl tendo uma atualização que quebra a compatibilidade com alguns programas
+<li>certas coisas precisarem de muito mais configurações do que outras distros
+</ul>
+<p>E como eu falei no <a href='#post_2025_04_26' class='ref'>post_2025_04_26</a>, eu estou usando o 1Password, e ele simplesmente não abre mais no Alpine. Porque o Musl removeu certas funções &quot;antiquadas&quot; em favor de outras mais seguras, o que quebrou a compatibilidade de um monte de coisa de uma vez só.
+<p>Não acho que vá demorar muito até isso ser corrigido, mas, por enquanto pelo menos, eu não vou usar o Alpine. No lugar eu usarei o Xubuntu.
+<p># Mais leve que o padrão e pode ficar ainda mais enxuto.
+<p>O instalador mais novo da Canonical te permite fazer uma instalação &quot;mínima&quot;, o que no caso do Xubuntu, que já é mais leve que o Ubuntu padrão, faz dele algo quase que equivalente ao Alpine, depois de executar o script:
+<pre class='sample'>setup-desktop xfce
+</pre>
+<p>O que faz do Xubuntu, em termos de usabilidade e praticidade, superior ao Alpine para mim. Até mesmo com a minha configuração (o meu rice, como seria chamado na comunidade linux) com o Sway, ele se comporta de forma que o Alpine, porém mais... estável.
+<p>E sim, eu estou usando o meu setup nesse exato momento, aqui, uma screenshot:
+<p><a rel='nofollow noopener' href='https://0x0.st/s/gCFGKJQlDECJp8b-nLpbEw/8WFk.png'>https://0x0.st/s/gCFGKJQlDECJp8b-nLpbEw/8WFk.png</a>
+<p># Enfim
+<p>Eu nem sei muito bem o porquê de eu estar escrevendo esse post, eu não estou falando nada de relevante aqui. Mas, de qualquer forma, acho que isso faz bem para mim.
+<p>Até o próximo post!
+</section>
+<section class='member'>
+<h4 id='post_2025_05_01'><span class='heading-body'>fn post_2025_05_01</span><span class='heading-extra'><a href='#post_2025_05_01'>[permalink]</a></span></h4>
+<pre class='decl'>
+<span class='keyword'>fn</span> post_2025_05_01() <span class='type'>void</span>;</pre>
+<p># Um design um pouco... familiar
+<p>Não sei se você usa, usou ou já viu o Github, mas se já, acho que você já notou uma certa semelhança da aparência desse site com as páginas de readme do Github.
+<p>O motivo é porque eu estou me inspirando nela mesmo :P.
+<p>Uma das últimas coisas que adicionei foram os &quot;alerts&quot;, que são decorações bonitinhas para tipos específicos de &quot;blockquotes&quot; (citações).
+<p>Eu deixei exemplos na página de testes (<a href='#post_1970_01_01' class='ref'>post_1970_01_01</a>).
+<p>Ainda estou experimentando algumas coisas por aqui, mas por enquanto, acho que o resultado está sendo satisfatório.
+<p>Também troquei a fonte do site, antes eu estava usando a Iosevka, agora estou usando a JetBrains Mono. Motivo? Bem, ela é simplesmente é mais leve. É. Eu poderia dizer que a aparência também foi um fator, mas não acho que isso seria um fator decisivo.
+<p># Aos poucos vou melhorando o Markup daqui
+<p>O Markup do Haredoc é extremamente simples, esses títulos, alerts e syntax-highlighting são todos frutos de um JavaScript simples. Ainda tem bastante coisa faltando aqui, como por exemplo, uma forma de fazer algum texto ficar em negrito.
+<p>Planejo implementar esse tipo de coisa conforme esse blog evolui. O que não acho que vá demorar tanto, afinal de contas, em +/- 15 dias esse blog passou por 3 reworks diferentes.
+</section>
+<script>
+  document.querySelector("pre").setAttribute('id', 'list')
+  // Markup
+  estilizarElementoComCaractere('#', 'title');
+  estilizarElementoComCaractere('|', 'quote');
+  estilizarElementoComCaractere('[!NOTE]', 'note');
+  estilizarElementoComCaractere('[!TIP]', 'tip');
+  estilizarElementoComCaractere('[!IMPORTANT]', 'important');
+  estilizarElementoComCaractere('[!WARNING]', 'warning');
+  estilizarElementoComCaractere('[!CAUTION]', 'caution');
+
+  // Cores nos códigos
+  estilizarCodigo('=', 'yellow');
+  estilizarCodigo('true', 'orange');
+  estilizarCodigo('false', 'orange');
+  estilizarCodigo('@symbol', 'orange');
+  estilizarCodigo('export', 'red');
+  estilizarCodigo('return', 'red');
+  estilizarCodigo('use', 'red');
+  estilizarCodigo('defer', 'red');
+  estilizarCodigo('def', 'red');
+  estilizarCodigo('type', 'purple');
+  estilizarCodigo('enum', 'purple');
+  estilizarCodigo('const', 'purple');
+  estilizarCodigo('match', 'purple');
+  estilizarCodigo('let', 'purple');
+  estilizarCodigo('fn', 'purple');
+  estilizarCodigo('switch', 'purple');
+  estilizarCodigo('break', 'purple');
+  estilizarCodigo('case', 'purple');
+  estilizarCodigo('if', 'purple');
+  estilizarCodigo('else', 'purple');
+  estilizarCodigo('assert', 'purple');
+  estilizarCodigo('len', 'purple');
+  estilizarCodigo('for', 'purple');
+  estilizarCodigo('yield', 'purple');
+  estilizarCodigo('free', 'purple');
+  estilizarCodigo('delete', 'purple');
+  estilizarCodigo('insert', 'purple');
+  estilizarCodigo('append', 'purple');
+  estilizarCodigo('static', 'purple');
+  estilizarCodigo('+', 'lyellow');
+  estilizarCodigo('-', 'lyellow');
+  estilizarCodigo('/', 'lyellow');
+  estilizarCodigo('*', 'lyellow');
+  estilizarCodigo('!', 'lyellow');
+  estilizarCodigo('||', 'lyellow');
+  estilizarCodigo(',', 'lpurple');
+  estilizarCodigo(';', 'lpurple');
+  estilizarCodigo('{', 'lpurple');
+  estilizarCodigo('}', 'lpurple');
+  estilizarCodigo('[', 'lpurple');
+  estilizarCodigo(']', 'lpurple');
+  estilizarCodigo('::', 'lpurple');
+  estilizarCodigo('(', 'lpurple');
+  estilizarCodigo(')', 'lpurple');
+  estilizarCodigo('struct', 'lblue');
+  estilizarCodigo('str', 'lblue');
+  estilizarCodigo('i64', 'lblue');
+  estilizarCodigo('i32', 'lblue');
+  estilizarCodigo('i16', 'lblue');
+  estilizarCodigo('i8', 'lblue');
+  estilizarCodigo('f32', 'lblue');
+  estilizarCodigo('f64', 'lblue');
+  estilizarCodigo('u8', 'lblue');
+  estilizarCodigo('u16', 'lblue');
+  estilizarCodigo('u32', 'lblue');
+  estilizarCodigo('u64', 'lblue');
+  estilizarCodigo('opaque', 'lblue');
+  estilizarCodigo('void', 'lblue');
+  estilizarCodigo('rune', 'lblue');
+  estilizarCodigo('size', 'lblue');
+  estilizarCodigo('null', 'lblue');
+  estilizarCodigo('nullable', 'lblue');
+</script>
+</body></html>
