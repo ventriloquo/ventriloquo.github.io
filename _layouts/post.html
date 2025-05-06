@@ -1,0 +1,41 @@
+{% include head.html %}
+<body>
+  <div class="post">
+    <div style="margin-bottom: 1em">
+      <a class="button" href="/blog">Voltar</a>
+      <span class="switcher" style="visibility: hidden; user-select: none">|</span>
+      <a class="switcher button" href="{{page.previous.url}}">Anterior</a>
+      <a class="switcher button" href="{{page.next.url}}">Próximo</a>
+      <span style="visibility: hidden; user-select: none">|</span>
+      <a class="button" href="mailto:{{site.email}}?subject=Feedback sobre o post: {{ page.title }}" >Feedback</a>
+    </div>
+    <hgroup>
+        <time style="color: var(--grey)">{{ page.date | date: "%d/%m/%Y" }}</time>
+        <h1>{{ page.title }}</h1>
+        <p>{{ page.description }}</p>
+        <img style="width: 98%; height: 400px; object-fit: cover" src="/assets/img/thumbnails/{{page.thumbnail}}">
+    </hgroup>
+    <div>
+      {{ content }}
+    </div>
+  </div>
+  <div class="cards related">
+    <h4>Leia também</h4>
+    {% for related in site.related_posts limit: 5 %}
+    <a href="{{ related.url }}">
+      <div class="card">
+        <div class="card_image">
+          {% if related.thumbnail %}
+            <img src="/assets/img/thumbnails/{{related.thumbnail}}">
+            {% else %}
+            <p>Imagem não encontrada</p>
+          {% endif %}
+        </div>
+        <div class="card_title">
+          <h3>{{ related.title }}</h3>
+        </div>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</body>
