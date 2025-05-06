@@ -1,4 +1,4 @@
-@import url("/assets/css/themes/default.css");
+@import url("/assets/css/themes/gruv.css");
 @import url("/assets/css/code.css");
 
 @font-face {
@@ -123,7 +123,6 @@ a:hover {
   z-index: 100;
   max-width: 70ch;
   border-radius: 3px;
-  margin-bottom: 2em;
 }
 
 .cards a, .cards h3 {
