@@ -1,0 +1,30 @@
+---
+layout: default.vto
+title: "Post"
+---
+{{ if possui_bloco_de_código }}
+<head>
+  <link href="/assets/css/prism.css" rel="stylesheet">
+  <script src="/assets/js/prism.js" defer></script>
+</head>
+{{ /if }}
+<div class="post" data-pagefind-body>
+  <article>
+    <div class="center">
+      <div class="post-thumbnail">
+        <p class="center">
+          {{ thumbnail }}
+        </p>
+      </div>
+    </div>
+    {{ date.toLocaleDateString("pt-BR") }}
+    <hgroup>
+      <h1>{{ title }}</h1>
+      <p>{{ description }}</p>
+    </hgroup>
+    <hr>
+    <div class="post-content">
+      {{ content }}
+    </div>
+  </article>
+</div>

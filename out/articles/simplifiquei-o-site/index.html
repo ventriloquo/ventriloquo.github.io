@@ -1,0 +1,73 @@
+<!doctype html><html lang=pt-br><meta content="text/html; charset=UTF-8"http-equiv=Content-Type><meta content=pt-br http-equiv=Content-Language><meta content="Não estou mais usando nem o Bootstrap, nem o Jekyll."name=description><meta content=Tukain name=author><meta content=Lume name=generator><meta content="width=device-width,initial-scale=1"name=viewport><link href=/assets/fav.webp rel=icon type=image/webp><link href=/assets/css/styles.css rel=stylesheet><title>Simplifiquei o site</title><body><header><nav><input id=sidebar-active type=checkbox><label class=open-sidebar-button for=sidebar-active>Menu</label><div class=links-container><label class=close-sidebar-button for=sidebar-active>Fechar</label><a class=home-link href=/>início</a><a href=/blog>blog</a><a href=/tutoriais>tutoriais</a><a href=/tags>tags</a><a href=/search>pesquisar</a><a href=/conversor>conversor</a></div></nav></header><main><link href=/assets/css/prism.css rel=stylesheet><script defer src=/assets/js/prism.js></script><div class=post data-pagefind-body><article><div class=center><div class=post-thumbnail><p class=center>c[_] Vai um café?</div></div> 24/06/2024 <hgroup><h1>Simplifiquei o site</h1><p>Não estou mais usando nem o Bootstrap, nem o Jekyll.</hgroup><hr><div class=post-content><p>Pois é, essa é mais uma prova do quão indeciso eu consigo ser com esse site. Eu quase que fiz um refactor completo de como o site funciona, o motivo? Eu queria deixar esse site mais fácil de ser editado (ou até mesmo atualizado) pelo Neocities.<h1>Como ele funciona agora?</h1><p>Agora esse site basicamente voltou a sua origem de quando eu tinha que escrever o HTML de cada post na mão. Claro que eu sempre tinha uma template para poder agilizar esse trabalho, mas ainda assim era bem ineficiênte.<p>A diferença é que agora eu fiz um shell-script que cuida de fazer todo o processo repetitivo e me deixa por conta de simplesmente escrever o conteúdo.<p>O script é tão simples que eu posso tornar ele em um script posix sem muitas dificuldades.<h1>Tive que sacrificar algumas coisas</h1><p>Como toda mudança, são necessários alguns sacrifícios, e no caso desse site, foram as tags.<p>Isso não é lá um grande problema, mas ainda assim é uma feature a menos aqui.<p>Como eu vou estudar Javascript, eu acho que eu posso implementar um sistema de tags simples, no mesmo estilo que o meu antigo sistema de tabela de conteúdos.<h1>As dependências do script</h1><p>Em termos simples: uma distro Linux ou sistema unix-like.<p>Tudo o que esse script faz é uma manipulação de arquivos e nada além disso, e para poder provar isso, aqui está todo o código do script:<pre><code class=language-bash>#!/usr/bin/env bash
+
+echo "Nome do post: "
+read TMPNAME
+echo "Descrição do post: "
+read DESCR
+echo "Thumbnail: "
+read THUMB
+
+POSTNAME="$(echo "$TMPNAME" | tr ' ' '-')"
+
+touch posts/$POSTNAME.html
+cat posts/_template.html > posts/$POSTNAME.html
+
+mkdir -p tmp
+
+head --lines=33 blog.html > tmp/top
+tail --lines=+34 blog.html > tmp/bottom
+
+cat << EOF > tmp/middle
+    &LTarticle class="card">
+      &LTa class="post-link" href="/posts/$POSTNAME.html">
+        &LTdiv class="thumbnail">
+          &LTp class="center">
+            $THUMB
+          
+        &LT/div>
+        &LThgroup>
+          &LTh3>$TMPNAME&LT/h3>
+          $DESCR
+        &LT/hgroup>
+      &LT/a>
+    &LT/article>
+EOF
+
+head --lines=27 posts/$POSTNAME.html > tmp/post-top
+tail --lines=+28 posts/$POSTNAME.html > tmp/post-bottom
+
+cat << EOF > tmp/post-middle
+      &LTdiv class="post-thumbnail">
+        &LTp class="center">
+          $THUMB
+        
+      &LT/div>
+      &LThgroup>
+        # $TMPNAME
+        $DESCR
+      &LT/hgroup>
+      &LThr>
+      &LTdiv class="post-content">
+
+        CONTEÚDO
+
+      &LT/div>
+EOF
+
+cp blog.html blog.html.bk
+cp posts/$POSTNAME.html $POSTNAME.html.bk
+
+cat tmp/top     >  blog.html
+printf "\n"     >> blog.html
+cat tmp/middle  >> blog.html
+printf "\n"     >> blog.html
+cat tmp/bottom  >> blog.html
+
+cat tmp/post-top      >  posts/$POSTNAME.html
+printf "\n"           >> posts/$POSTNAME.html
+cat tmp/post-middle   >> posts/$POSTNAME.html
+printf "\n"           >> posts/$POSTNAME.html
+cat tmp/post-bottom   >> posts/$POSTNAME.html
+
+$EDITOR posts/$POSTNAME.html
+</code></pre><p>Eu sei que esse código não é o mais eficiênte, mas o importante é que ele funciona.<h1><em>Fin</em></h1><p>Bem, isso é tudo o que eu tenho a dizer por agora. Até o próximo post!</div></article></div></main><footer><p>https://tukain.xyz/ © Tukain, 2025.</footer>

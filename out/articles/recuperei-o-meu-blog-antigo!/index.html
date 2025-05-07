@@ -1,0 +1,46 @@
+<!doctype html><html lang=pt-br><meta content="text/html; charset=UTF-8"http-equiv=Content-Type><meta content=pt-br http-equiv=Content-Language><meta content="Esse carinha tava guardado em minhas memórias a muito tempo"name=description><meta content=Tukain name=author><meta content=Lume name=generator><meta content="width=device-width,initial-scale=1"name=viewport><link href=/assets/fav.webp rel=icon type=image/webp><link href=/assets/css/styles.css rel=stylesheet><title>Recuperei o meu blog antigo!</title><body><header><nav><input id=sidebar-active type=checkbox><label class=open-sidebar-button for=sidebar-active>Menu</label><div class=links-container><label class=close-sidebar-button for=sidebar-active>Fechar</label><a class=home-link href=/>início</a><a href=/blog>blog</a><a href=/tutoriais>tutoriais</a><a href=/tags>tags</a><a href=/search>pesquisar</a><a href=/conversor>conversor</a></div></nav></header><main><link href=/assets/css/prism.css rel=stylesheet><script defer src=/assets/js/prism.js></script><div class=post data-pagefind-body><article><div class=center><div class=post-thumbnail><p class=center>☆*: .｡. o(≧▽≦)o .｡.:*☆</div></div> 05/05/2025 <hgroup><h1>Recuperei o meu blog antigo!</h1><p>Esse carinha tava guardado em minhas memórias a muito tempo</hgroup><hr><div class=post-content><h1>Eu simplesmente não acredito nisso!</h1><p>Longos foram os tempos que eu tive este blog, ô nostalgia!<p>Este blog surgiu na época em que eu ainda não trabalhava, e durou até +/- o meu 2º mês de serviço. Desde então, eu fiz tantas mudanças e tantas reviravoltas que simplesmente eu achava que essa versão do site tinha virado uma história que só estava presente na minha cabeça e na de mais 3 pessoas:<ul><li>Um primo meu<li>Um amigo meu<li>A minha namorada</ul><p>Mas, essa parte de ter durado até +/- o meu 2º mês de trabalho foi o que salvou esse carinha, porquê o símeo que está escrevendo aqui, achou na época uma ótima ideia de fazer um backup no computador do trabalho ._.<p>Mentira, não era backup coisa nenhuma, eu provavelmente estava desenvolvendo a versão feita usando Emacs desse site. Pois é, até isso eu usei. Ainda está no ar (por enquanto), o link é esse <a href=https://tukain.codeberg.page>aqui</a>.<h1>A maior diferença dele</h1><p>Esse site usa um <a href=https://en.wikipedia.org/wiki/Static_site_generator>SSG</a> diferente da versão então mais recente, que usa <a href=https://jekyllrb.com>Jekyll</a>, ele usa o <a href=https://lume.land>Lume</a>!<p>O Lume é um SSG feito pelo pessoal do [Deno.land], um runtime Javascript/Typescript, e que em si, é feito usando Typescript. E olha, o bichinho é rápido viu.<p>Além disso, o Lume usa uma <a href=https://en.wikipedia.org/wiki/Template_processor>templating engine</a> diferente do Jekyll também, ele usa o <a href=https://vento.js.org>Vento.js</a> no lugar do <a href=https://shopify.github.io/liquid/>Liquid</a>. As diferenças são mais práticas do que parecem na realidade.<p>A Liquid é apenas uma templating engine, com parâmetros pré-definidos, enquanto o Vento.js te permite usar JAVASCRIPT para fazer ações customizadas/processar o conteúdo, ou seja, você pode fazer qualquer coisa praticamente.<h1>MUITOS PLUGINS ÚTEIS</h1><p>A minha configuração atual é a seguinte:<pre><code class=language-js>import lume from "lume/mod.ts";
+import feed from "lume/plugins/feed.ts";
+import lightningCss from "lume/plugins/lightningcss.ts";
+import minifyHTML from "lume/plugins/minify_html.ts";
+import pagefind from "lume/plugins/pagefind.ts";
+
+const site = lume({
+  src: "./src",
+  dest: "./out",
+  server: {
+    open: false,
+  }
+});
+
+
+site.ignore("README.md", ".git", ".gitignore");
+
+site.script("update", "git add . && git commit -m 'Update' && git push");
+
+site.copy([".woff2", ".png", ".webp", ".jpg", ".ico", ".gif"]);
+
+site.loadAssets([".js", ".json"])
+
+site.use(pagefind())
+
+site.use(minifyHTML())
+
+site.use(lightningCss({ includes: "assets/css/" }))
+
+site.use(feed({
+  output: ["/feed.xml", "/feed.json"],
+  query: "type=post",
+  info: {
+    title: "=site.title",
+    description: "=site.description",
+  },
+  items: {
+    title: "=title",
+    description: "=excerpt",
+  },
+}));
+
+export default site;
+
+</code></pre><p>Os plugins em si são:<ul><li>o creador de feeds rss e json<li>o minificador de HTML<li>o minificador de CSS<li>a search engine do site</ul><p>Todos eles sendo bem simples de instalar, bastando apenas um <code>import</code> e pronto! Sem a necessidade de usar um arquivo separado para listar os plugins que deseja, configurar esses plugins no arquivo de configuração do site e depois rodar um comando que não é o comando que você usa para <strong>GERAR</strong> o site... te soa familiar, Jekyll?<pre><code class=language-sh>Gemfile -> _config.yml -> bundle
+</code></pre><h1>LumeCMS</h1><p>E claro, a cereja no bolo, esse carinha tem um freaking <a href=https://pt.wikipedia.org/wiki/Sistema_de_gerenciamento_de_conte%C3%BAdo>CMS</a>! Que inclusive, é bem simples de se configurar e de utilizar.<p>Ele basicamente facilita na criação de conteúdo, dando menus, botões e listas que você preenche com as informações da postagem e, claro, escreve o conteúdo em si.<p>Ele também é configurado da mesma maneira que o site em si, só que em um arquivo diferente, o <code>_cms.js</code> (ou <code>_cms.ts</code>, caso você esteja usando Typescript).<h1>Vou fazer algumas mudanças ainda</h1><p>O que eu planejo fazer é uma espécie de combinação entre esse site e o anterior, feito com Jekyll.<p>E uma das coisas que esse carinha precisa, é de um belo carinho do meu CSS atual.<p>Outra coisa que vou ter que fazer é basicamente re-aprender a usar o Vento.js, e mais importante, vou ter que me lembrar de como navego nessa code-base.<p>Vou nessa!</div></article></div></main><footer><p>https://tukain.xyz/ © Tukain, 2025.</footer>

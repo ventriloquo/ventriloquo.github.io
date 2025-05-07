@@ -1,0 +1,51 @@
+<!doctype html><html lang=pt-br><meta content="text/html; charset=UTF-8"http-equiv=Content-Type><meta content=pt-br http-equiv=Content-Language><meta content="Um build system no estilo do Zig Build System"name=description><meta content=Tukain name=author><meta content=Lume name=generator><meta content="width=device-width,initial-scale=1"name=viewport><link href=/assets/fav.webp rel=icon type=image/webp><link href=/assets/css/styles.css rel=stylesheet><title>Harebuild</title><body><header><nav><input id=sidebar-active type=checkbox><label class=open-sidebar-button for=sidebar-active>Menu</label><div class=links-container><label class=close-sidebar-button for=sidebar-active>Fechar</label><a class=home-link href=/>início</a><a href=/blog>blog</a><a href=/tutoriais>tutoriais</a><a href=/tags>tags</a><a href=/search>pesquisar</a><a href=/conversor>conversor</a></div></nav></header><main><link href=/assets/css/prism.css rel=stylesheet><script defer src=/assets/js/prism.js></script><div class=post data-pagefind-body><article><div class=center><div class=post-thumbnail><p class=center>(@ _ @)</div></div> 27/05/2024 <hgroup><h1>Harebuild</h1><p>Um build system no estilo do Zig Build System</hgroup><hr><div class=post-content><p>Quanto tempo meu caro leitor, espero que você esteja bem.<p>Hoje eu trago algo que comecei a fazer a pouco tempo, e que, pelo menos para mim, é algo que acho que será útil assim que estiver concluído. Estou me referindo a um build-system que comecei a fazer para a Hare, ele está em seus estágios iniciais, eu nem sequer li sobre como fazer um build-system ainda.<h1>Então como que ele funciona por enquanto?</h1><p>No momento ele é basicamente um shell-script glorificado, não que isso seja um problema, mas ainda assim continua sendo algo que um shell-script (ou Makefile) conseguiria fazer de forma até mesmo mais simples.<p>Porém, a ideia é ter uma forma de compilar um programa feito em Hare, usando um outro programa feito em Hare, quiçá até mesmo integrar o build-system no próprio código-fonte do programa.<h1>Como está a implementação atual?</h1><p>Por enquanto, como eu já disse, ela é basicamente um shell-script glorificado, mas para fins de tranparência (já que eu não criei um repositório para esse projeto no momento) aqui está o código-fonte dela:<pre><code class=language-rust>use fmt;
+use os;
+use os::exec;
+
+type Build = struct {
+	flag:	str,
+	target:	str,
+	link:	str,
+	output:	str,
+	src:	str,
+};
+
+fn build(b: Build) void = {
+	let cmd = exec::cmd(
+		"hare",
+		"build",
+		"-a",
+		b.target,
+		b.flag,
+		b.link,
+		"-o",
+		b.output,
+		b.src,
+	)!;
+	let proc = exec::start(&cmd)!;
+	let status = exec::wait(&proc)!;
+	assert(exec::check(&status) is void);
+};
+
+def src_file = "hello.ha";
+
+export fn main() void = {
+	let prog = Build {
+		target =	os::machine(),
+		flag =		"-R",
+		link =		"-L.",
+		src =		src_file,
+		output =	"hello",
+	};
+
+	build(prog);
+};
+
+@init fn init() void = {
+	fmt::printfln("Compilando: {}", src_file)!;
+};
+
+@fini fn init() void = {
+	fmt::println("Programa compilado!")!;
+};
+</code></pre><p>Como eu disse, extremamente simples, um shell-script glorificado, mas apesar disso, ainda é um começo de algo que pode vir a ser útil.<h1><em>Fin</em></h1><p>Bem, isso é tudo o que eu tenho a dizer por hoje.<p>Te vejo no próximo post!</div></article></div></main><footer><p>https://tukain.xyz/ © Tukain, 2025.</footer>

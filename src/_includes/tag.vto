@@ -1,0 +1,22 @@
+---
+layout: default.vto
+---
+<div class="center">
+  {{ for tag of search.pages(`${ title }`, "date=desc") }}
+    <article class="card">
+      <a class="post-link" href="{{ tag.url }}">
+      <div class="center">
+        <div class="thumbnail">
+          <p class="center">
+            {{ tag.thumbnail }}
+          </p>
+        </div>
+      </div>
+        <hgroup>
+          <h3>{{ tag.title }}</h3>
+          <p>{{ tag.description }}</p>
+        </hgroup>
+      </a>
+    </article>
+  {{ /for }}
+</div>

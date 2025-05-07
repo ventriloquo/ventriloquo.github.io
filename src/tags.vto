@@ -1,0 +1,20 @@
+---
+layout: default.vto
+title: Tags
+description: Tags dos posts/tutoriais
+---
+{{ include "components/intro.vto" }}
+<hr>
+<div class="center">
+<ul style="list-style: none; font-size: medium">
+  {{ for tag of search.pages("type=tag", "title") }}
+  <li>
+    <a href="{{ tag.url }}">
+      <article class="card center">
+        {{ tag.title |> toLowerCase }}
+      </article>
+    </a>
+  <li>
+  {{ /for }}
+</ul>
+</div>

@@ -1,0 +1,44 @@
+:root {
+  --background:           #1F1F1F;
+  --foreground:           #D6DBE5;
+  --grey:                 #303030;
+  --red:                  #F81118;
+  --green:                #2DC55E;
+  --yellow:               #ECBA0F;
+  --blue:                 #2A84D2;
+  --purple:               #4E5AB7;
+  --cyan:                 #1081D6;
+  --bright-background:    #1a1a1a;
+  --bright-foreground:    #FFFFFF;
+  --bright-grey:          #707070;
+  --bright-red:           #DE352E;
+  --bright-green:         #1DD361;
+  --bright-yellow:        #FB3D09;
+  --bright-blue:          #1081D6;
+  --bright-purple:        #5350B9;
+  --bright-cyan:          #0F7DDB;
+}
+
+.color {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  height: 200px;
+  width: 200px;
+  margin: 0.2em;
+  padding: 0.2em;
+}
+
+.color > p {
+  align-content: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.color:hover {
+  opacity: 90%;
+}

@@ -1,0 +1,25 @@
+---
+layout: default.vto
+title: Tutoriais
+description: Alguns tutoriais sobre coisas que uso, feitos por mim.
+---
+{{ include "components/intro.vto" }}
+<hr>
+<div class="center">
+{{ for tutorial of search.pages("type=tutorial", "date=desc") }}
+    <article class="card">
+      <a class="post-link" href="{{ tutorial.url }}">
+        <div class="thumbnail">
+          <p class="center">
+            {{ tutorial.thumbnail }}
+          </p>
+        </div>
+        <hgroup>
+          <h3>{{ tutorial.title }}</h3>
+          <p>{{ tutorial.description }}</p>
+        </hgroup>
+      </a>
+    </article>
+{{ /for }}
+</div>
+
