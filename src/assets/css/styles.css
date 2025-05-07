@@ -33,7 +33,25 @@
   --accent-2: #27e9bc;
 
   --border: solid 1px var(--bg-1);
+  --pagefind-ui-primary: var(--blue);
+  --pagefind-ui-text: var(--fg-1);
+  --pagefind-ui-background: var(--bg-2);
+  --pagefind-ui-border: var(--bg-1);
+  --pagefind-ui-font: "Switch";
 }
+#search {
+  width: 80ch;
+  font-weight: normal;
+}
+
+.pagefind-ui__search-input, .pagefind-ui__message, .pagefind-ui__result-title {
+  font-weight: normal !important;
+}
+
+mark {
+  background-color: var(--yellow) !important;
+}
+
 
 h1, h2, h3, dd, dt {
   color: var(--fg-1) !important;
@@ -54,11 +72,11 @@ a:hover {
   justify-content: center;
 }
 
-.button {
+button {
   color: var(--fg-1) !important;
 }
 
-.button:hover {
+button:hover {
   opacity: 90% !important;
   background-color: inherit !important;
 }
@@ -274,30 +292,37 @@ nav img, nav hgroup, .open-sidebar-button, .close-sidebar-button {
   text-align: center;
 }
 
-.button, .alternative_button {
+button, .alternative_button {
   border-radius: 3px;
   box-shadow: 0px 1px 2px 0px black;
   font-size: small;
+  margin: 5px;
   padding: 6px 20px;
   background-color: var(--bg-1);
   color: var(--fg-1);
   transition: all 0.2s;
 }
 
-.button:hover {
+button:hover {
   opacity: 100%;
   background-color: var(--accent-2);
   color: var(--bg-0);
 }
 
-.button:active, .alternative_button {
+button:active, .alternative_button {
   box-shadow: inset 0px 1px 2px 0px black;
   background-color: var(--bg-2);
   color: var(--fg-1);
 }
 
-.button:active, .alternative_button:hover {
+button:active, .alternative_button:hover {
   opacity: 100%;
+}
+canvas {
+  max-width: 500px;
+  max-height: 300px;
+  display: block;
+  margin: auto;
 }
 
 hr {
