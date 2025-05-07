@@ -518,6 +518,10 @@ footer > p {
   #sidebar-active:checked ~ .links-container {
     left: 0;
   }
+  
+  .post-thunbnail {
+    font-size: medium;
+  }
 }
 
 @media only screen and (max-width: 800px) {
