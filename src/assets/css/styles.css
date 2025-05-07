@@ -40,7 +40,7 @@ h1, h2, h3, dd, dt {
 }
 
 a {
-  color: var(--blue);
+  color: var(--accent-1);
   text-decoration: none;
 }
 
@@ -221,7 +221,7 @@ nav img, nav hgroup, .open-sidebar-button, .close-sidebar-button {
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
-  font-size: 24pt;
+  font-size: large;
 }
 
 .cards a, .cards h3 {
@@ -445,7 +445,7 @@ footer {
   padding: 1em 0;
   margin-top: 2em;
   text-align: center;
-  background-color: var(--grey);
+  background-color: var(--bg-1);
 }
 
 footer > p {
@@ -519,7 +519,7 @@ footer > p {
     left: 0;
   }
   
-  .post-thunbnail {
+  .post-thumbnail {
     font-size: medium;
   }
 }
