@@ -74,6 +74,7 @@ a:hover {
 
 button {
   color: var(--fg-1) !important;
+  border: none;
 }
 
 button:hover {
