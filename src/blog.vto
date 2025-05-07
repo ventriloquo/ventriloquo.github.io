@@ -1,0 +1,35 @@
+---
+layout: default.vto
+title: Meu Blog
+description: Aqui eu falo sobre coisas do meu cotidiano ou sobre assuntos que me interessam.
+---
+{{ include "components/intro.vto" }}
+<div class="center">
+  <a href="/feed.xml">
+    <img style="border-radius: 3px; width: 16px; margin: 5px" src="/assets/rss.webp">
+  </a>
+  <a href="/feed.json">
+    <img style="border-radius: 3px; width: 16px; margin: 5px" src="/assets/json.webp">
+  </a>
+</div>
+<hr>
+
+<div class="center">
+{{ for post of search.pages("type=post", "date=desc") }}
+    <a href="{{ post.url }}" class="post-link">
+      <div class="card">
+          <div class="card_image">
+            <p>
+            {{ post.thumbnail }}
+            </p>
+          </div>
+          <div class="card_title">
+            <h3>
+              {{ post.title }}
+            </h3>
+          </div>
+      </div>
+    </a>
+{{ /for }}
+</div>
+

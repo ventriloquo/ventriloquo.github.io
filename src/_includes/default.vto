@@ -1,0 +1,35 @@
+<html lang="{{ lang }}">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="Content-Language" content="{{ lang }}" />
+  <meta name="description" content="{{ description }}" />
+  <meta name="author" content="{{ author }}" />
+  <meta name="generator" content="Lume" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="{{ favicon }}" type="image/webp" />
+  <link href="/assets/css/styles.css" rel="stylesheet">
+  <title>{{ title }}</title>
+</head>
+<header>
+  <nav>
+    <!--https://www.youtube.com/watch?v=8eFeIFKAKHw-->
+    <input type="checkbox" id="sidebar-active">
+    <label for="sidebar-active" class="open-sidebar-button">Menu</label>
+    <div class="links-container">
+      <label for="sidebar-active" class="close-sidebar-button">Fechar</label>
+      <a class="home-link" href="/">início</a>
+      {{ for link of links }}
+        <a href="{{ link.url }}">{{ link.title }}</a>
+      {{ /for }}
+    </div>
+  </nav>
+</header>
+<body>
+  <div class="content">
+    {{ content }}
+  </div>
+  <footer>
+    <p>{{ baseurl }} © {{ author }}, {{ new Date().getFullYear() }}.</p>
+  </footer>
+</body>
+</html>
