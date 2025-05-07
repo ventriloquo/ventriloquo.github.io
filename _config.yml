@@ -4,6 +4,10 @@ email: "tours_culinaria.10@icloud.com"
 description: >- # this means to ignore newlines until "baseurl:"
   Um blog simples, feito utilizando o Jekyll.
 
+collections:
+  arquivos:
+    output: true
+
 defaults:
   -
     scope:
