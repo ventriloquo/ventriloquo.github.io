@@ -29,11 +29,18 @@ Eu não vou escrever nada sério aqui.
 <iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=2511184890/size=large/bgcol=333333/linkcol=0f91ff/tracklist=false/artwork=small/track=3193833832/transparent=true/" seamless><a href="https://tobyfox.bandcamp.com/album/deltarune-chapter-2-ost">DELTARUNE Chapter 2 OST de Toby Fox &amp; Lena Raine &amp; Marcy Nabors</a></iframe>
 
 ```rust
-// Mas é óbvio que eu vou colocar um hello world aqui
-
 use fmt;
 
 export fn main() void = {
-    fmt::printfln("Olá, mundo!")!;
+	const greetings = [
+		"Hello, world!",
+		"¡Hola Mundo!",
+		"Γειά σου Κόσμε!",
+		"Привіт, світе!",
+		"こんにちは世界！",
+	];
+	for (let greeting .. greetings) {
+		fmt::println(greeting)!;
+	};
 };
 ```

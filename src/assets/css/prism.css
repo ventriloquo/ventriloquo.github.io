@@ -1,5 +1,8 @@
 /* PrismJS 1.29.0
 https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+clike+javascript+bash+c+go+liquid+lua+makefile+markup-templating+toml+yaml */
+
+@import url("/assets/css/colors.css");
+
 code[class*=language-],
 pre[class*=language-] {
   color: var(--fg-1);

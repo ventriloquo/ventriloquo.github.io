@@ -5,6 +5,7 @@ description: Esse carinha tava guardado em minhas memórias a muito tempo
 thumbnail: '☆*: .｡. o(≧▽≦)o .｡.:*☆'
 tags:
   - updates
+  - ssg
 type: post
 possui_bloco_de_código: true
 ---
