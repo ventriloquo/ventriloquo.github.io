@@ -6,7 +6,7 @@ import pagefind from "lume/plugins/pagefind.ts";
 
 const site = lume({
   src: "./src",
-  dest: "./out",
+//  dest: "./out",
   prettyUrls: true,
   server: {
     open: false,
