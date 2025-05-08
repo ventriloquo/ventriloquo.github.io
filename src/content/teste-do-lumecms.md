@@ -16,10 +16,10 @@ Alado
 
 Esse bagulho tá funcionando mesmo 😱
 
-![Image](/assets/media/posts/46a54cc30ea925f976fc9b3f046da947.png)
+![Image](/assets/media/46a54cc30ea925f976fc9b3f046da947.png)
 
 Mano, até em celular isso funciona
 
-![Image](/assets/media/posts/6ebb3e1fd862ed25261a0aa0e51a5564.png)
+![Image](/assets/media/6ebb3e1fd862ed25261a0aa0e51a5564.png)
 
 Agora eu poderia usar o ChromeOS Flex sem nenhum problema... Isso é, se o Lume funcionar no Debian.

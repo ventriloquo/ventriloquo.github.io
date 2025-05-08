@@ -272,7 +272,7 @@ Sinta-se livre para examinar o "[código-fonte](https://github.com/tukainpng/tuk
 deste website, quem sabe você aprenda algo de verdade vendo como que se usa o
 Jekyll na prática.
 
-Logicamente, eu recomendo fortemente que você [![Image](/assets/media/tutoriais/5ea23c05e100e5031eca4abfca246e35.jpg)](https://jekyllrb.com/docs/)
+Logicamente, eu recomendo fortemente que você [![Image](/assets/media/5ea23c05e100e5031eca4abfca246e35.jpg)](https://jekyllrb.com/docs/)
 (pesquise no Google o que isso significa 😁)
 
 Enfim, eu vou dar o fora agora, qualquer erro que você perceba neste artigo ou

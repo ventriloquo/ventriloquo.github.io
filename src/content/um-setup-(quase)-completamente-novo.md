@@ -45,7 +45,7 @@ Olha, apesar de ser uma modificação "simples", o setup parece com
 algo muito diferente do anterior (que usava a Onedark), apesar de ter
 sido baseado nele.
 
-![Image](/assets/media/posts/87bfdf33161881e40a88ddcf123be791.webp)
+![Image](/assets/media/87bfdf33161881e40a88ddcf123be791.webp)
 
 Eu também fiz algumas simpleficações com o setup, como por exemplo,
 removendo o mpd e programas/scripts relacionados e fazendo/adaptando

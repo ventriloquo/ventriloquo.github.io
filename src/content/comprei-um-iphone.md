@@ -12,7 +12,7 @@ tags:
 type: post
 possui_bloco_de_código: false
 ---
-![](/assets/media/posts/eah.jpg)
+![](/assets/media/eah.jpg)
 
 Devo admitir que essa compra foi em grande parte algo que fiz puramente
 no emocional, pois depois de alguns meses trabalhando eu finalmente

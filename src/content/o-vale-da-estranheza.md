@@ -18,7 +18,7 @@ não, nada disso, muito pelo contrário, eu sou do tipo que prefere assitir uma 
 
 A minha primeira exposição ao vale da estranheza foi, provavelmente como muitas outras pessoas, com o meme do senhor incrível.
 
-![Image](/assets/media/posts/sr_incrivel.png)
+![Image](/assets/media/sr_incrivel.png)
 
 É óbvio que esse meme não é a melhor representação do Vale da estranheza, mas ele já é uma boa demonstração do que ele pode ser. O sentimento que imagens do Vale da estranheza proporcionam é o de… desconforto. Pelo menos no meu caso esse é o sentimento. Algo que está errado, de alguma forma, e você consegue perceber, porém, ele também te lembra algo que não lhe é estranho, mundano, comum. Esse conflito gera esse desconforto esquisito.
 
@@ -36,11 +36,11 @@ Uns meses atrás, eu comecei a jogar [Silent Hill](https://en.wikipedia.org/wiki
 
 Devido às limitações da época, existe uma presença fortíssima de compressão de alguns assets, como por exemplo, as texturas e os efeitos sonoros. No caso das texturas, em alguns momentos é difícil até mesmo dizer se o que tá na sua frente é uma mancha de sujeira, uma queimadura ou então até mesmo sangue ressecado. Literalmente o seu cérebo é quem vai decidir da hora.
 
-![Image](/assets/media/posts/silent_hill_screenshot_03.jpg)
+![Image](/assets/media/silent_hill_screenshot_03.jpg)
 
 Outra coisa boa a se comentar é a visão extremamente limitada. Isso é uma limitação do próprio hardware do Playstation, mas a equipe que fez Silent Hill contornou isso e transformou em parte da gameplay. E olha, se tem uma coisa que me assusta, é não saber se o que tá na minha frente é um ser humano, ou outra coisa que provavelmente não tá afim de conversar.
 
-![Image](/assets/media/posts/SH1_rifle.jpg)
+![Image](/assets/media/SH1_rifle.jpg)
 
 Infelizmente eu perdi o meu save do jogo, eu estava na seção do parque de diversões, por conta da frustração de ter perdido o save e também por preguiça de ter que jogar tudo de novo, eu acabei não jogando mais. Porém, esse jogo tem o meu respeito. Ele tem pouquíssimos jumpscares, a maior parte da gameplay ele simplesmente ataca a sua ansiedade e te deixa apreensivo, mas ainda assim ele sabe dosar, e muito bem, quando ele deve fazer o seu coração bater um tanto mais rápido.
 
@@ -49,11 +49,11 @@ Mais recentemente foi lançado na Netflix a adaptação do mangá [Dandadan](htt
 
 [No vídeo que ele comenta sobre Dandadan](https://youtu.be/eUQiwNVp6MU?si=M4N2eF5DmrYD7ZFp), o Naythf fala sobre vários aspectos do mangá, como por exemplo os temas abordados e gêneros da obra. O curioso para mim foi a parte de terror do mangá. No maior estilo [Junji Ito](https://en.wikipedia.org/wiki/Junji_Ito), as partes de terror focam (e muito) na estranheza. Não sei dizer se chega a poder ser considerado algo do Vale, mas no mínimo chega perto.
 
-![Image](/assets/media/posts/dandadan-manga-primo-capitolo-05.jpg)
+![Image](/assets/media/dandadan-manga-primo-capitolo-05.jpg)
 
 Uma outra aparição de algo que me lembra o vale da estranheza foi no anime [Chainsaw Man](https://en.wikipedia.org/wiki/Chainsaw_Man), no caso em uma de suas finalizações de episódio. Para ser mais exato, na [5ª finalização](https://www.youtube.com/watch?v=ymQ3wEIq84Y).
 
-![Image](/assets/media/posts/chainsaw-man-ending-5.webp)
+![Image](/assets/media/chainsaw-man-ending-5.webp)
 
 Sei que a intenção não era exatamente o Vale, mas ainda assim não consigo assistir essa finalização sem fazer essa comparação.
 
@@ -68,7 +68,7 @@ Sinceramente esse gênero de terror é o que mais me dá medo, por quê diferent
 
 Essa é a parte que mais pega nos meus nervos. O fato de você não só ver ou achar, mas até mesmo de você ter alguma lembrança com o local. Como por exemplo, um parque aquático abandonado. Apesar de nunca ter ido a um pessoalmente, até mesmo eu fico com calafrios em ver algo como isso:
 
-![Image](/assets/media/posts/liminal.webp)
+![Image](/assets/media/liminal.webp)
 
 Não tem nada de errado com o local em si, nem com a imagem, porém, ainda assim, algo parece estar errado.
 
@@ -80,7 +80,7 @@ Mas sem sombra de dúvidas, uma das modas da internet relacionada a esse tema qu
 
 ## The Backrooms
 
-![Image](/assets/media/posts/HobbyTown_USA_Oshkosh_interior_under_construction_2002_(The_Backrooms).jpg)
+![Image](/assets/media/HobbyTown_USA_Oshkosh_interior_under_construction_2002_(The_Backrooms).jpg)
 
 Tudo começou com um post na aba paranormal do 4chan, a mensagem do usuário em si não tinha nada de mais, porém a resposta é uma coisa completamente a parte.
 
@@ -100,11 +100,11 @@ Durante a onda de vídeos sobre as Backrooms, os vídeos dele se destacavam (e m
 
 Ele não só conseguiu fazer uma combinação de Analog Horror com The Backrooms, como fez isso beirando a perfeição.
 
-![Image](/assets/media/posts/The-Backrooms-Kane-Pixels-01.jpg)
+![Image](/assets/media/The-Backrooms-Kane-Pixels-01.jpg)
 
 Foi basicamente dos vídeos dele que surgiu a inspiração de diversos jogos que se vê por aí na Steam ou Itch.io.
 
-![Image](/assets/media/posts/smii7y_return_to_the_backrooms.webp)
+![Image](/assets/media/smii7y_return_to_the_backrooms.webp)
 
 # Analog horror
 Bem, já que eu mencionei ele, por quê não comentar sobre?
@@ -121,7 +121,7 @@ Coisas como [Nephthys Media](https://www.youtube.com/@blackdrag0nfish), que expl
 
 ## Nephthys Media
 
-![Image](/assets/media/posts/hqdefault.jpg)
+![Image](/assets/media/hqdefault.jpg)
 
 Apesar de não lembrar de praticamente nada do Nephthys Media, uma coisa que não tem como eu me esquecer é a atmosfera presente nele, é algo que me lembra os Espaços Liminares. É um desconforto constante e a impressão de que tem algo a mais que eu não estou enxergando.
 
@@ -136,7 +136,7 @@ Ele explora a bizarrice que são [Doppelgängers](https://en.wikipedia.org/wiki/
 
 O maior problema do Mandela Catalogue é que o seu criador acabou enjoando da própria obra e quis fazer dela algo "maior". Vamos dizer que ele voou muito perto do sol e acabou estragando a minisérie, pelo menos para mim, eu já não tenho o mínimo de interesse por ela depois do 2º capítulo.
 
-![Image](/assets/media/posts/catalogue-mondela-mandela-magazine.gif)
+![Image](/assets/media/catalogue-mondela-mandela-magazine.gif)
 <center><a href="https://www.youtube.com/watch?v=gk4AlxnZOYc" target="_blank">The Mandela Magazine</a></center>
 
 Uma coisa que pode ser aprendida com o caso do Mandela Catalogue é a seguinte: Se a sua obra se tornou popular por conta da ambientação e do mistério que gira em torno de algo quase que no estilo Lovecraft de absurdo, não transforma ela em uma minisérie de terror adolescente.
@@ -148,7 +148,7 @@ The Walden Files é um ARG que tem inspirações em FNAF e em The Mandela Catalo
 
 Ele genuinamente me dá medo. Medo ao ponto de que eu só consumi ele por intermédio de um youtuber, o [Pombo Atômico](https://www.youtube.com/@pombatomico) e de dia na maior parte das vezes.
 
-![Image](/assets/media/posts/walden_files.webp)
+![Image](/assets/media/walden_files.webp)
 
 Ele também é extremamente gráfico e sonoro. Não é algo que eu recomendaria para a minha namorada por exemplo.
 

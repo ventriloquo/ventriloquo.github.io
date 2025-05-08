@@ -36,7 +36,7 @@ Eu sei, é uma comparação muito ruim, já que técnicamente os dois consoles d
 vez são basicamente os mesmos em carcaças diferentes. Mas ainda assim eu
 precisava comparar eles com alguma coisa para poder alongar esse post.
 
-![._.](/assets/media/posts/pepe.webp)
+![._.](/assets/media/pepe.webp)
 
 Enfim.
 
@@ -52,7 +52,7 @@ de um celular mediano com controles embutidos que consegue jogar Doom Eternal.
 
 > Eu não tô de sacanagem. **TEM** um port de Doom Eternal **OFICIAL** nessa
 > porra.
-> ![](/assets/media/posts/doom_enternal_switch.png)
+> ![](/assets/media/doom_enternal_switch.png)
 
 Não que eu tenha jogado Doom Eternal, afinal de contas essa desgraça custa
 R$300. Na realidade a maioria dos jogos hoje em dia tão custando isso, então
@@ -89,7 +89,7 @@ mobile super-faturados.
 
 > Na real qualquer coisa lá é super-faturada. A porra de um calendário tá
 > custando R$80,00. **UM CALENDÁRIO, CACETE**.
-> ![](/assets/media/posts/nday.png)
+> ![](/assets/media/nday.png)
 > Onde que eu vou precisar de um **CALENDÁRIO** em um **VIDEO-GAME**???
 
 # A pesar dos pesares, eu estou amando a experiência

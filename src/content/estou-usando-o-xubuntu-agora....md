@@ -43,7 +43,7 @@ de forma que o Alpine, porém mais... estável.
 
 E sim, eu estou usando o meu setup nesse exato momento, aqui, uma screenshot:
 
-![](/assets/media/posts/8WFk.png)
+![](/assets/media/8WFk.png)
 > Uma coisa sobre essa screenshot:
 >
 > O código que está sendo mostrado é um post sendo escrito usando a linguagem

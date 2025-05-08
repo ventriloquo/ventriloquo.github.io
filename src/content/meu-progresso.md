@@ -21,7 +21,7 @@ prontos, e um deles também tem uma versão re-escrita em C, como forma de
 demonstrar a similaridade entre eles. O primeiro exemplo é uma sequência
 Fibonacci, e o segundo é… bem…
 
-![Image](/assets/media/posts/901d15628e3491670f85c866621023eb.webp)
+![Image](/assets/media/901d15628e3491670f85c866621023eb.webp)
 
 Não, isso não é um screenshot do Undertale, isso é o segundo exemplo do raylib.ha.
 No momento, com as bindings atuais, é possível fazer um jogo semelhante ao
