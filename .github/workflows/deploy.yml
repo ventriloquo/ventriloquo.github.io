@@ -4,6 +4,10 @@ on:
   push:
     branches: [main]
 
+concurrency: # prevent concurrent deploys doing strange things
+  group: deploy-to-neocities
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -41,4 +45,11 @@ jobs:
           import-map: "./deno.json"
           entrypoint: _cms.js
 
-     
+      - name: Deploy to neocities
+        uses: bcomnes/deploy-to-neocities@v3
+        with:
+          api_key: ${{ secrets.NEOCITIES_API_TOKEN }}
+          cleanup: true
+          neocities_supporter: false # set this to true if you have a supporter account and want to bypass unsuported files filter.
+          preview_before_deploy: false # print a deployment plan prior to waiting for files to upload.
+          dist_dir: _site
