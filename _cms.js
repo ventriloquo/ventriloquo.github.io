@@ -23,9 +23,9 @@ cms.storage(
   }),
 );
 
-cms.upload("Mídia: Arquivos multimídia utilizados nos posts/tutoriais", "src:assets/media");
+cms.upload("Mídia: Arquivos multimídia utilizados nos posts/tutoriais", "src:src/assets/media");
 
-cms.collection("Conteúdo: Posts e tutoriais", "src:content/*.md",
+cms.collection("Conteúdo: Posts e tutoriais", "src:src/content/*.md",
   [
     {
       name: "date",
@@ -84,7 +84,7 @@ cms.collection("Conteúdo: Posts e tutoriais", "src:content/*.md",
     },
   ]);
 
-cms.collection("Tags: Tags dos posts e tutoriais", "src:tags/*.md",
+cms.collection("Tags: Tags dos posts e tutoriais", "src:src/tags/*.md",
   [
     {
       name: "title",
