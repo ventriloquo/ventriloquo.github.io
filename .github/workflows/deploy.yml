@@ -21,13 +21,6 @@ jobs:
       - name: Build site
         run: deno task build
 
-      - name: Deploy to Deno Deploy
-        uses: denoland/deployctl@v1
-        with:
-          project: tukain
-          import-map: "./deno.json"
-          entrypoint: _cms.js
-
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
@@ -39,3 +32,12 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        
+      - name: Deploy to Deno Deploy
+        uses: denoland/deployctl@v1
+        with:
+          project: tukain
+          import-map: "./deno.json"
+          entrypoint: _cms.js
+
+     
