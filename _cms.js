@@ -2,6 +2,15 @@ import lumeCMS from "lume/cms/mod.ts";
 
 const cms = lumeCMS();
 
+cms.storage(
+  "src",
+  new GitHub({
+    client: new Octokit({ auth: Deno.env.get("GITHUB_TOKEN") }),
+    owner: "ventriloquo",
+    repo: "ventriloquo.github.io",
+  }),
+);
+
 cms.upload("Mídia: Arquivos multimídia utilizados nos posts/tutoriais", "src:assets/media");
 
 cms.collection("Conteúdo: Posts e tutoriais", "src:content/*.md",
