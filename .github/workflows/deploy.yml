@@ -26,4 +26,4 @@ jobs:
         with:
           project: tukain
           import-map: "./deno.json"
-          entrypoint: serve.ts
+          entrypoint: _cms.js
