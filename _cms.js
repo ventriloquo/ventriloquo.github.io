@@ -1,6 +1,16 @@
 import lumeCMS from "lume/cms/mod.ts";
 
-const cms = lumeCMS();
+const username = Deno.env.get("USERNAME");
+const password = Deno.env.get("PASSWORD");
+
+const cms = lumeCMS({
+    auth: {
+    method: "basic",
+    users: {
+      [username]: password,
+    },
+  },
+});
 
 cms.storage(
   "src",
