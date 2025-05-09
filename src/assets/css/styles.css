@@ -235,6 +235,8 @@ nav img, nav hgroup, .open-sidebar-button, .close-sidebar-button {
   background-color: var(--bg-2);
   color: var(--fg-1);
   height: 130px;
+  border-start-start-radius: 3px;
+  border-start-end-radius: 3px;
 }
 
 .card_image img {
