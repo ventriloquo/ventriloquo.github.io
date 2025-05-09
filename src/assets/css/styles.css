@@ -350,7 +350,8 @@ strong, b {
 }
 
 p {
-  padding-bottom: 1em;
+  padding-top: .7em;
+  padding-bottom: .7em;
 }
 
 pre {
