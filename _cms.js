@@ -95,4 +95,17 @@ cms.collection("Tags: Tags dos posts e tutoriais", "src:src/tags/*.md",
     },
   ]);
 
+cms.collection("Styles: O CSS do site","src:src/assets/css/*.css", [
+  {
+    name: "content",
+    type: "code",
+  }
+]);
+
+cms.collection("_includes: os arquivos responsáveis pelos layouts do site","src:src/_includes/*.vto", [
+  {
+    name: "content",
+    type: "code",
+  }
+]);
 export default cms;
