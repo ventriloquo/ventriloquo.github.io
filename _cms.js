@@ -95,18 +95,4 @@ cms.collection("Tags: Tags dos posts e tutoriais", "src:src/tags/*.md",
     },
   ]);
 
-cms.document("Estilização do site","src:src/assets/css/styles.css", [
-  {
-    name: "content",
-    type: "code",
-  }
-]);
-
-cms.document("Paleta de cores","src:src/assets/css/colors.css", [
-  {
-    name: "content",
-    type: "code",
-  }
-]);
-
 export default cms;
