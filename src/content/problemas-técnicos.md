@@ -18,4 +18,4 @@ Eu não sei o porquê disso, nem se isso deveria acontecer, mas o que eu fiz par
 
 Isso é uma gambiarra, mas se amanhã, no mesmo horário (ou antes) o problema persistir, então eu oficialmente sou um mamaco, ou o meu `resgistrar` é uma bosta.
 
-![Image](/src/assets/media/monki.gif)
+![Image](https://media.tenor.com/sbicJ3YIwpkAAAAM/monkey-monkey-flip.gif)
