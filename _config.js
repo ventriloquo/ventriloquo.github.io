@@ -1,7 +1,7 @@
 import lume from "lume/mod.ts";
 import feed from "lume/plugins/feed.ts";
 import lightningCss from "lume/plugins/lightningcss.ts";
-import minifyHTML from "lume/plugins/minify_html.ts";
+//import minifyHTML from "lume/plugins/minify_html.ts";
 import pagefind from "lume/plugins/pagefind.ts";
 import sitemap from "lume/plugins/sitemap.ts";
 import robots from "lume/plugins/robots.ts";
@@ -36,7 +36,7 @@ site.use(robots({
 
 site.use(pagefind())
 
-site.use(minifyHTML())
+//site.use(minifyHTML())
 
 site.use(lightningCss({ includes: "assets/css/" }))
 
