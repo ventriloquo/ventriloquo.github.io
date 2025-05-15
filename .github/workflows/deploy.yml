@@ -1,4 +1,4 @@
-name: Publish on Deno Deploy
+name: Publish on Github Pages and Neocities
 
 on:
   push:
@@ -20,11 +20,8 @@ jobs:
       - name: Clone repository
         uses: actions/checkout@v4
 
-      - name: Setup Deno environment
-        uses: denoland/setup-deno@v2
-
       - name: Build site
-        run: deno task build
+        run: ./blog.sh build
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -32,18 +29,11 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "_site"
+          path: "public"
 
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        
-      - name: Deploy to Deno Deploy
-        uses: denoland/deployctl@v1
-        with:
-          project: cms-tukain
-          import-map: "./deno.json"
-          entrypoint: _cms.js
 
       - name: Deploy to neocities
         uses: bcomnes/deploy-to-neocities@v3
@@ -52,4 +42,4 @@ jobs:
           cleanup: true
           neocities_supporter: false # set this to true if you have a supporter account and want to bypass unsuported files filter.
           preview_before_deploy: true # print a deployment plan prior to waiting for files to upload.
-          dist_dir: _site
+          dist_dir: public

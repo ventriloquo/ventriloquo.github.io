@@ -1,0 +1,183 @@
+@font-face {
+  src: url("/assets/fonts/jetbrainsmono.woff2");
+  font-family: "jetbrains";
+}
+
+@font-face {
+  src: url("/assets/fonts/shingopro.otf");
+  font-family: "shin";
+}
+
+:root {
+    --background: #1f1f28;
+    --background-alt: #2a2a37;
+    --foreground: #dcd7ba;
+    --grey:       #363646;
+    --accent:     #957fb8;
+    --title:      #98bb6c;
+    --code:       #727169;
+    --border:     solid 1px var(--grey);
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+    font-family: "shin";
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--foreground);
+}
+
+a {
+    text-decoration: none;
+    color: var(--accent);
+}
+
+a:hover {
+    opacity: 80%;
+}
+
+hr {
+    border: var(--border);
+    border-bottom: none;
+}
+
+p {
+  padding: .5em 0;
+}
+
+p > code, pre {
+    color: var(--code);
+    background-color: var(--background-alt);
+    border-radius: 3px;
+    font-family: "jetbrains";
+}
+
+p > code {
+    padding: 5px;
+}
+
+code {
+    font-family: "jetbrains";
+}
+
+pre {
+    padding: 1em;
+    overflow-x: scroll;
+}
+
+blockquote {
+    background-color: var(--background-alt);
+    color: var(--accent);
+    border-left: solid 5px var(--accent);
+    margin: 1em 0;
+    padding: 5px 10px;
+}
+
+blockquote > p > code, blockquote > pre {
+    background-color: var(--background);
+}
+
+blockquote > pre {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+hr, ul, ol {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    list-style-position: inside;
+}
+
+h1 {
+    color: var(--title);
+    padding: 10px;
+    border-radius: 3px;
+}
+
+h1, h4 {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+
+h2, h3 {
+    border-bottom: var(--border);
+}
+
+h4:has(i) {
+    color: var(--code);
+    margin-top: -2em;
+    margin-bottom: 2em;
+}
+
+img {
+    max-height: 400px;
+    max-width: 100%;
+    object-fit: cover;
+    display: block;
+    margin: 1em auto;
+    border: var(--border);
+}
+
+table, th, td {
+    border: var(--border);
+    padding: 5px;
+    border-collapse: collapse;
+}
+
+table {
+    border: none;
+    overflow: scroll;
+    margin: 1em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+colgroup {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+th, td {
+    padding-left: 1em;
+    padding-right: 1em;
+    margin: 0;
+}
+
+th {
+    font-weight: bold;
+    background-color: var(--background-alt);
+}
+
+th:hover {
+    opacity: 80%;
+}
+
+td:hover {
+    background-color: var(--background-alt);
+    opacity: 50%;
+}
+
+article {
+    max-width: 70ch;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+    min-height: 100vh;
+}
+

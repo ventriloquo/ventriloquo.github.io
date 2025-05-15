@@ -1,0 +1,66 @@
+# Revisitando o blog.sh - meu próprio "ssg".
+
+Esse carinha estava guardado no quinto dos infernos praticamente. Empoeirando
+em um repositório de uma forja git que eu nem sequer uso a quase 1 ano, mas eu
+lembrei dele.
+
+Eu cortei boa parte das funcionalidades dele, eu só preciso de algo que gere
+uma página nova e que essa página seja listada em uma página de indexização.
+Ah, e claro, que eu só precise escrever em Markdown e não precise me preocupar
+com nada mais.
+
+No caso de escrever em Markdown, quem faz todo o `parsing` e transforma
+Markdown em HTML é o [smu](https://git.codemadness.org/smu), um programinha em
+C que é extremamente pequeno, porém mais do que competente e também é muito
+rápido.
+
+Também há um arquivo de configuração simples, feito usando `json`, e com o
+parsing sendo feito usando o `jq`. Mas isso é facilmente modificável, já que o
+blog.sh é só um shell-script (como o próprio nome já demonstra), então eu posso
+remover essa dependência facilmente, como eu mesmo já fiz quando eu removi a
+navbar e a footer daqui (a implementação era simples até demais, então vou
+deixar para fazer uma implementação melhor mais tarde).
+
+Eu sinceramente fiquei até que impressionado com o quão simples é a estrutura
+desse script, principalmente quando eu comparo com a complexidade e o puro
+tamanho que é a versão do meu site feita usando o [Lume](https://lume.land) ou
+a [versão criada com React](https://github.com/ventriloquo/jsx-tukain). São
+praticamente 100 linhas de `posix shell-script`, só isso.
+
+Isso me lembrou também do porquê de eu gostar tanto de usar o terminal: eu sou
+apaixonado em shell-scripts. Eles podem se comportar como pequenos programas
+com muito pouco esforço. Eu prefiro isso a ter que usar Javascript, por
+exemplo.
+
+## Comandos
+
+O blog.sh tem apenas 3 comandos no momento:
+
+1. create
+2. build
+3. version
+
+Não tem muito mistério em entender o que cada um faz, a única coisa que se deve
+prestar atenção é no comando "create". Você precisa de um arquivo de
+configuração (no momento `config.json`, mas quero substituir por um arquivo de
+texto simples que não dependa de um programa que não é padrão), caso o
+contrário, ele cessa a execução do script e joga a seguinte mensagem de erro:
+
+    You don't have a config.json file!
+
+É, eu sei, não explica muita coisa, mas vai direto ao ponto. No script
+original, ele criava um arquivo chamado "deleteme", esse era um arquivo que
+servia para mostrar como que você criava um post e também como usar o script em
+si. Eu removi essa parte do script, mas irei re-implementá-la de forma que
+quem for usar o script não precise ter um `config.json`.
+
+O segundo comando serve para re-construir o site depois de você ter criado um
+post, ou atualizado algo na estrutura do site. É um processo manual, mas é algo
+bem simples de resolver.
+
+Parte do comando create é criar um arquivo chamado `.site`, ele serve só para
+marcar o diretório do site como a raiz do site. Com isso, o comando "build" não
+tenta gerar o site final em qualquer diretório, já que se não existir um
+arquivo `.site` presente o script vai simplesmente cessar a execução.
+
+![KISS](https://www.logomaven.com/blog/wp-content/uploads/2016/01/keep_it_simple__stupid_by_miiitch2.jpg)
