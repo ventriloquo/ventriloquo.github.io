@@ -67,4 +67,4 @@ marcar o diretório do site como a raiz do site. Com isso, o comando "build" nã
 tenta gerar o site final em qualquer diretório, já que se não existir um
 arquivo `.site` presente o script vai simplesmente cessar a execução.
 
-![KISS](https://www.logomaven.com/blog/wp-content/uploads/2016/01/keep_it_simple__stupid_by_miiitch2.jpg)
+![KISS](/assets/img/Keep-it-simple,-stupid.webp)
