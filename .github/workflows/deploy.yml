@@ -41,7 +41,7 @@ jobs:
       - name: Deploy to Deno Deploy
         uses: denoland/deployctl@v1
         with:
-          project: tukain
+          project: cms-tukain
           import-map: "./deno.json"
           entrypoint: _cms.js
 
