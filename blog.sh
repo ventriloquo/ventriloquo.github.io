@@ -92,6 +92,7 @@ build_site() {
 
   echo "</ul>" >> index.html
 
+  mkdir -p assets/img
   rm ./assets/img/*
 
   for IMAGE in $(/bin/ls ./content)
