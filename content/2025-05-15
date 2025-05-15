@@ -56,7 +56,11 @@ quem for usar o script não precise ter um `config.json`.
 
 O segundo comando serve para re-construir o site depois de você ter criado um
 post, ou atualizado algo na estrutura do site. É um processo manual, mas é algo
-bem simples de resolver.
+bem simples de resolver, eu, por exemplo, deixei esse repositório com um Github
+Action que faz todo o processo necessário para construir esse site, ou seja, eu
+só escrevo o post e dou um `git push` e o site é atualizado tanto no
+[Github Pages](https://ventriloquo.github.io) quanto no
+[Neocities](https://tukainpng.neocities.org).
 
 Parte do comando create é criar um arquivo chamado `.site`, ele serve só para
 marcar o diretório do site como a raiz do site. Com isso, o comando "build" não
