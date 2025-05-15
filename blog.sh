@@ -2,20 +2,45 @@
 
 # DON'T CHANGE THIS
 INPUT=$1
-SITE_NAME=$(cat ./config.json | jq -r .name)
-SITE_LANG="$(cat ./config.json | jq -r .lang)"
-SITE_AUTHOR="$(cat ./config.json | jq -r .author)"
-SITE_DESCRIPTION="$(cat ./config.json | jq -r .description)"
-SITE_NOTE="$(cat ./config.json | jq -r .note)"
-SITE_FAVICON_NAME="$(cat ./config.json | jq -r .favicon.filename)"
-SITE_FAVICON_TYPE="$(cat ./config.json | jq -r .favicon.extension)"
+
+RED="\e[31m"
+GREEN="\e[32m"
+BLUE="\e[34m"
+RESET="\e[0m"
+
+usage() {
+cat << EOF
+
+Usage: blog.sh <command>
+
+version - shows blog.sh version
+create  - create the website structure
+build   - build the website
+
+EOF
+}
+
+check_dependencies() {
+  printf "${BLUE}Checking dependencies...\n"
+  [ -z "$(which smu)" ] && printf "${RED}smu is not installed! Please install it.\n(git://git.codemadness.org/smu/)" && exit 1
+  [ -z "$(which convert)" ] && printf "${RED}Image Magick is not installed! Please install it." && exit 1
+  [ ! -f "config" ] && echo "${RED}You don't have a config file!" && exit 1
+  printf "${GREEN}God's in his heaven, all's right with the world.\n${RESET}"
+}
+
+check_dependencies
+
+SITE_NAME="$(cat config | grep 'title' | awk -F: '{print $2}')"
+SITE_LANG="pt-br"
+SITE_AUTHOR="tukain"
+SITE_DESCRIPTION="Sou alguém que busca por músicas que me relaxam ou que dão adrenalina… Só depende do dia. Sinta-se livre para explorar o meu espaço neste vasto mundo chamado internet! "
+SITE_NOTE="Usuário Linux / Blogger / Nerd de computador"
+SITE_FAVICON_NAME="fav"
+SITE_FAVICON_TYPE="webp"
 
 create_site() {
-  [ -z "$(which smu)" ] && echo "smu is not installed! Please install it from git://git.codemadness.org/smu/" && exit 1
-  [ -z "$(which jq)" ] && echo "jq is not installed! Please install it from your package repo!" && exit 1
-  [ ! -f "config.json" ] && echo "You don't have a config.json file!" && exit 1
   mkdir -p "content"
-  mkdir -p "assets"
+  mkdir -p "assets/img"
   mkdir -p "pages"
   mkdir -p "public"
   touch ".site"
@@ -39,7 +64,7 @@ EOF
 }
 
 build_site() {
-  [ ! -f ".site" ] && echo "You're not inside the site directory!" && exit 1
+  [ ! -e "./.site" ] && echo "You're not inside the site directory!" && exit 1
   rm -rf ./public
   mkdir -p public/posts
 
@@ -66,26 +91,43 @@ build_site() {
   done
 
   echo "</ul>" >> index.html
+
+  rm ./assets/img/*
+
+  for IMAGE in $(/bin/ls ./content)
+  do
+    RESULT=$(grep "/assets/img" ./content/${IMAGE} | tr "!()[]" "|" | awk -F\| '{print $5}')
+    printf "\e[34mImagens encontradas em ${IMAGE}:\e[0m\n${RESULT}\n"
+    for LINE in $RESULT
+    do
+    printf "\e[34mLinha sendo processada:\e[0m\n${LINE}\n"
+      for TEXT in $LINE
+      do
+      LABEL=$(echo $TEXT | awk -F\/ '{print $4}' | awk -F".webp" '{print $1}' | tr "-" " ")
+      printf "\e[34mTexto final:\e[0m\n${LABEL}\n"
+      convert \
+        -background \#2a2a37 \
+        -fill \#dcd7ba \
+        -size 800x200 \
+        -font assets/fonts/shingopro.otf \
+        caption:"${LABEL}" \
+        ".${LINE}"
+      done
+    done
+  done
+
   mv *.html public
   cp -r ./assets ./public
+
 }
 
 version() {
-  printf "\e[32mblog.sh \e[34m(v0.0.1)\e[0m\n"
+  printf "${BLUE}blog.sh (v0.0.1)${RESET}\n"
 }
 
 case $INPUT in
   "build") build_site;;
   "create") create_site;;
   "version") version;;
-  *) cat << EOF
-
-Usage: blog.sh <command>
-
-version - shows blog.sh version
-create  - create the website structure
-build   - build the website
-
-EOF
-;;
+  *) usage;;
 esac
