@@ -21,10 +21,10 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Install dependencies
-        uses: sudo apt install -y jq make gcc git
+        run: sudo apt install -y jq make gcc git
 
       - name: Install smu
-        uses: git clone --depth=1 git://git.codemadness.org/smu && cd smu && sudo make install && cd ..
+        run: git clone --depth=1 git://git.codemadness.org/smu && cd smu && sudo make install && cd ..
 
       - name: Build site
         run: ./blog.sh build
