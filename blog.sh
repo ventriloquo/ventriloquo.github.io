@@ -109,8 +109,13 @@ build_site() {
       convert \
         -background \#2a2a37 \
         -fill \#dcd7ba \
-        -size 800x200 \
+        -size 400x100 \
         -font assets/fonts/shingopro.otf \
+        -trim \
+        -page 800x200+200+50 \
+        -flatten \
+        -gravity center \
+        +repage \
         caption:"${LABEL}" \
         ".${LINE}"
       done
