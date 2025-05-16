@@ -37,6 +37,7 @@ SITE_DESCRIPTION="Sou alguém que busca por músicas que me relaxam ou que dão 
 SITE_NOTE="Usuário Linux / Blogger / Nerd de computador"
 SITE_FAVICON_NAME="fav"
 SITE_FAVICON_TYPE="webp"
+SITE_BASENAME="tukain.xyz"
 
 create_site() {
   mkdir -p "content"
@@ -62,6 +63,22 @@ EOF
 
 
 }
+
+
+build_feed() {
+  [ ! -e public ] && echo "You didn't build the website yet!" && exit 1
+  echo '<?xml version="1.0" encoding="UTF-8" ?>' > public/feed.xml
+  echo '<rss version="2.0">' >> public/feed.xml
+  for PAGE in $(/bin/ls -1 ./public/posts | sort -r | tr '\n' ' ')
+  do
+    echo "<item>" >> public/feed.xml
+    echo "<title>$(grep '<h1>' ./public/posts/$PAGE | tr '<>/' '\n' | head -n3 | tail -n1 )</title>" >> public/feed.xml
+    echo "<link>https://${SITE_BASENAME}/posts/${PAGE}</link>" >> public/feed.xml
+    echo "</item>" >> public/feed.xml
+  done
+  echo '</rss>' >> public/feed.xml
+}
+
 
 build_site() {
   [ ! -e "./.site" ] && echo "You're not inside the site directory!" && exit 1
@@ -97,7 +114,7 @@ build_site() {
 
   for IMAGE in $(/bin/ls ./content)
   do
-    RESULT=$(grep "/assets/img" ./content/${IMAGE} | tr "!()[]" "|" | awk -F\| '{print $5}')
+    RESULT=$(grep "(/assets/img" ./content/${IMAGE} | tr "!()[]" "|" | awk -F\| '{print $5}')
     printf "\e[34mImagens encontradas em ${IMAGE}:\e[0m\n${RESULT}\n"
     for LINE in $RESULT
     do
@@ -109,13 +126,10 @@ build_site() {
       convert \
         -background \#2a2a37 \
         -fill \#dcd7ba \
-        -size 400x100 \
+        -size 800x200 \
         -font assets/fonts/shingopro.otf \
-        -trim \
-        -page 800x200+200+50 \
-        -flatten \
+        -pointsize 30 \
         -gravity center \
-        +repage \
         caption:"${LABEL}" \
         ".${LINE}"
       done
@@ -124,7 +138,7 @@ build_site() {
 
   mv *.html public
   cp -r ./assets ./public
-
+  build_feed
 }
 
 version() {
@@ -133,6 +147,7 @@ version() {
 
 case $INPUT in
   "build") build_site;;
+  "feed") build_feed;;
   "create") create_site;;
   "version") version;;
   *) usage;;
