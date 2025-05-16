@@ -69,7 +69,14 @@ p > code {
     padding: 5px;
 }
 
-code {
+kbd {
+    color: var(--background);
+    background-color: var(--foreground);
+    padding: 3px 10px;
+    border-radius: 3px;
+}
+
+code, kbd {
     font-family: "jetbrains";
 }
 
