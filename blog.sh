@@ -30,14 +30,18 @@ check_dependencies() {
 
 check_dependencies
 
-SITE_NAME="$(cat config | grep 'title' | awk -F: '{print $2}')"
-SITE_LANG="pt-br"
-SITE_AUTHOR="tukain"
-SITE_DESCRIPTION="Sou alguém que busca por músicas que me relaxam ou que dão adrenalina… Só depende do dia. Sinta-se livre para explorar o meu espaço neste vasto mundo chamado internet! "
-SITE_NOTE="Usuário Linux / Blogger / Nerd de computador"
-SITE_FAVICON_NAME="fav"
-SITE_FAVICON_TYPE="webp"
-SITE_BASENAME="tukain.xyz"
+grab_config() {
+  cat config | grep $1 | awk -F: '{print $2}'
+}
+
+SITE_NAME="$(grab_config title)"
+SITE_LANG="$(grab_config lang)"
+SITE_AUTHOR="$(grab_config author)"
+SITE_DESCRIPTION="$(grab_config description)"
+SITE_NOTE="$(grab_config note)"
+SITE_FAVICON_NAME="$(grab_config favicon_name)"
+SITE_FAVICON_TYPE="$(grab_config favicon_type)"
+SITE_BASENAME="$(grab_config basename)"
 
 create_site() {
   mkdir -p "content"
@@ -92,26 +96,31 @@ build_site() {
   for FILE in $(/bin/ls ./content)
   do
     cat ./pages/head.html   >  public/posts/$FILE.html
-    echo "<body><article><p style='text-align: center' ><a href='/'>Voltar</a></p>"  >> public/posts/$FILE.html
+    echo "<body><article><h1 style='text-align: center' ><a href='/'>${SITE_NAME}</a></h1>"  >> public/posts/$FILE.html
+    echo "<time>$FILE</time>"  >> public/posts/$FILE.html
     smu ./content/$FILE     >> public/posts/$FILE.html
     echo "</article></body>" >> public/posts/$FILE.html
   done
 
   cat ./pages/head.html > index.html
   echo "<article>" >> index.html
-  echo "<h1>$SITE_NAME</h1>" >> index.html
+  echo "<h1 class='site_name'>$SITE_NAME</h1>" >> index.html
   echo "<h4><i>${SITE_NOTE}</i></h4>" >> index.html
   [ ! -z "$SITE_DESCRIPTION" ] && echo "<p>${SITE_DESCRIPTION}</p>" >> index.html
 
   echo "<hr>" >> index.html
-  echo "<ul>" >> index.html
+  echo "<table><thead><tr><th>Post</th><th>Data de criação</th></tr></thead></tbody>" >> index.html
 
   for PAGE in $(/bin/ls -1 ./public/posts | sort -r | tr '\n' ' ')
   do
-    echo "<li><a href=\"/posts/${PAGE}\">$(grep '<h1>' ./public/posts/$PAGE | tr '<>/' '\n' | head -n3 | tail -n1 )</a></li>" >> index.html
+    echo "<tr>\
+      <td><a href=\"/posts/${PAGE}\">\
+      $(grep '<h1>' ./public/posts/$PAGE | tr '<>/' '\n' | head -n3 | tail -n1 )\
+      </a></td>\
+      <td>$(echo $PAGE | awk -F'.html' '{print $1}')</td></tr>" >> index.html
   done
 
-  echo "</ul>" >> index.html
+  echo "</tbody></table>" >> index.html
 
   mkdir -p assets/img
   rm ./assets/img/*
