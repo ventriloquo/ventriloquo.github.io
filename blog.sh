@@ -69,6 +69,9 @@ build_feed() {
   [ ! -e public ] && echo "You didn't build the website yet!" && exit 1
   echo '<?xml version="1.0" encoding="UTF-8" ?>' > public/feed.xml
   echo '<rss version="2.0">' >> public/feed.xml
+  echo '<channel>' >> public/feed.xml
+  echo '<title>Tukain - Feed</title>' >> public/feed.xml
+  echo '<description>Feed do meu blog</description>' >> public/feed.xml
   for PAGE in $(/bin/ls -1 ./public/posts | sort -r | tr '\n' ' ')
   do
     echo "<item>" >> public/feed.xml
@@ -76,6 +79,7 @@ build_feed() {
     echo "<link>https://${SITE_BASENAME}/posts/${PAGE}</link>" >> public/feed.xml
     echo "</item>" >> public/feed.xml
   done
+  echo '</channel>' >> public/feed.xml
   echo '</rss>' >> public/feed.xml
 }
 
