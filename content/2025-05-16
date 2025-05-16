@@ -1,0 +1,76 @@
+# Atualizações - 16-05-2025
+
+Eu estou implementando nesse momento a funcionalidade de criação de Feeds RSS
+no meu script. Aparentemente é algo bem mais simples do que eu imaginei, um 
+simples for-loop parece ser o suficiente para gerar as entradas (`<item>`).
+
+É sério, olha aqui, essa foi a minha implementação:
+
+    [ ! -e public ] && echo "You didn't build the website yet!" && exit 1
+    echo '<?xml version="1.0" encoding="UTF-8" ?>' > public/feed.xml
+    echo '<rss version="2.0">' >> public/feed.xml
+    for PAGE in $(/bin/ls -1 ./public/posts | sort -r | tr '\n' ' ')
+    do
+      echo "<item>" >> public/feed.xml
+      echo "<title>$(grep '<h1>' ./public/posts/$PAGE | tr '<>/' '\n' | head -n3 | tail -n1 )</title>" >> public/feed.xml
+      echo "<link>https://${SITE_BASENAME}/posts/${PAGE}</link>" >> public/feed.xml
+      echo "</item>" >> public/feed.xml
+    done
+    echo '</rss>' >> public/feed.xml
+
+Eu vou fazer com que o comando "build" já execute essa função, já que é meio
+paia ter que executar dois comandos só para gerar um site.
+
+Ainda tem muita coisa que eu quero adicionar a esse script, mas vou fazendo isso
+aos poucos. E também quero fazer algumas coisas que não tem uma real utilidade,
+mas que eu ache divertido. Por exemplo, o meu script cria imagens com um certo
+texto no centro, desde que eu especifique uma imagem presente no diretório
+`/assets/img`, o texto presente é escrito usando
+<kbd>-</kbd> no lugar de <kbd>Espaço</kbd>.
+
+Isso não tem uma utilidade real, mas é algo que eu achei divertido de
+implementar e que me permite criar "title cards" com qualquer frase que eu queira:
+
+![img](/assets/img/software-is-like-sex,-it's-better-when-it's-free.webp)
+
+Obrigado [Linus Torvalds](https://pt.wikipedia.org/wiki/Linus_Torvalds)
+por ter posto essa frase no mundo.
+
+A prova da falta de utilidade dessas imagens é que eu poderia simplesmente usar
+a tag `blockquote` do HTML. Ela literalmente serve para fazer citações:
+
+> Não há nada a ser fazido ~ Bonaparte, Napoleon
+
+Mas, diferente de uma imagem, um texto fazendo uma citação não pode ser baixado.
+
+E sim, já que o site gera as imagens, eu não preciso me preocupar em ter um
+backup delas. O script procura em todos os posts por algum _match_ de uma imagem
+localizada em `/assets/img` e gera a imagem. Eu uso o Imagemagick para fazer isso,
+a implementação no momento é essa aqui:
+
+    for IMAGE in $(/bin/ls ./content)
+    do
+      RESULT=$(grep "(/assets/img" ./content/${IMAGE} | tr "!()[]" "|" | awk -F\| '{print $5}')
+      printf "\e[34mImagens encontradas em ${IMAGE}:\e[0m\n${RESULT}\n"
+      for LINE in $RESULT
+      do
+      printf "\e[34mLinha sendo processada:\e[0m\n${LINE}\n"
+        for TEXT in $LINE
+        do
+        LABEL=$(echo $TEXT | awk -F\/ '{print $4}' | awk -F".webp" '{print $1}' | tr "-" " ")
+        printf "\e[34mTexto final:\e[0m\n${LABEL}\n"
+        convert \
+          -background \#2a2a37 \
+          -fill \#dcd7ba \
+          -size 800x200 \
+          -font assets/fonts/shingopro.otf \
+          -pointsize 30 \
+          -gravity center \
+          caption:"${LABEL}" \
+          ".${LINE}"
+        done
+      done
+    done
+
+Eu tenho a mais absoluta certeza de que eu não fiz a implementação mais eficiente,
+mas ela funciona, então tá tudo certo.
