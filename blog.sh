@@ -83,7 +83,7 @@ build_feed() {
     echo "<link>https://${SITE_BASENAME}/posts/${PAGE}</link>" >> public/feed.xml
     echo "<description><![CDATA[" >> public/feed.xml
     smu ./content/$(echo $PAGE | awk -F'.html' '{print $1}') >> public/feed.xml
-    echo "]]</description>" >> public/feed.xml
+    echo "]]></description>" >> public/feed.xml
     echo "</item>" >> public/feed.xml
   done
   echo '</channel>' >> public/feed.xml
