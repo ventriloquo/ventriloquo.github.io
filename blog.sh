@@ -82,7 +82,7 @@ build_feed() {
     echo "<title>$(grep '<h1>' ./public/posts/$PAGE | tr '<>/' '\n' | head -n3 | tail -n1 )</title>" >> public/feed.xml
     echo "<link>https://${SITE_BASENAME}/posts/${PAGE}</link>" >> public/feed.xml
     echo "<description><![CDATA[" >> public/feed.xml
-    cat ./public/posts/$PAGE >> public/feed.xml
+    smu ./content/$(echo $PAGE | awk -F'.html' '{print $1}') >> public/feed.xml
     echo "]]</description>" >> public/feed.xml
     echo "</item>" >> public/feed.xml
   done
