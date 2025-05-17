@@ -12,9 +12,9 @@ new: posts
 
 index: item
 	@cat header > tmp/index.html
-	@echo "<center><hgroup><h1>${TITLE}</h1>" >> tmp/index.html
+	@echo "<center><hgroup><h1 class=\"title\">${TITLE}</h1>" >> tmp/index.html
 	@echo "<p class=\"note\">${NOTE}</p></hgroup></center>" >> tmp/index.html
-	@echo "<br><article><p class=\"description\">${DESCRIPTION}</p><hr>" >> tmp/index.html
+	@echo "<article><p class=\"description\">${DESCRIPTION}</p><hr>" >> tmp/index.html
 	@echo "<table><thead><tr><th>Posts ($$(ls -1 ./posts | wc -l))</th></tr></thead><tbody>" >> tmp/index.html
 	@for FILE in $$(ls ./posts | sort -r); do \
 		echo "<tr><td><a href='/$${FILE}'>$$(echo $${FILE} | tr '-' '/' | tr '_' ' ' | tr '.md' ' ' )</a></td></tr>" >> tmp/index.html;\

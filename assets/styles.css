@@ -144,8 +144,12 @@ h1 {
     text-align: justify;
 }
 
-h2, h3 {
+h1, h2, h3 {
     border-bottom: var(--border);
+}
+
+h1:has(a), .title {
+  border: none;
 }
 
 h4:has(i) {
@@ -216,7 +220,15 @@ article {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 1em;
     padding: 1em;
     min-height: 100vh;
+    border: var(--border);
+    border-radius: 3px;
 }
 
+@media only screen and (orientation: portrait) {
+    article {
+        border: none;
+    }
+}
