@@ -13,9 +13,9 @@ new: posts
 index: item
 	@cat header > tmp/index.html
 	@echo "<center><hgroup><h1>${TITLE}</h1>" >> tmp/index.html
-	@echo "<p>${NOTE}</p></hgroup></center>" >> tmp/index.html
+	@echo "<p class=\"note\">${NOTE}</p></hgroup></center>" >> tmp/index.html
 	@echo "<br><article><p>${DESCRIPTION}</p><hr>" >> tmp/index.html
-	@echo "<table><thead><tr><th>Posts</th></tr></thead><tbody>" >> tmp/index.html
+	@echo "<table><thead><tr><th>Posts ($$(ls -1 ./posts | wc -l))</th></tr></thead><tbody>" >> tmp/index.html
 	@for FILE in $$(ls ./posts | sort -r); do \
 		echo "<tr><td><a href='/$${FILE}'>$${FILE}</a></td></tr>" >> tmp/index.html;\
 	done

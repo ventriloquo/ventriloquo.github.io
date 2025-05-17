@@ -134,6 +134,12 @@ h1 {
     text-align: center;
 }
 
+.note {
+    display: block;
+    margin-top: -1em;
+    color: var(--code);
+}
+
 h2, h3 {
     border-bottom: var(--border);
 }
@@ -194,6 +200,10 @@ th, td {
 
 th {
     font-weight: normal;
+    background-color: var(--grey);
+}
+
+tr:nth-of-type(even) {
     background-color: var(--background-alt);
 }
 
