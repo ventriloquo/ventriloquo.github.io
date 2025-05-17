@@ -81,6 +81,9 @@ build_feed() {
     echo "<item>" >> public/feed.xml
     echo "<title>$(grep '<h1>' ./public/posts/$PAGE | tr '<>/' '\n' | head -n3 | tail -n1 )</title>" >> public/feed.xml
     echo "<link>https://${SITE_BASENAME}/posts/${PAGE}</link>" >> public/feed.xml
+    echo "<description><![CDATA[" >> public/feed.xml
+    cat ./public/posts/$PAGE >> public/feed.xml
+    echo "]]</description>" >> public/feed.xml
     echo "</item>" >> public/feed.xml
   done
   echo '</channel>' >> public/feed.xml
