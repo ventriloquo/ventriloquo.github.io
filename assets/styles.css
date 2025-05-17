@@ -140,6 +140,10 @@ h1 {
     color: var(--code);
 }
 
+.description {
+    text-align: justify;
+}
+
 h2, h3 {
     border-bottom: var(--border);
 }
