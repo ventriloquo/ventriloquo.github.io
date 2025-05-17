@@ -126,6 +126,7 @@ hr, ul, ol {
 
 h1 {
     color: var(--title);
+    font-weight: normal;
 }
 
 .site_name, h4 {
