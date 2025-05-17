@@ -23,7 +23,7 @@ index: item
 	@cat footer >> tmp/index.html
 
 header:
-	@echo "<!DOCTYPE html><html><head><meta http-equiv='Content-Type' content='text/html; charset=UTF-8' /><meta http-equiv='Content-Language' content='${LANG}' /><meta name='generator' content='A freaking Makefile' /><meta name='author' content='tukain' /><meta name='description' content='${DESCRIPTION}' /><meta name='viewport' content='width=device-width, initial-scale=1'><link rel='icon' href='fav.webp' type='image/webp' /><link href='/styles.css' rel='stylesheet'><title>${TITLE}</title></head><body>" > header
+	@echo "<!DOCTYPE html><html><head><meta http-equiv='Content-Type' content='text/html; charset=UTF-8' /><meta http-equiv='Content-Language' content='${LANG}' /><meta name='generator' content='A freaking Makefile' /><meta name='author' content='tukain' /><meta name='description' content='${DESCRIPTION}' /><meta name='viewport' content='width=device-width, initial-scale=1'><link rel='icon' href='https://avatars.githubusercontent.com/u/205941290' type='image/png' /><link href='/styles.css' rel='stylesheet'><title>${TITLE}</title></head><body>" > header
 
 footer:
 	@echo '</body></html>' >> footer
@@ -36,7 +36,7 @@ item: header footer
 	@for FILE in $$(ls ./posts | sort -r); do \
 		mkdir tmp/$$FILE;\
 		cat header > tmp/$$FILE/index.html;\
-		echo "<center><a href='/'><h1>${TITLE}</h1></a></center>" >> tmp/$$FILE/index.html;\
+		echo "<center><h1><a href='/'>${TITLE}</a></h1></center>" >> tmp/$$FILE/index.html;\
 		echo "<article>" >> tmp/$$FILE/index.html;\
 		echo "<time>$${FILE}</time>" >> tmp/$$FILE/index.html;\
 		smu ./posts/$$FILE >> tmp/$$FILE/index.html; \
