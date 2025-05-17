@@ -126,7 +126,6 @@ hr, ul, ol {
 
 h1 {
     color: var(--title);
-    font-weight: normal;
 }
 
 .site_name, h4 {
@@ -144,6 +143,11 @@ h4:has(i) {
     margin-top: -2em;
     margin-bottom: 2em;
 }
+
+h1, h2, h3, h4 {
+  font-weight: normal;
+}
+
 
 time {
   display: block;
@@ -189,7 +193,7 @@ th, td {
 }
 
 th {
-    font-weight: bold;
+    font-weight: normal;
     background-color: var(--background-alt);
 }
 
