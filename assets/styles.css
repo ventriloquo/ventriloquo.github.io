@@ -1,10 +1,10 @@
 @font-face {
-  src: url("/assets/fonts/jetbrainsmono.woff2");
+  src: url("jetbrainsmono.woff2");
   font-family: "jetbrains";
 }
 
 @font-face {
-  src: url("/assets/fonts/shingopro.otf");
+  src: url("shingopro.otf");
   font-family: "shin";
 }
 
@@ -195,15 +195,6 @@ th, td {
 th {
     font-weight: normal;
     background-color: var(--background-alt);
-}
-
-th:hover {
-    opacity: 80%;
-}
-
-td:hover {
-    background-color: var(--background-alt);
-    opacity: 50%;
 }
 
 article {
