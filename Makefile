@@ -17,7 +17,7 @@ index: item
 	@echo "<article><p class=\"description\">${DESCRIPTION}</p><hr>" >> tmp/index.html
 	@echo "<table><thead><tr><th>Posts ($$(ls -1 ./posts | wc -l))</th></tr></thead><tbody>" >> tmp/index.html
 	@for FILE in $$(ls ./posts | sort -r); do \
-		echo "<tr><td><a href='/$${FILE}'>$$(echo $${FILE} | tr '-' '/' | tr '_' ' ' | tr '.md' ' ' )</a></td></tr>" >> tmp/index.html;\
+		echo "<tr><td><a href='/$$(echo $${FILE} | tr -d '.md')'>$$(cat posts/$${FILE} | head -n1 | tr -d \"#\")</a></td></tr>" >> tmp/index.html;\
 	done
 	@echo "</tbody></table>" >> tmp/index.html
 	@cat footer >> tmp/index.html
@@ -34,14 +34,14 @@ item: header footer
 	fi
 	@mkdir -p tmp
 	@for FILE in $$(ls ./posts | sort -r); do \
-		mkdir tmp/$$FILE;\
-		cat header > tmp/$$FILE/index.html;\
-		echo "<center><h1><a href='/'>${TITLE}</a></h1></center>" >> tmp/$$FILE/index.html;\
-		echo "<article>" >> tmp/$$FILE/index.html;\
-		echo "<time>$$(echo $${FILE} | tr '-' '/' | tr '_' ' ' | tr '.md' ' ' )</time>" >> tmp/$$FILE/index.html;\
-		smu ./posts/$$FILE >> tmp/$$FILE/index.html; \
-		echo "</article>" >> tmp/$$FILE/index.html;\
-		cat footer >> tmp/$$FILE/index.html;\
+		mkdir tmp/$$(echo $$FILE | tr -d '.md');\
+		cat header > tmp/$$(echo $$FILE | tr -d '.md')/index.html;\
+		echo "<center><h1><a href='/'>${TITLE}</a></h1></center>" >> tmp/$$(echo $$FILE | tr -d '.md')/index.html;\
+		echo "<article>" >> tmp/$$(echo $$FILE | tr -d '.md')/index.html;\
+		echo "<time>$$(echo $${FILE} | tr '-' '/' | tr '_' ' ' | tr -d '.md')</time>" >> tmp/$$(echo $$FILE | tr -d '.md')/index.html;\
+		smu ./posts/$$FILE >> tmp/$$(echo $$FILE | tr -d '.md')/index.html; \
+		echo "</article>" >> tmp/$$(echo $$FILE | tr -d '.md')/index.html;\
+		cat footer >> tmp/$$(echo $$FILE | tr -d '.md')/index.html;\
 	done
 
 feed: item
