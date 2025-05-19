@@ -19,6 +19,12 @@
       --code:           #43436c;
       --border: solid 1px var(--grey);
   }
+  th {
+    color: var(--background);
+  }
+  a {
+    text-decoration: underline !important;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -118,9 +124,13 @@ blockquote > pre {
     margin-bottom: 10px;
 }
 
-hr, ul, ol {
+hr {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
+}
+
+ul, ol {
+    padding-inline-start: 1em;
     list-style-position: inside;
 }
 
@@ -170,7 +180,7 @@ time {
   color: var(--code);
 }
 
-img {
+img, iframe {
     max-height: 400px;
     max-width: 100%;
     object-fit: cover;
@@ -223,6 +233,9 @@ article {
     margin-bottom: 1em;
     padding: 1em;
     min-height: 100vh;
+}
+
+.post {
     border: var(--border);
     border-radius: 3px;
 }

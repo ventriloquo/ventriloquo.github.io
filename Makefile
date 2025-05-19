@@ -1,7 +1,7 @@
 LANG="pt-br"
 TITLE="O site do Tukain"
 DESCRIPTION="Sou alguém que busca por músicas que me relaxam ou que dão adrenalina… Só depende do dia. Sinta-se livre para explorar o meu espaço neste vasto mundo chamado internet!"
-NOTE="Usuário Linux / Blogger / Curioso por tecnología"
+NAV=<a href="/about">Sobre mim</a> / <a href="https://github.com/ventriloquo">Github</a>
 SITE_BASENAME="tukain.xyz"
 EDITOR="nvim"
 
@@ -13,7 +13,7 @@ new: posts
 index: item
 	@cat header > tmp/index.html
 	@echo "<center><hgroup><h1 class=\"title\">${TITLE}</h1>" >> tmp/index.html
-	@echo "<p class=\"note\">${NOTE}</p></hgroup></center>" >> tmp/index.html
+	@echo "<p class=\"note\">${NAV}</p></hgroup></center>" >> tmp/index.html
 	@echo "<article><p class=\"description\">${DESCRIPTION}</p><hr>" >> tmp/index.html
 	@echo "<table><thead><tr><th>Posts ($$(ls -1 ./posts | wc -l))</th></tr></thead><tbody>" >> tmp/index.html
 	@for FILE in $$(ls ./posts | sort -r); do \
@@ -37,7 +37,7 @@ item: header footer
 		mkdir tmp/$$(echo $$FILE | tr -d '.md');\
 		cat header > tmp/$$(echo $$FILE | tr -d '.md')/index.html;\
 		echo "<center><h1><a href='/'>${TITLE}</a></h1></center>" >> tmp/$$(echo $$FILE | tr -d '.md')/index.html;\
-		echo "<article>" >> tmp/$$(echo $$FILE | tr -d '.md')/index.html;\
+		echo "<article class='post'>" >> tmp/$$(echo $$FILE | tr -d '.md')/index.html;\
 		echo "<time>$$(echo $${FILE} | tr '-' '/' | tr '_' ' ' | tr -d '.md')</time>" >> tmp/$$(echo $$FILE | tr -d '.md')/index.html;\
 		smu ./posts/$$FILE >> tmp/$$(echo $$FILE | tr -d '.md')/index.html; \
 		echo "</article>" >> tmp/$$(echo $$FILE | tr -d '.md')/index.html;\
@@ -62,7 +62,17 @@ feed: item
 	@echo '</channel>' >> feed.xml
 	@echo '</rss>' >> feed.xml
 
-public: posts assets index feed
+pages:
+	@for PAGE in $$(ls *.md); do \
+		mkdir tmp/$$(echo $$PAGE | tr -d '.md');\
+		cat header > tmp/$$(echo $$PAGE | tr -d '.md')/index.html;\
+		echo "<center><h1><a href='/'>${TITLE}</a></h1></center>" >> tmp/$$(echo $$PAGE | tr -d '.md')/index.html;\
+		echo "<article>" >> tmp/$$(echo $$PAGE | tr -d '.md')/index.html;\
+		smu ./$$PAGE >> tmp/$$(echo $$PAGE | tr -d '.md')/index.html;\
+		echo "</article>" >> tmp/$$(echo $$PAGE | tr -d '.md')/index.html;\
+	done
+
+public: posts assets index feed pages
 	@if [ -e "public" ]; then\
 		rm -rf public header footer;\
 	fi
