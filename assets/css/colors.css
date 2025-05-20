@@ -1,0 +1,18 @@
+:root {
+    --level-1-bg:               var(--background);
+    --level-1-fg:               #FFA066;
+    --level-2-bg:               var(--level-1-bg);
+    --level-2-fg:               var(--level-1-fg);
+    --level-3-bg:               var(--level-1-bg);
+    --level-3-fg:               var(--level-1-fg);
+
+    --foreground:               #DCD7BA;
+    --background-code:               #1F1F28;
+    --background:           #16161D;
+    --background-alt:          #2A2A37;
+    --accent:                   #957FB8;
+    --link:                     #7E9CD8;
+    --mode-bar:                 var(--background-alt);
+    --border:                   solid 1px var(--background-alt);    
+}
+

@@ -1,0 +1,4 @@
+#+TITLE: Blog
+#+DESCRIPTION: Aqui estão todos os meus posts! Eles não possuem uma ordem cronológica, não todos pelo menos.
+
+#+INCLUDE: sitemap.org :lines "9-"

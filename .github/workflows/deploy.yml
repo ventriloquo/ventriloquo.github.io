@@ -20,11 +20,11 @@ jobs:
       - name: Clone repository
         uses: actions/checkout@v4
 
-      - name: Install smu
-        run: git clone --depth=1 git://git.codemadness.org/smu && cd smu && sudo make install && cd ..
+      - name: Install Emacs
+        run: sudo apt install emacs-nox
 
       - name: Build site
-        run: make
+        run: emacs -x ./build.el
 
       - name: Setup Pages
         uses: actions/configure-pages@v5

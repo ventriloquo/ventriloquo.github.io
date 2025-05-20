@@ -1,0 +1,47 @@
+#+TITLE: Blog.sh, o meu próprio SSG
+
+Dos produtores de "Ovorefazermeusaite", vêm aí "E se eu fizer meu próprio gerador de sites?"!
+
+Agora falando sério, eu realmente fiz o meu próprio SSG (Static Site Generator).
+
+Ele não é nada demais, na realidade ele não é muito diferente dos scripts que eu fazia para conseguir criar um post novo de forma mais rápida, a diferença fica só na sofisticação do script e um pouco da forma em que ele opera.
+
+* Geração de site rápida pra k7
+Uma coisa que é extremamente notável é a diferença na hora de fazer a geração do site. É simplesmente absurdo. É como comparar a velocidade de um jogo feito em C, para um feito em JavaScript.
+
+No Emacs, a geração do site feito em org-mode leva uma coisa de 2 a 4 segundos, o que é relativamente rápido, porém, o meu script leva aproximadamente 0.071 segundos para fazer a mesma coisa.
+
+Tudo bem, eu não tenho uma tabela de conteúdo e nem o syntax highlighting, porém, essas são coisas que eu estou disposto a descartar se significar que eu vou ter uma geração de páginas dezenas de vezes mais rápida.
+
+* Por debaixo dos panos
+O script possui um comando que cuida da criação da estrutura de arquivos e um que "compila" o site com base nessa estrutura. Como você faz para usar essa estrutura de arquivos e quais as regras impostas pelo script podem ser achadas no readme que é gerado junto do website
+
+Todos os arquivos dentro do diretório content são lidos pelo smu, programa que é utilizado para converter um texto no estilo Markdown para HTML.
+
+O smu não tem suporte para tudo o que o Markdown tem a oferecer, porém ele aceita o uso de tags HTML, então tudo o que o smu não tiver suporte pode ser substituído por uma tag.
+
+* Por que?
+Eu fiz isso puramente para ver se eu conseguiria fazer um SSG, e, se tratando de funcionalidade básica, eu consegui sem nenhum problema.
+
+Mas um outro ponto que me fez fazer isso foi o Neovim... Olha, eu não sei se isso é algum tipo de apego ou algo do gênero, mas eu simplesmente fiquei com saudades de usar o meu Neovim. A configuração que eu tenho é equivalente à minha configuração do Emacs, não em todos os aspectos, mas quando se trata de edição de texto/código, ambos são quase os mesmos, porém o Neovim ainda leva a vantagem, porque o Neovim tem suporte ao LSP (Language Server Protocol), o que faz com que o auto-complete do Neovim seja muito mais versátil e preciso do que usar o company-mode no Emacs.
+
+Outra coisa que eu consigo fazer agora que eu fiz o meu próprio SSG é usar ele em conjunto com o Neovim ou qualquer outro editor de texto que eu queira, basta eu salvar o arquivo e digitar o comando:
+
+#+begin_src bash
+blog.sh build
+#+end_src
+
+E na realidade eu nem vou precisar digitar esse comando, eu já fiz um outro comando que é um equivalente ao hugo serve da vida. Tudo o que eu preciso fazer é digitar
+
+#+begin_src bash
+blog.sh serve
+#+end_src
+
+E isso vai abrir um servidor HTTP usando o =python -m http.server= e também vai executar o comando =entr=, que serve para "ficar de olho em mudanças", e sempre que o =entr= notar alguma mudança em algum arquivo do diretório content ele mesmo executa o =blog.sh build= e atualiza as páginas.
+
+Tudo o que eu preciso fazer agora é ficar de olho em qualquer bug que possa aparecer.
+
+* /Fin/
+Enfim, é isso o que eu tinha para falar por agora.
+
+Te vejo no próximo post!

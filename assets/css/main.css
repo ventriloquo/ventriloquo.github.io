@@ -1,0 +1,167 @@
+@import url("/css/colors.css");
+@import url("/css/animations.css");
+@import url("/css/mode-bars.css");
+@import url("/css/code.css");
+@import url("/css/org.css");
+@import url("/css/media.css");
+
+@font-face {
+    src: url("/fonts/shingopro.otf");
+    font-family: "shingopro";
+}
+
+@font-face {
+    src: url("/fonts/jetbrainsmono.woff2");
+    font-family: "jetbrains";
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    position: relative;
+    font-family: system-ui;
+    scroll-behavior: smooth;
+    scroll-padding: 1em;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: "shingopro";
+}
+
+a {
+    text-decoration: none;
+    color: var(--link);
+}
+
+a:hover {
+    opacity: 80%;
+}
+
+p {
+    padding-up: .5em;
+    padding-bottom: .5em;
+}
+
+hr {
+    border: var(--border);
+    border-bottom: none;
+}
+
+blockquote {
+    background-color: var(--background-alt);
+    color: var(--accent);
+    border-left: solid 5px var(--accent);
+    padding: 10px 20px;
+    margin: 10px auto;
+}
+
+blockquote > p > code {
+    background-color: var(--link);
+    color: var(--background);
+}
+
+blockquote > pre {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+pre, code {
+    font-family: "jetbrains";
+}
+
+p, hr {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+ul, ol {
+    list-style-position: inside;
+    padding-inline-start: 1.5em;
+}
+
+ul > li {
+    list-style: "- ";
+}
+
+h1 {
+    padding: 10px;
+    border-bottom: var(--border);
+    font-size: xx-large;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+
+h2, h3, h4 {
+    margin: 1em 0;
+}
+
+h2, h2::before {
+    content: "* ";
+    background-color: var(--level-1-bg);
+    color: var(--level-1-fg);
+}
+
+h3, h3::before {
+    content: "** ";
+    background-color: var(--level-2-bg);
+    color: var(--level-2-fg);
+}
+
+h4, h4::before {
+    content: "*** ";
+    background-color: var(--level-3-bg);
+    color:            var(--level-3-fg);
+}
+
+img {
+    max-height: 300px;
+    max-width: 100%;
+    object-fit: cover;
+    display: block;
+    margin: 1em auto;
+}
+
+table, th, td {
+    border: var(--border);
+    padding: 5px;
+    border-collapse: collapse;
+}
+
+table {
+    border: none;
+    overflow: scroll;
+    margin: 1em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+th, td {
+    padding-left: 1em;
+    padding-right: 1em;
+    margin: 0;
+}
+
+
+tr:hover {
+    color: var(--accent);
+}
+
+
+th {
+    font-weight: bold;
+    background-color: var(--background-alt);
+}
+
+tr:nth-of-type(even) {
+    background-color: var(--background-alt);
+}

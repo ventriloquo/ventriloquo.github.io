@@ -1,0 +1,49 @@
+#+TITLE: Vi, só que dentro do Emacs!
+
+Esse mostro de um programa é tão cheio de coisa para se falar que já garantiu até uma trilogia nesse blog.
+
+* Viper
+
+A um pouco mais de 3 horas atrás, enquanto eu ainda estava no meu trabalho, eu fiquei pesquisando um pouco sobre o Emacs, e eu acabei achando o diretório de manuais de referência dele. Dois deles me chamaram (e muito) a minha atenção, os manuais de referência do vip-mode e do =viper-mode=.
+
+Obviamente que quando eu vi esses manuais eu cliquei neles para ver do que eles se tratavam, e bom, eles são modos que emulam os controles do VI, o editor de texto modal que vem com qualquer sistema Unix e que foi dele que surgiu o Vim (VI iMproved).
+
+Eu decidi usar o =viper= no lugar do vip só porque ele aparenta ser uma opção mais completa em comparação. Ele chega no nível de até mesmo ter um mini-tutorial e um wizard perguntando qual o seu nível de expertise com ele.
+
+* Bem, e como é usar ele?
+
+Como já disse, o =viper= emula o VI e não o Vim (isso é o que o evil-mode faz), sendo assim ele não tem as mesmas teclas/comandos que o Vim possui. Porém, você ainda pode usar as teclas do Emacs em conjunto com as teclas do VI, o que mais que compensa, *na minha opinião*, a falta das teclas do Vim.
+
+Só de ter uma parte das teclas que são usadas no Vim já torna a minha experiência muito melhor. Afinal, apesar do Emacs ser um programa que é ótimo em diversos aspectos, as teclas de atalho dele não são particularmente um ponto positivo dele.
+
+E é claro que como tudo no Emacs, eu posso customizar o =viper= e adicionar os comandos que eu acho extremamente úteis do Vim, no =viper=, criando assim um Frankenstein que nunca deveria ter nascido.
+
+A minha configuração dele, inclusive, está bem modesta, com poucas linhas de código, mas já são o suficiente para deixar o meu uso do Emacs 10 vezes mais aconchegante.
+
+#+begin_src emacs-lisp
+(setq viper-mode t)
+(require 'viper)
+(setq viper-inhibit-startup-message 't)
+(setq viper-expert-level  '5)
+(setq viper-want-ctl-h-help t)
+(setq viper-ex-style-editing nil)
+(setq viper-no-multiple-ESC nil)
+(setq viper-syntax-preference 'extended)
+(setq viper-vi-style-in-minibuffer nil)
+(define-key viper-vi-basic-map (kbd "v") 'set-mark-command)
+(define-key viper-vi-basic-map (kbd "f") 'find-file)
+(define-key viper-vi-basic-map (kbd "R") 'replace-rectangle)
+(define-key viper-vi-basic-map (kbd "C-v") 'rectangle-mark-mode)
+(define-key viper-vi-basic-map (kbd "x") 'kill-region)
+(viper-mode)
+#+end_src
+
+Como eu disse, ainda está bem modesta. Apesar de que só tacar um bloco de código do nada não explica direito o que está acontecendo, Elisp é uma linguagem bem simples de entender, então eu acho que não vai ser tão problemático assim.
+
+Mas, basicamente eu só ativei o =viper-mode= e configurei 5 teclas de atalho que "emulam" algumas teclas que eu uso no Neovim. Não são completamente idênticas, mas já dão conta do recado.
+
+* /Fin/
+
+Bom, é isso, acho que por agora eu não tenho mais o que falar sobre esse lindo programa chamado Emacs.
+
+Até o próximo post!

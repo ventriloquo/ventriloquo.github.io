@@ -1,0 +1,36 @@
+#+TITLE: God mode
+#+DATE: 25/10/2024
+
+Pois é, depois de ter feito um SSG próprio e ter dedicado um post para ele, cá estou aqui novamente, usando o Emacs, porém dessa vez não estou usando o =viper-mode=, não não, dessa vez eu estou usando algo mais... /abençoado?/
+
+* God mode
+O nome é um pouco exagerado, mas isso não significa que ele não é algo que melhora *E MUITO* no uso do Emacs.
+
+Ele basicamente faz isso aqui com o =Ctrl= e =Alt=:
+
+[[https://i.makeagif.com/media/5-05-2024/1KNCKC.gif]]
+
+Isso não é exagero, basicamente qualquer /key-chord/ do emacs pode ser escrita sem a necessidade de usar algum modificador como o =Ctrl=, =Alt=, ou os dois ao mesmo tempo (como por exemplo a key-chord para selecionar uma palavra abaixo do cursor: =Ctrl Alt Espaço=).
+
+A consequência disso é bem direta ao ponto na realidade, primeiro que você não tem mais o risco de adquirir uma [[https://pt.wikipedia.org/wiki/Les%C3%A3o_por_esfor%C3%A7o_repetitivo][L.E.R]] da vida por ficar apertando o =Ctrl= como se não houvesse amanhã, segundo que, caso você tenha uma memória muscular boa, é possível ter um workflow tão eficiente quanto (senão até mais) um Vim-like. E isso inclui o =Evil-mode=, que faz com que o Emacs se comporte como o Vim, se tratando de teclas de atalho.
+
+* E quanto ao [[https://codeberg.org/tukain/blog.sh][blog.sh]]?
+Tendo em vista que eu já estou usando o =org-mode= novamente para desenvolver o meu site, o futuro dele é incerto. Ele é algo que eu fiz em um momento de hiperfoco extremamente aleatório e também enquanto eu estava entediado e procurando algo para me divertir.
+
+Mas não posso garantir nada, da mesma forma que eu já fiz e refiz o meu site centenas de vezes, eu posso voltar a usar o =blog.sh= novamente, mas no momento, eu prefiro continuar com o =org-mode=.
+
+* O estilo do site
+Vira e mexe eu me pego observando como o design do site está. A minha ideia com o estilo dele é ser o mais flexível possível, enquanto ao mesmo tempo seja minimalista, legível, e claro, agradável aos olhos.
+
+A consequência disso foi um site que, não importando a página, parece algum artigo de site de notícias quando visto usando a função de leitura de alguns navegadores.
+
+Eu já tenho umas ideias sobre o que eu posso fazer para dar um pequeno upgrade na aparência, sem ser algo extremamente radical (como foram as últimas mudanças nesse site).
+
+Em relação ao tema que eu uso (Kanagawa Wave), eu não sei dizer por quanto tempo ele vai durar, já uso ele a +/- 3 semanas, mas não chega perto dos meses que eu fiquei usando o Gruvbox em tudo.
+
+Enfim, isso é uma incógnita que eu prefiro não saber quando deixará de ser uma, afinal de contas, no momento em que eu estou escrevendo este post, a Kanagawa Wave é a minha nova favorita.
+
+* /Fin/
+Enfim, chega de ficar tagarelando com coisas que ninguém liga.
+
+Até o próximo post!

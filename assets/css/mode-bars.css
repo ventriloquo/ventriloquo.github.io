@@ -1,0 +1,65 @@
+#preamble, #postamble {
+    position: sticky;
+}
+
+#preamble {
+    top: 0px;
+}
+
+#postamble {
+    bottom: 0px;
+}
+
+#postamble > header > nav {
+    border-bottom: solid 15px var(--background);
+}
+
+#preamble > header > nav,
+#postamble > header > nav {
+    background-color: var(--mode-bar);
+    display: flex;
+    padding: 5px 20px;
+    justify-content: space-between;
+    overflow-x: scroll;
+    margin: 0;
+}
+
+#preamble > header > nav > ul,
+#postamble > header > nav > ul {
+    display: flex;
+    list-style: none;
+}
+
+#preamble > header > nav > ul > li,
+#postamble > header > nav > ul > li {
+    padding-left: 10px;
+    padding-right: 10px;
+    list-style: none;
+}
+
+#preamble > header > nav > ul > li > span,
+#postamble > header > nav > ul > li > span {
+    color: var(--yellow);
+}
+
+#preamble > header > nav > ul > li > a,
+#postamble > header > nav > ul > li > a {
+    color: var(--foreground);
+    border: solid 1px transparent;
+    padding: 0.5em 1em;
+}
+
+#preamble > header > nav > ul > li > a:hover,
+#postamble > header > nav > ul > li > a:hover {
+    border: solid 1px var(--foreground);
+}
+
+#postamble > header > nav > ul,
+#preamble > header > nav > ul {
+    padding: 0;
+}
+
+#preamble > header > nav {
+    padding: 15px;
+    font-size: medium;
+}

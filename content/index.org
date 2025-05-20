@@ -1,0 +1,14 @@
+#+TITLE: Tukain's Blog
+#+AUTHOR: Tukain
+#+DESCRIPTION: Um blog simples, feito usando o org-mode.
+#+OPTIONS: toc:nil
+
+#+begin_center
+/Feito com ❤️ usando o org-mode/
+#+end_center
+
+* Bem-vindo ao meu site!
+
+Sou alguém que busca por músicas que me relaxam ou que dão adrenalina… Só depende do dia.
+
+Sinta-se livre para explorar o meu espaço neste vasto mundo chamado internet!
