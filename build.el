@@ -29,7 +29,7 @@
       '(("pages"
     	 :base-directory "./content"
 	 :auto-sitemap t
-	 :sitemap-filename "./blog/sitemap.org"
+	 :sitemap-filename "sitemap.org"
 	 :sitemap-title "Sitemap"
 	 :sitemap-sort-files anti-chronologically
 	 :recursive t
