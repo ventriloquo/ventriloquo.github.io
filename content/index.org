@@ -4,11 +4,30 @@
 #+OPTIONS: toc:nil
 
 #+begin_center
-/Feito com ❤️ usando o org-mode/
+Não irei mais atualizar este site, por enquanto.
 #+end_center
 
-* Bem-vindo ao meu site!
+Depois de muita dor de cabeça, eu decidi que eu não irei atualizar este site
+por um tempo.
 
-Sou alguém que busca por músicas que me relaxam ou que dão adrenalina… Só depende do dia.
+No lugar, irei fazer novas postagens [[http://simp.ly/p/r23qNc][por aqui]]. Eu
+preciso desse pequeno tempo para relaxar um pouco e focar em outras áreas,
+mesmo que ainda sejam áreas envolvendo programação.
 
-Sinta-se livre para explorar o meu espaço neste vasto mundo chamado internet!
+O meu site foi o "projeto" que eu mais dediquei meu tempo desenvolvendo. Ele já
+passou por tantas mudanças e reconstruções completas que eu já perdi a conta.
+Mas, no final, eu acabei focando tanto nele que eu deixei de aprender a fazer
+coisas novas.
+
+A muito tempo eu negligencio outros projetos/objetivos meus por conta desse
+site, um exemplo disso são as
+[[https://github.com/ventriloquo/hare_raylib][minhas bindings]] da
+[[https://harelang.org][Harelang]], para a biblioteca de jogos em C,
+a [[https://github.com/raysan5/raylib][Raylib]].
+
+Espero que eu consiga realizar essa mudança na minha pessoa, e que, assim que
+conseguir, eu volte com algo a mostrar, algo de verdade.
+
+#+BEGIN_CENTER
+#+HTML: <span style="color: var(--accent)">Tukain, 20/05/2025</span>
+#+END_CENTER

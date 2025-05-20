@@ -4,18 +4,7 @@
 (load-theme 'kanagawa-wave t)
 (delete-directory "./public" t)
 
-(setq org-html-preamble
-      (concat
-       "<header>"
-         "<nav>"
-           "<ul>"
-             "<li><a href=\"/\">Início</a></li>"
-           "</ul>"
-	   "<ul>"
-             "<li><a href=\"/blog\">Blog</a></li>"
-           "</ul>"
-         "</nav>"
-	 "</header>"))
+(setq org-html-preamble nil)
 
 (setq org-html-postamble nil)
 

@@ -1,25 +1,4 @@
 #+TITLE: Sitemap
 
-- [[file:blog.org][Blog]]
-- [[file:teste.org][Teste]]
 - [[file:index.org][Tukain's Blog]]
 - [[file:404.org][Erro 404]]
-- 2025
-  - [[file:2025/ox-publish.org][Estou usando o ox-publish mais uma vez.]]
-  - [[file:2025/o-site-agora-é-feito-por-meio-de-uma-makefile.org][O site agora é gerado por meio de uma Makefile]]
-  - [[file:2025/revisitando-o-blog.sh.org][Revisitando o blog.sh - meu próprio "ssg".]]
-  - [[file:2025/estou-usando-o-xubuntu-agora.org][Estou usando o Xubuntu agora...]]
-- 2024
-  - [[file:2024/iphone.org][Eu comprei... Eu comprei um iPhone...]]
-  - [[file:2024/vale-da-estranheza.org][Vale da estranheza]]
-  - [[file:2024/de-novo-no-emacs.org][De novo no Emacs]]
-  - [[file:2024/god-mode.org][God mode]]
-  - [[file:2024/fiz-meu-próprio-ssg.org][Blog.sh, o meu próprio SSG]]
-  - [[file:2024/viper-mode.org][Vi, só que dentro do Emacs!]]
-  - [[file:2024/proton.org][Tô usando o Proton]]
-  - [[file:2024/emacs-parte-2.org][Emacs - Parte 2]]
-  - [[file:2024/emacs.org][Emacs]]
-  - [[file:2024/c-e-hare.org][A simplicidade da C e da Hare]]
-  - [[file:2024/hare.org][Hare]]
-  - [[file:2024/haiku.org][Haiku]]
-  - [[file:2024/chrome-os.org][O ChromeOS tá ficando interessante.]]
