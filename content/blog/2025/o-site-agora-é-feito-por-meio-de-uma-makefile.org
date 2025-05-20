@@ -1,5 +1,5 @@
 #+TITLE: O site agora é gerado por meio de uma Makefile
-#+DATE: 2025-05-17
+#+DATE: <2025-05-17>
 
 Eu considero isso uma evolução ao script que eu estava utilizando.
 

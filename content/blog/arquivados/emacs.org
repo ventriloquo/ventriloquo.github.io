@@ -1,5 +1,5 @@
 #+TITLE: Emacs
-#+DATE: 21/07/2024
+#+DATE: <2024-07-21>
 
 Olha só quem voltou! E mais uma vez com o site completamente mudado!
 

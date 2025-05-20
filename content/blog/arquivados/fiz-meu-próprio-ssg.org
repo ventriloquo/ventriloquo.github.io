@@ -1,4 +1,5 @@
 #+TITLE: Blog.sh, o meu próprio SSG
+#+DATE: <2024-10-20>
 
 Dos produtores de "Ovorefazermeusaite", vêm aí "E se eu fizer meu próprio gerador de sites?"!
 

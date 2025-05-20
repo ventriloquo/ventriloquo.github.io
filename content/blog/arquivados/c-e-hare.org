@@ -1,5 +1,5 @@
 #+TITLE: A simplicidade da C e da Hare
-#+DATE: 2024-03-25
+#+DATE: <2024-03-25>
 
 Recentemente eu fiz um post sobre os meus estudos com a linguagem de
 programação Hare, falei sobre o que eu planejo fazer com esse

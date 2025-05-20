@@ -1,5 +1,5 @@
 #+TITLE: God mode
-#+DATE: 25/10/2024
+#+DATE: <2024-10-25>
 
 Pois é, depois de ter feito um SSG próprio e ter dedicado um post para ele, cá estou aqui novamente, usando o Emacs, porém dessa vez não estou usando o =viper-mode=, não não, dessa vez eu estou usando algo mais... /abençoado?/
 

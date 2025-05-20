@@ -1,5 +1,5 @@
 #+TITLE: Hare
-#+DATE: 23/03/2024
+#+DATE: <2024-03-23>
 
 * Praticamente C, mas com diversas melhorias
 

@@ -1,4 +1,5 @@
 #+TITLE: De novo no Emacs
+#+DATE: <2024-10-28>
 
 E lá vamos nós de novo, em mais um post que só demonstra o quanto que eu necessito me tratar.
 

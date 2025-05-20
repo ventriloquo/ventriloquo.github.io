@@ -1,4 +1,5 @@
 #+TITLE: O ChromeOS tá ficando interessante.
+#+DATE: <2024-02-10>
 
 Quando o assunto se trata da Google, sempre se pode ter certeza de duas coisas:
 - Vai ser mais uma forma de mineirar dados como se fosse uma farm automática do Viniccius13

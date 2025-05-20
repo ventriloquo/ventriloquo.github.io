@@ -1,5 +1,5 @@
 #+TITLE: Eu comprei... Eu comprei um iPhone...
-#+DATE: 01/01/2025
+#+DATE: <2024-12-15>
 
 Pois é, logo eu, que enchia a boca para falar de privacidade e tecnologia open-source,
 comprei um iPhone.

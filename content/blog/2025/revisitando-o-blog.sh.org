@@ -1,5 +1,5 @@
 #+TITLE: Revisitando o blog.sh - meu próprio "ssg".
-#+DATE: 15-05-2025
+#+DATE: <2025-05-15>
 
 Esse carinha estava guardado no quinto dos infernos praticamente. Empoeirando
 em um repositório de uma forja git que eu nem sequer uso a quase 1 ano, mas eu

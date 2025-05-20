@@ -1,5 +1,5 @@
 #+TITLE: Estou usando o Xubuntu agora...
-#+DATE: 30-04-2025
+#+date: <2025-04-30>
 
 Esse não é o tipo de assunto que eu costumo fazer um post sobre, mas acho que
 vale a penar comentar um pouco.

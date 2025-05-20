@@ -1,4 +1,5 @@
 #+TITLE: Vi, só que dentro do Emacs!
+#+DATE: <2024-10-01>
 
 Esse mostro de um programa é tão cheio de coisa para se falar que já garantiu até uma trilogia nesse blog.
 

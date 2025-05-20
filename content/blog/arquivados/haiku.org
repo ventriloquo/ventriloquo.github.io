@@ -1,4 +1,5 @@
 #+TITLE: Haiku
+#+DATE: <2024-03-01>
 Que... nostalgia.
 
 Após longos 3 anos, finalmente pude instalar o Haiku no meu PC novamente. Como eu estava com saudades desse sistema.

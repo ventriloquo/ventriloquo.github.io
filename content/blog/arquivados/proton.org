@@ -1,5 +1,5 @@
 #+TITLE: Tô usando o Proton
-#+DATE: 25/08/2024
+#+DATE: <2024-08-25>
 
 Depois de aproximadamente 1 ano, eu criei uma nova conta no [[https://proton.me][Proton]].
 Um serviço de e-mail/calendário online/VPN/cloud storage/gerenciador
