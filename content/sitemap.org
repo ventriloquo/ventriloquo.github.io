@@ -5,6 +5,7 @@
 - [[file:index.org][Tukain's Blog]]
 - [[file:404.org][Erro 404]]
 - 2025
+  - [[file:2025/ox-publish.org][Estou usando o ox-publish mais uma vez.]]
   - [[file:2025/o-site-agora-é-feito-por-meio-de-uma-makefile.org][O site agora é gerado por meio de uma Makefile]]
   - [[file:2025/revisitando-o-blog.sh.org][Revisitando o blog.sh - meu próprio "ssg".]]
   - [[file:2025/estou-usando-o-xubuntu-agora.org][Estou usando o Xubuntu agora...]]

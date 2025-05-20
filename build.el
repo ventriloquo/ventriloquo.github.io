@@ -1,6 +1,7 @@
 (require 'ox-publish)
 (load-file "./htmlize.el")
-
+(load-file "./kanagawa/kanagawa-themes.el")
+(load-theme 'kanagawa-wave t)
 (delete-directory "./public" t)
 
 (setq org-html-preamble
