@@ -20,11 +20,20 @@ jobs:
       - name: Clone repository
         uses: actions/checkout@v4
 
-      - name: Install Emacs
-        run: sudo apt install emacs-nox
+      - name: Dependencies to build Hare
+        run: sudo apt intall -y scdoc && git clone --depth=1 git://c9x.me/qbe.git && git clone --depth=1 https://git.sr.ht/~sircmpwn/harec && git clone --depth=1 https://git.sr.ht/~sircmpwn/hare 
+
+      - name: Build QBE
+        run: cd qbe && sudo make install && cd ../
+
+      - name: Build Hare Compiler
+        run: cd harec && cp configs/linux.mk config.mk && sudo make install && cd ../
+
+      - name: Build Hare Standard Library
+        run: cd hare && cp configs/linux.mk config.mk && sudo make install
 
       - name: Build site
-        run: emacs -x ./build.el
+        run: make
 
       - name: Setup Pages
         uses: actions/configure-pages@v5

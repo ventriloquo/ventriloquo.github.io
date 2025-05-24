@@ -1,4 +1,0 @@
-#+TITLE: Sitemap
-
-- [[file:index.org][Tukain's Blog]]
-- [[file:404.org][Erro 404]]
