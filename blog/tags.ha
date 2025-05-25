@@ -1,2 +1,5 @@
-// - [[post_1970_01_01]]
-export const teste;
+// - [[post_2025_05_25]]
+export const raylib;
+
+// - [[post_2025_05_25]]
+export const hare;
