@@ -37,9 +37,10 @@ export type sobre_mim = struct {
 // 		hobbies: str,
 // 	};
 //
-// O conteúdo que compõe esses structs fará o uso majoritário da língua inglesa,
-// devido à uma limitação na linguagem de programação Hare. Fazendo com que não
-// seja possível utilizar caracteres UTF-8 em locais que não são comentários.
+// O conteúdo que compõe esses structs fará o uso da língua inglesa de forma
+// majoritária, devido à uma limitação na linguagem de programação Hare. Fazendo
+// com que não seja possível utilizar caracteres UTF-8 em locais que não
+// são comentários.
 //
 // # Como os posts são organizados
 //
