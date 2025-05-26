@@ -1,8 +1,8 @@
 #+TITLE: Sitemap
 
-- [[file:blog.org][Blog]]
-- [[file:index.org][Tukain's Blog]]
 - [[file:404.org][Erro 404]]
+- [[file:index.org][Tukain's Blog]]
+- [[file:blog.org][Blog]]
 - posts
   - [[file:posts/org-mode.org][Org-mode]]
   - [[file:posts/minhas-bindings.org][Retornei ao desenvolvimento das minhas bindings da Raylib.]]

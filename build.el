@@ -1,5 +1,6 @@
 (require 'ox-publish)
 (load-file "./htmlize.el")
+(load-file "./hare-mode.el")
 (load-file "./kanagawa/kanagawa-themes.el")
 (load-theme 'kanagawa-wave t)
 (delete-directory "./public" t)
