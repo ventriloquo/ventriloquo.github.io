@@ -1,0 +1,12 @@
+:root {
+    --foreground:       #DCD7BA;
+    --background-code:  #1F1F28;
+    --background:       #16161D;
+    --background-alt:   #2A2A37;
+    --accent:           #957FB8;
+    --link:             #7E9CD8;
+    --heading:          #FFA066;
+    --mode-bar:         var(--background-alt);
+    --border:           solid 1px var(--background-alt);    
+}
+

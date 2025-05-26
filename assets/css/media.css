@@ -1,0 +1,10 @@
+@media print {
+    #table-of-contents {
+	display: none;
+    }
+
+    #preamble, #postamble {
+	display: none;
+    }
+}
+
