@@ -1,4 +1,0 @@
-#+TITLE: Org-mode
-#+DATE: <2025-05-26 seg>
-
-* TODO O maior trunfo do Emacs.
