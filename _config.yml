@@ -1,6 +1,7 @@
+url: https://tukain.xyz/
 title: Ventriloquo
 author: "ventriloquo"
-description: >- # this means to ignore newlines until "baseurl:"
+description:
   Um blog simples, feito utilizando o Jekyll.
 
 defaults:
