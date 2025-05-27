@@ -16,3 +16,7 @@ defaults:
     values:
       layout: "post"
       category: "blog"
+  - scope:
+      path: "_drafts"
+    values:
+      layout: "post"

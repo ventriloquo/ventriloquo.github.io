@@ -14,6 +14,7 @@
       <h1>{{ page.title }}</h1>
       <p>{{ page.description }}</p>
   </hgroup>
+  <img src="/assets/img/thumbnails/{{page.thumbnail}}">
   <div>
     {{ content }}
   </div>
@@ -39,5 +40,12 @@
     </div>
   </a>
   {% endfor %}
+  <a href="/blog">
+    <div style="height: 50px" class="card">
+      <div class="card_title">
+      Veja mais
+      </div>
+    </div>
+  </a>
   </div>
 </body>
