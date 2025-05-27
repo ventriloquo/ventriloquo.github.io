@@ -33,7 +33,7 @@ for (let i = 0; i < posts.length; i++) {
      article.setAttribute("id", id);
      document.getElementById("body").appendChild(article);
      document.getElementById(id).innerHTML = `
-     <a href="#${id}"><h1>${title}<img class="icon" src="/assets/notepad.webp"></h1></a>
+     <a href="#${id}"><h1><img class="icon" src="/assets/notepad.webp">${title}</h1></a>
      ${text
            .replaceAll("%%", "%")
            .replaceAll("%#", "<h2>")
@@ -43,12 +43,8 @@ for (let i = 0; i < posts.length; i++) {
            .replaceAll("%/", "<br>")
            .replaceAll("%|", "<pre>")
            .replaceAll("|%", "</pre>")
-           .replaceAll("%\(",  "<ul>")
-           .replaceAll("\)%",  "</ul>")
-           .replaceAll("%-",  "<li>")
-           .replaceAll("-%",  "</li>")
-           .replaceAll("[",  "<kbd>")
-           .replaceAll("]",  "</kbd>")
+           .replaceAll("%[",  "<kbd>")
+           .replaceAll("]%",  "</kbd>")
            .replaceAll("%b",  "<b>")
            .replaceAll("b%",  "</b>")
            .replaceAll("%i",  "<i>")

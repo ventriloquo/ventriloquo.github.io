@@ -90,14 +90,6 @@ article > a > h1 {
     margin-bottom: -.5em;
 }
 
-@media only screen and (orientation: portrait) {
-
-  article:target {
-    width: 96%;
-  }
-
-}
-
 a {
   color: var(--link);
 }
@@ -140,9 +132,8 @@ hr {
   border-right: none;
   page-break-after: always;
   display: block;
-  margin: 3em;
+  margin: 3em 0;
 }
-
 
 ul, ol {
   list-style-position: inside;
@@ -229,4 +220,10 @@ kbd, pre, code {
 
 kbd, pre {
   min-height: 20px;
+}
+
+@media only screen and (orientation: portrait) {
+    hgroup {
+	padding: 15px;
+    }
 }
