@@ -85,6 +85,7 @@ p, hr {
 ul, ol {
     list-style-position: inside;
     padding-inline-start: 1.5em;
+    margin-bottom: 1em;
 }
 
 ul > li {

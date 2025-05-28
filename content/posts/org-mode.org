@@ -1,4 +1,27 @@
 #+TITLE: Org-mode
 #+DATE: <2025-05-26 seg>
 
-* TODO O maior trunfo do Emacs.
+O famoso Org-mode... Como que eu posso descrever...
+
+* O maior trunfo do Emacs.
+Acho que isso não é lá tão polêmico de dizer. O Emacs é capaz de muitas coisas, *muitas*, mas essa /coisinha/ em específico é tão incrível que até mesmo fura a bolha da comunidade do Emacs e chega à comunidades como a do Vim/Neovim.
+
+Você pode comparar o org-mode com o sistema de organização que usa Markdown. Com a diferença que nesse sistema imaginário as partes provavelmente seriam programas diferentes um do outro, e no caso do org-mode, tá tudo dentro do Emacs, e tudo interage e é integrado com maestria.
+
+Você consegue fazer planejamentos com uma agenda, distribuir tarefas entre diversos documentos, /deadlines/, exportação de documentos (que inclusive, é assim que esse site é gerado) entre diversas outras coisas.
+
+Até mesmo planilhas você consegue fazer! Isso mesmo, planilhas, não tabelas (chupa essa manga, Markdown).
+
+* Geração de site
+Como já mencionei, esse site em si é gerado a partir do org-mode, os detalhes de como isso funcionam são um pouco longos demais para que eu consiga explicar de forma rápida.
+
+Mas basicamente é o seguinte:
+
+- Dentro do org-mode, existe uma ferramenta de publicação.
+- Você pode criar um "/script/" em =elisp= configurando um projeto
+- Nesse /script/ você exporta o projeto em uma série de arquivos HTML
+
+Isso não é toda a história, mas é o conceito base.
+
+* TODO Escrever o resto do artigo
+
