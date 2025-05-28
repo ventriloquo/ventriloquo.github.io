@@ -1,7 +1,7 @@
 (require 'ox-publish)
 (load-file "./pkgs/htmlize.el")
 (load-file "./pkgs/hare-mode.el")
-(load-file "./pkgs/gruber-darker.el")
+(load-file "./pkgs/gruber/gruber-darker-theme.el")
 (load-theme 'gruber-darker t)
 (delete-directory "./public" t)
 
