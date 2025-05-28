@@ -41,6 +41,7 @@ hgroup {
     border-right-color: grey;
     border-bottom-color: grey;
     padding: 30px;
+    margin-bottom: 1em;
 }
 
 hgroup::before {
@@ -51,11 +52,6 @@ hgroup::before {
     top: 0;
     left: 0;
     width: 100%;
-}
-
-hgroup > h1 {
-  margin-top: 0;
-  margin-bottom: 0;
 }
 
 main {
@@ -88,6 +84,7 @@ button:active {
 
 article > a > h1 {
     margin-bottom: -.5em;
+    margin-top: -.2em;
 }
 
 a {
@@ -142,10 +139,6 @@ ul, ol {
 
 ul > li {
   list-style: "- "
-}
-
-pre > br {
-  margin: 0px;
 }
 
 h1, h2, h3 {
@@ -212,7 +205,8 @@ p > code {
 }
 
 kbd, pre, code {
-  background-color: var(--background-dim);
+  background-color: black;
+  color: white;
   padding: 3px;
   overflow-x: scroll;
   margin: 10px auto;

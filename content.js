@@ -3,6 +3,7 @@ const site_title = "Tukain's Website"
 let posts = [
     {
 	title: "Novamente usando o Javascript para gerar meu site",
+	date: "27/05/2025",
 	content:`
 Eu fiquei muito em dúvida sobre o que eu poderia fazer para continuar o desenvolvimento desse site.
 
@@ -14,11 +15,24 @@ Eu havia criado esse site para ser o meu projetinho do Neocities. Um site onde e
 
 Fiz uma mudança considerável no código-fonte original, dando uma boa polida nele. Acho que isso faz parte de progredir nos estudos.
 
-Apesar disso, o código-fonte responsável por gerar o site é bem pequeno. Tendo umas 60 linhas, no máximo.
+Apesar disso, o código-fonte responsável por gerar o site é bem pequeno. Tendo umas 60 linhas.
+
+O total de linhas que o arquivo em si possui é de 130 linhas, dessas, 70 são para realizar o syntax highlighting nos blocos de código. Eu fiz esse syntax highlighting em uma outra versão do meu site, uma em que eu só comentava e exemplificava códigos em Hare. Com isso, a única linguagem que realmente possui highlighting é a Hare, porém, liguagens com sintáxe semelhante, como a Rust, acabam ficando com cores de qualquer maneira, porque o código responsável por colorir sintáxe não liga para a sintáxe em si, somente para algumas palavras.
+
+O que introduz um problema quando estamos tratando de %i strings i%, por exemplo, vamos dizer que você tenha um programa cuja linguagem para documentação seja o inglês. Você poderia escrever, por exemplo, %[how to use this program]% para quando o usuário digitasse %[programa -h]%. O resultado disso é que quando eu gerar uma tag %[&lt;pre&gt;]% a palavra "use" ficará colorida.
+
+%|
+how to use this program
+
+|%
+É isso o que acontece quando você não tem um %i parser i%.
+
+Enfim, assim como todas as outras vezes que eu re-escrevi este site, eu não tenho certeza quanto a quanto tempo irei manter essa versão que utiliza JavaScript.
 `
     },
     {
 	title: "Retornei ao desenvolvimento das minhas bindings da Raylib.",
+	date: "25/05/2025",
 	content: `
 Depois de ter basicamente abandonado esse projeto por 8 meses, eu finalmente voltei a desenvolver ele.
 
@@ -43,9 +57,7 @@ type game_screen = enum {
 };
 
 export fn main() int = {
-// Código...
         let current_screen = game_screen::LOGO;
-// Código...
 };
 
 |%
@@ -56,14 +68,15 @@ Foi um bom execício.
     },
     {
 	title: "Teste",
+	date: "27/05/2025",
 	content: `
 Agora eu tenho a capacidade de usar os %i template literals i% do Javascript!
 
 O título desse website é: %[${site_title}]%
 
-A sua data e hora atual: é %[${new Date}]%
+A sua data e hora atual é: %[${new Date}]%
 
-Além disso, eu posso simplesmente escrever inline-javascript sem problemas!
+Além disso, eu posso simplesmente escrever %i inline-javascript i% sem problemas!
 Experimenta clicar <button onClick="alert('AAEEEEEEEEEEEE KAASSINNÃÃÃOOOO')">aqui</button>
 `
     }
