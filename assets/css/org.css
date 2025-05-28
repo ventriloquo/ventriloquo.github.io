@@ -3,8 +3,6 @@
     display: block;
     margin: 1em auto;
     padding: 10px;
-    border: solid 1px var(--background-alt);
-    border-radius: 3px;
 }
 
 .org-center {
@@ -26,25 +24,22 @@
 }
 
 .TODO {
-    color: #E82424;
+    color: #f43841;
 }
 
-/*
+.TODO::after {
+    content: ":"
+}
 
-TODO:
-FIXME:
-NOTE:
-
-*/
 #table-of-contents {
     background-color: var(--background-code);
     padding: 10px;
+    border: none;
 }
 
 #table-of-contents > h2 {
     background-color: var(--background-code);
     color: var(--foreground);
-    border: none;
     margin: 0;
 }
 

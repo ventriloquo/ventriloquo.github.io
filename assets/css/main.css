@@ -100,21 +100,6 @@ h2, h3, h4 {
     margin: 1em 0;
 }
 
-h2, h2::before {
-    content: "* ";
-    color: var(--heading);
-}
-
-h3, h3::before {
-    content: "** ";
-    color: var(--heading);
-}
-
-h4, h4::before {
-    content: "*** ";
-    color:            var(--heading);
-}
-
 img {
     max-height: 300px;
     max-width: 100%;

@@ -1,8 +1,8 @@
 (require 'ox-publish)
-(load-file "./htmlize.el")
-(load-file "./hare-mode.el")
-(load-file "./kanagawa/kanagawa-themes.el")
-(load-theme 'kanagawa-wave t)
+(load-file "./pkgs/htmlize.el")
+(load-file "./pkgs/hare-mode.el")
+(load-file "./pkgs/gruber-darker.el")
+(load-theme 'gruber-darker t)
 (delete-directory "./public" t)
 
 (setq org-html-preamble

@@ -1,12 +1,12 @@
 :root {
-    --foreground:       #DCD7BA;
-    --background-code:  #1F1F28;
-    --background:       #16161D;
-    --background-alt:   #2A2A37;
-    --accent:           #957FB8;
-    --link:             #7E9CD8;
-    --heading:          #FFA066;
-    --mode-bar:         var(--background-alt);
+    --foreground:       #f4f4ff;
+    --background:       #181818;
+    --background-code:  #282828;
+    --background-alt:   #453d41;
+    --accent:           #ffdd33;
+    --link:             #96a6c8;
+    --heading:          #9e95c7;
+    --mode-bar:         var(--background-code);
     --border:           solid 1px var(--background-alt);    
 }
 
