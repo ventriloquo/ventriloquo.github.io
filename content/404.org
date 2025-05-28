@@ -1,0 +1,5 @@
+#+TITLE: Erro 404
+
+#+begin_center
+A página solicitada não foi encontrada.
+#+end_center

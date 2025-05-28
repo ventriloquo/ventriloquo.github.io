@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<!-- 2025-05-27 Tue 21:31 -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Retornei ao desenvolvimento das minhas bindings da Raylib.</title>
+<meta name="generator" content="Org Mode" />
+<link rel=icon type="image/webp" href="/fav.webp"> <link rel=stylesheet href="/css/main.css" />
+</head>
+<body>
+<div id="preamble" class="status">
+<header><nav><a href="/">Início</a><a href="/blog.html">Blog</a></nav></header>
+</div>
+<div id="content" class="content">
+<header>
+<h1 class="title">Retornei ao desenvolvimento das minhas bindings da Raylib.</h1>
+</header><p>
+Depois de ter basicamente abandonado <a href="https://github.com/ventriloquo/hare_raylib">esse projeto</a> por 8 meses, eu finalmente voltei a desenvolver ele.
+</p>
+
+<p>
+Esse projeto serve para os meus estudos de programação (eu ainda não sei programar), sendo assim, todo o processo de desenvolvimento dessas bindings está sendo manual.
+</p>
+
+<p>
+Eu sei muito bem que essa não é nem de longe a forma minimamente eficiente, mas eu não estou querendo ser eficiente nesse processo, não agora pelo menos, eu quero adquirir experiência com a <a href="https://harelang.org">Hare</a> e aprender as diferenças dela com a C, e deixar essas informações queimadas no meu cérebro.
+</p>
+
+<p>
+Tendo isso em vista, no momento, eu já consegui traduzir os dois primeiros exemplos que são mostrados no site da própria <a href="https://raylib.com">Raylib</a>. O segundo exemplo foi um bom refresco para mim. Já fazia muito tempo desde a última vez que eu usei a Hare, e eu não lembrava de basicamente nada sobre como eu usava certas coisas.
+</p>
+
+<p>
+O segundo exemplo da Raylib faz o uso de <code>enums</code>, o que eu nunca cheguei a usar no tempo em que eu estava estudando a Hare pela primeira vez. Então, lá fui eu para a página de <a href="https://harelang.org/tutorials/introduction">tutorial</a> da Hare buscar por algum uso de <code>enum</code>.
+</p>
+
+<p>
+O que descobri é que para usar um <code>enum</code>, você precisa explicitamente usar o nome do enum em si e acessar a propriedade dele <i>quase</i> que da mesma forma que é feita quando você importa um módulo. Da seguinte forma:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-hare"><span style="color: #957FB8; font-weight: bold; font-style: italic;">use</span> raylib::*;
+
+<span style="color: #957FB8; font-weight: bold; font-style: italic;">type</span> game_screen = <span style="color: #7AA89F;">enum</span> {
+        LOGO = 0,
+        TITLE,
+        GAMEPLAY,
+        ENDING,
+};
+
+<span style="color: #957FB8; font-weight: bold; font-style: italic;">export</span> <span style="color: #957FB8; font-weight: bold; font-style: italic;">fn</span> main() <span style="color: #7AA89F;">int</span> = {
+<span style="color: #727169;">// </span><span style="color: #727169; font-style: italic;">C&#243;digo...</span>
+        <span style="color: #957FB8; font-weight: bold; font-style: italic;">let</span> current_screen = game_screen::LOGO;
+<span style="color: #727169;">// </span><span style="color: #727169; font-style: italic;">C&#243;digo...</span>
+};
+</pre>
+</div>
+
+<p>
+Ao decorrer do código para o segundo exemplo, são utilizados outros <code>enums</code> e também são utilizados <code>switch-cases</code> que fazem uso dos mesmos.
+</p>
+
+<p>
+Foi um bom execício.
+</p>
+</div>
+</body>
+</html>

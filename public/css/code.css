@@ -1,0 +1,72 @@
+p > code {
+    color: var(--foreground);
+    background-color: var(--background-code);
+}
+
+pre, code {
+    background-color: var(--background-code);
+    padding: 5px;
+    border-radius: 3px;
+    overflow-x: scroll;
+    margin: 10px auto;
+}
+
+pre {
+    min-height: 20px;
+}
+
+.src:hover::before {
+    float: right;
+    background-color: var(--accent);
+    color: var(--background);
+    min-width: 32px;
+    min-height: 20px;
+    text-align: center;
+    border: solid 2px var(--accent);
+    border-radius: 3px;
+    animation: 300ms slide-in both;
+}
+
+.src-C:hover::before {
+    content: "C"
+}
+
+.src-hare:hover::before {
+    content: "Hare"
+}
+
+.src-bash:hover::before {
+    content: "Bash"
+}
+
+.src-html:hover::before {
+    content: "HTML"
+}
+
+.src-javascript:hover::before {
+    content: "Javascript"
+}
+
+.src-css:hover::before {
+    content: "CSS"
+}
+
+.src-lua:hover::before {
+    content: "Lua"
+}
+
+.src-emacs-lisp:hover::before {
+    content: "Elisp"
+}
+
+.src-cpp:hover::before {
+    content: "C++"
+}
+
+.src-python:hover::before {
+    content: "Python"
+}
+
+.src-org:hover::before {
+    content: "Org-mode";
+}
