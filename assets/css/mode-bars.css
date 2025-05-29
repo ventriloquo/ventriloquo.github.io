@@ -11,6 +11,7 @@
     display: flex;
     justify-content: space-between;
     font-size: medium;
+    border: solid 1px var(--background);
     border-radius: 3px;
     margin: .5em 1em;
 }

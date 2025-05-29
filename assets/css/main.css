@@ -73,10 +73,6 @@ blockquote > pre {
     margin-bottom: 10px;
 }
 
-pre, code {
-    font-family: "jetbrains";
-}
-
 p, hr {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
@@ -85,7 +81,6 @@ p, hr {
 ul, ol {
     list-style-position: inside;
     padding-inline-start: 1.5em;
-    margin-bottom: 1em;
 }
 
 ul > li {

@@ -12,7 +12,7 @@ Você consegue fazer planejamentos com uma agenda, distribuir tarefas entre dive
 
 Até mesmo planilhas você consegue fazer! Isso mesmo, planilhas, não tabelas (chupa essa manga, Markdown).
 
-* Geração de site
+* Geração de sites
 Como já mencionei, esse site em si é gerado a partir do org-mode, os detalhes de como isso funcionam são um pouco longos demais para que eu consiga explicar de forma rápida.
 
 Mas basicamente é o seguinte:
@@ -23,5 +23,46 @@ Mas basicamente é o seguinte:
 
 Isso não é toda a história, mas é o conceito base.
 
-* TODO Escrever o resto do artigo
+Enfim, essa ferramenta de publicação consegue transformar os seus documentos feitos em org-mode para uma variedade de outros formatos, como pdf's, LaTeX e etc.
 
+Ainda por cima existe a possibilidade da lista de arquivos ser expandida por meio de pacotes externos, como por exemplo o [[https://melpa.org/#/ox-pandoc][ox-pandoc]], que te permite converter um documento =.org= para qualquer outro formato suportado pelo [[https://pandoc.org/][pandoc]] (é bastante, viu).
+
+** Execução de código dentro do org-mode
+
+Pois é, ele é capaz até mesmo disso!
+
+Não sei como eu posso exemplificar isso aqui neste artigo, mas aqui vai um exemplo tirado do fundo dos meus 83 de QI:
+
+Você tem um documento =.org= em que você está fazendo anotações sobre a linguagem de programação [[https://harelang.org][Hare]], e então você deixa anotado o exemplo de "/hello, world!/" que é exibido no site da Hare.
+
+#+begin_src hare
+use fmt;
+
+export fn main() void = {
+	const greetings = [
+		"Hello, world!",
+		"¡Hola Mundo!",
+		"Γειά σου Κόσμε!",
+		"Привіт, світе!",
+		"こんにちは世界！",
+	];
+	for (let greeting .. greetings) {
+		fmt::println(greeting)!;
+	};
+};
+#+end_src
+
+Você pode configurar o bloco de código para poder compilar e executar esse código, dentro do próprio org-mode!
+
+Você precisaria de algo como
+
+#+begin_src emacs-lisp
+(org-babel-do-load-languages
+ 'org-babel-load-languages '((C . t)))
+#+end_src
+
+Presente na sua configuração do Emacs para que o org-mode saiba o que ele deve usar para compilar/executar esse block de código. Mas ainda assim, é muito maneiro saber que ele tem essa capacidade!
+
+[[https://youtu.be/aiBt8CieE7U?si=j_vCLvhqtJUenLkO&t=373][Esse vídeo]] demonstra bem o que eu quero dizer.
+
+* TODO Finalizar artigo

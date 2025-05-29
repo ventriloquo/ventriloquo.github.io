@@ -4,6 +4,7 @@ p > code {
 }
 
 pre, code {
+    font-family: "jetbrains";
     background-color: var(--background-code);
     padding: 5px;
     border-radius: 3px;
@@ -13,6 +14,10 @@ pre, code {
 
 pre {
     min-height: 20px;
+}
+
+pre > span {
+    font-weight: normal !important;
 }
 
 .src:hover::before {
