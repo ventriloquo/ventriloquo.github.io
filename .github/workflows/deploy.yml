@@ -20,11 +20,11 @@ jobs:
       - name: Clone repository
         uses: actions/checkout@v4
 
-      - name: Install Emacs
-        run: sudo apt install emacs-nox
+      - name: Install Pandoc
+        run: sudo apt install pandoc
 
       - name: Build site
-        run: emacs -x ./build.el
+        run: make
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
