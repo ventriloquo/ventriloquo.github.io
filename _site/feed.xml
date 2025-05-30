@@ -1,0 +1,1210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ventriloquo</title>
+    <description>Um blog simples, feito utilizando o Jekyll.</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 29 May 2025 21:54:13 -0300</pubDate>
+    <lastBuildDate>Thu, 29 May 2025 21:54:13 -0300</lastBuildDate>
+    <generator>Jekyll v4.3.2</generator>
+    
+      <item>
+        <title>Minhas bindings da Raylib</title>
+        <description>&lt;p&gt;Retornei ao desenvolvimento das minhas bindings da Raylib.&lt;/p&gt;
+
+&lt;p&gt;Depois de ter basicamente abandonado esse projeto por 8 meses, eu finalmente
+voltei a desenvolver ele.&lt;/p&gt;
+
+&lt;p&gt;Esse projeto serve para os meus estudos de programação (eu ainda não sei
+programar), sendo assim, todo o processo de desenvolvimento dessas bindings
+está sendo manual.&lt;/p&gt;
+
+&lt;p&gt;Eu sei muito bem que essa não é nem de longe a forma minimamente eficiente, mas
+eu não estou querendo ser eficiente nesse processo, não agora pelo menos, eu
+quero adquirir experiência com a Hare e aprender as diferenças dela com a C, e
+deixar essas informações queimadas no meu cérebro.&lt;/p&gt;
+
+&lt;p&gt;Tendo isso em vista, no momento, eu já consegui traduzir os dois primeiros
+exemplos que são mostrados no site da própria Raylib. O segundo exemplo foi um
+bom refresco para mim. Já fazia muito tempo desde a última vez que eu usei a
+Hare, e eu não lembrava de basicamente nada sobre como eu usava certas coisas.&lt;/p&gt;
+
+&lt;p&gt;O segundo exemplo da Raylib faz o uso de enums, o que eu nunca cheguei a usar
+no tempo em que eu estava estudando a Hare pela primeira vez. Então, lá fui eu
+para a página de tutorial da Hare buscar por algum uso de enum.&lt;/p&gt;
+
+&lt;p&gt;O que descobri é que para usar um enum, você precisa explicitamente usar o nome
+do enum em si e acessar a propriedade dele quase que da mesma forma que é feita
+quando você importa um módulo. Da seguinte forma:&lt;/p&gt;
+
+&lt;div class=&quot;language-rust highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;use&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;raylib&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;game_screen&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;enum&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;LOGO&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;TITLE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;GAMEPLAY&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;ENDING&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;fn&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// Código...&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;current_screen&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;game_screen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;LOGO&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// Código...&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Ao decorrer do código para o segundo exemplo, são utilizados outros enums e
+também são utilizados switch-cases que fazem uso dos mesmos.&lt;/p&gt;
+
+&lt;p&gt;Foi um bom execício.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 25 May 2025 00:00:00 -0300</pubDate>
+        <link>http://localhost:4000/blog/2025/05/25/retornei-a-desevolver-minhas-bindings.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2025/05/25/retornei-a-desevolver-minhas-bindings.html</guid>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>Estou usando o Xubuntu agora...</title>
+        <description>&lt;p&gt;Esse não é o tipo de assunto que eu costumo fazer um post sobre, mas acho que
+vale a penar comentar um pouco.&lt;/p&gt;
+
+&lt;p&gt;Bom, para começar, a minha distro favorita é a Alpine. Ela é simples, rápida,
+versátil e também é beeem pequena. Mas tem umas coisas que são um pouco chatas
+nela, pelo menos por enquanto. Coisas como:&lt;/p&gt;
+
+&lt;p&gt;pacotes não disponíveis para ela a musl tendo uma atualização que quebra a
+compatibilidade com alguns programas certas coisas precisarem de muito mais
+configurações do que outras distros E como eu falei no post 
+“&lt;a href=&quot;/blog/2025/04/26/retornei-ao-jekyll.html&quot;&gt;Voltei a usar o jekyll&lt;/a&gt;”, eu
+estou usando o 1Password, e ele simplesmente não abre mais no Alpine. Porque o
+Musl removeu certas funções “antiquadas” em favor de outras mais seguras, o que
+quebrou a compatibilidade de um monte de coisa de uma vez só.&lt;/p&gt;
+
+&lt;p&gt;Não acho que vá demorar muito até isso ser corrigido, mas, por enquanto pelo
+menos, eu não vou usar o Alpine. No lugar eu usarei o Xubuntu.&lt;/p&gt;
+
+&lt;h1 id=&quot;mais-leve-que-o-padrão-e-pode-ficar-ainda-mais-enxuto&quot;&gt;Mais leve que o padrão e pode ficar ainda mais enxuto.&lt;/h1&gt;
+
+&lt;p&gt;O instalador mais novo da Canonical te permite fazer uma instalação “mínima”, o
+que no caso do Xubuntu, que já é mais leve que o Ubuntu padrão, faz dele algo
+quase que equivalente ao Alpine, depois de executar o script:&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;setup-desktop xfce
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;O que faz do Xubuntu, em termos de usabilidade e
+praticidade, superior ao Alpine para mim. Até mesmo com a minha configuração (o
+meu rice, como seria chamado na comunidade linux) com o Sway, ele se comporta
+de forma que o Alpine, porém mais… estável.&lt;/p&gt;
+
+&lt;p&gt;E sim, eu estou usando o meu setup nesse exato momento, aqui, uma screenshot:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/8WFk.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Uma coisa sobre essa screenshot:&lt;/p&gt;
+
+  &lt;p&gt;O código que está sendo mostrado é um post sendo escrito usando a linguagem
+de programação &lt;a href=&quot;https://harelang.org&quot;&gt;Hare&lt;/a&gt;. Eu fiz uma 
+&lt;a href=&quot;https://github.com/ventriloquo/ventriloquo.github.io/tree/3a88160a8303c03924acfbb2eaa4d07d7c7eeac2&quot;&gt;versão&lt;/a&gt;
+inteira do meu blog usando ela, mas, como já dá para perceber, não estou 
+usando ela no momento.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;enfim&quot;&gt;Enfim&lt;/h1&gt;
+
+&lt;p&gt;Eu nem sei muito bem o porquê de eu estar escrevendo esse post, eu não estou
+falando nada de relevante aqui. Mas, de qualquer forma, acho que isso faz bem
+para mim.&lt;/p&gt;
+
+&lt;p&gt;Até o próximo post!&lt;/p&gt;
+</description>
+        <pubDate>Wed, 30 Apr 2025 00:00:00 -0300</pubDate>
+        <link>http://localhost:4000/blog/2025/04/30/usando-o-xubuntu.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2025/04/30/usando-o-xubuntu.html</guid>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>Voltei a usar o Jekyll</title>
+        <description>&lt;p&gt;Pois é, depois de um total de &lt;strong&gt;10 dias&lt;/strong&gt;, já voltei a usar o Jekyll. Por quê?
+Porque o chimpanzé aqui ficou nostálgico com esse tema do Nintendo Switch que
+eu fiz.&lt;/p&gt;
+
+&lt;p&gt;Cara, sério, eu tenho um problema.&lt;/p&gt;
+
+&lt;p&gt;Mas, não foi só isso que ocorreu nesses curtos 10 dias, não não, nada disso. Eu
+tomei certas decisões que (como sempre) são contrárias a algumas opiniões
+minhas de meses (ou semanas) atrás.&lt;/p&gt;
+
+&lt;h1 id=&quot;vamos-começar-falando-de-dinheiro&quot;&gt;Vamos começar falando de dinheiro&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/sirigueijo-dinheiro.jpg&quot; alt=&quot;sirigueijo&quot; /&gt;&lt;/p&gt;
+&lt;center&gt;&lt;sup&gt;Eu sei que você já está com a frase na cabeça&lt;/sup&gt;&lt;/center&gt;
+
+&lt;p&gt;Bom, para começar, eu quero falar um pouco sobre o Neocities, o mesmo que eu
+&lt;a href=&quot;/2025/04/19/apoiador_neocities.html&quot;&gt;comentei anteriormente&lt;/a&gt; que havia me tornado um apoiador.&lt;/p&gt;
+
+&lt;p&gt;Advinha? Não sou mais! Hahah… ;-;&lt;/p&gt;
+
+&lt;p&gt;Mas calma, eu não estou falindo nem nada do gênero, foi só um reajuste dos meus
+gastos mensais.&lt;/p&gt;
+
+&lt;p&gt;O motivo disso dessa vez não foi algo vindo de mim, mas sim algo relacionado ao
+meu irmão mais novo. Aconteceram algumas coisas relacionadas à saúde dele esse
+ano e por consequência disso eu e a minha família vamos precisar dar uma
+atenção maior à ele.&lt;/p&gt;
+
+&lt;p&gt;E isso também vai envolver dinheiro, querendo ou não, afinal, nada é de graça
+nesse mundo.&lt;/p&gt;
+
+&lt;p&gt;Uma coisa que ele comprou foi um iPhone 11, por influência de alguns amigos de
+escola e bem… eu mesmo, e eu vou dar uma ajuda para ele pagar, uns R$60,00. O
+que é pouco e tecnicamente não seria um impeditivo para pagar o Neocities, mas
+tem outra coisa que eu vou precisar ajudar.&lt;/p&gt;
+
+&lt;p&gt;Por recomendação médica, o meu irmão vai precisar fazer exercícios diários. Por
+enquanto ele não pode fazer academia, mas ele também não pode ficar sedentário,
+por conta do risco da condição dele voltar à tona. Sendo assim, a minha família
+pensou que pôr ele em um Society seria uma boa opção, afinal ele gosta de
+futebol e é relativamente bom também. Sendo assim ele se exercitaria e também
+se divirtiria.&lt;/p&gt;
+
+&lt;p&gt;E isso sim é algo impeditivo, por que além da mensalidade (que é um pouco mais
+cara que o Neocities), nós teremos que arcar com os custos de fardamento e
+passagem para ele, afinal ele não tem nem um emprego e nem a idade correta para
+correr atrás de um.&lt;/p&gt;
+
+&lt;p&gt;E caso ele puder fazer uma academia, eu também terei de ir com ele. O que é
+mais um gasto mensal que se torna um impeditivo para pagar o Neocities.&lt;/p&gt;
+
+&lt;p&gt;Tendo tudo isso em mente, eu estou planejando um outro arranjo de assinaturas
+para mim. O atual/anterior é esse aqui:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Serviço&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Preço (mensal)&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Amazon Prime&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;R$13,90&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Crunchyroll&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;R$14,99&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Apple Music&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;R$21,90&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;iCloud+&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;R$4,90&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Neocities&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;R$30,00 ($5,00)&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Total: R$85,69&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Essas foram as minhas assinaturas até essa semana pelo menos, porém já estou
+organizando uma nova, com reduções e com a troca de 1 dos serviços listados:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Serviço&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Preço (mensal)&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Amazon Prime&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;R$13,90&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Crunchyroll&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;R$14,99&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1Password&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;R$19,90&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;iCloud+&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;R$4,90&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Total: R$53,69&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Sim, eu vou tirar o Apple Music e usar o 1Password no lugar.&lt;/p&gt;
+
+&lt;h2 id=&quot;woah-woah-woah-como-assim-1password&quot;&gt;Woah Woah Woah, como assim “1Password”???&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/1password.jpg&quot; alt=&quot;1password&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Como o próprio nome já dá a entender, o 1Password é um gerenciador de senhas.
+Um muito popular inclusive.&lt;/p&gt;
+
+&lt;p&gt;É. Isso é o que eu queria dizer com “tomei certas decisões que são contrárias
+a algumas opiniões minhas”.&lt;/p&gt;
+
+&lt;p&gt;Isso é correlacionado com uma neura minha em relação à segurança online. E um
+desses episódios em que eu fico paranoíco do nada veio poucos dias após eu
+configurar o meu e-mail do iCloud para usar o meu próprio domínio.&lt;/p&gt;
+
+&lt;p&gt;O pensamento foi o seguinte: todas as minhas senhas e chaves de acesso estão no
+gerenciador de senhas do iCloud, porém eu só consigo ter acesso à essas senhas
+se eu tiver um iPhone ou Mac, sendo assim, se eu de alguma forma perder o
+acesso ao meu celular, ou trocar para um Android, eu vou perder minhas senhas.&lt;/p&gt;
+
+&lt;p&gt;Sim, isso é uma paranóia minha. Eu uso a muito tempo um gerenciador de senhas
+chamado KeePassXC. Um programa gratuito e de código aberto. Porém, ele (e
+outros clientes do protocolo KeePass) tem um pequeno e chato problema: O banco
+de dados é um arquivo no seu aparelho. O que de primeira não é um problema, já
+que é fácil fazer um Backup desse carinha.&lt;/p&gt;
+
+&lt;p&gt;Mas, digamos que você comprou um celular novo e você precise fazer login na sua
+conta Google/Apple. A menos que a sua senha seja uma senha legível ou que você
+já saiba de cor… você está encrencado se não tiver um outro aparelho que
+tenha acesso ao seu banco de dados ou pior, se você não tiver feito um backup
+dele.&lt;/p&gt;
+
+&lt;p&gt;Você poderia dizer que o mesmo vale ao 1Password, o que não seria mentira, mas,
+o 1Password tem uma vantagem: ele pode ser acessado de qualquer navegador.&lt;/p&gt;
+
+&lt;p&gt;Quando você cria uma conta para o 1Password ele também te dá um &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PDF&lt;/code&gt; para você
+imprimir. Nesse &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PDF&lt;/code&gt; estão as informações necessárias para você obter acesso a
+sua “vault” de senhas.&lt;/p&gt;
+
+&lt;p&gt;Com isso, você mata dois coelhos com uma cajadada só:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Backups das suas senhas&lt;/li&gt;
+  &lt;li&gt;Acesso a elas independente das circunstâcias&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Ele também possui algumas características muito úteis, como por exemplo a
+criação e integração de chaves &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ssh&lt;/code&gt;!&lt;/p&gt;
+
+&lt;p&gt;Ah, mais uma coisa, eu disse qualquer navegador, mas na verdade ele tem um
+cliente para praticamente qualquer sistema operacional! E isso inclui o Linux!&lt;/p&gt;
+
+&lt;p&gt;Ele tem pacotes em &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.deb&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.rpm&lt;/code&gt;, binários, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flatpak&lt;/code&gt; e &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;snap&lt;/code&gt;. E o cliente de
+linha de comando dele (sim, ele tem isso também) tem um pacote disponível para
+o &lt;a href=&quot;https://alpinelinux.org&quot;&gt;Alpine&lt;/a&gt;!&lt;/p&gt;
+
+&lt;p&gt;Disponibilidade não é nem de longe um problema aqui, e olha que eu estou
+falando de um produto comercial e de código fechado.&lt;/p&gt;
+
+&lt;h2 id=&quot;então-sem-músicas&quot;&gt;Então… sem músicas?&lt;/h2&gt;
+
+&lt;p&gt;Bom, por enquanto, sim, é uma coisa paia, não vou mentir, mas temporária. Falta
+pouco para que as minhas faturas mais caras sejam quitadas, e quando isso
+acontecer, eu vou voltar a assinar esse serviço.&lt;/p&gt;
+
+&lt;p&gt;Até agora, o Apple Music está sendo o melhor serviço de streaming de músicas
+que eu já usei, e não planejo ficar sem ele por muito tempo.&lt;/p&gt;
+
+&lt;h2 id=&quot;largando-o-proton-e-migrando-para-o-icloud&quot;&gt;Largando o Proton e migrando para o iCloud&lt;/h2&gt;
+
+&lt;p&gt;Essa é, na minha opinião, a mudança mais radical vindo de mim.&lt;/p&gt;
+
+&lt;p&gt;Eu uso os serviços da &lt;a href=&quot;https://proton.me&quot;&gt;Proton&lt;/a&gt; desde a
+&lt;a href=&quot;https://pt.wikipedia.org/wiki/Pandemia_de_COVID-19&quot;&gt;pandemia&lt;/a&gt;, e eu não tenho
+muito a reclamar dos serviços prestados. Mas pondo na balança os valores e a
+conveniência desses serviços com o iCloud, simplesmente não tem como eu manter
+a Proton.&lt;/p&gt;
+
+&lt;p&gt;Por R$4,90 eu tenho 50Gb na núvem para backup da minha galeria e backups do
+meu celular, libero o uso de domínios próprios no e-mail e, o que me motivou a
+ter uma conta na Proton: e-mail aliases.&lt;/p&gt;
+
+&lt;p&gt;Simplesmente não tem pra quê eu manter os dois se eu só vou usar um.&lt;/p&gt;
+
+&lt;p&gt;Eu não digo isso porquê eu estou pagando pelos dois nem nada, é só que pagar
+pelo iCloud e o 1Password é mais vantajoso para mim do que pagar por R$42,00
+para ter a mesma usabilidade do que pagar R$25,00.&lt;/p&gt;
+
+&lt;p&gt;Eu sei que no caso do Proton eu ficaria com 500Gb de armazenamento e etc. Mas
+eu simplesmente não uso isso tudo de armazenamento. Muito menos isso tudo em
+armazenamento em núvem!&lt;/p&gt;
+
+&lt;p&gt;Eu também não uso Bitcoin e também não uso VPN, ou seja, eu estaria pagando por
+serviços que eu simplesmente não uso!&lt;/p&gt;
+
+&lt;p&gt;Se eu, por exemplo, quiser pagar somente pelo Proton Pass (o gerenciador de
+senhas), isso me custaria R$27,90. Sendo que a &lt;strong&gt;ÚNICA&lt;/strong&gt; vantagem dele em
+relação ao 1Password são os e-mail aliases, o que eu já consigo com os R$4,90
+do iCloud+.&lt;/p&gt;
+
+&lt;p&gt;Financeiramente falando, não tem sentido algum eu preferir ele ao combo iCloud+
+e 1Password. Em questão de praticidade, também, pois o Proton Pass só é
+disponível em navegador e aplicativo mobile.&lt;/p&gt;
+
+&lt;p&gt;Enquanto os valores do Proton forem altos assim sem oferecer algo de real
+diferencial, eu não vou utilizar essa conta.&lt;/p&gt;
+
+&lt;p&gt;Por isso a migração, afinal eu usava/uso os aliases do Proton em algumas das
+minhas contas. Eu não acho que isso vá demorar muito, mas além de fazer isso
+com as contas que eu usei os aliases do Proton, eu também vou fazer isso com as
+contas que estão com o meu Gmail registrado. E isso sim pode fazer com que eu
+acabe levando um pouco mais de tempo.&lt;/p&gt;
+
+&lt;h1 id=&quot;algumas-mudanças-no-site&quot;&gt;Algumas mudanças no site&lt;/h1&gt;
+
+&lt;p&gt;Bom, além da clara volta do Jekyll no processo e do meu amado tema inspirado no
+Nintendo Switch, eu vou tentar dar uma simplificada nele e deixar ele mais
+otimizado.&lt;/p&gt;
+
+&lt;p&gt;Não que ele já não seja, mas tem certas áreas que ele poderia melhorar, como
+por exemplo no tamanho das imagens que eu uso.&lt;/p&gt;
+
+&lt;p&gt;Estou me referindo ao tamanho relacionado à resolução e armazenamento, só para
+deixar claro.&lt;/p&gt;
+
+&lt;p&gt;Essa preocupação vem do fato de que agora eu só tenho 1Gb para usar. E isso
+vale tanto para o Neocities, quanto para o Github Pages.&lt;/p&gt;
+
+&lt;p&gt;Mas parte dessa simplificação também envolve uma simplificação na configuração
+do Jekyll aqui. O que eu já fiz na realidade, afinal de contas esse site é
+simples por natureza, então não tive problemas em fazer isso.&lt;/p&gt;
+
+&lt;h1 id=&quot;fin&quot;&gt;&lt;em&gt;Fin&lt;/em&gt;&lt;/h1&gt;
+&lt;p&gt;Bom, por enquanto, isso é tudo.&lt;/p&gt;
+
+&lt;p&gt;Até o próximo post!&lt;/p&gt;
+</description>
+        <pubDate>Sat, 26 Apr 2025 00:00:00 -0300</pubDate>
+        <link>http://localhost:4000/blog/2025/04/26/retornei-ao-jekyll.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2025/04/26/retornei-ao-jekyll.html</guid>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>Me tornei um apoiador do Neocities</title>
+        <description>&lt;p&gt;É oficial, eu me tornei um apoiador do Neocities. O valor é algo que não me
+atrapalha, $5 mensais, o que vale +/- R$30 depois de pagar as taxas de câmbio.
+Em comparação com outras opções de hostings, como por exemplo a opção do meu
+próprio &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;registrar&lt;/code&gt;, a Hostinger, que é uns R$20 reais… em um plano de 2
+anos… que você tem que pagar tudo.&lt;/p&gt;
+
+&lt;p&gt;Pois é, em relação a custo, isso aqui é bem mais em conta. E sim, eu sei que o
+Github Pages faz algo semelhante só que de graça, mas não é a mesma coisa. No
+Github, o site não é lá tanto algo pessoal quanto ele é um projeto que a
+pessoas vão olhar e fazer comparações com outros projetos. No Neocities, a
+ideia em si é a criação de sites pessoais, sites simples, sites que lembram a
+estética dos anos 90 e 2000, que lembram a internet na época que ela ainda
+estava engatinhando.&lt;/p&gt;
+
+&lt;p&gt;A conveniência também é um fator muito presente no Neocities. Ele te dá acesso
+a uma &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dashboard&lt;/code&gt; em que você pode gerenciar todos os arquivos do site e também
+te da acesso a um editor de código com capacidade de &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;code completion&lt;/code&gt;.
+Basicamente um editor de código com um LSP. E que é muito rápido inclusive.&lt;/p&gt;
+
+&lt;p&gt;Outra coisa que é rápida é a velocidade que o site atualiza, você aperta o
+botão para salvar e o site já está no ar, com todas as mudanças salvas, sem
+necessidade de reiniciar o Workflow e esperar todo o processo ser concluído.&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 19 Apr 2025 00:00:00 -0300</pubDate>
+        <link>http://localhost:4000/blog/2025/04/19/apoiador_neocities.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2025/04/19/apoiador_neocities.html</guid>
+        
+        <category>web</category>
+        
+        <category>compras</category>
+        
+        <category>etc</category>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>Simplenote</title>
+        <description>&lt;p&gt;Essa semana eu decidi tirar a poeira de uma conta que eu tinha no
+&lt;a href=&quot;https://simplenote.com&quot;&gt;Simplenote&lt;/a&gt;, e começei a usar ele para fazer algumas
+anotações do meu dia a dia e uns brainstorms que podem (ou não) se tornarem
+posts aqui no meu blog.&lt;/p&gt;
+
+&lt;p&gt;Eu sinto uma certa nostalgia em voltar a usar esse carinha.&lt;/p&gt;
+
+&lt;p&gt;Antes de ter um blog (uns 3/4 anos atrás), eu tinha o costume de escrever
+diários usando programas de anotações. Alguns dos que eu já usei foram:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Google Keep (pois é)&lt;/li&gt;
+  &lt;li&gt;Evernote (nem um pouco original, eu sei)&lt;/li&gt;
+  &lt;li&gt;Obsidian&lt;/li&gt;
+  &lt;li&gt;Notion&lt;/li&gt;
+  &lt;li&gt;Neovim (claro, por quê não?)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://notesnook.com/&quot;&gt;Notesnook&lt;/a&gt; (um Evernote, só que open-source)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;E claro, o Simplenote!&lt;/p&gt;
+
+&lt;p&gt;O Simplenote tem uma característica interessane sobre ele: ele não faz quase
+porra nenhuma.&lt;/p&gt;
+
+&lt;p&gt;Tá no nome né? “Simple”, simples.&lt;/p&gt;
+
+&lt;p&gt;E isso mais beneficia do que atrapalha ele na minha opinião, porque dessa
+forma ele fica extremamente solido e leve. Você consegue logar nele e
+criar/editar suas anotações de basicamente qualquer coisa que conecta na
+internet e tem um navegador.&lt;/p&gt;
+
+&lt;p&gt;O design dele também é bem simples e direto ao ponto. Não tem menus ou opções
+que entram na sua frente e as anotações ficam em uma lista contendo o título e
+a primeira linha que prossegue o título.&lt;/p&gt;
+
+&lt;p&gt;Lembra muito o design do Apple Notes na realidade, pode ser que ele tenha sido
+uma inspiração ou vice-versa.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/simplenote.jpg&quot; alt=&quot;Simplenote rodando no MacOS&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Enfim, é um bom design.&lt;/p&gt;
+
+&lt;h2 id=&quot;funções&quot;&gt;Funções&lt;/h2&gt;
+
+&lt;p&gt;São tão poucas que eu posso fazer uma lista aqui rapidinho:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Anotações em Markdown (por padrão é texto simples)&lt;/li&gt;
+  &lt;li&gt;Publicação de anotações&lt;/li&gt;
+  &lt;li&gt;Tags&lt;/li&gt;
+  &lt;li&gt;Busca de anotações&lt;/li&gt;
+  &lt;li&gt;Histórico de versões&lt;/li&gt;
+  &lt;li&gt;Colaboração&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;E… é isso. Como eu disse, simples.&lt;/p&gt;
+
+&lt;p&gt;Porém, essas funcionalidades são mais que o suficiente para que você tenha uma
+ótima experiência na hora de fazer anotações, ou até mesmo fazer um &lt;a href=&quot;https://app.simplenote.com/p/r23qNc&quot;&gt;blog&lt;/a&gt;!&lt;/p&gt;
+
+&lt;p&gt;Pois é, eu fiz um blog usando apenas o Simplenote. Não é algo a se levar a
+sério, mas mostra que se alguém quisesse, seria relativamente fácil de ser
+feito.&lt;/p&gt;
+
+&lt;p&gt;Como eu mesmo já expliquei no &lt;a href=&quot;http://simp.ly/p/VWNt2L&quot;&gt;post em destaque&lt;/a&gt;, um
+blog feito dessa maneira tem muitas limitações:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Eu vou começar com as desvantagens:&lt;/p&gt;
+
+  &lt;ol&gt;
+    &lt;li&gt;Como qualquer outra plataforma gratuita, você está a mercê da plataforma continuar de pé, ou dela ir com a sua cara.&lt;/li&gt;
+    &lt;li&gt;Você não consegue alterar o domínio, afinal de contas, você não é o dono do site e isso aqui não é uma plataforma de hospedagem de sites.&lt;/li&gt;
+    &lt;li&gt;Você não consegue alterar a aparência da página&lt;/li&gt;
+    &lt;li&gt;Não é possível fazer upload de arquivos&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Fora o trabalho manual, claro.&lt;/p&gt;
+
+&lt;p&gt;Ainda assim, é uma coisa interessante e uma curiosidade bacana.&lt;/p&gt;
+
+&lt;p&gt;Acho que deve ser possível fazer a mesma coisa com o Notesnook ou Evernote, mas
+poder fazer isso com um serviço tão simples como esse traz um certo charme que
+esses dois não teriam.&lt;/p&gt;
+
+&lt;p&gt;Seria mais porque eu não esperaria menos de dois serviços tão complexos e
+cheios de funcionalidades.&lt;/p&gt;
+
+&lt;p&gt;Bom, caso a grana fique curta, eu sei onde eu posso guardar meus posts e ainda
+assim ter um local para expôr-los ao mundo.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 10 Apr 2025 00:00:00 -0300</pubDate>
+        <link>http://localhost:4000/blog/2025/04/10/simplenote.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2025/04/10/simplenote.html</guid>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>Tchau Codeberg, voltarei ao Github.</title>
+        <description>&lt;p&gt;O Codeberg tem vários problemas. Mas o maior deles é a velocidade dele e a
+estabilidade (aparentemente, essa parte diz muito sobre os mantedores da
+plataforma).&lt;/p&gt;
+
+&lt;p&gt;O Github, apesar dos &lt;strong&gt;diversos&lt;/strong&gt; problemas, é uma plataforma &lt;em&gt;relativamente&lt;/em&gt;
+confiável. No sentido de que ela não vai simplesmente morrer por 2 dias sem
+mais nem menos. Se um dia isso acontecer, é porque a coisa tá federal.&lt;/p&gt;
+
+&lt;p&gt;Para você ter uma noção, eu nem sequer deletei a minha conta do Codeberg ainda,
+não por sentimentalismo, mas sim porque para que eu &lt;strong&gt;POSSA&lt;/strong&gt; excluir minha
+conta, antes, eu preciso excluir/transferir &lt;strong&gt;TODOS&lt;/strong&gt; os meus repositórios.&lt;/p&gt;
+
+&lt;p&gt;Só tem 1 pequeno problema: leva de 5 a 40 minutos para carregar qualquer página
+nessa porcaria. Simplesmente não vale meu tempo.&lt;/p&gt;
+
+&lt;p&gt;Esse site já estava sendo hosteado no Github justamente porque é inviável
+deixar ele em servidores tão lerdos e quebrados.&lt;/p&gt;
+
+&lt;p&gt;Principalmente agora, que eu comprei um domínio.&lt;/p&gt;
+
+&lt;p&gt;Não quero nem começar a imaginar o inferno que seria ter que fazer a
+configuração do DNS com o Codeberg.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Obrigado senhor Jesus Cristo pelo livramento!&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Claro, como já falei, o Github não é perfeito também, mas pelo menos dá para o
+gasto por enquanto.&lt;/p&gt;
+
+&lt;p&gt;Futuramente, planejo deixar o site por inteiro (incluindo o código-fonte)
+hosteado apenas no Neocities. Mas para isso eu vou precisar ser um apoiador,
+para que eu não tenha limitações em quais arquivos posso fazer upload e que
+para que eu possa configurar o meu domínio lá.&lt;/p&gt;
+
+&lt;p&gt;Não acho que esse seja um futuro muito distante, é só uma questão de
+organização mesmo.&lt;/p&gt;
+
+&lt;p&gt;Queria poder fazer um post mais desenvolvido, mas eu estou irritado demais por
+conta do Codeberg para conseguir raciocinar direito. É realmente uma pena que
+um projeto desse calibre tenha uma execução tão… merda.&lt;/p&gt;
+
+&lt;p&gt;É melhor que eu simplesmente pare um pouco e escute, sei lá, &lt;em&gt;Feel It Still&lt;/em&gt;, de
+&lt;em&gt;Portugal. The Man&lt;/em&gt;. Recomendo, é uma música com um rítmo bem relaxante.&lt;/p&gt;
+
+&lt;iframe allow=&quot;autoplay *; encrypted-media *; fullscreen *; clipboard-write&quot; frameborder=&quot;0&quot; height=&quot;175&quot; style=&quot;width:100%;overflow:hidden;border-radius:10px;&quot; sandbox=&quot;allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation&quot; src=&quot;https://embed.music.apple.com/us/album/feel-it-still/1229315038?i=1229315050&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Hmmm, parando para pensar, essa é a primeira vez que coloco um &lt;em&gt;embed&lt;/em&gt; no site
+após o novo design. Bacana.&lt;/p&gt;
+
+&lt;h1 id=&quot;fin&quot;&gt;&lt;em&gt;Fin&lt;/em&gt;&lt;/h1&gt;
+
+&lt;p&gt;Enfim, já estou cansado de ficar remoendo essa raiva que criei do Codeberg.&lt;/p&gt;
+
+&lt;p&gt;Até o próximo post!&lt;/p&gt;
+</description>
+        <pubDate>Wed, 09 Apr 2025 00:00:00 -0300</pubDate>
+        <link>http://localhost:4000/blog/2025/04/09/github.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2025/04/09/github.html</guid>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>O meu Nintendo Switch Lite</title>
+        <description>&lt;p&gt;Como eu havia mencionado no meu &lt;a href=&quot;/2025/04/04/jekyll.html&quot;&gt;post anterior&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Sim, eu comprei essa belezura [Nintendo Switch Lite],
+mais tarde eu posso fazer um post falando sobre como está
+sendo a minha experiência com ele.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Pois é, um Nintendo Switch Lite.&lt;/p&gt;
+
+&lt;p&gt;Se eu tivesse um consultor financeiro, ele iria me dar um chute nas bolas mais
+forte do que uma batida de um Uno com um Gol G2.&lt;/p&gt;
+
+&lt;p&gt;Em questão monetária, esse é o console mais barato que a Nintendo tem a
+oferecer. O que faz parecer que ele é uma versão mais fraquinha que o modelo
+padrão, mas isso está longe de ser verdade.&lt;/p&gt;
+
+&lt;p&gt;Se tratando dos componentes internos, o Switch Lite é idêntico ao modelo padrão
+de primeira geração (o v1), já que a versão atualizada do modelo padrão só
+lançou depois do Switch Lite.&lt;/p&gt;
+
+&lt;p&gt;O exterior é onde a coisa muda… e muito.&lt;/p&gt;
+
+&lt;h1 id=&quot;apenas-um-portátil&quot;&gt;Apenas um portátil&lt;/h1&gt;
+
+&lt;p&gt;A Nintendo optou por fazer o Switch Lite ser apenas um portátil. Algo como o
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Nintendo_3DS&quot;&gt;3DS&lt;/a&gt; era para o
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Wii_U&quot;&gt;Wii U&lt;/a&gt;… se o 3DS tivesse a mesma
+potência do Wii U.&lt;/p&gt;
+
+&lt;p&gt;Eu sei, é uma comparação muito ruim, já que técnicamente os dois consoles da
+vez são basicamente os mesmos em carcaças diferentes. Mas ainda assim eu
+precisava comparar eles com alguma coisa para poder alongar esse post.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/pepe.webp&quot; alt=&quot;._.&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Enfim.&lt;/p&gt;
+
+&lt;p&gt;Com os cortes de custo na carcaça, a redução de tamanho (incluindo o tamanho da
+tela), e claro, a remoção dos
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Joy-Con&quot;&gt;Joy-Cons&lt;/a&gt;, o Switch Lite se tornou um
+portátil &lt;em&gt;“barato”&lt;/em&gt;. Porém, ainda sendo bem equipado… para um portátil.&lt;/p&gt;
+
+&lt;h1 id=&quot;tá-e-aí&quot;&gt;Tá… e aí?&lt;/h1&gt;
+
+&lt;p&gt;Bom, juntando todos os fatores citados acima, você tem um aparelho do tamanho
+de um celular mediano com controles embutidos que consegue jogar Doom Eternal.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Eu não tô de sacanagem. &lt;strong&gt;TEM&lt;/strong&gt; um port de Doom Eternal &lt;strong&gt;OFICIAL&lt;/strong&gt; nessa
+porra.
+&lt;img src=&quot;/assets/img/doom_enternal_switch.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Não que eu tenha jogado Doom Eternal, afinal de contas essa desgraça custa
+R$300. Na realidade a maioria dos jogos hoje em dia tão custando isso, então
+não tem muito para onde correr (tem sim: Steam).&lt;/p&gt;
+
+&lt;p&gt;Junto da alteração no design do meu site, eu adicionei uma página onde eu
+mostro os jogos que eu tenho atualmente. Não são muitos (pobre é uma coisa
+triste), mas são jogos que eu me divirto e muito jogando.&lt;/p&gt;
+
+&lt;p&gt;Ah, é mesmo, eu não comentei sobre o design do site!&lt;/p&gt;
+
+&lt;p&gt;Eu fiz a melhor recriação que consegui do aplicativo de “notícias” do Switch.&lt;/p&gt;
+
+&lt;p&gt;Por que? Porque ele é extremamente simples e minimalista (como todo o sistema
+na realidade), sendo assim, relativamente fácil de replicar.&lt;/p&gt;
+
+&lt;p&gt;Mas parte dessa facilidade eu devo ao fato de estar utilizando um SSG. Por que
+nunca que eu iria fazer toda essa alteração de design na mão… de novo.&lt;/p&gt;
+
+&lt;h1 id=&quot;o-sistema-do-switch-é-muito-divertido&quot;&gt;O sistema do Switch é muito divertido&lt;/h1&gt;
+
+&lt;p&gt;Absolutamente &lt;strong&gt;TUDO&lt;/strong&gt; tem um efeito sonoro fofo. Eu esperava um toque disso da
+Nintendo, mas não &lt;strong&gt;NESSE&lt;/strong&gt; nível.&lt;/p&gt;
+
+&lt;p&gt;Navegar pelo sistema é algo simples, intuitivo e, como já disse, divertido.&lt;/p&gt;
+
+&lt;p&gt;Exceto na eShop, aquilo é um sacrilégio de tão sofrível. É impressionante que
+no mesmo console que eu jogo Burnout Paradise a 60fps eu não consigo navegar na
+loja por mais de 5 minutos sem ele pedir por mizericórdia.&lt;/p&gt;
+
+&lt;p&gt;A esse ponto, eu simplesmente compro os meus jogos pela loja web, e só deixo
+para usar a do Switch para achar algum diamante no oceano de promoções de jogos
+mobile super-faturados.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Na real qualquer coisa lá é super-faturada. A porra de um calendário tá
+custando R$80,00. &lt;strong&gt;UM CALENDÁRIO, CACETE&lt;/strong&gt;.
+&lt;img src=&quot;/assets/img/nday.png&quot; alt=&quot;&quot; /&gt;
+Onde que eu vou precisar de um &lt;strong&gt;CALENDÁRIO&lt;/strong&gt; em um &lt;strong&gt;VIDEO-GAME&lt;/strong&gt;???&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;a-pesar-dos-pesares-eu-estou-amando-a-experiência&quot;&gt;A pesar dos pesares, eu estou amando a experiência&lt;/h1&gt;
+
+&lt;p&gt;Poder jogar Resident Evil 4 (não é o remake) ou Devil May Cry 3 onde eu quiser
+e a 60fps é simplesmente incrível.&lt;/p&gt;
+
+&lt;p&gt;Eu espero conseguir comprar mais jogos que eram parte da minha infância ou
+sonhos de consumo, como o Resident Evil 4 e o Burnout Paradise.&lt;/p&gt;
+
+&lt;p&gt;Revisitar esses jogos (ou até mesmo experência-los pela primeira vez) é um
+sentimento que eu não consigo descrever em palavras.&lt;/p&gt;
+
+&lt;p&gt;Ok, paguei caro para ter acesso a isso, mas pelo menos eu não comprei um PS5 ou
+Series X/S e fiquei só com 1 jogo ou nenhum.&lt;/p&gt;
+
+&lt;h1 id=&quot;fin&quot;&gt;&lt;em&gt;Fin&lt;/em&gt;&lt;/h1&gt;
+
+&lt;p&gt;Bom, é isso o que eu tenho para falar hoje, a vida de CLT me chama.&lt;/p&gt;
+
+&lt;p&gt;Até o próximo post!&lt;/p&gt;
+</description>
+        <pubDate>Sat, 05 Apr 2025 00:00:00 -0300</pubDate>
+        <link>http://localhost:4000/blog/2025/04/05/nintendo-switch-lite.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2025/04/05/nintendo-switch-lite.html</guid>
+        
+        <category>compras</category>
+        
+        <category>hardware</category>
+        
+        <category>video-game</category>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>Jekyll</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;A muito tempo atrás, numa gálaxia muito, muito distante…&lt;/p&gt;
+  &lt;h1 id=&quot;star-wa-&quot;&gt;STAR WA-&lt;/h1&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Calma calabreso, não temos o direito dessa IP.&lt;/p&gt;
+
+&lt;p&gt;Olá, caro leitor! Estava com saudades?&lt;/p&gt;
+
+&lt;p&gt;Imagino que não, mas mesmo se eu estiver errado não teria como saber, afinal eu
+não coloquei (ainda) um e-mail para receber feedback desse site.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Parando para pensar, isso seria bem útil na realidade. Eu não precisaria
+depender da minha própria esquizofrenia para reconstruir o site do zero.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Enfim. Hoje o assunto é sobre um antigo queridinho meu: O Jekyll!&lt;/p&gt;
+
+&lt;p&gt;Depois de muito tempo em que eu só usei:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;O meu próprio SSG;&lt;/li&gt;
+  &lt;li&gt;O “SSG” pré instalado do Emacs;&lt;/li&gt;
+  &lt;li&gt;O &lt;a href=&quot;https://lume.land/&quot;&gt;Lume&lt;/a&gt; (Esse é bom pra cacete também).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Mas agora, cá estou eu, de novo usando o Jekyll.&lt;/p&gt;
+
+&lt;p&gt;Dessa vez a motivação foi &lt;strong&gt;MUITO&lt;/strong&gt; trivial. Eu fiz uma conta no Github (de
+novo).&lt;/p&gt;
+
+&lt;p&gt;Eu já tive diversas contas no Github, e isso não é exagero. Algumas eu
+simplesmente perdi a senha ou o código de recuperação da autenticação de dois
+fatores (sim, eu escrevi o nome todo só para fazer volume).&lt;/p&gt;
+
+&lt;p&gt;Outras eu simplesmente deletei ou levei um shadow-ban do Github porque o e-mail
+que eu usava nele era um alias. É sério isso Microsoft?&lt;/p&gt;
+
+&lt;p&gt;Bom, de qualquer modo, agora eu tenho uma conta lá de novo e o meu nome de
+usuário agora é o mesmo do meu nome de usuário no Bandcamp, ventriloquo.&lt;/p&gt;
+
+&lt;h1 id=&quot;tá-mas-o-que-é-que-o-jekyll-tem-haver&quot;&gt;Tá, mas o que é que o Jekyll tem haver?&lt;/h1&gt;
+
+&lt;p&gt;Simples! O github pages (o serviço de hosting de sites estáticos do Github)
+utiliza o Jekyll!&lt;/p&gt;
+
+&lt;p&gt;Sendo assim, se o repositório do seu site tenha uma estrutura de um site
+Jekyll, você não precisa se preocupar com mais nada, pois o mesmo serviço que
+você usa para hostear (desculpe, língua portuguesa), também tem um SSG
+&lt;em&gt;built-in&lt;/em&gt;!&lt;/p&gt;
+
+&lt;p&gt;Depois que você descobre as facilidades que um SSG pode te proporcionar, você
+não consegue mais voltar atrás. Você pode até tentar, eu já tentei… Várias
+vezes, mas você não vai conseguir depois de muito pouco tempo.&lt;/p&gt;
+
+&lt;p&gt;A conveniência de simplesmente escrever um artigo e ele automagicamente se
+tornar uma página web e ficar no lugar correto na hierarquia de arquivos é
+simplesmente viciante. Sem contar a parte de você criar uma template que é
+utilizada por diversas páginas e mais tarde, quando você precisar fazer alguma
+alteração nessas páginas, tudo o que você vai precisar fazer é alterar a
+template, não cada página individual.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/patcha.jpg&quot; alt=&quot;patcha? é assim que se escreve?&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Eu ainda estou me re-acostumando a usar o Jekyll, mas ainda tenho um pouco de
+“memória muscular”.&lt;/p&gt;
+
+&lt;p&gt;Só estou fazendo os famosos polimentos no site agora, e provavelmente eu vou
+dar uma alterada nas cores do site. Vou deixar elas mais parecidas com a UI do meu
+querido Nintendo Switch Lite.&lt;/p&gt;
+
+&lt;p&gt;Sim, eu comprei essa belezura, mais tarde eu posso fazer um post falando sobre
+como está sendo a minha experiência com ele.&lt;/p&gt;
+
+&lt;p&gt;Enfim, por hoje isso é tudo o que eu vou falar.&lt;/p&gt;
+
+&lt;p&gt;Posso ter voltado com diversas mudanças no site, mas a minha criatividade para
+escrever continua sendo pífea em comparação a minha capacidade de retrabalho.&lt;/p&gt;
+
+&lt;p&gt;Até o próximo post!&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Espero que não demore muito para sair…&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        <pubDate>Fri, 04 Apr 2025 00:00:00 -0300</pubDate>
+        <link>http://localhost:4000/blog/2025/04/04/jekyll.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2025/04/04/jekyll.html</guid>
+        
+        <category>web</category>
+        
+        <category>open-source</category>
+        
+        <category>programação</category>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>Eu comprei um iPhone...</title>
+        <description>&lt;p&gt;Pois é, logo eu, que enchia a boca para falar de privacidade e
+tecnologia open-source, comprei um iPhone.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/eah.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Devo admitir que essa compra foi em grande parte algo que fiz puramente
+no emocional, pois depois de alguns meses trabalhando eu finalmente
+conseguir ter condições para comprar um celular flag-ship. Por mais que
+no caso ele seja um flag-ship antigo, ele ainda é um puta de um celular.&lt;/p&gt;
+
+&lt;p&gt;O iPhone em questão é o iPhone 12.&lt;/p&gt;
+
+&lt;p&gt;Pois é, um celular de 4 anos de idade.&lt;/p&gt;
+
+&lt;p&gt;Mas, apesar da &quot;&lt;em&gt;idade avançada&lt;/em&gt;&quot;, ele continua sendo um puta celular
+parrudo. Não é porque ele tem 4 anos, que a construção dele é inferior à
+de celulares atuais. Nem por isso a câmera dele ficou defasada. Muito
+pelo contrário.&lt;/p&gt;
+
+&lt;p&gt;Em comparação com o celular que eu estava utilizando (Um Moto G52), este
+iPhone de 4 anos de idade simplesmente &lt;strong&gt;destrói&lt;/strong&gt; ele em &lt;strong&gt;tudo&lt;/strong&gt;, com
+a única excessão sendo privacidade, pois o meu antigo Moto G52 está com
+a LineageOS instalada.&lt;/p&gt;
+
+&lt;p&gt;Este é literalmente o único ponto negativo deste celular, que inclusive
+eu comprei pelo mesmo valor que o meu antigo POCO M4 Pro, e também na
+mesma loja de celular. Ou seja:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://static.displate.com/857x1200/displate/2022-12-08/941aad7a4e6139fe00aa5cd1fbc84aa7_6954feb865b5916c28c8f66026a0d6ce.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 01 Jan 2025 00:00:00 -0300</pubDate>
+        <link>http://localhost:4000/blog/2025/01/01/iphone.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2025/01/01/iphone.html</guid>
+        
+        <category>compras</category>
+        
+        <category>hardware</category>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>O vale da estranheza</title>
+        <description>&lt;p&gt;Esse é um assunto que volta e meia me vem à cabeça. Mas, por qual razão?
+Bem, os motivos são vários na realidade. Seja no meu consumo de mídia,
+pela minha navegação na internet ou então até mesmo na vida real, o tal
+chamado &quot;Vale da estranheza&quot; sempre se mostra uma hora ou outra.&lt;/p&gt;
+
+&lt;p&gt;O curioso disso é como ele é retradado em várias formas de
+entretenimento. Filmes, séries, animes, jogos, todos eles têm um aspecto
+principal idêntico na maioria das vezes: O terror.&lt;/p&gt;
+
+&lt;h1 id=&quot;eu-não-sou-um-cara-que-curte-terror&quot;&gt;Eu não sou um cara que curte terror&lt;/h1&gt;
+
+&lt;p&gt;não, nada disso, muito pelo contrário, eu sou do tipo que prefere
+assitir uma comédia romântica à ter que assitir um filme de terror. Mas,
+esse sub-gênero (e outros como ele) me atrai. Isso é algo difícil de
+explicar, porém tenho certeza que não sou o único a pensar assim: Apesar
+de dar calafrios, eu tenho uma curiosidade que aumenta cada vez mais.&lt;/p&gt;
+
+&lt;p&gt;A minha primeira exposição ao vale da estranheza foi, provavelmente como
+muitas outras pessoas, com o meme do senhor incrível.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/sr_incrivel.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;É óbvio que esse meme não é a &lt;strong&gt;melhor&lt;/strong&gt; representação do Vale da
+estranheza, mas ele já é uma boa demonstração do que ele pode ser. O
+sentimento que imagens do Vale da estranheza proporcionam é o de…
+desconforto. Pelo menos no meu caso esse é o sentimento. Algo que está
+errado, de alguma forma, e você consegue perceber, porém, ele também te
+lembra algo que não lhe é estranho, mundano, comum. Esse conflito gera
+esse desconforto esquisito.&lt;/p&gt;
+
+&lt;p&gt;Esse meme ficou popular, e por consequência eu consumi muitos vídeos no
+youtube contendo esse meme, fazendo assim com que o algorítimo me
+recomendasse vídeos contendo temas relacionados e afins. Então, eu foi
+exposto à um outro gênero similar ao Vale: Os espaços liminares. Depois
+eu comento mais sobre eles.&lt;/p&gt;
+
+&lt;p&gt;Apesar disso, eu, por algum motivo que só Deus sabe, tenho um interesse
+nesse estilo de terror, e em outros estilos similares/derivados dele.&lt;/p&gt;
+
+&lt;p&gt;Isso me torna alguém que gosta de terror mas só não quer admitir?
+Provavelmente. Mas estamos na internet e são poucos os que querem ser
+coerentes por aqui.&lt;/p&gt;
+
+&lt;h1 id=&quot;a-presença-do-vale-da-estranheza-na-mídia-que-consumo&quot;&gt;A presença do Vale da estranheza na mídia que consumo&lt;/h1&gt;
+
+&lt;h2 id=&quot;jogos&quot;&gt;Jogos&lt;/h2&gt;
+
+&lt;p&gt;Uns meses atrás, eu comecei a jogar &lt;a href=&quot;https://en.wikipedia.org/wiki/Silent_Hill_(video_game)&quot;&gt;Silent
+Hill&lt;/a&gt;, um
+clássico do Playstation 1. O jogo constantemente te dá calafrios por
+toda a gameplay. É um ótimo exemplo do que é possível fazer mesmo tendo
+diversas limitações. No caso, um exemplo de como fazer alguém infartar.&lt;/p&gt;
+
+&lt;p&gt;Devido às limitações da época, existe uma presença fortíssima de
+compressão de alguns assets, como por exemplo, as texturas e os efeitos
+sonoros. No caso das texturas, em alguns momentos é difícil até mesmo
+dizer se o que tá na sua frente é uma mancha de sujeira, uma queimadura
+ou então até mesmo sangue ressecado. Literalmente o seu cérebo é quem
+vai decidir da hora.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/SH1_rifle.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Outra coisa boa a se comentar é a visão extremamente limitada. Isso é
+uma limitação do próprio hardware do Playstation, mas a equipe que fez
+Silent Hill contornou isso e transformou em parte da gameplay. E olha,
+se tem uma coisa que me assusta, é não saber se o que tá na minha frente
+é um ser humano, ou outra coisa que provavelmente não tá afim de
+conversar.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/silent_hill_screenshot_03.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Infelizmente eu perdi o meu save do jogo, eu estava na seção do parque
+de diversões, por conta da frustração de ter perdido o save e também por
+preguiça de ter que jogar tudo de novo, eu acabei não jogando mais.
+Porém, esse jogo tem o meu respeito. Ele tem pouquíssimos jumpscares, a
+maior parte da gameplay ele simplesmente ataca a sua ansiedade e te
+deixa apreensivo, mas ainda assim ele sabe dosar, e muito bem, quando
+ele deve fazer o seu coração bater um tanto mais rápido.&lt;/p&gt;
+
+&lt;h2 id=&quot;animes&quot;&gt;Animes&lt;/h2&gt;
+
+&lt;p&gt;Mais recentemente foi lançado na Netflix a adaptação do mangá
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Dandadan&quot;&gt;Dandadan&lt;/a&gt;, mas eu não o conheci
+por trailers ou por que me foi recomendado na home da Netflix. Eu fui
+apresentado à esse mangá por meio de um youtuber que acompanho, o
+&lt;a href=&quot;https://www.youtube.com/@CentralNaythf&quot;&gt;Naythf&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://youtu.be/eUQiwNVp6MU?si=M4N2eF5DmrYD7ZFp&quot;&gt;No vídeo que ele comenta sobre
+Dandadan&lt;/a&gt;, o Naythf
+fala sobre vários aspectos do mangá, como por exemplo os temas abordados
+e gêneros da obra. O curioso para mim foi a parte de terror do mangá. No
+maior estilo &lt;a href=&quot;https://en.wikipedia.org/wiki/Junji_Ito&quot;&gt;Junji Ito&lt;/a&gt;, as
+partes de terror focam (e muito) na estranheza. Não sei dizer se chega a
+poder ser considerado algo do Vale, mas no mínimo chega perto.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/dandadan-manga-primo-capitolo-05.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Uma outra aparição de algo que me lembra o vale da estranheza foi no
+anime &lt;a href=&quot;https://en.wikipedia.org/wiki/Chainsaw_Man&quot;&gt;Chainsaw Man&lt;/a&gt;, no
+caso em uma de suas finalizações de episódio. Para ser mais exato, na
+&lt;a href=&quot;https://www.youtube.com/watch?v=ymQ3wEIq84Y&quot;&gt;5ª finalização&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/chainsaw-man-ending-5.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Sei que a intenção não era exatamente o Vale, mas ainda assim não
+consigo assistir essa finalização sem fazer essa comparação.&lt;/p&gt;
+
+&lt;p&gt;Todo o cenário e a ambientação em que os personagens estão me lembram
+também os Espaços Liminares. Não seria uma surpresa para mim se essa
+semelhança fosse intencional, afinal, tanto o anime quanto os Espaços
+Liminares ficaram em alta +/- na mesma época.&lt;/p&gt;
+
+&lt;h1 id=&quot;espaços-liminares&quot;&gt;Espaços liminares&lt;/h1&gt;
+
+&lt;p&gt;Os espaços liminares tomam um rumo semelhante ao Vale, porém ele se
+diverge em um ponto: Na ambientação.&lt;/p&gt;
+
+&lt;p&gt;A ambientação dos espaços liminares é bem característica, são lugares
+que você espera que vá ter algo ou alguém por lá, mas, não há nada.
+Somente o que foi deixado por lá.&lt;/p&gt;
+
+&lt;p&gt;Sinceramente esse gênero de terror é o que mais me dá medo, por quê
+diferente de um alien vestido de ser humano e um cachorro assassino sem
+pele, um espaço liminar é perfeitamente possível na vida real. Na
+realidade eles não são possíveis, eles &lt;strong&gt;existem&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Essa é a parte que mais pega nos meus nervos. O fato de você não só ver
+ou achar, mas até mesmo de você ter alguma lembrança com o local. Como
+por exemplo, um parque aquático abandonado. Apesar de nunca ter ido a um
+pessoalmente, até mesmo eu fico com calafrios em ver algo como isso:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/liminal.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Não tem nada de errado com o local em si, nem com a imagem, porém, ainda
+assim, algo parece estar errado.&lt;/p&gt;
+
+&lt;p&gt;Uma explicação dada por muitas pessoas na internet é a de que o motivo
+desse desconforto vêm do fato de você esperar vem alguém na foto, por
+ser um local público e por você sempre ver um local como esse, populado.&lt;/p&gt;
+
+&lt;p&gt;A verdade é que cada pessoa tem uma reação à espaços como esses, no meu
+caso eu sinto calafrios, quase como se tivesse algo a mais na foto, mas
+que eu não estou enxergando, para outras pessoas, é só uma foto de um
+lugar vazio.&lt;/p&gt;
+
+&lt;p&gt;Mas sem sombra de dúvidas, uma das modas da internet relacionada a esse
+tema que mais me intrigou foram as
+&lt;a href=&quot;https://en.wikipedia.org/wiki/The_Backrooms&quot;&gt;Backrooms&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-backrooms&quot;&gt;The Backrooms&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/HobbyTown_USA_Oshkosh_interior_under_construction_2002_(The_Backrooms).jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Tudo começou com um post na aba paranormal do 4chan, a mensagem do
+usuário em si não tinha nada de mais, porém a resposta é uma coisa
+completamente a parte.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;If you&apos;re not careful and you noclip out of reality in the wrong
+areas, you&apos;ll end up in the Backrooms, where it&apos;s nothing but the
+stink of old moist carpet, the madness of mono-yellow, the endless
+background noise of fluorescent lights at maximum hum-buzz, and
+approximately six hundred million square miles of randomly segmented
+empty rooms to be trapped in&lt;/p&gt;
+
+  &lt;p&gt;God save you if you hear something wandering around nearby, because it
+sure as hell has heard you&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;E é com essa resposta que nasce um fenômeno na internet, um
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Alternate_reality_game&quot;&gt;ARG&lt;/a&gt;, e claro,
+uma fandom.&lt;/p&gt;
+
+&lt;p&gt;O que mais me deixou intrigado foi a semelhança dos ARG&apos;s de The
+Backrooms com a &lt;a href=&quot;https://en.wikipedia.org/wiki/SCP_Foundation&quot;&gt;SCP
+Foundation&lt;/a&gt;. Cada sala em
+The Backrooms tem um padrão, um método a seguir para conseguir fugir, e
+claro, algum tipo de anomalia presente. Seja ela uma criatura humanoide
+ou até mesmo um sorriso flutuante.&lt;/p&gt;
+
+&lt;p&gt;The Backrooms ficou tão popular que ultrapassou o gênero de &lt;a href=&quot;https://en.wikipedia.org/wiki/Analog_horror&quot;&gt;Analog
+Horror&lt;/a&gt; (o meu gênero
+favorito de terror). Diversos criadores de conteúdo fizeram vídeos
+comentando sobre, teorizando, fazendo gameplays de alguns jogos com esse
+tema.&lt;/p&gt;
+
+&lt;h3 id=&quot;kane-pixels&quot;&gt;&lt;a href=&quot;https://www.youtube.com/c/KANEpixels&quot;&gt;Kane Pixels&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Esse carinha fez as Backrooms simplesmente explodirem.&lt;/p&gt;
+
+&lt;p&gt;Durante a onda de vídeos sobre as Backrooms, os vídeos dele se
+destacavam (e muito) entre todos os outros. Seja por qualidade técnica
+ou por ambientação, os vídeos que ele produzia (e produz até hoje) são
+de cair o queixo.&lt;/p&gt;
+
+&lt;p&gt;Ele não só conseguiu fazer uma combinação de Analog Horror com The
+Backrooms, como fez isso beirando a perfeição.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/The-Backrooms-Kane-Pixels-01.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Foi basicamente dos vídeos dele que surgiu a inspiração de diversos
+jogos que se vê por aí na Steam ou Itch.io.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/smii7y_return_to_the_backrooms.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;analog-horror&quot;&gt;Analog horror&lt;/h1&gt;
+
+&lt;p&gt;Bem, já que eu mencionei ele, por quê não comentar sobre?&lt;/p&gt;
+
+&lt;p&gt;Assim como The Backrooms, esse gênero ficou extremamente popular uns
+tempos atrás. Começando uma febre com vídeos do universo de
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Five_Nights_at_Freddy%27s&quot;&gt;FNAF&lt;/a&gt;, poís é,
+FNAF. A maior parte desses vídeos giravam em torno de serem fitas de uso
+interno da empresa - Fitas de treinamento, relatórios gravados,
+filmagens de segurança - e que não eram feitas para serem consumidas por
+pessoas não-autorizadas.&lt;/p&gt;
+
+&lt;p&gt;Mas sempre, de alguma forma, alguém conseguia acesso às fitas e colocava
+as gravações na internet.&lt;/p&gt;
+
+&lt;p&gt;A parte mais interessante de alguns desses vídeos era a parte técnica,
+muitos deles eram quase que um &quot;olha só o que eu sei fazer&quot;.&lt;/p&gt;
+
+&lt;p&gt;Pois é, esse tema ficou saturado beeeeem rápido. Mas, algumas pessoas
+viram potêncial nesse estilo de terror, e decidiram criar universos
+próprios, tendo como uma base o horror analógico.&lt;/p&gt;
+
+&lt;p&gt;Coisas como &lt;a href=&quot;https://www.youtube.com/@blackdrag0nfish&quot;&gt;Nephthys Media&lt;/a&gt;,
+que exploravam um horror cósmico, começaram a surgir. O que foi um fator
+que me fez ter interesse nesse gênero.&lt;/p&gt;
+
+&lt;h2 id=&quot;nephthys-media&quot;&gt;Nephthys Media&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/hqdefault.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Apesar de não lembrar de praticamente nada do Nephthys Media, uma coisa
+que não tem como eu me esquecer é a atmosfera presente nele, é algo que
+me lembra os Espaços Liminares. É um desconforto constante e a impressão
+de que tem algo a mais que eu não estou enxergando.&lt;/p&gt;
+
+&lt;p&gt;Pode se dizer que esse analog horror em específico é o responsável por
+eu ter um certo medo de astros.&lt;/p&gt;
+
+&lt;p&gt;O enredo gira em torno de entidades que habitam os astros e em seus
+planos. Como disse eu não lembro de muita coisa, mas ainda assim é algo
+que eu recomendo.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-mandela-catalogue&quot;&gt;The Mandela Catalogue&lt;/h2&gt;
+
+&lt;p&gt;Outro que ficou extremamente popular, mas que o criador perdeu a mão.&lt;/p&gt;
+
+&lt;p&gt;Ele explora a bizarrice que são
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Doppelg%C3%A4nger&quot;&gt;Doppelgängers&lt;/a&gt;, e pelo
+menos no início da minisérie, consegue fazer isso muito bem até.&lt;/p&gt;
+
+&lt;p&gt;O maior problema do Mandela Catalogue é que o seu criador acabou
+enjoando da própria obra e quis fazer dela algo &quot;maior&quot;. Vamos dizer
+que ele voou muito perto do sol e acabou estragando a minisérie, pelo
+menos para mim, eu já não tenho o mínimo de interesse por ela depois do
+2º capítulo.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/catalogue-mondela-mandela-magazine.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=gk4AlxnZOYc&quot;&gt;The Mandela Magazine&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Uma coisa que pode ser aprendida com o caso do Mandela Catalogue é a
+seguinte: Se a sua obra se tornou popular por conta da ambientação e do
+mistério que gira em torno de algo quase que no estilo Lovecraft de
+absurdo, não transforma ela em uma minisérie de terror adolescente.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-walden-files&quot;&gt;The Walden Files&lt;/h2&gt;
+
+&lt;p&gt;Esse me dá arrepios só de lembrar.&lt;/p&gt;
+
+&lt;p&gt;The Walden Files é um ARG que tem inspirações em FNAF e em The Mandela
+Catalogue. Porém, só somente inspirações, ele é uma obra que não só se
+destaca como também elevou o padrão do gênero de Analog Horror.&lt;/p&gt;
+
+&lt;p&gt;Ele genuinamente me dá medo. Medo ao ponto de que eu só consumi ele por
+intermédio de um youtuber, o &lt;a href=&quot;https://www.youtube.com/@pombatomico&quot;&gt;Pombo
+Atômico&lt;/a&gt; e de dia na maior parte
+das vezes.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/walden_files.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ele também é extremamente gráfico e sonoro. Não é algo que eu
+recomendaria para a minha namorada por exemplo.&lt;/p&gt;
+
+&lt;p&gt;Mas a história que é contada… Olha, faz valer a pena. É com um dedo de
+FNAF, mas contada de uma forma coesa durante toda a obra e sem entregar
+fria e sem bandeja. Do início ao fim a sua curiosidade é instigada.&lt;/p&gt;
+
+&lt;p&gt;É uma ótima obra para se ver no Halloween. E talvez uma ótima obra para
+não assitir enquanto você está comendo alguma coisa.&lt;/p&gt;
+
+&lt;h1 id=&quot;fin&quot;&gt;&lt;em&gt;Fin&lt;/em&gt;&lt;/h1&gt;
+
+&lt;p&gt;Bem, isso é tudo o que eu tinha a comentar por agora. O halloween está
+chegando e eu quis dar os meus 5 centávos aqui.&lt;/p&gt;
+
+&lt;p&gt;Te vejo no próximo post!&lt;/p&gt;
+</description>
+        <pubDate>Tue, 31 Dec 2024 00:00:00 -0300</pubDate>
+        <link>http://localhost:4000/blog/2024/12/31/vale-da-estranheza.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2024/12/31/vale-da-estranheza.html</guid>
+        
+        <category>etc</category>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+  </channel>
+</rss>

@@ -17,32 +17,32 @@ jobs:
       contents: read
 
     steps:
-      - name: Clone repository
-        uses: actions/checkout@v4
+        - name: Checkout
+          uses: actions/checkout@v4
 
-      - name: Install Pandoc
-        run: sudo apt install pandoc
+        - name: Install Jekyll
+          run: sudo apt install jekyll
 
-      - name: Build site
-        run: make
+        - name: Build with Jekyll
+          run: jekyll b -V
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
+        - name: Setup Pages
+          uses: actions/configure-pages@v5
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: "public"
+        - name: Upload artifact
+          uses: actions/upload-pages-artifact@v3
+          with:
+            path: "_site"
 
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+        - name: Deploy to GitHub Pages
+          id: deployment
+          uses: actions/deploy-pages@v4
 
-      - name: Deploy to neocities
-        uses: bcomnes/deploy-to-neocities@v3
-        with:
-          api_key: ${{ secrets.NEOCITIES_API_TOKEN }}
-          cleanup: true
-          neocities_supporter: false # set this to true if you have a supporter account and want to bypass unsuported files filter.
-          preview_before_deploy: true # print a deployment plan prior to waiting for files to upload.
-          dist_dir: public
+        - name: Deploy to neocities
+          uses: bcomnes/deploy-to-neocities@v3
+          with:
+            api_key: ${{ secrets.NEOCITIES_API_TOKEN }}
+            cleanup: true
+            neocities_supporter: false
+            preview_before_deploy: false
+            dist_dir: _site
