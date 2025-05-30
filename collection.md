@@ -4,6 +4,7 @@ title: Coleção de jogos
 description: Tenho muito orgulho e felicidade por conseguir não só por comprar um Switch, mas também por conseguir ter montado essa coleção! Isso é basicamente um sonho de infância meu.
 ---
 
+[![deltarune](/assets/img/collection/deltarune.avif)](https://www.nintendo.com/pt-br/store/products/deltarune-switch/)
 [![sonic mania](/assets/img/collection/sonic-mania-icon.jpg)](https://www.nintendo.com/pt-br/store/products/sonic-mania-switch/)
 [![resident evil 4](/assets/img/collection/re4-icon.jpg)](https://www.nintendo.com/pt-br/store/products/resident-evil-4-switch/)
 [![devil may cry 3](/assets/img/collection/devil-may-cry-3-icon.jpg)](https://www.nintendo.com/pt-br/store/products/devil-may-cry-3-special-edition-switch/)
