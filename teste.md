@@ -1,6 +1,7 @@
 ---
 layout: "post"
 title: "Teste"
+thumbnail: aviso.jpg
 ---
 
 Essa página não contém nada de útil para o leitor, como o próprio nome
@@ -93,7 +94,7 @@ int main() {
 
 <fake@example.com>
 
-[hobbit-hole](https://en.wikipedia.org/wiki/Hobbit#Lifestyle "Hobbit lifestyles")
+[Markdown Guide](https://www.markdownguide.org "a free and open-source reference guide that explains how to use Markdown")
 
 [fake email](mailto:fake@example.com)
 
