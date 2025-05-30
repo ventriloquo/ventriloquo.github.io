@@ -1,11 +1,11 @@
 :root {
-  --red:      #dc322f;
-  --green:    #859900;
-  --yellow:   #b58900;
-  --blue:     #268bd2;
-  --purple:   #d33682;
-  --cyan:     #2aa198;
-  --orange:   #cb4b16;
+  --red:      #c00;
+  --green:    #7d1;
+  --yellow:   #ed0;
+  --blue:     #36a;
+  --purple:   #757;
+  --cyan:     #79c;
+  --orange:   #f70;
   --grey:     var(--bg-1);
 
   --bg-0:     #323232;
@@ -20,5 +20,5 @@
 }
 
 code, pre, .highlight {
-  background-color: #073642 !important;
+  background-color: #222 !important;
 }
