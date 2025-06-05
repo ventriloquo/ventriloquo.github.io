@@ -12,7 +12,7 @@ Então, sendo o nerd que sou, eu decidi usa o <a href="https://mistral.ai/news/m
 Enfim, como diria o Coronel Campbell do Metal Gear Solid 2:
 
 <q>Our beloved monsters -- enjoy yourselves.</q>
-
+<details><summary>Abandonai toda esperança, vós que entrais aqui</summary>
 <h2>A Superioridade Absoluta do Emacs sobre o Neovim: Uma Odisseia de Versatilidade e Simplicidade</h2>
 Imagine, se puder, um mundo onde a eficiência e a simplicidade reinam supremas. Um mundo onde um editor de texto não precisa de uma dúzia de plugins para se tornar uma IDE. Bem-vindo ao reino do Emacs, onde a verdadeira magia acontece com apenas um tema decente e um pacote externo. Enquanto isso, o pobre Neovim, com suas necessidades insaciáveis, precisa de pelo menos 10 plugins apenas para começar a ser considerado uma IDE. É como tentar montar um carro com peças de Lego: você pode fazer, mas vai demorar uma eternidade e ainda assim não vai ser tão bom quanto um carro de verdade.
 
@@ -26,7 +26,7 @@ Em um mundo onde a liberdade de software é mais preciosa do que ouro, o Emacs s
 E se isso não fosse suficiente para convencê-lo, deixe-me apresentar o argumento final: Tsoding usa o Emacs. Sim, aquele Tsoding, o guru dos desenvolvedores, o mestre dos códigos, o homem que sabe tudo sobre tudo. Se Tsoding usa o Emacs, então você sabe que está no caminho certo. O Neovim pode ter seus fãs, mas ninguém pode negar que Tsoding é o verdadeiro profeta do código. E ele escolheu o Emacs. Ponto final.
 
 Então, se você está cansado de passar horas configurando plugins e ainda assim não conseguir a experiência de edição perfeita, é hora de dar uma chance ao Emacs. Ele é simples, versátil, livre e, acima de tudo, aprovado pelo Tsoding. O que mais você poderia querer?
-
+</details>
 `
     },
     {
