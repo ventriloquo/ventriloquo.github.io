@@ -114,7 +114,7 @@ cite time::before {
 hr {
     border: none;
     border-bottom: solid 1px var(--bg-1);
-    margin: 1em 0;
+    margin: 1em 15%;
 }
 
 kbd {
@@ -222,4 +222,33 @@ li {
     max-width: 80ch;
     margin: auto;
     padding: 15px;
+}
+
+@media print {
+    root {
+	--bg-0:		#efefef;
+	--bg-1:		#cfcfcf;
+	--fg-0:		#181818;
+	--fg-1:		#282828;
+	--accent:	var(--fg-1);
+	--link:		var(--fg-1);
+	--heading:	var(--fg-1);
+    }
+    html, body, main, section, h1, h2, p, cite, time {
+	color: #181818 !important;
+	background-color: #fff !important;
+    }
+    
+    a {
+	color: #484848;
+    }
+
+    hr {
+	page-break-before: always;
+	opacity: 0;
+    }
+
+    nav {
+	display: none;
+    }
 }
