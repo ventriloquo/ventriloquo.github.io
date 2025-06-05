@@ -1,9 +1,11 @@
-let post, text, title, date
+"use strict"
+
+let post, text, title, date, id;
 for (let i = 0; i < posts.length; i++) {
-  post = posts[i];
+  post	= posts[i];
   title = post.title;
-  text = post.content;
-  date = post.date;
+  text	= post.content;
+  date	= post.date;
 
   if (date === undefined) {
     date = "Sem data definida"
@@ -26,19 +28,7 @@ for (let i = 0; i < posts.length; i++) {
    document.getElementById("blog_posts").appendChild(article);
    document.getElementById(id).innerHTML = `
    <h1>${title} <time>${date}</time></h1>
-   ${text.replaceAll("%%", "%")
-         .replaceAll("%#", "<h2>")
-         .replaceAll("#%", "</h2>")
-         .replaceAll("%'", "<blockquote>")
-         .replaceAll("'%", "</blockquote>")
-         .replaceAll("%/", "<br>")
-         .replaceAll("%|", "<pre>")
-         .replaceAll("|%", "</pre>")
-         .replaceAll("%[",  "<kbd>")
-         .replaceAll("]%",  "</kbd>")
-         .replaceAll("%b",  "<b>")
-         .replaceAll("b%",  "</b>")
-         .replaceAll("%i",  "<i>")
-         .replaceAll("i%",  "</i>")
-         .replaceAll("\n", "<br>")}`;
+   ${text.replaceAll("\n", "<br>")}
+   <hr>`;
 }
+

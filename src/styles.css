@@ -188,7 +188,6 @@ nav a {
 article {
   display: block;
   margin-bottom: 1em;
-  border-bottom: solid 1px var(--bg-1);
 }
 
 img {
