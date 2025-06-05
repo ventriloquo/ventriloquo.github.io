@@ -20,51 +20,55 @@ Isso me incomoda e muito hoje em dia, porque sinto que isso é uma coisa que me 
 Acredito que ainda vá levar um tempo até que eu pare de ter esse comportamento, mas espero que esse site seja um começo para esse meu desenvolvimento. Já que esse site tem como visão ser o mais simples possível, o uso de JavaScript nele se limita a garantir que os posts do meu blog sigam um padrão quando se trata da ordem e layout (espaçamento entre parágrafos, títulos, datas, esse tipo de coisa), ainda que boa parte disso também dependa do meu CSS.
 
 Tenho esperança de que eu vá conseguir superar essa questão, afinal de contas, eu nunca me imaginei usando o Emacs por exemplo, fui por muito tempo um evangelista do Vim, mas agora, o Emacs é um dos, senão, o meu editor de texto favorito (e olha que a configuração que eu mais gosto de usar é uma que é <a href="https://github.com/ventriloquo/minimal-emacs">praticamente vanilla</a> de tão enxuta).
+
+Claro que para isso, será necessária dedicação da minha parte. E estou trabalhando nesse aspecto também, para que essa minha atitude não se torne apenas mais um dos meus episódios de mudança repentina quanto ao meu gosto sobre tecnologia.
+
+<q>É simplesmente vergonhoso o quão frequente isso é.</q>
 `
     },
-  {
-    title: "Teste - 2",
-    date: "04.06.2025",
-    content: `
-    Este é o <b>segundo</b> <i>"post"</i> deste blog.
-    <q>Não há nada a ser fazido.
-    <cite>Bonaparte, Napoleon<time>10.07.1815</time></cite></q>
-    <pre>
+    {
+	title: "Teste - 2",
+	date: "04.06.2025",
+	content: `
+Este é o <b>segundo</b> <i>"post"</i> deste blog.
+<q>Não há nada a ser fazido.
+<cite>Bonaparte, Napoleon<time>10.07.1815</time></cite></q>
+<pre>
 (() => {
   console.log("JavaScript pode até ser uma bosta. Mas é útil.")
 })();
-    </pre>
-    <img src="https://preview.redd.it/v65crolks8f01.png?width=640&crop=smart&auto=webp&s=39374c71d7272d7c0efd82fb6545849335546ee1" loading="lazy">
+</pre>
+<img src="https://preview.redd.it/v65crolks8f01.png?width=640&crop=smart&auto=webp&s=39374c71d7272d7c0efd82fb6545849335546ee1" loading="lazy">
     `
-  },
-  {
-    title: "Teste",
-    date: "04.06.2025",
-    content: `
-    Este é o <b>primeiro</b> <i>"post"</i> deste blog.
+    },
+    {
+	title: "Teste",
+	date: "04.06.2025",
+	content: `
+Este é o <b>primeiro</b> <i>"post"</i> deste blog.
 
-    <kbd>Ctrl</kbd> <kbd>Alt</kbd> <kbd>Del</kbd>
+<kbd>Ctrl</kbd> <kbd>Alt</kbd> <kbd>Del</kbd>
 
-    <code>/gamerule keepinventory true</code>
+<code>/gamerule keepinventory true</code>
 
-    <a href="https://www.gnu.org/software/emacs/manual/pdf/emacs.pdf">Manual do Emacs</a>
+<a href="https://www.gnu.org/software/emacs/manual/pdf/emacs.pdf">Manual do Emacs</a>
 
-    <ul>
-      <li>1</li>
-      <li>2</li>
-      <ul>
-        <li>3</li>
-        <li>4</li>
-      </ul>
-    </ul>
-    <ol>
-      <li>Um</li>
-      <li>Dois</li>
-      <ol>
-        <li>Três</li>
-        <li>Quatro</li>
-      </ol>
-    </ol>
+<ul>
+  <li>1</li>
+  <li>2</li>
+  <ul>
+    <li>3</li>
+    <li>4</li>
+  </ul>
+</ul>
+<ol>
+  <li>Um</li>
+  <li>Dois</li>
+  <ol>
+    <li>Três</li>
+    <li>Quatro</li>
+  </ol>
+</ol>
     `
-  }
+    }
 ]
