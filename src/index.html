@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8">
+    <meta name="author" content="tukain">
+    <meta name="description" content="Um site extremamente simples.">
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'
+      width='32' height='32'>
+      <rect width='32' height='32' fill='rgb(255,221,51)'/></svg>">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Tukain's Website</title>
+  </head>
+  <body>
+    <main>
+    <nav>
+      <div>
+        <a href="#home">Início</a>
+      </div>
+      <div>
+        <a href="#blog">Blog</a>
+        <a href="#sobre">Sobre</a>
+      </div>
+    </nav>
+
+      <!-- Tela inicial -->
+      <section id="home">
+        <div class="content">
+          <hgroup>
+            <h1>Tukain&CloseCurlyQuote;s Website</h1>
+            <p>Bem-vindo ao meu website!</p>
+          </hgroup>
+          <hr>
+          <p>Este site é inspirado (e também usa partes do CSS) no site
+              <a href="https://john-doe.neocities.org/">john-doe.neocities.org</a>.</p>
+          <p>A paleta de cores utilizada é a <a href="https://github.com/rexim/gruber-darker-theme">Gruber Darker</a></p>
+        </div>
+      </section>
+
+      <!-- Sobre Mim -->
+      <section id="sobre">
+        <div class="content">
+          <h1>Sobre mim</h1>
+          <p>Olá, internauta! Tudo bem com você? Eu espero que sim!</p>
+          <p>Você pode me chamar de Tukain, ou Ventriloquo, se preferir.</p>
+          <p>Eu sou um cara que gosta e muito do mundo open-source e Linux,
+          apesar que nos últimos tempos eu tenha perdido um pouco do vapor
+          sobre esses assuntos. Ainda assim, eles são importantes o bastante
+          para ainda me importar!</p>
+        </div>
+      </section>
+
+      <!-- Blog -->
+      <section id="blog">
+        <div id="blog_posts" class="content">
+          <noscript>
+            <hgroup>
+              <h1>Erro</h1>
+              <p>Por favor, habilite o JavaScript para poder visualizar os
+              posts.</p>
+            </hgroup>
+          </noscript>
+          <script src="./content.js"></script>
+        </div>
+      </section>
+    </main>
+    <script src="./blog.js"> </script>
+  </body>
+</html>
