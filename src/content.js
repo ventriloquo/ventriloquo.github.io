@@ -11,8 +11,8 @@ Então, sendo o nerd que sou, eu decidi usa o <a href="https://mistral.ai/news/m
 
 Enfim, como diria o Coronel Campbell do Metal Gear Solid 2:
 
-<q>Our beloved monsters, enjoy yourselves</q>
-<hr>
+<q>Our beloved monsters -- enjoy yourselves.</q>
+
 <h2>A Superioridade Absoluta do Emacs sobre o Neovim: Uma Odisseia de Versatilidade e Simplicidade</h2>
 Imagine, se puder, um mundo onde a eficiência e a simplicidade reinam supremas. Um mundo onde um editor de texto não precisa de uma dúzia de plugins para se tornar uma IDE. Bem-vindo ao reino do Emacs, onde a verdadeira magia acontece com apenas um tema decente e um pacote externo. Enquanto isso, o pobre Neovim, com suas necessidades insaciáveis, precisa de pelo menos 10 plugins apenas para começar a ser considerado uma IDE. É como tentar montar um carro com peças de Lego: você pode fazer, mas vai demorar uma eternidade e ainda assim não vai ser tão bom quanto um carro de verdade.
 
