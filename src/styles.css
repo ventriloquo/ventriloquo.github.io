@@ -117,6 +117,10 @@ hr {
     margin: 1em 15%;
 }
 
+summary {
+    color: var(--heading);
+}
+
 kbd {
     background-color: var(--fg-0);
     color: var(--bg-0);
