@@ -53,11 +53,22 @@ a[href$=".png"]:before { content: "IMG"; }
 h1 {
     color: var(--accent);
     font-size: xx-large;
+    position: relative;
 }
 
 h2 {
     color: var(--heading);
     font-size: x-large;
+}
+
+h1:has(+ p), h1:has(+ br), h2:has(+ br) {
+    margin-bottom: -.5rem;
+}
+
+h1:hover::before {
+    content: "#";
+    position: absolute;
+    left: -1.5rem;
 }
 
 p {
@@ -159,7 +170,7 @@ section {
     z-index: 1;
 }
 
-section:target {
+section:target, section:has(article:target) {
     display: block;
 }
 
