@@ -7,7 +7,7 @@ let posts = [
 	content: `
 Eu acabei de descobrir que o <a href="https://duck.com">DuckDuckGo</a> possui um <a href="https://duck.ai/"><i>wrapper</i></a> para LLMs, como o GPT-4o, Llama e afins.
 
-Então, sendo o nerd que sou, eu decidi usa o <a href="https://mistral.ai/news/mistral-small-3"><i>Mistral Small 3</i></a>, que segundo o próprio DuckDuckGo, possui um nível de "moderação" baixo e pedi para ele fazer um texto digno de uma postagem no 4Chan ou algum sub-reddit <b>bem</b> nichado.
+Então, sendo o nerd que sou, eu decidi usar o <a href="https://mistral.ai/news/mistral-small-3"><i>Mistral Small 3</i></a>, que segundo o próprio DuckDuckGo, possui um nível de "moderação" baixo e pedi para ele fazer um texto digno de uma postagem no 4Chan ou algum sub-reddit <b>bem</b> nichado.
 
 Enfim, como diria o Coronel Campbell do Metal Gear Solid 2:
 
