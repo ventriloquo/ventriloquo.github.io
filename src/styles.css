@@ -267,3 +267,9 @@ li {
 	display: none;
     }
 }
+
+@media only screen and (max-width: 720px) {
+    h1:hover::before {
+	content: "";
+    }
+}
