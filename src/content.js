@@ -61,8 +61,7 @@ Claro que para isso, será necessária dedicação da minha parte. E estou traba
 Este é o <b>segundo</b> <i>"post"</i> deste blog.
 <q>Não há nada a ser fazido.
 <cite>Bonaparte, Napoleon<time>10.07.1815</time></cite></q>
-<pre>
-(() => {
+<pre>(() => {
   console.log("JavaScript pode até ser uma bosta. Mas é útil.")
 })();
 </pre>
