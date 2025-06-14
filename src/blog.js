@@ -39,8 +39,7 @@ for (let i = 0; i < posts.length; i++) {
     document.getElementById(id).innerHTML = `
     <a href="#${id}"><h1>${title} <time>${date}</time></h1></a>
     ${text.replaceAll("\n", "<br>")
-          .replaceAll("--", "—")}
-    <hr>`;
+          .replaceAll("--", "—")}`;
 }
 
 const progressBar = document.getElementById('progress-bar');
