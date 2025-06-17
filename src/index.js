@@ -10,19 +10,16 @@ for (let i = 0; i < posts.length; i++) {
     if (date === undefined) date = "Sem data definida";
     if (text === undefined) text = "Sem conteúdo definido";
 
-    id = `
-post_${date.toLowerCase().replaceAll(".", "-").replaceAll(" ", "-")}
-_${title.toLowerCase()
-	.replaceAll(" ", "-")
-	.replaceAll(",", "")
-	.replaceAll(".", "")
-	.replaceAll("é", "e")
-	.replaceAll("ê", "e")
-	.replaceAll("á", "a")
-	.replaceAll("à", "a")
-	.replaceAll("ã", "a")
-	.replaceAll("ô", "o")
-	.replaceAll("õ", "o")}`
+    id = `post_${date.toLowerCase().replaceAll(".", "-").replaceAll(" ", "-")}_${title.toLowerCase().replaceAll(" ", "-")
+												    .replaceAll(",", "")
+												    .replaceAll(".", "")
+												    .replaceAll("é", "e")
+												    .replaceAll("ê", "e")
+												    .replaceAll("á", "a")
+												    .replaceAll("à", "a")
+												    .replaceAll("ã", "a")
+												    .replaceAll("ô", "o")
+												    .replaceAll("õ", "o")}`
 
     let article = document.createElement("article");
     article.setAttribute("id", id);

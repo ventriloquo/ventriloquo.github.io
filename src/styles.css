@@ -11,6 +11,8 @@
 
 html {
     scrollbar-width: none;	/* Hiding the scrollbar on Firefox */
+    scroll-padding-top: 4em;
+    scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
