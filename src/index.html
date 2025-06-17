@@ -17,7 +17,7 @@
     <title>Tukain's Website</title>
   </head>
   <body>
-    <main>
+    <header>
       <nav>
 	<div>
           <a href="#home">Início</a>
@@ -27,7 +27,8 @@
           <a href="#sobre">Sobre</a>
 	</div>
       </nav>
-
+    </header>
+    <main>
       <!-- Tela inicial -->
       <section id="home">
         <div class="content">
@@ -78,19 +79,15 @@
         <div id="blog_posts" class="content">
           <noscript>
             <hgroup>
-              <h1>Erro: JavaScript desabilitado</h1>
+              <h1><span style="color: red">Erro:</span> JavaScript desabilitado</h1>
               <p>Por favor, habilite o JavaScript para poder visualizar os
 		posts.</p>
             </hgroup>
           </noscript>
-	  <div id="progress-container">
-	    <div id="progress-bar"></div>
-	  </div>
           <script src="./content.js"></script>
-	  <script src="./blog.js"></script>
         </div>
       </section>
-
     </main>
+    <script src="./index.js"></script>
   </body>
 </html>
