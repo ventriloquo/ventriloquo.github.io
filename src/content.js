@@ -2,6 +2,26 @@
 
 let posts = [
     {
+	title: "METAL GEAR SOLID 3!!!",
+	date: "18.06.2025",
+	content: `
+A minha namorada fez algo que é dígno de fazer até o Kratos chorar de tanta emoção. Ela me deu, de presente de dia dos namorados, o fucking Metal Gear Solid 3: Snake Eater!
+
+Cara, eu literalmente fiquei querendo comprar essa obra prima do Kojima desde o dia que eu comprei o meu Switch Lite, e hoje, dia 18/06/2025, eu venho aqui dizer a vocês senhores: <b>a minha mina fez a boa</b>.
+
+<img loading="lazy" src="https://images.steamusercontent.com/ugc/53246768171442452/ED926E0139891BC9144B3C6610E19393F8A58AD1/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false">
+
+Eu tô no trabalho agora, mas eu mal consigo me segurar de tanto que eu quero:
+
+<ol>
+<li>Encher ela de beijos</li>
+<li>Encher ela de beijos um pouco mais</li>
+<li>Jogar o jogo</li>
+</ol>
+Agora eu tô fudido pra achar algum presente à altura, mas foda-se. <span style="color: #f43841">Eu te amo querida! <3</span>
+`
+    },
+    {
 	title: "Pérolas das LLMs",
 	date: "05.06.2025",
 	content: `
