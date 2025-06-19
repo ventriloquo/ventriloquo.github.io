@@ -2,8 +2,7 @@
     --fg:	#2b2923;
     --bg-0:	#5f5f52;
     --bg-1:	#838470;
-    --link:	#96a6c8;
-    --hr-color: #363636;
+    --border: solid 1px var(--fg);
 }
 
 html {
@@ -106,9 +105,9 @@ h1:has(+ p), h1:has(+ br), h2:has(+ br) {
 }
 
 h1:hover::before {
-    content: "#";
+    content: "[REF]";
     position: absolute;
-    left: -1.5rem;
+    font-size: small;
 }
 
 p {
@@ -158,12 +157,14 @@ cite time::before {
 
 hr {
     border: none;
-    border-bottom: solid 1px var(--fg);
+    border-bottom: var(--border);
+    position: absolute;
+    left: 0;
+    width: 100vw;
 }
 
 table {
-    border: solid 2px var(--fg);
-    border-radius: 3px;
+    border: var(--border);
     width: 100%;
     margin: 1em auto;
     text-align: left;
@@ -188,7 +189,6 @@ details:hover {
 
 code, kbd, pre {
     padding: 5px;
-    border-radius: 3px;
     font-family: monospace;
 }
 
@@ -229,9 +229,9 @@ section {
 
 .up {
     position: fixed;
+    z-index: 10;
     left: 1em;
     bottom: 1em;
-    z-index: 10;
     text-decoration: none;
     font-size: x-large;
     background-color: var(--bg-0);
@@ -239,14 +239,26 @@ section {
     width: 40px;
     height: 40px;
     text-align: center;
+    border: var(--border);
+}
+
+.up:hover::after {
+    content: "Topo da página";
+    position: fixed;
+    display: block;
+    height: 40px;
+    bottom: 1em;
+    left: 2.7em;
+    padding: 0 1em;
+    background-color: var(--fg);
+    color: var(--bg-0);
+    border: var(--border);
 }
 
 article {
     display: block;
     margin-bottom: 1em;
-    background-color: var(--bg-1);
     padding: 5px;
-    border-radius: 3px;
 }
 
 section:target, section:has(article:target) {
@@ -326,8 +338,12 @@ li {
 .content {
     display: block;
     max-width: 80ch;
+    min-height: 100vh;
     margin: auto;
     padding: 15px;
+    background-color: var(--bg-1);
+    border-left: var(--border);
+    border-right: var(--border);
 }
 
 @media only screen and (max-width: 720px) {
