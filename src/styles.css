@@ -1,17 +1,14 @@
 :root {
-    --bg-0:	#181818;
-    --bg-1:	#282828;
-    --fg-0:	#e4e4ef;
-    --fg-1:	#f4f4ff;
-    --accent:	#ffdd33;
+    --fg:	#2b2923;
+    --bg-0:	#5f5f52;
+    --bg-1:	#838470;
     --link:	#96a6c8;
-    --heading:	#95a99f;
     --hr-color: #363636;
 }
 
 html {
     scrollbar-width: none;	/* Hiding the scrollbar on Firefox */
-    scroll-padding-top: 4em;
+    scroll-padding-top: 0;
     scroll-behavior: smooth;
 }
 
@@ -21,15 +18,19 @@ html {
 
 body {
     background-color: var(--bg-1);
-    color: var(--fg-0);
+    color: var(--fg);
     font-family: "San Francisco", system-ui;
     line-height: 1.6;
     position: relative;
 }
 
 a {
+    text-decoration: underline;
+    color: var(--fg);
+}
+
+a:has(h1) {
     text-decoration: none;
-    color: var(--link);
 }
 
 a:hover {
@@ -40,13 +41,13 @@ a[href*="//"]:after {
     font-weight: 300;
     font-size: .85em;
     content: "\2197"; /* top right arrow */
-    color: var(--fg-0);
-    opacity: .25;
+    color: var(--fg);
 }
 
 a:before {
     font-size: .7em;
     margin-right: .4em;
+    color: var(--fg);
 }
 
 /* Documents */
@@ -91,13 +92,12 @@ a[href$=".gif"]:before,
 a[href$=".png"]:before	{ content: "IMG"; }
 
 h1 {
-    color: var(--accent);
+    color: var(--fg);
     font-size: xx-large;
     position: relative;
 }
 
 h2 {
-    color: var(--heading);
     font-size: x-large;
 }
 
@@ -126,8 +126,7 @@ i, em {
 }
 
 time {
-    color: var(--fg-0);
-    opacity: 50%;
+    color: var(--fg);
     font-size: initial;
     margin-left: .4em;
 }
@@ -136,7 +135,7 @@ q, blockquote {
     display: block;
     margin: 15px 0;
     padding: 8px 0 8px 15px;
-    border-left: solid 3px var(--accent);
+    border-left: solid 3px var(--fg);
     font-style: italic;
 }
 
@@ -145,7 +144,7 @@ q p::before, q p::after, blockquote p::before, blockquote p::after {
 }
 
 cite, cite time {
-    color: var(--accent);
+    color: var(--fg);
     opacity: 90%;
 }
 
@@ -159,12 +158,11 @@ cite time::before {
 
 hr {
     border: none;
-    border-bottom: solid 1px var(--hr-color);
-    margin: 1em 15%;
+    border-bottom: solid 1px var(--fg);
 }
 
 table {
-    border: solid 2px var(--accent);
+    border: solid 2px var(--fg);
     border-radius: 3px;
     width: 100%;
     margin: 1em auto;
@@ -172,7 +170,7 @@ table {
 }
 
 th {
-    background-color: var(--accent);
+    background-color: var(--fg);
     color: var(--bg-0);
 }
 
@@ -188,10 +186,6 @@ details:hover {
     cursor: pointer;
 }
 
-summary {
-    color: var(--heading);
-}
-
 code, kbd, pre {
     padding: 5px;
     border-radius: 3px;
@@ -199,13 +193,13 @@ code, kbd, pre {
 }
 
 kbd {
-    background-color: var(--fg-0);
+    background-color: var(--fg);
     color: var(--bg-0);
 }
 
 pre, code {
     background-color: var(--bg-1);
-    color: var(--fg-1);
+    color: var(--fg);
 }
 
 pre {
@@ -230,46 +224,77 @@ section {
     min-height: 100vh;
     width: 100vw;
     background: var(--bg-0);
-    padding-top: 5em;
     z-index: 1;
+}
+
+.up {
+    position: fixed;
+    left: 1em;
+    bottom: 1em;
+    z-index: 10;
+    text-decoration: none;
+    font-size: x-large;
+    background-color: var(--bg-0);
+    display: block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
 }
 
 article {
     display: block;
     margin-bottom: 1em;
+    background-color: var(--bg-1);
+    padding: 5px;
+    border-radius: 3px;
 }
 
 section:target, section:has(article:target) {
+    margin-top: 0;
     display: block;
 }
 
-section#home {
+header {
+    background-color: var(--fg);
     display: block;
+    padding-top: 1.5em;
+    padding-bottom: .6em;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100vw;
+    position: sticky;
+    top: 0;
+    z-index: 15;
+}
+
+header img {
+    max-height: 40vh;
+    margin-top: 20vh;
 }
 
 nav {
     display: flex;
     flex-wrap: wrap;
-    position: fixed;
-    background-color: var(--bg-0);
-    top: 0;
-    z-index: 2;
+    background-color: var(--bg-1);
     justify-content: space-between;
-    margin: auto;
-    width: 100vw;
-    border-bottom: solid 1px var(--bg-1);
+    padding-left: 2em;
+    padding-right: 2em;
+    margin-top: 20vh;
+    margin-bottom: 20vh;
 }
 
 nav a {
     text-decoration: none;
     display: inline-block;
-    padding: 1em;
+    padding: 0 1em;
+    color: var(--fg);
 }
 
 img {
     max-width: 100%;
     display: block;
     margin: .7em auto;
+    opacity: 80%;
 }
 
 ul, ol {
@@ -306,6 +331,9 @@ li {
 }
 
 @media only screen and (max-width: 720px) {
+    #blog_posts {
+	padding: 0;
+    }
     h1:hover::before {
 	content: "";
     }

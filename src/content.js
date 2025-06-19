@@ -18,7 +18,7 @@ Eu tô no trabalho agora, mas eu mal consigo me segurar de tanto que eu quero:
 <li>Encher ela de beijos um pouco mais</li>
 <li>Jogar o jogo</li>
 </ol>
-Agora eu tô fudido pra achar algum presente à altura, mas foda-se. <span style="color: #f43841">Eu te amo querida! <3</span>
+Agora eu tô fudido pra achar algum presente à altura, mas foda-se. <b>Eu te amo querida! <3</b>
 `
     },
     {
