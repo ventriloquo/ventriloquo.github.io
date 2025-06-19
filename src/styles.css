@@ -90,6 +90,42 @@ a[href$=".jpg"]:before,
 a[href$=".gif"]:before,
 a[href$=".png"]:before	{ content: "IMG"; }
 
+header {
+    background-color: var(--fg);
+    display: block;
+    padding-top: 1.5em;
+    padding-bottom: .6em;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100vw;
+    position: sticky;
+    top: 0;
+    z-index: 15;
+}
+
+header img {
+    max-height: 40vh;
+    margin-top: 20vh;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--bg-1);
+    justify-content: space-between;
+    padding-left: 2em;
+    padding-right: 2em;
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+}
+
+nav a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 0 1em;
+    color: var(--fg);
+}
+
 h1 {
     color: var(--fg);
     font-size: xx-large;
@@ -100,7 +136,7 @@ h2 {
     font-size: x-large;
 }
 
-h1:has(+ p), h1:has(+ br), h2:has(+ br) {
+h1:has(+ p), h2:has(+ p) {
     margin-bottom: -.5rem;
 }
 
@@ -202,6 +238,11 @@ pre, code {
     color: var(--fg);
 }
 
+pre p {
+    margin: 0;
+    padding: 0;
+}
+
 pre {
     padding: 1em;
     overflow-x: scroll;
@@ -266,42 +307,6 @@ section:target, section:has(article:target) {
     display: block;
 }
 
-header {
-    background-color: var(--fg);
-    display: block;
-    padding-top: 1.5em;
-    padding-bottom: .6em;
-    padding-left: 0;
-    padding-right: 0;
-    width: 100vw;
-    position: sticky;
-    top: 0;
-    z-index: 15;
-}
-
-header img {
-    max-height: 40vh;
-    margin-top: 20vh;
-}
-
-nav {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: var(--bg-1);
-    justify-content: space-between;
-    padding-left: 2em;
-    padding-right: 2em;
-    margin-top: 20vh;
-    margin-bottom: 20vh;
-}
-
-nav a {
-    text-decoration: none;
-    display: inline-block;
-    padding: 0 1em;
-    color: var(--fg);
-}
-
 img {
     max-width: 100%;
     display: block;
@@ -327,7 +332,7 @@ ul ul, ol ol {
     margin: 0;
 }
 
-ul br, ol br {
+ul p, ol p {
     display: none;
 }
 

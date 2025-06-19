@@ -103,12 +103,23 @@ Toma aqui o <a href="https://www.gnu.org/software/emacs/manual/pdf/emacs.pdf">ma
   </ol>
 </ol>
 
-<q>Não há nada a ser fazido.
-<cite>Bonaparte, Napoleon<time>10.07.1815</time></cite></q>
+<q>Não há nada a ser fazido.<br><cite>Bonaparte, Napoleon<time>10.07.1815</time></cite></q>
 <pre>(() => {
   console.log("JavaScript pode até ser uma bosta. Mas é útil.")
 })();
 </pre>
+<table>
+  <thead>
+    <tr>
+      <th>Isso</th><th>É</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Um</td><td>Teste</td>
+    </tr>
+  </tbody>
+</table>
 <img src="https://preview.redd.it/v65crolks8f01.png?width=640&crop=smart&auto=webp&s=39374c71d7272d7c0efd82fb6545849335546ee1" loading="lazy">
     `
     }
