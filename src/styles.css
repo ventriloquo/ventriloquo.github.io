@@ -198,7 +198,7 @@ kbd {
 }
 
 pre, code {
-    background-color: var(--bg-1);
+    background-color: var(--bg-0);
     color: var(--fg);
 }
 
@@ -336,5 +336,8 @@ li {
     }
     h1:hover::before {
 	content: "";
+    }
+    article {
+	padding: 1em;
     }
 }
