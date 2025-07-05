@@ -64,7 +64,7 @@ Com isso, o trecho =/tmp/teste.ha:4:21:= vira um hiperlink clicável (e também 
 
 No caso desse exemplo, o erro está no fato que a função =println= pode retornar um erro, e esse erro precisa ser gerenciado. Mas, podemos simplesmente adicionar =!= no final dessa função (o que sinaliza que em caso de algum erro acontecer, o programa deve ter sua execução interrompida) e tudo fica resolvido:
 
-#+begin_src hare
+#+begin_src simphare
 use fmt;
 
 export fn main() void = {
