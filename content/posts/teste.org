@@ -1,0 +1,32 @@
+#+TITLE: Teste
+#+DATE: <1970-01-01 thu>
+#+OPTIONS: toc:nil
+
+* Código
+
+Aposto que você nunca ouviu falar da =Hare=
+
+#+begin_src hare
+use fmt;
+
+export fn main() void = {
+	fmt::println("Olá, mundo!")!;
+};
+#+end_src
+
+* Tabelas
+
+| Item                  | Nível |
+|-----------------------+-------|
+| Armadura de correntes |     7 |
+| Espada de ferro       |     9 |
+| Enxada de diamante    |    69 |
+
+* LaTeX
+
+Essa aqui é famosa:
+
+\begin{equation}
+  x=\frac{-b\pm\sqrt{b^2 - 4ac}}{2a}
+\end{equation}
+

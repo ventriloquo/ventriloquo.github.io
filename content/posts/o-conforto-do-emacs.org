@@ -1,0 +1,94 @@
+#+TITLE: O (estranho) conforto do Emacs
+#+DATE: <2025-07-05 Sat>
+
+O Emacs não é o tipo de programa que é conhecido pelo seu conforto na hora de utilizar, não não, muito pelo contrário. A primeira coisa que você vai ver quando procurar um pouco sobre o assunto vai ser algum meme com alguma tecla de atalho maluca, como essa:
+
+#+HTML: <p><kbd>Ctrl x</kbd> <kbd>4</kbd> <kbd>j</kbd> <kbd>t</kbd> <kbd>.</kbd> <kbd>%</kbd> <kbd>*</kbd></p>
+
+(Eu queria estar de sacanagem, mas essa monstruosidade realmente existe)
+
+Mas, ele também tem seus pontos que são *extremamente* úteis e que fazem a experiência de usar ele passar de uma maluquice, para uma relação de amor e ódio.
+
+* Org-mode
+
+Uma das coisas mais faladas sobre o Emacs é o Org-mode, eu não vou entrar em muitos detalhes, até porquê esse é um assunto muito saturado (pelo menos para mim), mas devo concordar, esse carinha é sim um /flagship/. Dentre diversas coisas que o Org-mode consegue fazer, uma delas é a publicação de artigos, o que pode ser usado para a criação de Sites/Blogs/Wikis.
+
+Muitas pessoas fazem o famoso "segundo cérebro" que outros fazem com o [[https://obsidian.md][Obsidian]] no Org-mode, e olha, pelo menos por padrão, o Org-mode ainda sai na vantagem. Bom, esse negócio foi criado por um literal [[https://www.uva.nl/en/profile/d/o/c.dominik/c.dominik.html?cb#Biography][ex-integrante da Nasa]] no fim das contas, não poderia esperar por menos.
+
+Até mesmo suporte à /inline/ [[https://pt.wikipedia.org/wiki/LaTeX][LaTeX]] esse carinha tem! Ou seja, você pode escrever uma tese de mestrado aqui se quiser! Bom, pelo menos uma equação de vez em quando você consegue escrever:
+
+\begin{equation}
+  x=\frac{-b\pm\sqrt{b^2 - 4ac}}{2a}
+\end{equation}
+
+Porém, o Emacs é mais do que um programa para anotações ou publicação de artigos, ele também é um editor de código, um *muito* competente devo adicionar.
+
+* Compile-mode
+E uma das coisas que já vem embarcadas com o Emacs é o =Compile-mode=, um bagulho tão útil, tão fácil de usar e tão versátil, que me fez voltar a gostar de aprender a programar.
+
+Sem sacanagem, desde o momento que eu deixei de só ver o [[https://www.youtube.com/@tsodingdaily][Tsoding]] usando isso, para começar a usar por conta própria, eu senti que a minha produtividade e o meu aprendizado foram muito beneficiados.
+
+Ele serve, para mim pelo menos, como um equivalente a auto-completação de código em linguagens com sintáxes complicadas. Ele é útil nesse nível. Principalmente porque a minha linguagem de escolha para *aprender* a programar foi justamente a [[https://harelang.org][Hare]], uma *linguagem de sistemas*. É. Eu sou um retardado. Mas, com o =Compile-mode=, a minha vida fica dezenas de vezes mais fácil.
+
+Cada erro de compilação que é reconhecido na tela do =Compile-mode= é um /hiperlink/ que te leva diretamente para a linha e a coluna onde esse erro aparece. Como ele faz isso? Simples, através de [[https://pt.wikipedia.org/wiki/Express%C3%A3o_regular][Expressões Regulares]]. Você já reparou que quando algo dá errado na compilação de algum programa, ele te dá algo como =erro:23:9:=? Esses números representam a linha e a coluna onde o "erro" aconteceu, o =Compile-mode= simplesmente te permite clicar nesse erro para que você seja posicionado no lugar especificado pelo erro.
+
+Com isso, se você segue o estilo de programação orientada a erros de compilação (uma coisa que o Tsoding faz), o =Compile-mode= simplesmente é uma benção divina.
+
+E sim, esse é o meu caso, já que a Hare não possui um LSP (ainda), sendo assim, esse estilo de programação não é apenas um estilo que eu descidi seguir por capricho, foi porque eu não tive lá outras escolhas (fora programar usando alguma outra linguagem que *tem* outras opções disponíveis).
+
+Por exemplo, digamos que você tente compilar este programa hiper-complexo aqui embaixo:
+
+#+begin_src simphare
+use fmt;
+
+export fn main() void = {
+	fmt::println("Olá, mundo!");
+};
+#+end_src
+
+Ele não vai compilar.
+
+Porém, o compilador da Hare vai te dizer o que há de errado:
+
+#+begin_src sh
+hare run /tmp/teste.ha
+/tmp/teste.ha:4:21: error: Cannot ignore error here
+
+4 |		fmt::println("Olá, mundo!");
+  |	                    ^
+
+harec for /tmp/teste.ha exited with status 4
+#+end_src
+
+Com isso, o trecho =/tmp/teste.ha:4:21:= vira um hiperlink clicável (e também acessível por tecla de atalho) que te leva exatamente onde o erro aconteceu.
+
+No caso desse exemplo, o erro está no fato que a função =println= pode retornar um erro, e esse erro precisa ser gerenciado. Mas, podemos simplesmente adicionar =!= no final dessa função (o que sinaliza que em caso de algum erro acontecer, o programa deve ter sua execução interrompida) e tudo fica resolvido:
+
+#+begin_src hare
+use fmt;
+
+export fn main() void = {
+	fmt::println("Olá, mundo!")!;
+};
+#+end_src
+
+Depois disso, é só recompilar o programa!
+
+#+HTML: <q><p>Basta apertar <kbd>g</kbd> na janela do <code>Compile-mode</code>.</p></q>
+
+* TODO VersionControl (vc)
+Uma das minhas recentes descobertas nesse editor maravilhoso foi algo que eu sinceramente não faço ideia de como que eu não sabia da existência. É sério. Isso não é um bagulho escondido ou desativado por padrão, pelo contrário, é ativado por padrão e um botão escrito "Git" aparece sempre que você está em um repositório.
+
+._.
+
+Eu duvido muito da minha capacidade as vezes.
+
+Enfim. Com uma simples© tecla de atalho (assumindo que você tenha o =which-key-mode= ativado):
+
+#+HTML: <p><kbd>Ctrl x</kbd> <kbd>v</kbd></p>
+
+Um menu com várias ações possíveis do git para se fazer com o arquivo atual!
+
+Não é nada comparável ao famoso [[https://github.com/magit/magit][Magit]], mas para algo que é nativo, já é uma mão na roda. E para o meu caso, é mais que o suficiente.
+
+Principalmente pelo fator de facilidade de uso.
