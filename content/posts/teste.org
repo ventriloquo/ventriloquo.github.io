@@ -6,11 +6,20 @@
 
 Aposto que você nunca ouviu falar da =Hare=
 
-#+begin_src hare
+#+begin_src simphare
 use fmt;
 
 export fn main() void = {
-	fmt::println("Olá, mundo!")!;
+	const greetings = [
+		"Hello, world!",
+		"¡Hola Mundo!",
+		"Γειά σου Κόσμε!",
+		"Привіт, світе!",
+		"こんにちは世界！",
+	];
+	for (let greeting .. greetings) {
+		fmt::println(greeting)!;
+	};
 };
 #+end_src
 
@@ -30,3 +39,6 @@ Essa aqui é famosa:
   x=\frac{-b\pm\sqrt{b^2 - 4ac}}{2a}
 \end{equation}
 
+* Ibagens aéreas do comandante Amilton
+
+#+HTML: <img loading="lazy" src="https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1qFZU9.img?w=710&h=399&m=6">
