@@ -13,7 +13,7 @@ Mas, ele também tem seus pontos que são *extremamente* úteis e que fazem a ex
 
 Uma das coisas mais faladas sobre o Emacs é o Org-mode, eu não vou entrar em muitos detalhes, até porquê esse é um assunto muito saturado (pelo menos para mim), mas devo concordar, esse carinha é sim um /flagship/. Dentre diversas coisas que o Org-mode consegue fazer, uma delas é a publicação de artigos, o que pode ser usado para a criação de Sites/Blogs/Wikis.
 
-Muitas pessoas fazem o famoso "segundo cérebro" que outros fazem com o [[https://obsidian.md][Obsidian]] no Org-mode, e olha, pelo menos por padrão, o Org-mode ainda sai na vantagem. Bom, esse negócio foi criado por um literal [[https://www.uva.nl/en/profile/d/o/c.dominik/c.dominik.html?cb#Biography][ex-integrante da Nasa]] no fim das contas, não poderia esperar por menos.
+Muitas pessoas fazem o famoso "segundo cérebro" que outros fazem com o [[https://obsidian.md][Obsidian]] no Org-mode, e olha, pelo menos por padrão, o Org-mode ainda sai na vantagem. Bom, esse negócio foi criado por um literal [[https://www.uva.nl/en/profile/d/o/c.dominik/c.dominik.html?cb#Biography][ex-integrante da NASA]] no fim das contas, não poderia esperar por menos.
 
 Até mesmo suporte à /inline/ [[https://pt.wikipedia.org/wiki/LaTeX][LaTeX]] esse carinha tem! Ou seja, você pode escrever uma tese de mestrado aqui se quiser! Bom, pelo menos uma equação de vez em quando você consegue escrever:
 

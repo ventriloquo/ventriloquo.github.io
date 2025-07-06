@@ -1,13 +1,28 @@
 :root {
-    --bg-0:	#181818;
-    --bg-1:	#282828;
-    --fg-0:	#e4e4ef;
-    --fg-1:	#f4f4ff;
-    --accent:	#ffdd33;
-    --link:	#96a6c8;
-    --heading:	#95a99f;
-    --hr-color: #363636;
-    --red:      #f43841;
+    --bg-0:		var(--black);
+    --bg-1:		#121212;
+    --fg:		var(--brightwhite);
+    --accent:		var(--yellow);
+    --link:		var(--green);
+    --heading:		var(--brightblue);
+    --border: solid 1px var(--white);
+    /* "ANSI" Colors */
+    --black:		#1C1B19; 
+    --red:		#EF2F27; 
+    --green:		#519F50; 
+    --yellow:		#FBB829; 
+    --blue:		#2C78BF; 
+    --magenta:		#E02C6D; 
+    --cyan:		#0AAEB3; 
+    --white:		#BAA67F; 
+    --brightblack:	#918175; 
+    --brightred:	#F75341; 
+    --brightgreen:	#98BC37; 
+    --brightyellow:	#FED06E; 
+    --brightblue:	#68A8E4; 
+    --brightmagenta:	#FF5C8F; 
+    --brightcyan:	#2BE4D0; 
+    --brightwhite:	#FCE8C3;
 }
 
 html {
@@ -21,7 +36,7 @@ html {
 body {
     display: block;
     background-color: var(--bg-0);
-    color: var(--fg-0);
+    color: var(--fg);
     font-family: "San Francisco", system-ui;
     line-height: 1.6;
     position: relative;
@@ -41,7 +56,7 @@ a[href*="//"]:after {
     font-weight: 300;
     font-size: .85em;
     content: "\2197"; /* top right arrow */
-    color: var(--fg-0);
+    color: var(--fg);
     opacity: .25;
 }
 
@@ -127,7 +142,7 @@ i, em {
 }
 
 time {
-    color: var(--fg-0);
+    color: var(--fg);
     opacity: 50%;
     font-size: initial;
     margin-left: .4em;
@@ -156,7 +171,7 @@ cite time::before {
 
 hr {
     border: none;
-    border-bottom: solid 1px var(--hr-color);
+    border-bottom: var(--border);
     margin: 1em 15%;
 }
 
@@ -171,16 +186,16 @@ code, kbd, pre {
 }
 
 kbd {
-    background-color: var(--fg-0);
+    background-color: var(--fg);
     color: var(--bg-0);
 }
 
-pre, code {
+pre, code, mjx-container {
     background-color: var(--bg-1);
-    color: var(--fg-1);
+    color: var(--fg);
 }
 
-pre {
+pre, mjx-container {
     padding: 1em;
     overflow-x: scroll;
 }
@@ -223,13 +238,14 @@ nav {
     justify-content: space-between;
     margin: auto;
     width: 100vw;
-    border-bottom: solid 1px var(--bg-1);
+    border-bottom: var(--border);
 }
 
 nav a {
     text-decoration: none;
     display: inline-block;
     padding: 1em;
+    color: var(--fg);
 }
 
 img {
@@ -265,7 +281,8 @@ li {
 }
 
 table {
-    border: solid 1px var(--accent);
+    border: var(--border);
+    border-color: var(--accent);
     width: 100%;
     margin: 1em auto;
     text-align: left;
