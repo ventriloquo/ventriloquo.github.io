@@ -1,8 +1,8 @@
 #+TITLE: Sitemap
 
-- [[file:index.org][Tukain's Website]]
-- [[file:blog.org][Blog]]
 - [[file:sobre.org][Sobre mim]]
+- [[file:blog.org][Blog]]
+- [[file:index.org][Tukain's Website]]
 - posts
   - [[file:posts/o-conforto-do-emacs.org][O (estranho) conforto do Emacs]]
   - [[file:posts/ate-que-eu-to-curtindo-a-elisp.org][Até que eu tô curtindo a Elisp]]

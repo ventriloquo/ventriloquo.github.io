@@ -76,7 +76,7 @@ Depois disso, é só recompilar o programa!
 
 #+HTML: <q><p>Basta apertar <kbd>g</kbd> na janela do <code>Compile-mode</code>.</p></q>
 
-* TODO VersionControl (vc)
+* VersionControl (vc)
 Uma das minhas recentes descobertas nesse editor maravilhoso foi algo que eu sinceramente não faço ideia de como que eu não sabia da existência. É sério. Isso não é um bagulho escondido ou desativado por padrão, pelo contrário, é ativado por padrão e um botão escrito "Git" aparece sempre que você está em um repositório.
 
 ._.
@@ -91,4 +91,14 @@ Um menu com várias ações possíveis do git para se fazer com o arquivo atual!
 
 Não é nada comparável ao famoso [[https://github.com/magit/magit][Magit]], mas para algo que é nativo, já é uma mão na roda. E para o meu caso, é mais que o suficiente.
 
-Principalmente pelo fator de facilidade de uso.
+Principalmente pelo fator de facilidade de uso. Você não precisa instalar nada, configurar nada, e muito menos quebrar a cabeça com como *CACETARALHOS* navegar nele. É só uma lista de teclas de atalho que fazem uma ação cada uma. Simples.
+
+Juntando isso com o gerenciamento de projetos do Emacs (sim, ele tem isso também), você fica com um ambiente de desenvolvimento basicamente completo! Integração Git, gerenciamento de projetos e uma forma de interagir com os erros do compilador, é simples, mas é poderoso.
+
+E olha que eu tô falando de coisas nativas do Emacs, a partir do momento que você começa a buscar por [[https://melpa.org/#/][pacotes]] a coisa fica em outro patamar.
+
+* /Fin/
+
+Bom, acho que isso é tudo o que eu tenho para falar, por enquanto.
+
+Te vejo no próximo post!
