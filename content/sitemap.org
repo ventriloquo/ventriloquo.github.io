@@ -1,13 +1,13 @@
 #+TITLE: Sitemap
 
 - [[file:sobre.org][Sobre mim]]
-- [[file:blog.org][Blog]]
 - [[file:index.org][Tukain's Website]]
+- [[file:blog.org][Blog]]
 - posts
   - [[file:posts/o-conforto-do-emacs.org][O (estranho) conforto do Emacs]]
   - [[file:posts/ate-que-eu-to-curtindo-a-elisp.org][Até que eu tô curtindo a Elisp]]
   - [[file:posts/mgs3.org][METAL GEAR SOLID 3!!!]]
-  - [[file:posts/perolas-llms.org][Pérolas das LLMs]]
   - [[file:posts/vergonha-javascript.org][A vergonha que sinto ao usar JavaScript]]
+  - [[file:posts/perolas-llms.org][Pérolas das LLMs]]
   - [[file:posts/minhas-bindings.org][Retornei ao desenvolvimento das minhas bindings da Raylib.]]
   - [[file:posts/teste.org][Teste]]

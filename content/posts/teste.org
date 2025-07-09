@@ -23,6 +23,18 @@ export fn main() void = {
 };
 #+end_src
 
+Mas com toda certeza ouviu falar da =C=
+
+#+begin_src c
+#include <stdio.h>
+
+int main()
+{
+    printf("Olá, mundo!\n");
+    return 0;
+}
+#+end_src
+
 * Tabelas
 
 | Item                  | Nível |
@@ -42,3 +54,12 @@ Essa aqui é famosa:
 * Ibagens aéreas do comandante Amilton
 
 #+HTML: <img loading="lazy" src="https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1qFZU9.img?w=710&h=399&m=6">
+
+* Listas
+
+1. Item
+2. Item
+   1. Sub-item
+3. Item
+4. Item
+   - Sub-item

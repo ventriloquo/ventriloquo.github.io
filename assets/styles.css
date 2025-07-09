@@ -37,10 +37,6 @@
     --xgray6:		#585858; 
 }
 
-html {
-    scrollbar-width: none;	/* Hiding the scrollbar on Firefox */
-}
-
 ::-webkit-scrollbar {
     display: none;		/* Hiding the scrollbar on Chrome */
 }
@@ -131,12 +127,6 @@ h2 {
 
 h1:has(+ p), h1:has(+ br), h2:has(+ br) {
     margin-bottom: -.5rem;
-}
-
-h1:hover::before {
-    content: "#";
-    position: absolute;
-    left: -1.5rem;
 }
 
 p {
@@ -327,8 +317,3 @@ tr:nth-of-type(even) {
     color: var(--red);
 }
 
-@media only screen and (max-width: 720px) {
-    h1:hover::before {
-	content: "";
-    }
-}
