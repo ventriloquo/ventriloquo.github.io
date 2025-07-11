@@ -11,7 +11,7 @@ title: "Blog"
     <div class="card">
       <div class="card_image">
         {% if post.thumbnail %}
-          <img src="/assets/img/thumbnails/{{post.thumbnail}}">
+          <img loading="lazy" src="/assets/img/thumbnails/{{post.thumbnail}}">
           {% else %}
           <p>Imagem não encontrada</p>
         {% endif %}

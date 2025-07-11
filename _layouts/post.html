@@ -14,7 +14,7 @@
       <h1>{{ page.title }}</h1>
       <p>{{ page.description }}</p>
   </hgroup>
-  <img src="/assets/img/thumbnails/{{page.thumbnail}}">
+  <img loading="lazy" src="/assets/img/thumbnails/{{page.thumbnail}}">
   <div>
     {{ content }}
   </div>
@@ -29,7 +29,7 @@
     <div class="card">
       <div class="card_image">
         {% if related.thumbnail %}
-          <img src="/assets/img/thumbnails/{{related.thumbnail}}">
+          <img loading="lazy" src="/assets/img/thumbnails/{{related.thumbnail}}">
           {% else %}
           <p>Imagem não encontrada</p>
         {% endif %}
