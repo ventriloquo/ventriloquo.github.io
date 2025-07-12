@@ -451,6 +451,7 @@ center {
     margin: 1em auto;
     width: 256px;
     height: 220px;
+    animation: none;
   }
   .related .card_image {
     height: 130px;
