@@ -8,7 +8,7 @@ title: "Blog"
 ">
 {% for post in site.posts %}
   <a href="{{ post.url }}">
-    <div class="card">
+    <div class="card card_post" style="animation-delay: {{forloop.index}}00ms">
       <div class="card_image">
         {% if post.thumbnail %}
           <img loading="lazy" src="/assets/img/thumbnails/{{post.thumbnail}}">

@@ -124,6 +124,22 @@ dd {
   padding: 10px;
 }
 
+.card_post {
+  animation-name: fade-in;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in;
+  animation-duration: 500ms;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 .related {
   position: absolute;
   top: 1em;

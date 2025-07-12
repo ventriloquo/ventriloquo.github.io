@@ -5,13 +5,13 @@ description: Tenho muito orgulho e felicidade por conseguir não só por comprar
 ---
 
 [![metal gear solid 3](/assets/img/collection/metal-gear-solid-3.jpg)](https://www.nintendo.com/pt-br/store/products/metal-gear-solid-3-snake-eater-master-collection-version-switch/)
-[![deltarune](/assets/img/collection/deltarune.avif)](https://www.nintendo.com/pt-br/store/products/deltarune-switch/)
-[![sonic mania](/assets/img/collection/sonic-mania-icon.jpg)](https://www.nintendo.com/pt-br/store/products/sonic-mania-switch/)
+[![burnout paradise remastered](/assets/img/collection/burnout-paradise-remastered-icon.jpg)](https://www.nintendo.com/pt-br/store/products/burnout-paradise-remastered-switch/)
 [![resident evil 4](/assets/img/collection/re4-icon.jpg)](https://www.nintendo.com/pt-br/store/products/resident-evil-4-switch/)
 [![devil may cry 3](/assets/img/collection/devil-may-cry-3-icon.jpg)](https://www.nintendo.com/pt-br/store/products/devil-may-cry-3-special-edition-switch/)
+[![deltarune](/assets/img/collection/deltarune.avif)](https://www.nintendo.com/pt-br/store/products/deltarune-switch/)
 [![dragon ball fighterz](/assets/img/collection/dragon-ball-fighterz.jpg)](https://www.nintendo.com/pt-br/store/products/dragon-ball-fighterz-switch/)
 [![blasphemous](/assets/img/collection/blasphemous.jpg)](https://www.nintendo.com/pt-br/store/products/blasphemous-switch/)
-[![burnout paradise remastered](/assets/img/collection/burnout-paradise-remastered-icon.jpg)](https://www.nintendo.com/pt-br/store/products/burnout-paradise-remastered-switch/)
+[![sonic mania](/assets/img/collection/sonic-mania-icon.jpg)](https://www.nintendo.com/pt-br/store/products/sonic-mania-switch/)
 [![broforce](/assets/img/collection/broforce-icon.jpg)](https://www.nintendo.com/pt-br/store/products/broforce-switch/)
 [![dead cells](/assets/img/collection/dead-cells-icon.jpg)](https://www.nintendo.com/pt-br/store/products/dead-cells-switch/)
 [![hades](/assets/img/collection/hades-icon.jpg)](https://www.nintendo.com/pt-br/store/products/hades-switch/)
