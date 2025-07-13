@@ -265,7 +265,8 @@ menos para mim, eu já não tenho o mínimo de interesse por ela depois do
 
 ![](/assets/img/catalogue-mondela-mandela-magazine.gif)
 
-[The Mandela Magazine](https://www.youtube.com/watch?v=gk4AlxnZOYc)
+<center><sup><a href="https://www.youtube.com/watch?v=gk4AlxnZOYc">The Mandela
+Magazine</a></sup></center>
 
 Uma coisa que pode ser aprendida com o caso do Mandela Catalogue é a
 seguinte: Se a sua obra se tornou popular por conta da ambientação e do
