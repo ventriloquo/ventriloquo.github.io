@@ -1,4 +1,5 @@
 :root {
+  /* https://srcery.sh/ */
   --red:      #EF2F27;
   --green:    #519F50;
   --yellow:   #FBB829;
@@ -6,10 +7,10 @@
   --purple:   #E02C6D;
   --cyan:     #0AAEB3;
   --orange:   #FF5F00;
-  --grey:     var(--bg-1);
   --black:    #1C1B19;
   --white:    #FCE8C3;
 
+  --grey:     var(--bg-1);
   --bg-0:     #323232;
   --bg-1:     #505050;
   --bg-2:     #2d2d2d;
