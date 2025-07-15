@@ -8,21 +8,6 @@ Essa página não contém nada de útil para o leitor, como o próprio nome
 dela já diz, ela é uma página de testes. Para ser mais específico, ela é
 uma página de testes do CSS do site.
 
-# Colors
-
-<span style="display: inline-block; width: 64px; height: 64px; background-color: var(--red)"></span>
-<span style="display: inline-block; width: 64px; height: 64px; background-color: var(--green)"></span>
-<span style="display: inline-block; width: 64px; height: 64px; background-color: var(--blue)"></span>
-<span style="display: inline-block; width: 64px; height: 64px; background-color: var(--yellow)"></span>
-<span style="display: inline-block; width: 64px; height: 64px; background-color: var(--orange)"></span>
-<span style="display: inline-block; width: 64px; height: 64px; background-color: var(--cyan)"></span>
-<span style="display: inline-block; width: 64px; height: 64px; background-color: var(--purple)"></span>
-<span style="display: inline-block; width: 64px; height: 64px; background-color: var(--grey)"></span>
-<span style="display: inline-block; width: 64px; height: 64px; background-color: var(--bg-1)"></span>
-<span style="display: inline-block; width: 64px; height: 64px; background-color: var(--bg-0)"></span>
-<span style="display: inline-block; width: 64px; height: 64px; background-color: var(--fg-1)"></span>
-<span style="display: inline-block; width: 64px; height: 64px; background-color: var(--fg-2)"></span>
-
 
 # Blockquote
 
@@ -47,27 +32,92 @@ O Xandão é um ~~arrombado~~ lindo.
 | Escudo              | 2     | 9/10         |
 | Enchada de Diamante | 69    | sim/10       |
 
+
 # Code-block
 
+C:
 ```c
-#include <stdio.h>
+int factorial(int n) {
+    int result = 1;
+    for (int i = 1; i <= n; ++i)
+        result *= i;
+    return result;
+}
 
-/*
-  Comentário de
-  Múltiplas
-  Linhas
-*/
+long long int fibb(int n) {
+  int fnow = 0, fnext = 1, tempf;
+  while(--n > 0) {
+    tempf = fnow + fnext;
+    fnow = fnext;
+    fnext = tempf;
+  }
+  return fnext;
+}
+```  
 
-int main() {
-    int i;
+Javascript:
+```javascript
+function factorial(n) {
+  //check our edge case
+  if (n < 0) { throw "Number must be non-negative"; }
 
-    for (i = 0; i < 5; i++) {
-      printf("%d\n", i); // O que será que vai aparecer???
+  var result = 1;
+  //we skip zero and one since both are 1 and are identity
+  while (n > 1) {
+    result *= n;
+    n--;
+  }
+  return result;
+}
+
+function fib(n) {
+  var a = 0, b = 1, t;
+  while (n-- > 0) {
+    t = a;
+    a = b;
+    b += t;
+    console.log(a);
+  }
+  return a;
+}
+```  
+
+Rust:
+```rust
+fn factorial_recursive (n: u64) -> u64 {
+    match n {
+        0 => 1,
+        _ => n * factorial_recursive(n-1)
     }
+}
 
-    return 0;
+fn factorial_iterative(n: u64) -> u64 {
+    (1..=n).product()
+}
+
+fn main () {
+    for i in 1..10 {
+        println!("{}", factorial_recursive(i))
+    }
+    for i in 1..10 {
+        println!("{}", factorial_iterative(i))
+    }
 }
 ```
+
+# Syntax-highlighting Colors
+<center>
+<span style="display: inline-block; width: 64px; height: 64px; background-color: var(--red)"></span>
+<span style="display: inline-block; width: 64px; height: 64px; background-color: var(--green)"></span>
+<span style="display: inline-block; width: 64px; height: 64px; background-color: var(--blue)"></span>
+<span style="display: inline-block; width: 64px; height: 64px; background-color: var(--yellow)"></span>
+<span style="display: inline-block; width: 64px; height: 64px; background-color: var(--orange)"></span>
+<span style="display: inline-block; width: 64px; height: 64px; background-color: var(--cyan)"></span>
+<span style="display: inline-block; width: 64px; height: 64px; background-color: var(--magenta)"></span>
+<span style="display: inline-block; width: 64px; height: 64px; background-color: var(--white)"></span>
+<span style="display: inline-block; width: 64px; height: 64px; background-color: var(--grey)"></span>
+<span style="display: inline-block; width: 64px; height: 64px; background-color: var(--black)"></span>
+</center>
 
 # Inline-code
 

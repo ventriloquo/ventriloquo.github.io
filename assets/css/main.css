@@ -1,16 +1,6 @@
 @import url("/assets/css/themes/default.css");
 @import url("/assets/css/code.css");
 
-@font-face {
-  src: url('/assets/shingopro.otf');
-  font-family: "Nintendo Switch Font";
-}
-
-@font-face {
-  src: url('/assets/jetbrainsmono.woff2');
-  font-family: "jetbrains";
-}
-
 * {
   padding: 0;
   margin: 0;
@@ -362,7 +352,6 @@ img {
 }
 
 table, th, td {
-  border: var(--border-obs);
   padding: 5px;
   border-collapse: collapse;
 }
@@ -404,7 +393,8 @@ thead > tr > th {
 }
 
 colgroup {
-  border: solid 2px var(--fg-2);
+  border: var(--border);
+  border-color: var(--fg-2);
 }
 
 blockquote {

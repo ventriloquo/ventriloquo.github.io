@@ -23,22 +23,24 @@
     >Feedback</a>
   </div>
   <div class="cards related">
-  <h4>Leia também</h4>
-  {% for related in site.related_posts limit: 4 %}
-  <a href="{{ related.url }}">
-    <div class="card card_post" style="animation-delay: {{forloop.index}}50ms">
-      <div class="card_image">
-        {% if related.thumbnail %}
-          <img loading="lazy" src="/assets/img/thumbnails/{{related.thumbnail}}">
-          {% else %}
-          <p>Imagem não encontrada</p>
-        {% endif %}
-      </div>
-      <div class="card_title">
-        <h3>{{ related.title }}</h3>
-      </div>
-    </div>
-  </a>
-  {% endfor %}
+    {% if site.related_posts.size >= 1 %}
+      <h4>Leia também</h4>
+      {% for related in site.related_posts limit: 4 %}
+      <a href="{{ related.url }}">
+        <div class="card card_post" style="animation-delay: {{forloop.index}}50ms">
+          <div class="card_image">
+            {% if related.thumbnail %}
+              <img loading="lazy" src="/assets/img/thumbnails/{{related.thumbnail}}">
+              {% else %}
+              <p>Imagem não encontrada</p>
+            {% endif %}
+          </div>
+          <div class="card_title">
+            <h3>{{ related.title }}</h3>
+          </div>
+        </div>
+      </a>
+      {% endfor %}
+    {% endif %}
   </div>
 </body>
