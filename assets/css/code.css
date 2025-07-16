@@ -127,6 +127,7 @@
   color: var(--white);
 }
 
-.language-md .p {
+.language-md .p, .language-elisp .p  {
   color: var(--grey);
 }
+

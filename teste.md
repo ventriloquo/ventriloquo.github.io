@@ -105,6 +105,23 @@ fn main () {
 }
 ```
 
+Elisp:
+```elisp
+(defun fib (limit &optional style)
+  "Insert numbers of the Fibonacci sequence until a certain `limit'"
+  (setq a 0
+        b 1)
+  (while (< a limit)
+    (setq c (+ a b)
+          a b
+          b c)
+    (cond
+     ((equal style 'line)
+       (insert (format "\n%d" a)))
+      (t
+       (insert (format "%d, " a))))))
+```
+
 # Syntax-highlighting Colors
 <center>
 <span style="display: inline-block; width: 64px; height: 64px; background-color: var(--red)"></span>
