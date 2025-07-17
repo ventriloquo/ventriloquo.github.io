@@ -35,7 +35,6 @@ O Xandão é um ~~arrombado~~ lindo.
 
 # Code-block
 
-C:
 ```c
 int factorial(int n) {
     int result = 1;
@@ -55,7 +54,6 @@ long long int fibb(int n) {
 }
 ```  
 
-Javascript:
 ```javascript
 function factorial(n) {
   //check our edge case
@@ -82,7 +80,6 @@ function fib(n) {
 }
 ```  
 
-Rust:
 ```rust
 fn factorial_recursive (n: u64) -> u64 {
     match n {
@@ -105,7 +102,6 @@ fn main () {
 }
 ```
 
-Elisp:
 ```elisp
 (defun fib (limit &optional style)
   "Insert numbers of the Fibonacci sequence until a certain `limit'"

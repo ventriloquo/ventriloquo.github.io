@@ -1,6 +1,16 @@
-.highlight { overflow: scroll; }
 .highlight table td { padding: 5px; }
 .highlight table pre { margin: 0; }
+
+.highlight {
+  overflow: scroll;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.highlight, .highlight .w {
+  color: var(--white);
+  background-color: var(--black);
+}
 
 .highlight .err {
   color: var(--red);
@@ -131,3 +141,62 @@
   color: var(--grey);
 }
 
+.highlighter-rouge {
+  position: relative;
+}
+
+div.highlight {
+  border-top: solid 2em var(--orange);
+}
+
+.highlighter-rouge::before {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 0 10px;
+  text-align: right;
+  color: var(--black);
+  font-size: small;
+}
+
+.language-c.highlighter-rouge::before {
+  content: "C"
+}
+
+.language-elisp.highlighter-rouge::before {
+  content: "Emacs Lisp"
+}
+
+.language-rust.highlighter-rouge::before {
+  content: "Rust"
+}
+
+.language-javascript.highlighter-rouge::before {
+  content: "JavaScript"
+}
+
+.language-go.highlighter-rouge::before {
+  content: "Go"
+}
+
+.language-haskell.highlighter-rouge::before {
+  content: "Haskell"
+}
+
+.language-python.highlighter-rouge::before {
+  content: "Python"
+}
+
+.language-java.highlighter-rouge::before {
+  content: "Java"
+}
+
+.language-sh.highlighter-rouge::before {
+  content: "Shell"
+}
+
+.language-md.highlighter-rouge::before {
+  content: "Markdown"
+}
