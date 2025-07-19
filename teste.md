@@ -103,19 +103,36 @@ fn main () {
 ```
 
 ```elisp
-(defun fib (limit &optional style)
-  "Insert numbers of the Fibonacci sequence until a certain `limit'"
+;; Aprendendo a usar o `cl-assert' em conjunto com a criação de buffers usando
+;; `get-buffer-create', `switch-to-buffer' e `insert'.
+
+(require 'cl-lib)
+
+(defun novo-buffer-com-conteudo (nome conteudo)
+  "Cria um buffer com `nome' e `conteudo'"
+  (cl-assert (stringp nome) nil "`nome' deve ser uma string")
+  (cl-assert (stringp conteudo) nil "`conteudo' deve ser uma string")
+  (setq buffer (get-buffer-create nome)
+	texto conteudo)
+  (switch-to-buffer buffer)
+  (insert texto))
+
+(defun fib (limite)
+  "Cria números fibonacci até certo `limite'"
+  (cl-assert (numberp limite) nil "`limite' deve ser um número.")
   (setq a 0
-        b 1)
-  (while (< a limit)
+	b 1
+	progress '())
+  (while (< a limite)
     (setq c (+ a b)
-          a b
-          b c)
-    (cond
-     ((equal style 'line)
-       (insert (format "\n%d" a)))
-      (t
-       (insert (format "%d, " a))))))
+	  a b
+	  b c)
+    (push a progress))
+  (format "A sequência Fibonacci com o número mais próximo de %d é a seguinte:\n[%s]\n"
+	  limite
+	  (mapconcat 'prin1-to-string (reverse (cdr progress)) " ")))
+
+(novo-buffer-com-conteudo "fibonacci" (format "%s" (fib 10000)))
 ```
 
 # Syntax-highlighting Colors
