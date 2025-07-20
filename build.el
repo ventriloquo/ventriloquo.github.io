@@ -31,7 +31,7 @@
       org-html-doctype "html5"
       org-html-html5-fancy t)
 
-;; NOTE: Meu Deus do ceu, por que CACETARALHOS isso não tem uma documentação decente?!
+;; NOTE: Meu Deus do céu, por quê CACETARALHOS isso não tem uma documentação decente?!
 (defun my-sitemap-format-entry (entry style project)
   (let ((title (org-publish-find-title entry project))
         (date (org-publish-find-date entry project)))
@@ -43,16 +43,16 @@
 	 :auto-sitemap t
 	 :sitemap-filename "sitemap.org"
 	 :sitemap-title "Sitemap"
+	 :sitemap-style tree
 	 :sitemap-sort-files anti-chronologically
 	 :sitemap-format-entry my-sitemap-format-entry
 	 :recursive t
 	 :htmlized-source t
 	 :publishing-directory "./public"
 	 :section-numbers nil
-	 :table-of-contents nil
-	 :with-toc nil
-	 :with-author nil
-	 :with-creator nil
+	 :table-of-contents t
+	 :with-author t
+	 :with-creator t
 	 :with-latex t
 	 :with-date t
 	 :validate nil

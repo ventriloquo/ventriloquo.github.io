@@ -1,5 +1,6 @@
 #+TITLE: Pérolas das LLMs
 #+DATE: <2025-06-05 thu>
+#+OPTIONS: toc:nil
 
 Eu acabei de descobrir que o DuckDuckGo possui um wrapper para LLMs, como o GPT-4o, Llama e afins.
 

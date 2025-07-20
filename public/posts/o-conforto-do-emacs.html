@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<!-- 2025-07-19 sáb 21:10 -->
+<!-- 2025-07-20 Sun 01:13 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>O (estranho) conforto do Emacs</title>
+<meta name="author" content="john" />
 <meta name="generator" content="Org Mode" />
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg'
 	              width='32' height='32'&gt;
@@ -63,7 +64,18 @@
 <div id="content" class="content">
 <header>
 <h1 class="title">O (estranho) conforto do Emacs</h1>
-</header><p>
+</header><nav id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org7b28cba">Org-mode</a></li>
+<li><a href="#orgf320482">Compile-mode</a></li>
+<li><a href="#orga7b94c5">VersionControl (vc)</a></li>
+<li><a href="#org0fd05c4"><i>Fin</i></a></li>
+</ul>
+</div>
+</nav>
+<p>
 O Emacs não é o tipo de programa que é conhecido pelo seu conforto na hora de utilizar, não não, muito pelo contrário. A primeira coisa que você vai ver quando procurar um pouco sobre o assunto vai ser algum meme com alguma tecla de atalho maluca, como essa:
 </p>
 
@@ -76,9 +88,9 @@ O Emacs não é o tipo de programa que é conhecido pelo seu conforto na hora de
 <p>
 Mas, ele também tem seus pontos que são <b>extremamente</b> úteis e que fazem a experiência de usar ele passar de uma maluquice, para uma relação de amor e ódio.
 </p>
-<div id="outline-container-orgb111439" class="outline-2">
-<h2 id="orgb111439">Org-mode</h2>
-<div class="outline-text-2" id="text-orgb111439">
+<div id="outline-container-org7b28cba" class="outline-2">
+<h2 id="org7b28cba">Org-mode</h2>
+<div class="outline-text-2" id="text-org7b28cba">
 <p>
 Uma das coisas mais faladas sobre o Emacs é o Org-mode, eu não vou entrar em muitos detalhes, até porquê esse é um assunto muito saturado (pelo menos para mim), mas devo concordar, esse carinha é sim um <i>flagship</i>. Dentre diversas coisas que o Org-mode consegue fazer, uma delas é a publicação de artigos, o que pode ser usado para a criação de Sites/Blogs/Wikis.
 </p>
@@ -100,9 +112,9 @@ Porém, o Emacs é mais do que um programa para anotações ou publicação de a
 </p>
 </div>
 </div>
-<div id="outline-container-org4fe1f26" class="outline-2">
-<h2 id="org4fe1f26">Compile-mode</h2>
-<div class="outline-text-2" id="text-org4fe1f26">
+<div id="outline-container-orgf320482" class="outline-2">
+<h2 id="orgf320482">Compile-mode</h2>
+<div class="outline-text-2" id="text-orgf320482">
 <p>
 E uma das coisas que já vem embarcadas com o Emacs é o <code>Compile-mode</code>, um bagulho tão útil, tão fácil de usar e tão versátil, que me fez voltar a gostar de aprender a programar.
 </p>
@@ -132,9 +144,9 @@ Por exemplo, digamos que você tente compilar este programa hiper-complexo aqui 
 </p>
 
 <div class="org-src-container">
-<pre class="src src-simphare"><span style="color: #EF2F27; font-weight: bold;">use</span> fmt;
+<pre class="src src-simphare"><span style="color: #EF2F27;">use</span> fmt;
 
-<span style="color: #EF2F27; font-weight: bold;">export</span> <span style="color: #EF2F27; font-weight: bold;">fn</span> main() <span style="color: #68A8E4;">void</span> = {
+<span style="color: #EF2F27;">export</span> <span style="color: #EF2F27;">fn</span> main() <span style="color: #68A8E4;">void</span> = {
         fmt::println(<span style="color: #98BC37;">"Ol&#225;, mundo!"</span>);
 };
 </pre>
@@ -168,9 +180,9 @@ No caso desse exemplo, o erro está no fato que a função <code>println</code> 
 </p>
 
 <div class="org-src-container">
-<pre class="src src-simphare"><span style="color: #EF2F27; font-weight: bold;">use</span> fmt;
+<pre class="src src-simphare"><span style="color: #EF2F27;">use</span> fmt;
 
-<span style="color: #EF2F27; font-weight: bold;">export</span> <span style="color: #EF2F27; font-weight: bold;">fn</span> main() <span style="color: #68A8E4;">void</span> = {
+<span style="color: #EF2F27;">export</span> <span style="color: #EF2F27;">fn</span> main() <span style="color: #68A8E4;">void</span> = {
         fmt::println(<span style="color: #98BC37;">"Ol&#225;, mundo!"</span>)!;
 };
 </pre>
@@ -183,9 +195,9 @@ Depois disso, é só recompilar o programa!
 <q><p>Basta apertar <kbd>g</kbd> na janela do <code>Compile-mode</code>.</p></q>
 </div>
 </div>
-<div id="outline-container-org2df46f2" class="outline-2">
-<h2 id="org2df46f2">VersionControl (vc)</h2>
-<div class="outline-text-2" id="text-org2df46f2">
+<div id="outline-container-orga7b94c5" class="outline-2">
+<h2 id="orga7b94c5">VersionControl (vc)</h2>
+<div class="outline-text-2" id="text-orga7b94c5">
 <p>
 Uma das minhas recentes descobertas nesse editor maravilhoso foi algo que eu sinceramente não faço ideia de como que eu não sabia da existência. É sério. Isso não é um bagulho escondido ou desativado por padrão, pelo contrário, é ativado por padrão e um botão escrito "Git" aparece sempre que você está em um repositório.
 </p>
@@ -225,9 +237,9 @@ E olha que eu tô falando de coisas nativas do Emacs, a partir do momento que vo
 </p>
 </div>
 </div>
-<div id="outline-container-org5c624e1" class="outline-2">
-<h2 id="org5c624e1"><i>Fin</i></h2>
-<div class="outline-text-2" id="text-org5c624e1">
+<div id="outline-container-org0fd05c4" class="outline-2">
+<h2 id="org0fd05c4"><i>Fin</i></h2>
+<div class="outline-text-2" id="text-org0fd05c4">
 <p>
 Bom, acho que isso é tudo o que eu tenho para falar, por enquanto.
 </p>
