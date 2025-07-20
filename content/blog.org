@@ -1,0 +1,11 @@
+#+TITLE: Blog
+#+DESCRIPTION: Um blog simples, feito usando o org-mode.
+#+OPTIONS: toc:nil
+
+Este é o meu blog.
+
+Eu costumo fazer postagens relacionadas à editores de código, softwares e eventualmente coisas que fazem parte do meu cotidiano.
+
+-----
+
+#+INCLUDE: sitemap.org :lines "7-"

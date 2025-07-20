@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<!-- 2025-07-19 sáb 21:10 -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>O (estranho) conforto do Emacs</title>
+<meta name="generator" content="Org Mode" />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg'
+	              width='32' height='32'&gt;
+	              &lt;polygon points='16,2 30,16 16,30 2,16' fill='%23FFDD33'/&gt;
+                      &lt;/svg&gt;">
+                     <link rel=icon type="image/webp" href="/fav.webp">
+                     <link rel=stylesheet href="/reset.css" />
+                     <link rel=stylesheet href="/styles.css" />
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
+</script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+</head>
+<body>
+<div id="preamble" class="status">
+<header>
+         <nav>
+           <div>
+             <a href="/">Início</a>
+           </div>
+           <div>
+             <a href="/blog.html">Blog</a>
+             <a href="/sobre.html">Sobre</a>
+           </div>
+         </nav>
+       </header>
+</div>
+<div id="content" class="content">
+<header>
+<h1 class="title">O (estranho) conforto do Emacs</h1>
+</header><p>
+O Emacs não é o tipo de programa que é conhecido pelo seu conforto na hora de utilizar, não não, muito pelo contrário. A primeira coisa que você vai ver quando procurar um pouco sobre o assunto vai ser algum meme com alguma tecla de atalho maluca, como essa:
+</p>
+
+<p><kbd>Ctrl x</kbd> <kbd>4</kbd> <kbd>j</kbd> <kbd>t</kbd> <kbd>.</kbd> <kbd>%</kbd> <kbd>*</kbd></p>
+
+<p>
+(Eu queria estar de sacanagem, mas essa monstruosidade realmente existe)
+</p>
+
+<p>
+Mas, ele também tem seus pontos que são <b>extremamente</b> úteis e que fazem a experiência de usar ele passar de uma maluquice, para uma relação de amor e ódio.
+</p>
+<div id="outline-container-orgb111439" class="outline-2">
+<h2 id="orgb111439">Org-mode</h2>
+<div class="outline-text-2" id="text-orgb111439">
+<p>
+Uma das coisas mais faladas sobre o Emacs é o Org-mode, eu não vou entrar em muitos detalhes, até porquê esse é um assunto muito saturado (pelo menos para mim), mas devo concordar, esse carinha é sim um <i>flagship</i>. Dentre diversas coisas que o Org-mode consegue fazer, uma delas é a publicação de artigos, o que pode ser usado para a criação de Sites/Blogs/Wikis.
+</p>
+
+<p>
+Muitas pessoas fazem o famoso "segundo cérebro" que outros fazem com o <a href="https://obsidian.md">Obsidian</a> no Org-mode, e olha, pelo menos por padrão, o Org-mode ainda sai na vantagem. Bom, esse negócio foi criado por um literal <a href="https://www.uva.nl/en/profile/d/o/c.dominik/c.dominik.html?cb#Biography">ex-integrante da NASA</a> no fim das contas, não poderia esperar por menos.
+</p>
+
+<p>
+Até mesmo suporte à <i>inline</i> <a href="https://pt.wikipedia.org/wiki/LaTeX">LaTeX</a> esse carinha tem! Ou seja, você pode escrever uma tese de mestrado aqui se quiser! Bom, pelo menos uma equação de vez em quando você consegue escrever:
+</p>
+
+\begin{equation}
+  x=\frac{-b\pm\sqrt{b^2 - 4ac}}{2a}
+\end{equation}
+
+<p>
+Porém, o Emacs é mais do que um programa para anotações ou publicação de artigos, ele também é um editor de código, um <b>muito</b> competente devo adicionar.
+</p>
+</div>
+</div>
+<div id="outline-container-org4fe1f26" class="outline-2">
+<h2 id="org4fe1f26">Compile-mode</h2>
+<div class="outline-text-2" id="text-org4fe1f26">
+<p>
+E uma das coisas que já vem embarcadas com o Emacs é o <code>Compile-mode</code>, um bagulho tão útil, tão fácil de usar e tão versátil, que me fez voltar a gostar de aprender a programar.
+</p>
+
+<p>
+Sem sacanagem, desde o momento que eu deixei de só ver o <a href="https://www.youtube.com/@tsodingdaily">Tsoding</a> usando isso, para começar a usar por conta própria, eu senti que a minha produtividade e o meu aprendizado foram muito beneficiados.
+</p>
+
+<p>
+Ele serve, para mim pelo menos, como um equivalente a auto-completação de código em linguagens com sintáxes complicadas. Ele é útil nesse nível. Principalmente porque a minha linguagem de escolha para <b>aprender</b> a programar foi justamente a <a href="https://harelang.org">Hare</a>, uma <b>linguagem de sistemas</b>. É. Eu sou um retardado. Mas, com o <code>Compile-mode</code>, a minha vida fica dezenas de vezes mais fácil.
+</p>
+
+<p>
+Cada erro de compilação que é reconhecido na tela do <code>Compile-mode</code> é um <i>hiperlink</i> que te leva diretamente para a linha e a coluna onde esse erro aparece. Como ele faz isso? Simples, através de <a href="https://pt.wikipedia.org/wiki/Express%C3%A3o_regular">Expressões Regulares</a>. Você já reparou que quando algo dá errado na compilação de algum programa, ele te dá algo como <code>erro:23:9:</code>? Esses números representam a linha e a coluna onde o "erro" aconteceu, o <code>Compile-mode</code> simplesmente te permite clicar nesse erro para que você seja posicionado no lugar especificado pelo erro.
+</p>
+
+<p>
+Com isso, se você segue o estilo de programação orientada a erros de compilação (uma coisa que o Tsoding faz), o <code>Compile-mode</code> simplesmente é uma benção divina.
+</p>
+
+<p>
+E sim, esse é o meu caso, já que a Hare não possui um LSP (ainda), sendo assim, esse estilo de programação não é apenas um estilo que eu descidi seguir por capricho, foi porque eu não tive lá outras escolhas (fora programar usando alguma outra linguagem que <b>tem</b> outras opções disponíveis).
+</p>
+
+<p>
+Por exemplo, digamos que você tente compilar este programa hiper-complexo aqui embaixo:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-simphare"><span style="color: #EF2F27; font-weight: bold;">use</span> fmt;
+
+<span style="color: #EF2F27; font-weight: bold;">export</span> <span style="color: #EF2F27; font-weight: bold;">fn</span> main() <span style="color: #68A8E4;">void</span> = {
+        fmt::println(<span style="color: #98BC37;">"Ol&#225;, mundo!"</span>);
+};
+</pre>
+</div>
+
+<p>
+Ele não vai compilar.
+</p>
+
+<p>
+Porém, o compilador da Hare vai te dizer o que há de errado:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sh">hare run /tmp/teste.ha
+/tmp/teste.ha:4:21: error: Cannot ignore error here
+
+4 |             fmt::println(<span style="color: #98BC37;">"Ol&#225;, mundo!"</span>);
+  |                         ^
+
+harec for /tmp/teste.ha exited with status 4
+</pre>
+</div>
+
+<p>
+Com isso, o trecho <code>/tmp/teste.ha:4:21:</code> vira um hiperlink clicável (e também acessível por tecla de atalho) que te leva exatamente onde o erro aconteceu.
+</p>
+
+<p>
+No caso desse exemplo, o erro está no fato que a função <code>println</code> pode retornar um erro, e esse erro precisa ser gerenciado. Mas, podemos simplesmente adicionar <code>!</code> no final dessa função (o que sinaliza que em caso de algum erro acontecer, o programa deve ter sua execução interrompida) e tudo fica resolvido:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-simphare"><span style="color: #EF2F27; font-weight: bold;">use</span> fmt;
+
+<span style="color: #EF2F27; font-weight: bold;">export</span> <span style="color: #EF2F27; font-weight: bold;">fn</span> main() <span style="color: #68A8E4;">void</span> = {
+        fmt::println(<span style="color: #98BC37;">"Ol&#225;, mundo!"</span>)!;
+};
+</pre>
+</div>
+
+<p>
+Depois disso, é só recompilar o programa!
+</p>
+
+<q><p>Basta apertar <kbd>g</kbd> na janela do <code>Compile-mode</code>.</p></q>
+</div>
+</div>
+<div id="outline-container-org2df46f2" class="outline-2">
+<h2 id="org2df46f2">VersionControl (vc)</h2>
+<div class="outline-text-2" id="text-org2df46f2">
+<p>
+Uma das minhas recentes descobertas nesse editor maravilhoso foi algo que eu sinceramente não faço ideia de como que eu não sabia da existência. É sério. Isso não é um bagulho escondido ou desativado por padrão, pelo contrário, é ativado por padrão e um botão escrito "Git" aparece sempre que você está em um repositório.
+</p>
+
+<p>
+._.
+</p>
+
+<p>
+Eu duvido muito da minha capacidade as vezes.
+</p>
+
+<p>
+Enfim. Com uma simples© tecla de atalho (assumindo que você tenha o <code>which-key-mode</code> ativado):
+</p>
+
+<p><kbd>Ctrl x</kbd> <kbd>v</kbd></p>
+
+<p>
+Um menu com várias ações possíveis do git para se fazer com o arquivo atual!
+</p>
+
+<p>
+Não é nada comparável ao famoso <a href="https://github.com/magit/magit">Magit</a>, mas para algo que é nativo, já é uma mão na roda. E para o meu caso, é mais que o suficiente.
+</p>
+
+<p>
+Principalmente pelo fator de facilidade de uso. Você não precisa instalar nada, configurar nada, e muito menos quebrar a cabeça com como <b>CACETARALHOS</b> navegar nele. É só uma lista de teclas de atalho que fazem uma ação cada uma. Simples.
+</p>
+
+<p>
+Juntando isso com o gerenciamento de projetos do Emacs (sim, ele tem isso também), você fica com um ambiente de desenvolvimento basicamente completo! Integração Git, gerenciamento de projetos e uma forma de interagir com os erros do compilador, é simples, mas é poderoso.
+</p>
+
+<p>
+E olha que eu tô falando de coisas nativas do Emacs, a partir do momento que você começa a buscar por <a href="https://melpa.org/#/">pacotes</a> a coisa fica em outro patamar.
+</p>
+</div>
+</div>
+<div id="outline-container-org5c624e1" class="outline-2">
+<h2 id="org5c624e1"><i>Fin</i></h2>
+<div class="outline-text-2" id="text-org5c624e1">
+<p>
+Bom, acho que isso é tudo o que eu tenho para falar, por enquanto.
+</p>
+
+<p>
+Te vejo no próximo post!
+</p>
+</div>
+</div>
+</div>
+</body>
+</html>

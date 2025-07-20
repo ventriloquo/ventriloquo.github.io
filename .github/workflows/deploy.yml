@@ -20,19 +20,13 @@ jobs:
         - name: Checkout
           uses: actions/checkout@v4
 
-        - name: Install Jekyll
-          run: sudo apt install jekyll
-
-        - name: Build with Jekyll
-          run: jekyll b -V
-
         - name: Setup Pages
           uses: actions/configure-pages@v5
 
         - name: Upload artifact
           uses: actions/upload-pages-artifact@v3
           with:
-            path: "_site"
+            path: "public"
 
         - name: Deploy to GitHub Pages
           id: deployment
@@ -45,4 +39,4 @@ jobs:
             cleanup: true
             neocities_supporter: false
             preview_before_deploy: false
-            dist_dir: _site
+            dist_dir: public
