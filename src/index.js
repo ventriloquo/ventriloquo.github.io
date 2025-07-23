@@ -11,15 +11,19 @@ for (let i = 0; i < posts.length; i++) {
   if (text === undefined) text = "Sem conteúdo definido";
 
   id = `post_${date.toLowerCase().replaceAll(".", "-").replaceAll(" ", "-")}_${
-    title.toLowerCase().replaceAll(" ", "-")
+    title
+      .toLowerCase()
+      .replaceAll(" ", "-")
       .replaceAll(",", "")
       .replaceAll(".", "")
-      .replaceAll("é", "e")
-      .replaceAll("ê", "e")
       .replaceAll("á", "a")
       .replaceAll("à", "a")
       .replaceAll("ã", "a")
+      .replaceAll("é", "e")
+      .replaceAll("ê", "e")
+      .replaceAll("í", "i")
       .replaceAll("ô", "o")
+      .replaceAll("ó", "o")
       .replaceAll("õ", "o")
   }`;
 
@@ -30,8 +34,9 @@ for (let i = 0; i < posts.length; i++) {
   document.getElementById(id).innerHTML = `
     <a href="#${id}"><h1>${title} <time>${date}</time></h1></a>
     ${
-    text.replaceAll("\n", "<p>")
-      .replaceAll("--", "—")
-  }
+      text
+        .replaceAll("\n", "<p>")
+        .replaceAll("--", "—")
+    }
     <hr>`;
 }

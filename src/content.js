@@ -42,7 +42,7 @@ Sendo assim, eu consigo fazer um clone do meu computador de forma extremamente f
 
 Experimenta usar um computador com a instalação base do Windows 11 sem internet, é tão útil quanto um Chromebook de 2015, e de alguma forma ele fica pior a partir do momento em que ele tem acesso a internet!
 
-Eu tenho desde um bloco de notas à uma instalação do TeXLive (<a href="https://www.latex-project.org/>LaTeX</a>).
+Eu tenho desde um bloco de notas à uma instalação do TeXLive (<a href="https://www.latex-project.org/">LaTeX</a>).
 
 Preciso fazer um TCC? Eu consigo de boa. Fazer uma apresentação de slides? Tranquilo. Criar um site que lista documentos com base em um banco de dados simples? O Jekyll já tá pronto para usar.
 
