@@ -17,7 +17,7 @@ Fazer essa implementação foi um aprendizado também, já que eu não uso bibli
 
 <blockquote>
 Se bem que esse bloco de código mostra um pouco da bagunça:
-<pre style="font-style:normal">
+<pre>
 for (let i = 0; i < livros_progresso.length; i++) {
   livros_progresso[i].setAttribute("id", "progress");
   livros[i].setAttribute("id", \`livro_\${i}\`);

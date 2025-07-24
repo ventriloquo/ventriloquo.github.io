@@ -172,6 +172,11 @@ q, blockquote {
   font-style: italic;
 }
 
+pre > p{
+  font-size: medium;
+  font-style: normal;
+}
+
 cite, cite time {
   color: var(--accent-2);
 }
