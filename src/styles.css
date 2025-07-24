@@ -410,7 +410,7 @@ button:hover {
   border: var(--border);
   border-top: none;
   border-right: none;
-  border-color: var(--bg-1)
+  border-color: var(--bg-1);
 }
 
 #nav_menu a {
@@ -425,10 +425,13 @@ button:hover {
   h1:hover::before {
     content: "";
   }
+
   .nav_itens {
     display: none;
   }
-  .nav_menu {
-    display: block;
+
+  .nav_menu, nav a {
+    display: inline-block;
+    font-size: large;
   }
 }
