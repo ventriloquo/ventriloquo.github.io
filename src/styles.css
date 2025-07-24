@@ -399,7 +399,6 @@ button:hover {
 }
 
 #nav_menu {
-  position: absolute;
   background-color: var(--bg-0);
   display: flex;
   flex-wrap: wrap;
