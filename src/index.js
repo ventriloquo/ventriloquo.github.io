@@ -91,7 +91,7 @@ for (let i = 0; i < posts.length; i++) {
       .replaceAll("õ", "o")
   }`;
 
-  let article = document.createElement("article");
+  const article = document.createElement("article");
   article.setAttribute("id", id);
   document.getElementById("blog_posts").appendChild(article);
 
