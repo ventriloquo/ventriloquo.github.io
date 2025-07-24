@@ -161,7 +161,7 @@ Eu tô no trabalho agora, mas eu mal consigo me segurar de tanto que eu quero:
 <li>Jogar o jogo</li>
 </ol>
 Agora eu tô fudido pra achar algum presente à altura, mas foda-se.
-<span style="color: #f43841">Eu te amo querida! <3</span>
+<span style="color: var(--red)">Eu te amo querida! <3</span>
 `,
   },
   {
