@@ -17,6 +17,7 @@ const livros_progresso    = document.getElementsByTagName("progress");
 
 for (let i = 0; i < livros_progresso.length; i++) {
   livros_progresso[i].setAttribute("id", "progress");
+  livros_progresso[i].setAttribute("title", `${livros_progresso[i].value} páginas lidas`);
   livros[i].setAttribute("id", `livro_${i}`);
 
   const restante = document.createElement("p");
