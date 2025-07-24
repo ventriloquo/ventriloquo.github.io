@@ -23,12 +23,24 @@
         <div>
           <a href="#home">Início</a>
         </div>
-        <div>
+        <div class="nav_itens">
           <a href="#blog">Blog</a>
           <a href="#leitura">Leitura</a>
           <a href="#sobre">Sobre</a>
         </div>
+        <button
+          popovertarget="nav_menu"
+          popovertargetaction="toggle"
+          class="nav_menu"
+        >
+          Menu
+        </button>
       </nav>
+      <div popover id="nav_menu">
+        <a href="#blog">Blog</a>
+        <a href="#leitura">Leitura</a>
+        <a href="#sobre">Sobre</a>
+      </div>
     </header>
     <main>
       <!-- Tela inicial -->

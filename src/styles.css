@@ -16,6 +16,7 @@ html {
   scrollbar-width: none; /* Hiding the scrollbar on Firefox */
   scroll-padding-top: 4em;
   scroll-behavior: smooth;
+  position: relative;
 }
 
 ::-webkit-scrollbar {
@@ -385,8 +386,46 @@ li {
   padding: 15px;
 }
 
+button {
+  display: inline-block;
+  padding: 1em;
+  border: none;
+  background-color: var(--bg-0);
+  color: var(--link);
+}
+
+button:hover {
+  color: var(--link-hover);
+}
+
+#nav_menu {
+  position: absolute;
+  background-color: var(--bg-0);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: auto;
+  padding: 1em;
+  width: 90vw;
+  height: 93vh;
+}
+
+#nav_menu a {
+  margin: 1em;
+}
+
+.nav_menu {
+  display: none;
+}
+
 @media only screen and (max-width: 720px) {
   h1:hover::before {
     content: "";
+  }
+  .nav_itens {
+    display: none;
+  }
+  .nav_menu {
+    display: block;
   }
 }

@@ -1,5 +1,12 @@
 "use strict";
 
+const nav_menu = document.getElementById("nav_menu");
+nav_menu.addEventListener("click", () => {
+  if (nav_menu.matches(":popover-open")) {
+    nav_menu.hidePopover();
+  }
+})
+
 let   livros_lidos        = 0;
 let   livros_sendo_lidos  = 0;
 let   paginas_lidas       = 0;
