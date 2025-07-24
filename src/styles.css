@@ -329,6 +329,47 @@ li {
   padding: 3px 0;
 }
 
+.biblioteca {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.livro {
+  position: relative;
+  max-width: 200px;
+  margin: 1em 10px;
+}
+
+.livro img {
+  max-width: 100%;
+  max-height: 280px;
+}
+
+.livro p {
+  font-size: larger;
+  text-align: center;
+  margin: 0;
+}
+
+.livro progress {
+  border-radius: 0;
+  background-color: var(--bg-1);
+  width: 100%;
+}
+
+.livro progress::-webkit-progress-bar {
+  background-color: var(--bg-1);
+}
+
+.livro progress::-webkit-progress-value {
+  background-color: var(--heading);
+}
+
+.livro progress::-moz-progress-bar {
+  background-color: var(--heading);
+}
+
 .content {
   display: block;
   max-width: 80ch;
