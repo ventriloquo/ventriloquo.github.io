@@ -23,7 +23,7 @@ for (let i = 0; i < livros_progresso.length; i++) {
   restante.setAttribute("id", "restante");
   restante.style.fontSize  = "small"
   restante.style.fontStyle = "italic"
-  restante.style.color     = "var(--accent)"
+  restante.style.color     = "var(--accent-2)"
 
   if (livros_progresso[i].value == livros_progresso[i].max) {
     livros_lidos++;
