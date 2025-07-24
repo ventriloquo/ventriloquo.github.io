@@ -1,38 +1,59 @@
 "use strict";
 
-let livros_lidos        = 0;
-let livros_sendo_lidos  = 0;
-let livros_total        = document.getElementsByClassName("livro").length;
-let livros_progresso    = document.getElementsByTagName("progress");
+let   livros_lidos        = 0;
+let   livros_sendo_lidos  = 0;
+let   paginas_lidas       = 0;
+let   paginas_total       = 0;
+const livros_total        = document.getElementsByClassName("livro").length;
+const livros_progresso    = document.getElementsByTagName("progress");
 
+let j = 0;
 for (let i = 0; i < livros_progresso.length; i++) {
-    livros_progresso[i].setAttribute("id", "progress");
-    if (livros_progresso[i].value == livros_progresso[i].max) {
-	livros_lidos++;
-    } else {
-	livros_sendo_lidos++;
-    }
+  livros_progresso[i].setAttribute("id", "progress");
+
+  if (livros_progresso[i].value == livros_progresso[i].max) {
+    livros_lidos++;
+  } else {
+    livros_sendo_lidos++;
+  }
+
+  paginas_lidas = paginas_lidas + livros_progresso[i].value;
+  paginas_total = paginas_total + livros_progresso[i].max;
 }
 
-let status_biblioteca = document.getElementById("status_biblioteca");
+const status_biblioteca = document.getElementById("status_biblioteca");
 status_biblioteca.innerHTML = `
   <table>
     <thead>
-      <tr>
-        <th>Total</th>
-        <th>Lido</th>
-        <th>Lendo</th>
-      </tr>
     </thead>
     <tbody>
       <tr>
-        <td>${livros_total}</td>
-        <td>${livros_lidos}</td>
-        <td> ${livros_sendo_lidos}</td>
+        <td>Total de livros</td>
+        <td style="text-align:center">${livros_total}</td>
+      </tr>
+      <tr>
+        <td>Total de livros lidos</td>
+        <td style="text-align:center">${livros_lidos}</td>
+      </tr>
+      <tr>
+        <td>Total de livros que estou lendo</td>
+        <td style="text-align:center"> ${livros_sendo_lidos}</td>
+      </tr>
+      <tr>
+        <th>Meu progresso</th>
+        <th class="livro" style="text-align:center">
+          ${paginas_lidas} páginas de ${paginas_total}
+          <progress
+            value="${paginas_lidas}"
+            max="${paginas_total}"
+          >
+          </progress>
+        </th>
       </tr>
     </tbody>
   </table>
 `;
+
 
 let post, text, title, date, id;
 for (let i = 0; i < posts.length; i++) {
