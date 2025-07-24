@@ -404,10 +404,13 @@ button:hover {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  margin: auto;
-  padding: 1em;
-  width: 90vw;
-  height: 93vh;
+  margin-left: auto;
+  text-align: right;
+  padding: .5em;
+  border: var(--border);
+  border-top: none;
+  border-right: none;
+  border-color: var(--bg-1)
 }
 
 #nav_menu a {
