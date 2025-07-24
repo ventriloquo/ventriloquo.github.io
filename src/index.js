@@ -4,16 +4,25 @@ let   livros_lidos        = 0;
 let   livros_sendo_lidos  = 0;
 let   paginas_lidas       = 0;
 let   paginas_total       = 0;
-const livros_total        = document.getElementsByClassName("livro").length;
+const livros              = document.getElementsByClassName("livro");
+const livros_total        = livros.length;
 const livros_progresso    = document.getElementsByTagName("progress");
 
-let j = 0;
 for (let i = 0; i < livros_progresso.length; i++) {
   livros_progresso[i].setAttribute("id", "progress");
+  livros[i].setAttribute("id", `livro_${i}`);
+
+  const restante = document.createElement("p");
+  restante.setAttribute("id", "restante");
+  restante.style.fontSize  = "small"
+  restante.style.fontStyle = "italic"
+  restante.style.color     = "var(--accent)"
 
   if (livros_progresso[i].value == livros_progresso[i].max) {
     livros_lidos++;
   } else {
+    restante.innerText = `Faltam ${livros_progresso[i].max - livros_progresso[i].value} páginas`
+    document.getElementById(`livro_${i}`).appendChild(restante)
     livros_sendo_lidos++;
   }
 
