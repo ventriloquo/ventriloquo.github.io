@@ -1,5 +1,10 @@
 "use strict";
 
+let livros_total = document.getElementById("status_biblioteca");
+livros_total.innerHTML = `<p>Total de livros: ${
+  document.getElementsByClassName("livro").length
+}</p>`;
+
 let post, text, title, date, id;
 for (let i = 0; i < posts.length; i++) {
   post = posts[i];
@@ -40,3 +45,4 @@ for (let i = 0; i < posts.length; i++) {
     }
     <hr>`;
 }
+
