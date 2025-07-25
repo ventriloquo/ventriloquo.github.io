@@ -36,8 +36,6 @@ for (let i = 0; i < livros_progresso.length; i++) {
 const status_biblioteca = document.getElementById("status_biblioteca");
 status_biblioteca.innerHTML = `
   <table>
-    <thead>
-    </thead>
     <tbody>
       <tr>
         <td>Total de livros</td>
