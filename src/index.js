@@ -17,18 +17,12 @@ const livros_progresso    = document.getElementsByTagName("progress");
 
 for (let i = 0; i < livros_progresso.length; i++) {
   const progresso = livros_progresso[i];
-  const maximo = Number(progresso.max);
-  const atual = Number(progresso.value);
-
-  // TODO: Type-checking
-  if (typeof(atual) === "string" || typeof(maximo) != "number") {
-    alert(`Erro em: ${livros[i].innerText}`)
-    break;
-  }
+  const pagina_maximo = Number(progresso.max);
+  const pagina_atual = Number(progresso.value);
 
   progresso.setAttribute("id", "progress");
 
-  progresso.setAttribute("title", `${atual} páginas lidas`);
+  progresso.setAttribute("title", `${pagina_atual} páginas lidas`);
   livros[i].setAttribute("id", `livro_${i}`);
 
   const restante = document.createElement("p");
@@ -36,16 +30,16 @@ for (let i = 0; i < livros_progresso.length; i++) {
   restante.style.fontStyle = "italic"
   restante.style.color     = "var(--accent-2)"
 
-  if (atual === maximo) {
+  if (pagina_atual === pagina_maximo) {
     livros_lidos++;
   } else {
-    restante.innerText = `Faltam ${maximo - atual} páginas`
+    restante.innerText = `Faltam ${pagina_maximo - pagina_atual} páginas`
     livros[i].appendChild(restante)
     livros_sendo_lidos++;
   }
 
-  paginas_lidas = paginas_lidas + atual;
-  paginas_total = paginas_total + maximo;
+  paginas_lidas = paginas_lidas + pagina_atual;
+  paginas_total = paginas_total + pagina_maximo;
 }
 
 const status_biblioteca = document.getElementById("status_biblioteca");
