@@ -172,6 +172,8 @@ for (let i = 0; i < colection.length; i++) {
 
   let maximum = colection[i].progress.maximum;
   let current = colection[i].progress.current;
+  const maximum = colection[i].progress.maximum;
+  const current = colection[i].progress.current;
 
   progresso.setAttribute("value", `${current}`);
   progresso.setAttribute("max", `${maximum}`);
