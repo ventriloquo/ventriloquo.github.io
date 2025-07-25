@@ -168,6 +168,7 @@ for (let i = 0; i < colection.length; i++) {
 
   capa.setAttribute("loading", "lazy");
   capa.setAttribute("src", `./assets/${colection[i].cover}`);
+  capa.setAttribute("style", `animation-delay: ${i}50ms`)
 
   let maximum = colection[i].progress.maximum;
   let current = colection[i].progress.current;
@@ -175,7 +176,9 @@ for (let i = 0; i < colection.length; i++) {
   progresso.setAttribute("value", `${current}`);
   progresso.setAttribute("max", `${maximum}`);
   progresso.setAttribute("title", `${current} páginas lidas`);
+  progresso.setAttribute("style", `animation-delay: ${i}50ms`)
 
+  titulo.setAttribute("style", `animation-delay: ${i}50ms`)
   titulo.innerText = `${colection[i].title}`
 
   biblioteca.appendChild(entrada);
