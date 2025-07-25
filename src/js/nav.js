@@ -1,19 +1,6 @@
 "use strict";
 
-const links = [
-  {
-    title: "Blog",
-    path: "/pages/blog"
-  },
-  {
-    title: "Leitura",
-    path: "/pages/leitura"
-  },
-  {
-    title: "Sobre",
-    path: "/pages/sobre"
-  }
-]
+import links from "./db/links.js";
 
 const header = document.getElementById("header");
 header.innerHTML = `
