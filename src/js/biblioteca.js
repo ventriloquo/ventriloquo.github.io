@@ -1,6 +1,6 @@
 "use strict";
 
-let colection = [
+const colection = [
   {
     title: "Jujutsu Kaisen, Vol. 1",
     cover: "jujutsu_01.jpg",
