@@ -1,6 +1,6 @@
 "use strict";
 
-let posts = [
+const posts = [
   {
     title: "Minha primeira lista de leitura",
     date: "24.07.2025",
@@ -291,3 +291,5 @@ export fn main() void = {
     `,
   },
 ];
+
+export default posts;

@@ -1,5 +1,7 @@
 "use strict";
 
+import posts from "/js/posts.js"
+
 function slug(text) {
   return text
     .toLowerCase()

@@ -4,7 +4,7 @@ let   livros_lidos        = 0;
 let   livros_sendo_lidos  = 0;
 let   paginas_lidas       = 0;
 let   paginas_total       = 0;
-let   livros              = document.getElementsByClassName("livro");
+const livros              = document.getElementsByClassName("livro");
 const livros_total        = livros.length;
 const livros_progresso    = document.getElementsByTagName("progress");
 
