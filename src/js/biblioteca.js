@@ -168,7 +168,6 @@ for (let i = 0; i < colection.length; i++) {
 
   capa.setAttribute("loading", "lazy");
   capa.setAttribute("src", `./assets/${colection[i].cover}`);
-  capa.setAttribute("style", `animation-delay: ${i}50ms`)
 
   const maximum = colection[i].progress.maximum;
   const current = colection[i].progress.current;
