@@ -16,26 +16,36 @@ const livros_total        = livros.length;
 const livros_progresso    = document.getElementsByTagName("progress");
 
 for (let i = 0; i < livros_progresso.length; i++) {
-  livros_progresso[i].setAttribute("id", "progress");
-  livros_progresso[i].setAttribute("title", `${livros_progresso[i].value} páginas lidas`);
+  const progresso = livros_progresso[i];
+  const maximo = Number(progresso.max);
+  const atual = Number(progresso.value);
+
+  // TODO: Type-checking
+  if (typeof(atual) === "string" || typeof(maximo) != "number") {
+    alert(`Erro em: ${livros[i].innerText}`)
+    break;
+  }
+
+  progresso.setAttribute("id", "progress");
+
+  progresso.setAttribute("title", `${atual} páginas lidas`);
   livros[i].setAttribute("id", `livro_${i}`);
 
   const restante = document.createElement("p");
-  restante.setAttribute("id", "restante");
   restante.style.fontSize  = "small"
   restante.style.fontStyle = "italic"
   restante.style.color     = "var(--accent-2)"
 
-  if (livros_progresso[i].value == livros_progresso[i].max) {
+  if (atual === maximo) {
     livros_lidos++;
   } else {
-    restante.innerText = `Faltam ${livros_progresso[i].max - livros_progresso[i].value} páginas`
-    document.getElementById(`livro_${i}`).appendChild(restante)
+    restante.innerText = `Faltam ${maximo - atual} páginas`
+    livros[i].appendChild(restante)
     livros_sendo_lidos++;
   }
 
-  paginas_lidas = paginas_lidas + livros_progresso[i].value;
-  paginas_total = paginas_total + livros_progresso[i].max;
+  paginas_lidas = paginas_lidas + atual;
+  paginas_total = paginas_total + maximo;
 }
 
 const status_biblioteca = document.getElementById("status_biblioteca");
