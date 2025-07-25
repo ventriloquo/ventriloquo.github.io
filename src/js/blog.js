@@ -1,6 +1,6 @@
 "use strict";
 
-import posts from "/js/posts.js"
+import posts from "./db/posts.js"
 
 function slug(text) {
   return text
