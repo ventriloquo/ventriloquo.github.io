@@ -1,17 +1,10 @@
 "use strict";
 
-const nav_menu = document.getElementById("nav_menu");
-nav_menu.addEventListener("click", () => {
-  if (nav_menu.matches(":popover-open")) {
-    nav_menu.hidePopover();
-  }
-})
-
 let   livros_lidos        = 0;
 let   livros_sendo_lidos  = 0;
 let   paginas_lidas       = 0;
 let   paginas_total       = 0;
-const livros              = document.getElementsByClassName("livro");
+let   livros              = document.getElementsByClassName("livro");
 const livros_total        = livros.length;
 const livros_progresso    = document.getElementsByTagName("progress");
 
@@ -19,8 +12,6 @@ for (let i = 0; i < livros_progresso.length; i++) {
   const progresso = livros_progresso[i];
   const pagina_maximo = Number(progresso.max);
   const pagina_atual = Number(progresso.value);
-
-  progresso.setAttribute("id", "progress");
 
   progresso.setAttribute("title", `${pagina_atual} páginas lidas`);
   livros[i].setAttribute("id", `livro_${i}`);
@@ -75,45 +66,4 @@ status_biblioteca.innerHTML = `
   </table>
 `;
 
-
-let post, text, title, date, id;
-for (let i = 0; i < posts.length; i++) {
-  post = posts[i];
-  title = post.title;
-  text = post.content;
-  date = post.date;
-
-  if (date === undefined) date = "Sem data definida";
-  if (text === undefined) text = "Sem conteúdo definido";
-
-  id = `post_${date.toLowerCase().replaceAll(".", "-").replaceAll(" ", "-")}_${
-    title
-      .toLowerCase()
-      .replaceAll(" ", "-")
-      .replaceAll(",", "")
-      .replaceAll(".", "")
-      .replaceAll("á", "a")
-      .replaceAll("à", "a")
-      .replaceAll("ã", "a")
-      .replaceAll("é", "e")
-      .replaceAll("ê", "e")
-      .replaceAll("í", "i")
-      .replaceAll("ô", "o")
-      .replaceAll("ó", "o")
-      .replaceAll("õ", "o")
-  }`;
-
-  const article = document.createElement("article");
-  article.setAttribute("id", id);
-  document.getElementById("blog_posts").appendChild(article);
-
-  document.getElementById(id).innerHTML = `
-    <a href="#${id}"><h1>${title} <time>${date}</time></h1></a>
-    ${
-      text
-        .replaceAll("\n", "<p>")
-        .replaceAll("--", "—")
-    }
-    <hr>`;
-}
 

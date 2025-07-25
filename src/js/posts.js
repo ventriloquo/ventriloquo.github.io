@@ -106,7 +106,7 @@ Nos últimos dias eu não ando fazendo tanta coisa assim, além de trabalhar e e
 
 Se você me conhece, ou já viu meu perfil do Github, você já sabe que eu sou um usuário de <s>drog-</s> Emacs, e ele não só é configurado nessa linguagem, como é escrito nela e também interpreta ela! Só para colocar em perspectiva, um equivalente a isso seria um programa configurado em Python, que é escrito em Python e que interpreta Python.
 
-<img loading="lazy" src="https://pm1.narvii.com/6650/ccf5ada01e0c066109fec74a6ab62b31f1582598_hq.jpg">
+<img loading="lazy" src="./assets/ouroboros.jpg">
 <center><sup>sim, eu só queria tacar uma referência da ouroboros.</sup></center>
 
 A <code>Elisp</code> é um dialeto da <a href="https://pt.wikipedia.org/wiki/Lisp">Lisp</a> que é integrada ao Emacs e que tem funcionalidades que giram entorno de fazer parte de um editor de texto. Resumindo:
@@ -151,7 +151,7 @@ A minha namorada fez algo que é dígno de fazer até o Kratos chorar de tanta e
 
 Cara, eu literalmente fiquei querendo comprar essa obra prima do Kojima desde o dia que eu comprei o meu Switch Lite, e hoje, dia 18/06/2025, eu venho aqui dizer a vocês senhores: <b>a minha mina fez a boa</b>.
 
-<img loading="lazy" src="https://images.steamusercontent.com/ugc/53246768171442452/ED926E0139891BC9144B3C6610E19393F8A58AD1/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false">
+<img loading="lazy" src="./assets/snake_smilling.jpg">
 
 Eu tô no trabalho agora, mas eu mal consigo me segurar de tanto que eu quero:
 
@@ -161,7 +161,7 @@ Eu tô no trabalho agora, mas eu mal consigo me segurar de tanto que eu quero:
 <li>Jogar o jogo</li>
 </ol>
 Agora eu tô fudido pra achar algum presente à altura, mas foda-se.
-<span style="color: var(--red)">Eu te amo querida! <3</span>
+<span class="alert">Eu te amo querida! <3</span>
 `,
   },
   {
@@ -287,7 +287,7 @@ export fn main() void = {
 <tr><td>tabela</td><td>:D</td></tr>
 </tbody>
 </table>
-<img src="https://preview.redd.it/v65crolks8f01.png?width=640&crop=smart&auto=webp&s=39374c71d7272d7c0efd82fb6545849335546ee1" loading="lazy">
+<img src="./assets/dumb_js.jpg" loading="lazy">
     `,
   },
 ];
