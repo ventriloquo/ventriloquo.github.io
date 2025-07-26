@@ -415,6 +415,17 @@ button:hover {
   color: var(--red);
 }
 
+noscript {
+  display: flex;
+  position: absolute;
+  background-color: var(--bg-0);
+  z-index: 1000;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
 @media only screen and (max-width: 720px) {
   h1:hover::before {
     content: "";
