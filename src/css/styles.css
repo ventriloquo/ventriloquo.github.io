@@ -14,14 +14,22 @@
 }
 
 html {
-  scrollbar-width: none; /* Hiding the scrollbar on Firefox */
   scroll-padding-top: 4em;
   scroll-behavior: smooth;
   position: relative;
+  overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
-  display: none; /* Hiding the scrollbar on Chrome */
+  width: 10px;
+  height: 10px;
+  background-color: var(--bg-1);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--link-hover);
+  border-radius: 10px;
 }
 
 body {
@@ -136,6 +144,7 @@ h2 {
 
 h1:has(+ p), h1:has(+ time), h1:has(+ br), h2:has(+ br) {
   margin-bottom: -0.5rem;
+  padding-bottom: 1rem;
 }
 
 h1:hover::before {
@@ -438,5 +447,9 @@ noscript {
   .nav_menu, nav a {
     display: inline-block;
     font-size: large;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
   }
 }
