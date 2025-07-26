@@ -134,7 +134,7 @@ h2 {
   font-size: x-large;
 }
 
-h1:has(+ p), h1:has(+ br), h2:has(+ br) {
+h1:has(+ p), h1:has(+ time), h1:has(+ br), h2:has(+ br) {
   margin-bottom: -0.5rem;
 }
 

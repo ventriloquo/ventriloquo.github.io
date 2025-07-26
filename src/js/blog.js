@@ -34,7 +34,7 @@ for (let i = 0; i < posts.length; i++) {
   const article = document.createElement("article");
   article.setAttribute("id", id);
   article.innerHTML = `
-    <a href="#${id}"><h1>${title} <time>${date}</time></h1></a>
+    <a href="#${id}"><h1>${title}</h1><time>${date}</time></a>
     ${content
         .split('\n')
         .map(text => `<p>${text}</p>`)

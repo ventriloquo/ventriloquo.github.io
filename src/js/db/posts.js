@@ -2,6 +2,31 @@
 
 const posts = [
   {
+    title: "O Chrome DevTools é basicamente uma IDE",
+    date: "26.07.2025",
+    content: `
+Ultimamente eu ando estudando bastante sobre JavaScript e desenvolvimento web (o autismo deu uma ativada - não, eu não sou autista) e uma das coisas que todo mundo que desenvolve algo na web tem contato são as "DevTools".
+
+Tanto no Chrome, quanto no Firefox, ao apertar <kbd>F12</kbd> uma aba com diversas ferramentas de desenvolvimento vai surgir.
+
+Ela literalmente tem de tudo, desde uma análise do desempenho da página a um editor de código interativo. Sim. Um editor. Editor esse que compartilha de todas as funcionalidades do navegador e que também possui um debugger.
+
+Resumindo, é uma IDE que faz parte do próprio navegador.
+
+Mas porquê que eu estou dando tanta atenção à essa característica? Simples: pelo menos no Chrome, você pode configurar uma "Workspace", que é uma palavra bonita para um projeto; Nesse projeto, você tem acesso à todos os arquivos que fazem parte dele, e você pode fazer modificações à vontade! Basicamente, ele consegue comprir o papel que um VSCode ou Neovim faria (quando o quesito é desenvolvimento web).
+
+Tendo o ambiente de trabalho certo, você pode simplesmente usar o próprio navegador para desenvolver o seu site! Isso é muito doido.
+
+Esse post mesmo está sendo criado a partir do Chromium:
+
+<img loading="lazy" src="./assets/devtools.png">
+
+Ainda vou fazer alguns experimentos por aqui, para ter certeza se isso realmente é algo viável ou não.
+
+Enfim, até o próximo post!
+`
+  },
+  {
     title: "Minha primeira lista de leitura",
     date: "24.07.2025",
     content: `
