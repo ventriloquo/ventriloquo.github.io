@@ -1,3 +1,7 @@
+@import url("./css/themes.css");
+@import url("./css/intro.css");
+@import url("./css/webkit.css");
+
 @font-face {
   src: url('/fonts/Rubik-Regular.ttf');
   font-family: 'text';
@@ -8,34 +12,6 @@
   src: url('/fonts/FiraCode-Regular.ttf');
   font-family: 'code';
   font-display: swap;
-}
-
-::-webkit-scrollbar {
-  background-color: var(--bg-0);
-  width: .3em;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: rgba(var(--ac-0), .5);
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(var(--ac-0), 1);
-}
-
-:root {
-  --bg-1: #feedf3;
-  --bg-0: #f8e2e7;
-  --fg:   #564448;
-  --ac-0: 223, 45, 82;
-  --ac-1: 29, 137, 145;
-
-  --red:    #df2d52;
-  --green:  #2e916d;
-  --yellow: #f6661e;
-  --blue:   #006e93;
-  --purple: #5e2180;
-  --cyan:   #1d8991;
 }
 
 noscript {
@@ -59,15 +35,6 @@ body {
   font-size: large;
   background-color: var(--bg-1);
   color: var(--fg);
-
-  &:has(section:target) {
-    section#intro {
-      display: none;
-    }
-    nav {
-      display: flex;
-    }
-  }
 }
 
 a {
@@ -181,10 +148,6 @@ pre {
   overflow: scroll;
   padding: 10px;
   border-color: var(--fg);
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
 
   &.src {
     background-color: var(--fg);
@@ -353,19 +316,10 @@ p {
 }
 
 progress {
-  -webkit-appearance: none;
   border-radius: 0;
   width: 100%;
   border: none;
   background-color: var(--bg-0);
-
-  &::-webkit-progress-bar {
-    background-color: var(--bg-0);
-  }
-
-  &::-webkit-progress-value {
-    background-color: rgba(var(--ac-0), 1);
-  }
 
   &::-moz-progress-bar {
     background-color: rgba(var(--ac-0), 1);
@@ -406,6 +360,60 @@ table {
   }
 }
 
+details {
+  padding: .3em;
+  user-select: none;
+  background-color: var(--bg-0);
+  width: 100%;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 1em 0;
+  transition: all 300ms;
+
+  summary {
+    font-size: x-large;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    padding-bottom: .5em;
+
+    .status {
+      align-content: center;
+      margin-bottom: .5em;
+      padding: .3em;
+      border-radius: 5px;
+      color: var(--bg-1);
+
+      &.done     { background-color: var(--green)  }
+      &.doing    { background-color: var(--yellow) }
+      &.not_done { background-color: var(--red)    }
+    }
+
+  }
+
+  &:has(.done):hover, &:has(.doing):hover, &:has(.not_done):hover {
+    color: var(--bg-1);
+
+    .done, .doing, .not_done {
+      transition: all 300ms;
+      background-color: var(--fg);
+    }
+  }
+
+  &:has(.done):hover { background-color: var(--green) }
+  &:has(.doing):hover { background-color: var(--yellow) }
+  &:has(.not_done):hover { background-color: var(--red) }
+
+  p {
+    border-radius: 5px;
+    background-color: var(--bg-0);
+    color: var(--fg);
+    padding: 5px;
+    margin: 0;
+    user-select: text;
+  }
+}
+
 @media only screen and (max-width: 1280px) {
   section#intro {
     display: none;
@@ -429,7 +437,6 @@ table {
       display: none;
     }
   }
-
 }
 
 @media only screen and (orientation: portrait) {
@@ -462,176 +469,13 @@ table {
   }
 }
 
-/* Dark Mode (Srcery) */
-@media only screen and (prefers-color-scheme: dark) {
-  :root {
-    --fg:   #FCE8C3;
-    --bg-0: #1C1B19;
-    --bg-1: #121212;
-    --ac-0: 251, 184, 41;
-    --ac-1: 44, 120, 191;
-
-    --red:    #EF2F27;
-    --green:  #519F50;
-    --yellow: #FBB829;
-    --blue:   #2C78BF;
-    --purple: #E02C6D;
-    --cyan:   #0AAEB3;
-  }
-
-  li:has(.blog_entry) a {
-    background-color: var(--bg-0);
-    color: var(--fg);
-
-    &:hover {
-      color: var(--bg-0);
-    }
-  }
-
-  pre.src {
-    background-color: var(--bg-0);
-    color: var(--fg);
-  }
-
-  pre.src, pre.example {
-    border-color: rgba(var(--ac-0), 1);
-  }
-}
-
-body:has(#intro:target) {
+@media print {
   header {
     display: none;
   }
-}
-
-.intro {
-  display: grid;
-  margin: auto;
-  position: relative;
-  padding-top: 1em;
-  justify-items: center;
-
-  h1 {
-    opacity: 0;
-    transition: all 1s;
-    position: absolute;
-    bottom: -150%;
+  
+  body, section {
+    background-color: white;
+    color: black;
   }
-
-  &:has(.cube:hover) {
-    h1 {
-      opacity: 1;
-    }
-  }
-
-  /* https://triangulo.dev/posts/atomo-como-criar-cubo-css/ */
-  .cube {
-    width: 200px;
-    height: 200px;
-    position: relative;
-    align-content: center;
-  
-    transform-style: preserve-3d;
-  
-    .face {
-      transition: all 1s;
-      background: rgba(var(--ac-1), 1);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-  
-      font-size: 50px;
-      font-weight: bold;
-      color: #234e52;
-  
-      width: 200px;
-      height: 200px;
-      position: absolute;
-  
-      a:hover  {
-        background-color: transparent;
-      }
-    }
-  
-    .face--front {
-      transform: rotateX(-20deg) rotateY(-20deg) translateZ(100px);
-      background-image: url("/assets/fav.png");
-      background-position: center;
-    }
-  
-    .face--right {
-      transform: rotateX(-20deg) rotateY(70deg) translateZ(100px);
-    }
-  
-    .face--back {
-      transform: rotateX(70deg) rotateY(0deg) rotateZ(20deg) translateZ(100px);
-    }
-  
-    &:hover {
-      .face {
-        background-color: rgba(var(--ac-0), 1);
-      }
-  
-      .face--front {
-        transform: rotateX(0deg) rotateY(0deg) translateZ(200px);
-      }
-  
-      .face--right {
-        transform: rotateX(0deg) rotateY(0deg) rotateZ(45deg) translateY(0px) translateX(-70px) translateZ(100px);
-        width: 300px;
-        height: 300px;
-      }
-  
-      .face--back {
-        transform: rotateX(0deg) rotateY(0deg) translateY(-50px) translateX(-50px) translateZ(0px);
-        background-color: rgba(var(--ac-1), 1);
-        width: 300px;
-        height: 300px;
-      }
-    }
-  }
-}
-
-@media only screen and (prefers-color-scheme: dark) {
-  .intro {
-    .cube {
-      .face {
-        background-color: gray;
-      }
-      
-      .face--front {
-        filter: grayscale(1);
-      }
-      
-      &:hover {
-        .face--front {
-          filter: grayscale(0);
-        }
-      }
-    }
-  }
-}
-
-@media only screen and (prefers-color-scheme: light) {
-  .intro {
-    .cube {
-      .face {
-        background-color: #B09C7A;
-      }
-      .face--front {
-        filter: sepia(1);
-      }
-      
-      &:hover {
-        .face--front {
-          filter: sepia(0);
-        }
-      }
-    }
-  }
-}
-
-@keyframes fade-in {
-  from {opactity: 0}
-  to   {opactity: 1}
 }

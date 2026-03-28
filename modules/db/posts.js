@@ -2,6 +2,66 @@
 
 export const posts = [
   {
+    title: "Backup de programas",
+    date: "27.03.2026",
+    content: `
+Caramba, pelo jeito o buraco dessas leis de "Proteção à Criança" é <b>muito</b> mais profundo do que eu imaginei. Tem desde o [[https://www.legislation.gov.uk/ukpga/2023/50][Online Safety Act]] do Reino Unido, até umas propostas de lei na [[https://legiscan.com/CA/text/AB1043/id/3269704][Califórnia]] e Colorado, lá nos States.
+
+Algo em comúm que a Lei Felca tem com essas leis dos States, é a obrigação até mesmo do sistema operacional ter algum meio "eficiente" de verificar a idade do usuário, o que, caso não seja realizado, pode acarretar em penalidades extremas. Por conta disso temos exemplos de Distros Linux que simplesmente deixaram de operar no Brasil e nesses Estados dos States com leis parecidas, como o Arch Linux 32.
+
+Mas, se uma distribuição Linux deixa de operar, para que eles também evitem uma dor de cabeça jurídica, eles podem muito bem bloquear qualquer IP vindo dessas regiões de sequer baixar um programa dos repositórios deles (o que, sinceramente, é justo).
+
+Como eu sou um cara bem paranóico (principalmente com esse tipo de coisa), eu comecei a fazer backup de uma porrada de programa que eu uso. Como a minha "main distro" é o Alpine, isso é bem fácil, é só questão de executar um <code>apk fetch -R *programa*</code> e já era, ele pega o programa e todas as dependências dele e baixa os pacotes no diretório atual. Fiz isso com o [[https://gnome.org][GNOME]] e outros programas, como o [[https://librewolf.net][Librewolf]]. Basicamente, eu tenho como instalar esses programas mesmo se eu não tiver acesso à internet, ou se o meu acesso aos repositórios for restringido.
+
+Isso é uma coisa que eu recomendo que qualquer um faça também, eu sei que no Debian dá para fazer isso também (por mais que não seja tão simples quanto no alpine), afinal, de pouco serve um computador sem nenhum programa útil, e ter que depender de um terceiro guardando uma biblioteca de pacotes (um repositório) para poder instalar os seus programas é algo que a qualquer dia vai se virar contra você algum dia.
+`
+  },
+  {
+    title: "Lei Felca",
+    date: "17.03.2026",
+    content: `
+Hoje entra em vigor a "Lei Felca" o "ECA Digital".
+
+Essa merda vai servir basicamente para censura e vigilância em massa. É só ver o estado que a Inglaterra está em relação a essas leis de "proteção da criança e do adolescente na internet".
+
+
+- Aumentar pena para pedófilos/aliciadores? Fiscalizar contas suspeitas? Tomar medidas de conscientização na internet para os pais a fim de que eles mesmo tomem conta dos seus próprios filhos? Não, pra quê isso? 0 nececidade.
+- Fazer todo mundo que não tem nada haver com isso enviar uma foto da cara com o RG do lado para poder usar o próprio instagram, mesmo que a pessoa não tenha nenhum antecedente criminal relacionado com violações dos direitos de criaças/adolescentes? Com toda certeza. Quem se opõe a isso com toda certeza é um pedófilo.
+
+Pelo amor de Deus, essa porra não é, nunca foi e jamais será posta em prática para benefício da população. Literalmente serve apenas para limitar a privacidade de cidadãos inocentes a troco de porra nenhuma, porque isso não põe nenhum criminoso na cadeia, não faz com que punições para esse tipo de crime sejam mais duras e muito menos põe a polícia para trabalhar de forma eficiente.
+
+Além de tudo essa porra põe em cheque até mesmo sistemas operacionais, pelo simples motivo de possibilitar que a "criança" acesse algo que não seja apropriado para ela, e por isso o sistema operacional tem que ter uma medida que impeça menores de idade de acessar conteúdo impróprio. Eu tenho uma medida muito eficiente para isso, se chama: PAIS PRESENTES.
+
+Sistemas Linux já vão para a casa do caralho de imediato. Como caralhos o Arch Linux, Debian, Void, e etc, vai implementar algo que sirva para verificar a idade de alguém no nível requisitado pela Lei Felca? A PORRA DO SISTEMA É DE CÓDIGO ABERTO CACETE! Literalmente se a mizera do muleque quiser ver UM FURRY DANDO UM BACKFLIP NUMA ROLA, ele VAI DAR UM JEITO e não tem como impedir ele, porquê o código é aberto para QUALQUER UM MODIFICAR, ou seja, ele pode pegar o sistema de verificação de idade e tacar no limbo. E aí? Os programadores do sistema vão ser responsabilizados por isso?
+
+Não é atoa que já tem distro que tá bloqueando o download no Brasil, quem é doido de arriscar uma multa de MILHÕES DE REAIS POR INFRAÇÃO?
+
+Cara, a solução do Brasil realmente é o aeroporto, puta que pariu.
+`
+  },
+  {
+    title: "Patinete Elétrico",
+    date: "10.03.2026",
+    content: `
+A um certo tempo, eu estive pesquisando e procurando algum tipo de mobilidade elétrica da qual eu poderia utilizar para poder ir e vir do meu trabalho de forma mais tranquila (antes disso, eu ia pedalando, 10km indo e depois mais 10km voltando). Vi diversas opções, desde scooters elétricas que mais pareciam mobiletes tiradas dos Jetsons a bikes elétricas fazendo cosplay de Dirt Bike.
+
+Dentro desse monte de opções, as mais acessíveis tinham um problema crônico: eram muito baixas e pesadas para que eu ficasse subindo e descendo as escadas de casa.
+
+Foi então que o algorítimo do Youtube me recomendou vídeos de patinetes elétricos. Estes, diferente dessas bicicletas mais acessíveis, não tinham o problema da subida e descida de escada, pois eram bem mais leves.
+
+Depois de muito vai e vem acabei comprando um patinete no Mercado Livre, do qual chegou no início da semana passada e venho usando desde então.
+
+É muito confortável a viagem com ele, exceto em algumas partes onde o caminho é bem acidentado (ele não tem suspenção e os pneus são maciços, então ele treme para um cacete), porém hoje eu senti na pele a maior desvantagem dele: se você cair, vai ser que nem uma queda de skate, só que a 25km/h.
+
+Caí feito um saco de bosta kkkkkk
+
+Ralei meu cotovelo, o lado direito da minha cintura, fiquei com um inchaço no joelho esquerdo e com o ombro direito doendo. Graças à Deus eu tava de capacete, por que se não era do asfalto para o hospital.
+
+Enfim, tô vivo kkkkkkkk
+
+Serei mais cuidadoso a partir de agora, até porquê eu não quero nem ir parar na fila do INSS e muito menos levar uma surra da minha namorada.`
+  },
+  {
     title: "Ideias para o site",
     date: "09.02.2026",
     content: `

@@ -2,7 +2,9 @@
 
 import {
   create_page,
+  create_priv_page,
   slug,
+  markup,
   tag
 } from "./common.js";
 
@@ -55,18 +57,53 @@ export function books() {
   );
 
   for (const book of bookshelf) {
+    if (book.review === undefined) book.review = "<p style='color: var(--red)'>Sem review ainda</p>";
+    switch (Number(book.nota)) {
+      case 0:
+      case 1: book.nota = "<br>&#9733;&#9734;&#9734;&#9734;&#9734;<br><img loading='lazy' width='112' height='112' style='object-fit: cover' src='/assets/ashes_emoji.gif'>"; break;
+      case 2: book.nota = "<br>&#9733;&#9733;&#9734;&#9734;&#9734;<br><img loading='lazy' width='112' height='112' style='object-fit: cover' src='/assets/paia.jpg'>"; break;
+      case 3: book.nota = "<br>&#9733;&#9733;&#9733;&#9734;&#9734;<br><img loading='lazy' width='112' height='112' style='object-fit: cover' src='/assets/meh_emoji.gif'>"; break;
+      case 4: book.nota = "<br>&#9733;&#9733;&#9733;&#9733;&#9734;<br><img loading='lazy' width='112' height='112' style='object-fit: cover' src='/assets/nice_emoji.gif'>"; break;
+      case 5: book.nota = "<br>&#9733;&#9733;&#9733;&#9733;&#9733;<br><img loading='lazy' width='112' height='112' style='object-fit: cover' src='/assets/absolute_cinema.webp'>"; break; 
+      default: book.nota = "<span style='color: var(--red)'>Sem nota ainda</span>";
+    }
+
+    create_priv_page(`#${slug(book.title)}_page`, `${book.title}`,
+      tag("div", {},
+        tag("div", {},
+          tag("img",
+            {
+              "loading":"lazy",
+              "alt":book.title,
+              "title":book.title,
+              "width":"250",
+              "height":"400",
+              "style":"object-fit: cover",
+              "src":`/assets/${book.cover}`
+            }
+          ),
+          tag("div", {},
+            tag("blockquote", {"class":"quote"}, `<span>Review</span><br>${markup(book.review)}`),
+            tag("p", {"style":"margin: 0; text-align: center"}, `A minha nota para esse treco é...<br>${book.nota}`)
+          ),
+        ),
+      )
+    );
+
     document.getElementById("shelf").appendChild(
       tag("div", {"style":"margin: 10px"},
-        tag("img",
-          {
-            "loading":"lazy",
-            "alt":book.title,
-            "title":book.title,
-            "width":"180",
-            "height":"280",
-            "style":"object-fit: cover",
-            "src":`/assets/${book.cover}`
-          }
+        tag("a", {"href":`#${slug(book.title)}_page`},
+          tag("img",
+            {
+              "loading":"lazy",
+              "alt":book.title,
+              "title":book.title,
+              "width":"180",
+              "height":"280",
+              "style":"object-fit: cover; margin-top: 0",
+              "src":`/assets/${book.cover}`
+            }
+          )
         ),
         tag("progress", {"value":book.progress.current, "max":book.progress.maximum}),
         tag("p", {"style":"margin: 0; text-align: center"}, `${book.progress.current}/${book.progress.maximum}`)

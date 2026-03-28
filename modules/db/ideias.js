@@ -2,8 +2,20 @@
 
 export const ideias = [
   {
-    title: "Avaliações para os livros",
+    title: "Botão para enviar feedback de um post",
     stat: 0,
+    content: `
+Ao final de cada post deve haver um botão de feedback com um link para e-mail pre-preenchido com algumas informações sobre o post.
+
+O formato do link é o seguinte:
+#+begin_src
+mailto:email@example.com?subject=ASSUNTO
+#+end_src
+`
+  },
+  {
+    title: "Avaliações para os livros",
+    stat: 2,
     content: `
 Notas para os livros/mangás que eu li, com a nota variando de 0 a 10.
 
@@ -21,7 +33,9 @@ entre 0 e 1  => It's Joever
   {
     title: "Uma página de ideias",
     stat: 2,
-    content: "Uma página contendo todas as minhas ideias para o site"
+    content: `
+Uma página contendo todas as minhas ideias para o site
+`
   },
   {
     title: "Página de introdução com uma animação 3D",

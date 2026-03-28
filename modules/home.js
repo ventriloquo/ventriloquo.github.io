@@ -10,8 +10,7 @@ import { posts } from "./db/posts.js";
 import { list_entries } from "./blog.js";
 
 export function home() {
-  create_priv_page(
-    "home", "Caderno do Tukain",
+  create_priv_page("home", "Caderno do Tukain",
     tag("div", {}, markup(`Aqui é um lugar onde eu gosto de compartilhar um pouco do meu cotidiano. Também é um lugar onde eu ponho em prática algumas coisas que eu aprendi, seja elas relacionadas à tecnologia, programação ou qualquer outro assunto que eu achar pertinente.
 #+begin_quote
 <span>Reg Braithwaite</span>
@@ -19,7 +18,11 @@ export function home() {
 #+end_quote
 
 * Últimos posts
-`), tag("ul", {"id":"recent"})));
+`),
+      tag("ul", {"id":"recent"}),
+      tag("p", {"style":"text-align: center"}, tag("a", {"href":"https://developer.gnome.org/hig/reference/palette.html", "target":"_blank"}, "Paleta de cores utilizada no site"))
+    )
+  );
 
 
   list_entries(3, "recent");
