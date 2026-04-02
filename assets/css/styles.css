@@ -1,15 +1,15 @@
-@import url("./css/themes.css");
-@import url("./css/intro.css");
-@import url("./css/webkit.css");
+@import url("./themes.css");
+@import url("./intro.css");
+@import url("./webkit.css");
 
 @font-face {
-  src: url('/fonts/Rubik-Regular.ttf');
+  src: url('/assets/fonts/Rubik-Regular.ttf');
   font-family: 'text';
   font-display: swap;
 }
 
 @font-face {
-  src: url('/fonts/FiraCode-Regular.ttf');
+  src: url('/assets/fonts/FiraCode-Regular.ttf');
   font-family: 'code';
   font-display: swap;
 }
