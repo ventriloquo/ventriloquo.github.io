@@ -41,7 +41,16 @@ export function create_post() {
       tag("div", {},
         tag("h3", {"style":"font-weight: normal"}, post.date, tag("span", {}, ` - ~${wordcount} palavras, ${read_time}`)),
         tag("hr"),
-        tag("p", {}, markup(post.content)))
+        tag("p", {}, markup(post.content)),
+        tag("hr"),
+        tag("li", {},
+          tag("a", {
+            "class":"blog_entry",
+            "style":"display: inline-block",
+            "href":`mailto:contato.nest604@passinbox.com?subject=Feedback: ${post.title}`
+          }, "Feedback")
+        )
+      )
     );
   }
 }

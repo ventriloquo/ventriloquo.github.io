@@ -3,7 +3,7 @@
 export const ideias = [
   {
     title: "Botão para enviar feedback de um post",
-    stat: 0,
+    stat: 2,
     content: `
 Ao final de cada post deve haver um botão de feedback com um link para e-mail pre-preenchido com algumas informações sobre o post.
 
