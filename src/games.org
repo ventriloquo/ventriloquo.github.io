@@ -1,3 +1,0 @@
-#+HTML: <main id='body'></main>
-#+HTML: <script type="module" src="./modules/games.js"></script>
-#+HTML: <script type="module">import { games } from "./modules/games.js"; window.onload = games()</script>

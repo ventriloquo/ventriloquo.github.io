@@ -25,23 +25,7 @@
 			    "} /*"        current_theme	"*/\n" 
 			    "</style>")
 
-       org-html-preamble (concat
-			  "<header>"
-			  "<nav>"
-			  "<div class='home_link'>"
-			  "<a class='text' href='/'>Início</a>"
-			  "</div>"
-			  "<div id='nav_list' class='nav_items'>"
-			  (with-temp-buffer (insert-file-contents "src/assets/links.html") (buffer-string))
-			  "</div>"
-			  "<button popovertarget='nav_menu' popovertargetaction='toggle' class='nav_menu'>Menu</button>"
-			  "</nav>"
-			  "<div popover='' id='nav_menu'>"
-			  "<a href='/'>Início</a>"
-			  (with-temp-buffer (insert-file-contents "src/assets/links.html") (buffer-string))
-			  "</div>"
-			  "</header>")
-       
+       org-html-preamble nil
        org-html-postamble (concat
 			   "<footer>"
 			   "<p>Criado com: %c</p>"
@@ -81,12 +65,6 @@
 				    :publishing-directory "public/notes"
 				    :publishing-function org-html-publish-to-html
 				    :recusive nil)
-				   ("modules"
-				    :base-directory "src/modules"
-				    :base-extension "js"
-				    :recursive t
-				    :publishing-directory "public/modules"
-				    :publishing-function org-publish-attachment)
 				   ("static"
 				    :base-directory "src/assets"
 				    :base-extension "jpg\\|jpeg\\|png\\|webp\\|ttf\\|gif\\|css\\|js\\|html"

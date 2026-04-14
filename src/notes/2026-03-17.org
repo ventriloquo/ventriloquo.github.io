@@ -1,0 +1,19 @@
+#+TITLE: Lei Felca
+#+DATE: <2026-03-17 Tue>
+
+Hoje entra em vigor a "Lei Felca" o "ECA Digital".
+
+Essa merda vai servir basicamente para censura e vigilância em massa. É só ver o estado que a Inglaterra está em relação a essas leis de "proteção da criança e do adolescente na internet".
+
+- Aumentar pena para pedófilos/aliciadores? Fiscalizar contas suspeitas? Tomar medidas de conscientização na internet para os pais a fim de que eles mesmo tomem conta dos seus próprios filhos? Não, pra quê isso? 0 nececidade.
+- Fazer todo mundo que não tem nada haver com isso enviar uma foto da cara com o RG do lado para poder usar o próprio instagram, mesmo que a pessoa não tenha nenhum antecedente criminal relacionado com violações dos direitos de criaças/adolescentes? Com toda certeza. Quem se opõe a isso com toda certeza é um pedófilo.
+
+Pelo amor de Deus, essa porra não é, nunca foi e jamais será posta em prática para benefício da população. Literalmente serve apenas para limitar a privacidade de cidadãos inocentes a troco de porra nenhuma, porque isso não põe nenhum criminoso na cadeia, não faz com que punições para esse tipo de crime sejam mais duras e muito menos põe a polícia para trabalhar de forma eficiente.
+
+Além de tudo essa porra põe em cheque até mesmo sistemas operacionais, pelo simples motivo de possibilitar que a "criança" acesse algo que não seja apropriado para ela, e por isso o sistema operacional tem que ter uma medida que impeça menores de idade de acessar conteúdo impróprio. Eu tenho uma medida muito eficiente para isso, se chama: PAIS PRESENTES.
+
+Sistemas Linux já vão para a casa do caralho de imediato. Como caralhos o Arch Linux, Debian, Void, e etc, vai implementar algo que sirva para verificar a idade de alguém no nível requisitado pela Lei Felca? A PORRA DO SISTEMA É DE CÓDIGO ABERTO CACETE! Literalmente se a mizera do muleque quiser ver UM FURRY DANDO UM BACKFLIP NUMA ROLA, ele VAI DAR UM JEITO e não tem como impedir ele, porquê o código é aberto para QUALQUER UM MODIFICAR, ou seja, ele pode pegar o sistema de verificação de idade e tacar no limbo. E aí? Os programadores do sistema vão ser responsabilizados por isso?
+
+Não é atoa que já tem distro que tá bloqueando o download no Brasil, quem é doido de arriscar uma multa de MILHÕES DE REAIS POR INFRAÇÃO?
+
+Cara, a solução do Brasil realmente é o aeroporto, puta que pariu.
