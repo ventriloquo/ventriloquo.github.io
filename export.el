@@ -28,7 +28,7 @@
        org-html-preamble nil
        org-html-postamble (concat
 			   "<footer>"
-			   "<p>Criado com: %c</p>"
+			   "<p>Gerado com: %c</p>"
 			   "<p>Por: <a href='https://codeberg.org/tukain/'>Tukain</a></p>"
 			   "<p>"
 			   "Tema: " current_theme

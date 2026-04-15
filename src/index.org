@@ -13,5 +13,5 @@ pertinente.
 you will."
 #+end_quote
 
-** Posts:
+** Posts
 #+INCLUDE: notes/sitemap.org :only-contents t
