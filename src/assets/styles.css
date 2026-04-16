@@ -382,6 +382,15 @@ p {
     }
 }
 
+.home {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    font-size: large;
+    margin-top: -1em;
+    transition: all 300ms;
+}
+
 /* Programming Languages */
 pre.src-simphare:before		{ content: 'Hare'; }
 pre.src-elisp:before		{ content: 'Emacs Lisp'; }
