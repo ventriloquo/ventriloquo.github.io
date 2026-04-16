@@ -50,9 +50,6 @@ a {
 }
 
 #preamble {
-    position: relative;
-    top: 0;
-
     & a {
 	padding: 10px;
 	margin: 5px;
@@ -356,25 +353,25 @@ p {
 }
 
 @media only screen and (orientation: landscape) {
-    html {
-	padding: 1em 2em 1em 2em;
-    }
 
     body {
-	padding-top: 1em;
-	width: 80ch;
 	display: block;
 	margin: auto;
-	border-radius: 5px;
-	border: solid .3em var(--ac);
+	background-color: var(--bg-0);
     }
 
-    #postamble {
+    #preamble, #content, #postamble {
 	border: solid .3em var(--ac);
-	border-bottom: none;
+	border-radius: 5px;
 	width: 80ch;
+	margin: 1em auto;
+	background-color: var(--bg-1);
     }
-    
+
+    #preamble {
+	max-width: calc(80ch - 190px);
+    }
+        
     li:has(.timestamp) {
 	a {
 	    min-width: calc(100% - 200px);
@@ -387,7 +384,6 @@ p {
     text-align: center;
     padding: 10px;
     font-size: large;
-    margin-top: -1em;
     transition: all 300ms;
 }
 

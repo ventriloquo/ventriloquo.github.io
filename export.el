@@ -25,7 +25,10 @@
 			    "} /*"        current_theme	"*/\n" 
 			    "</style>")
 
-       org-html-preamble nil
+       org-html-preamble (concat
+			  "<header>"
+			  "<a class='home' href='/'>Início</a>"
+			  "</header>")
        org-html-postamble (concat
 			   "<footer>"
 			   "<p>Gerado com: %c</p>"
@@ -65,8 +68,6 @@
 				    :base-extension "org"
 				    :publishing-directory "public/notes"
 				    :publishing-function org-html-publish-to-html
-				    :html-link-home "/"
-				    :html-home/up-format "<a href='/' class='home'>Início</a>"
 				    :recusive nil)
 				   ("static"
 				    :base-directory "src/assets"
