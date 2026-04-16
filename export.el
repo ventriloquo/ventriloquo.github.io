@@ -48,6 +48,7 @@
        org-html-doctype                  "html5"
        org-html-html5-fancy              t
        org-html-head-include-scripts     nil
+       org-export-with-broken-links      t
 
        org-publish-project-alist '(("Caderno do Tukain"
 				    :base-directory "src"

@@ -247,7 +247,7 @@ nav#table-of-contents {
 }
 
 hr {
-    border: dashed .1em var(--ac);
+    border: dashed .1em var(--bg-0);
 }
 
 blockquote {
