@@ -8,10 +8,14 @@
 	    (org-publish-find-title entry project))))
 
 (setq  current_theme	(format " %s " (nth 0 custom-enabled-themes))
-       accent_color	(face-attribute 'cursor  :background nil 'default)
-       background_00	(face-attribute 'hl-line :background nil 'default)
-       background_01	(face-attribute 'default :background)
+       accent_color	(face-attribute 'dired-directory  :foreground nil 'default)
+       background_01	(face-attribute 'dired-directory  :background nil 'default)
+       background_00	(face-attribute 'default :background)
        foreground	(face-attribute 'default :foreground)
+
+       cursor-color-as-accent-color (concat "\n:root {\n\t--ac:\t"   (face-attribute 'cursor  :background nil 'default) ";\n}\n")
+       hl-line-as-background-0	    (concat "\n:root {\n\t--bg-0:\t" (face-attribute 'hl-line :background nil 'default) ";\n}\n")
+       hl-line-as-background-1	    (concat "\n:root {\n\t--bg-1:\t" (face-attribute 'hl-line :background nil 'default) ";\n}\n")
        
        org-html-head-extra (concat
 			    "<head><link rel='icon' href='/assets/fav.png'></head>"
@@ -22,12 +26,23 @@
 			    "\t--bg-0:\t" background_00	";\n"
 			    "\t--fg:\t"   foreground	";\n"
 			    "\t--ac:\t"   accent_color	";\n"
-			    "} /*"        current_theme	"*/\n" 
+			    "}\n"
+			    (cond
+			     ((equal current_theme " base16-gruvbox-dark "	) (concat hl-line-as-background-0))
+			     ((equal current_theme " base16-gruvbox-light "	) (concat hl-line-as-background-0))
+			     ((equal current_theme " base16-nord "		) (concat hl-line-as-background-0))
+			     ((equal current_theme " base16-sakura "		) (concat cursor-color-as-accent-color hl-line-as-background-0))
+			     )
+			    "/*" current_theme "*/\n"
 			    "</style>")
 
        org-html-preamble (concat
 			  "<header>"
-			  "<a class='home' href='/'>Início</a>"
+			  "<a href='/'>Início</a>"
+			  "<div style='display: flex'>"
+			  "<a target='_blank' href='https://codeberg.org/tukain'>Codeberg</a>"
+			  "<a target='_blank' href='https://neocities.org/site/tukainpng'>Neocities</a>"
+			  "</div>"
 			  "</header>")
        org-html-postamble (concat
 			   "<footer>"
@@ -35,11 +50,6 @@
 			   "<p>Por: <a href='https://codeberg.org/tukain/'>Tukain</a></p>"
 			   "<p>"
 			   "Tema: " current_theme
-			   " "
-			   "<span class='color_block' style='background-color:" background_00 "'></span>"
-			   "<span class='color_block' style='background-color:" background_01 "'></span>"
-			   "<span class='color_block' style='background-color:" foreground    "'></span>"
-			   "<span class='color_block' style='background-color:" accent_color  "'></span>"
 			   "</p>"
 			   "</footer>")
 

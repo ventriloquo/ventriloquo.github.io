@@ -50,6 +50,26 @@ a {
 }
 
 #preamble {
+    header {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+
+	a {
+	    display: block;
+	    text-align: center;
+	    padding: 10px;
+	    font-size: large;
+	    transition: all 300ms;
+	}
+	
+	&:has(a:only-child) {
+	    display: block;
+	}
+    }
+    
     & a {
 	padding: 10px;
 	margin: 5px;
@@ -72,7 +92,6 @@ a {
 }
 
 #content {
-    min-height: 100vh;
     max-width: 60ch;
     padding: 1em;
     display: block;
@@ -136,7 +155,7 @@ table {
 
 .src, .example {
     font-family: "iosevka", monospace;
-    border: solid .1em;
+    border: solid .2em;
     border-radius: 3px;
     margin: 0;
     position: relative;
@@ -145,10 +164,10 @@ table {
 }
 
 pre.src {
-    background-color: var(--bg-1);
+    background-color: var(--bg-0);
     color: var(--fg);
     position: relative;
-    padding-top: calc(2.5em + 14pt);
+    padding-top: calc(2em + 5pt);
 
     &:hover:before {
 	margin: 0;
@@ -157,13 +176,13 @@ pre.src {
     &:before {
 	display: inline;
 	margin: 0;
-	position: absolute;
 	top: 0;
-	right: 0;
-	width: calc(100% - 16pt);
-	padding: 8pt;
+	left: 0;
+	right: initial;
+	padding: 2pt 8pt;
 	background-color: var(--ac);
 	color: var(--bg-1);
+	border-end-end-radius: 5px;
     }
 }
 
@@ -241,6 +260,11 @@ nav#table-of-contents {
     h2 {
 	display: none;
     }
+
+    a {
+	font-size: large;
+	text-decoration: none;
+    }
 }
 
 hr {
@@ -308,6 +332,12 @@ p {
 }
 
 @media only screen and (orientation: portrait) {
+
+    #preamble {
+	background-color: var(--bg-0);
+	padding: .5em 0;
+    }
+    
     body {
 	font-size: medium;
     }
@@ -377,14 +407,6 @@ p {
 	    min-width: calc(100% - 200px);
 	}
     }
-}
-
-.home {
-    display: block;
-    text-align: center;
-    padding: 10px;
-    font-size: large;
-    transition: all 300ms;
 }
 
 /* Programming Languages */
