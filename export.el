@@ -30,6 +30,7 @@
 			    (cond
 			     ((equal current_theme " base16-gruvbox-dark "	) (concat hl-line-as-background-0))
 			     ((equal current_theme " base16-gruvbox-light "	) (concat hl-line-as-background-0))
+			     ((equal current_theme " modus-operandi-tinted "	) (concat hl-line-as-background-0))
 			     ((equal current_theme " base16-nord "		) (concat hl-line-as-background-0))
 			     ((equal current_theme " base16-sakura "		) (concat cursor-color-as-accent-color hl-line-as-background-0))
 			     )
@@ -40,8 +41,8 @@
 			  "<header>"
 			  "<a href='/'>Início</a>"
 			  "<div style='display: flex'>"
+			  "<span></span>"
 			  "<a target='_blank' href='https://codeberg.org/tukain'>Codeberg</a>"
-			  "<a target='_blank' href='https://neocities.org/site/tukainpng'>Neocities</a>"
 			  "</div>"
 			  "</header>")
        org-html-postamble (concat
