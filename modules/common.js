@@ -3,56 +3,64 @@
 export const page_list = [];
 
 export function slug(text) {
-  return text.toLowerCase()
-             .replaceAll(" ", "_")
-             .replaceAll(",", "")
-             .replaceAll(".", "")
-             .replaceAll(">", "")
-             .replaceAll("<", "")
-             .replaceAll("-", "")
-             .replaceAll("+", "")
-             .replaceAll(":", "")
-             .replaceAll(";", "")
-             .replaceAll("?", "")
-             .replaceAll("!", "")
-            // .replaceAll("/", "")
-             .replaceAll("%", "")
-             .replaceAll("#", "")
-             .replaceAll("*", "")
-             .replaceAll("&", "")
-             .replaceAll("__", "_")
-             .replaceAll("___", "_")
-             .replaceAll("á", "a")
-             .replaceAll("à", "a")
-             .replaceAll("â", "a")
-             .replaceAll("ã", "a")
-             .replaceAll("é", "e")
-             .replaceAll("è", "e")
-             .replaceAll("ê", "e")
-             .replaceAll("ó", "o")
-             .replaceAll("ò", "o")
-             .replaceAll("ô", "o")
-             .replaceAll("õ", "o")
-             .replaceAll("ç", "c");
+    return text.toLowerCase()
+        .replaceAll(" ", "_")
+        .replaceAll(",", "")
+        .replaceAll(".", "")
+        .replaceAll(">", "")
+        .replaceAll("<", "")
+        .replaceAll("-", "")
+        .replaceAll("+", "")
+        .replaceAll(":", "")
+        .replaceAll(";", "")
+        .replaceAll("?", "")
+        .replaceAll("!", "")
+    // .replaceAll("/", "")
+        .replaceAll("%", "")
+        .replaceAll("#", "")
+        .replaceAll("*", "")
+        .replaceAll("&", "")
+        .replaceAll("__", "_")
+        .replaceAll("___", "_")
+        .replaceAll("á", "a")
+        .replaceAll("à", "a")
+        .replaceAll("â", "a")
+        .replaceAll("ã", "a")
+        .replaceAll("é", "e")
+        .replaceAll("è", "e")
+        .replaceAll("ê", "e")
+        .replaceAll("ó", "o")
+        .replaceAll("ò", "o")
+        .replaceAll("ô", "o")
+        .replaceAll("õ", "o")
+        .replaceAll("ç", "c");
 }
 
 export function markup(text) {
-  return text.replaceAll("\n", "<br>")
-             .replaceAll("#+begin_src<br>", "<pre class='src'>")
-             .replaceAll("#+end_src<br>", "</pre>")
-             .replaceAll("#+begin_example<br>", "<pre class='example'>")
-             .replaceAll("#+end_example<br>", "</pre>")
-             .replaceAll("#+begin_quote<br>", "<blockquote class='quote'><p>")
-             .replaceAll("#+end_quote<br>", "</p></blockquote>")
-             .replaceAll("#+begin_note<br>", "<blockquote class='note'><p>")
-             .replaceAll("<br>#+end_note<br>", "</p></blockquote>")
-             .replaceAll("<br>- ", "<li>")
-             .replaceAll("<br>", "</li><br>")
-             .replaceAll("<br>* ", "<h2>")
-             .replaceAll("<br>", "</h2><br>")
-             .replaceAll("[[", "<a target='_blank' href='")
-             .replaceAll("][", "'>")
-             .replaceAll("]]", "</a>");
+    return text.replaceAll("\n", "<br>")
+        .replaceAll("#+begin_src<br>", "<pre class='src'>")
+        .replaceAll("#+end_src<br>", "</pre>")
+        .replaceAll("#+begin_example<br>", "<pre class='example'>")
+        .replaceAll("#+end_example<br>", "</pre>")
+        .replaceAll("#+begin_quote<br>", "<blockquote class='quote'><p>")
+        .replaceAll("#+end_quote<br>", "</p></blockquote>")
+        .replaceAll("#+begin_note<br>", "<blockquote class='note'><p>")
+        .replaceAll("<br>#+end_note<br>", "</p></blockquote>")
+        .replaceAll("<br>- ", "<li>")
+        .replaceAll("<br>", "</li><br>")
+        .replaceAll("<br>* ", "<h2>")
+        .replaceAll("<br>", "</h2><br>")
+        .replaceAll("<br><table><br>", "<table>")
+        .replaceAll("<br><tr>", "<tr>")
+        .replaceAll("<br><th>", "<th>")
+        .replaceAll("<br><td>", "<td>")
+        .replaceAll("<br></table>", "</table>")
+        .replaceAll("<br></tr>", "</tr>")
+        .replaceAll("<br></th>", "</th>")
+        .replaceAll("<br></td>", "</td>")
+        .replaceAll("[[", "<a target='_blank' href='")
+        .replaceAll("][", "'>")
+        .replaceAll("]]", "</a>");
 }
 
 export function invert_date(date, separator) {
@@ -64,45 +72,45 @@ export function invert_date(date, separator) {
 }
 
 export function tag(name, attributes, ...content) {
-  if (document.getElementById('body') === null) {
-    document.getElementsByTagName('body')[0].setAttribute("id", "body");
-  }
-
-  const element = document.createElement(name);
-
-  for (const attribute in attributes) {
-    element.setAttribute(attribute, attributes[attribute]);
-  }
-  
-  for (const c of content) {
-    switch (typeof(c)) {
-      case "string": element.innerHTML = c; break;
-      case "number": element.innerText = c; break;
-      default: element.appendChild(c);
+    if (document.getElementById('body') === null) {
+	document.getElementsByTagName('body')[0].setAttribute("id", "body");
     }
-  }
-  
-  return document.getElementById('body').appendChild(element);
+
+    const element = document.createElement(name);
+
+    for (const attribute in attributes) {
+	element.setAttribute(attribute, attributes[attribute]);
+    }
+
+    for (const c of content) {
+	switch (typeof(c)) {
+	case "string": element.innerHTML = c; break;
+	case "number": element.innerText = c; break;
+	default: element.appendChild(c);
+	}
+    }
+
+    return document.getElementById('body').appendChild(element);
 }
 
 export function create_page(name, title, content, priv = false) {
-  const id = slug(name);
+    const id = slug(name);
 
-  tag("section", {"id": id},
-    tag("h1",    {"id": `${id}_title`}, title),
-    tag("div",   {"id": `${id}_content`}, content)
-  );
+    tag("section", {"id": id},
+	tag("h1",    {"id": `${id}_title`}, title),
+	tag("div",   {"id": `${id}_content`}, content)
+       );
 
-  if (!priv) {
-    page_list.push(
-      {
-        id: `/#${id}`,
-        title: `${title}`
-      }
-    );
-  }
+    if (!priv) {
+	page_list.push(
+	    {
+		id: `/#${id}`,
+		title: `${title}`
+	    }
+	);
+    }
 }
 
 export function create_priv_page(name, title, content) {
-  create_page(name, title, content, true);
+    create_page(name, title, content, true);
 }

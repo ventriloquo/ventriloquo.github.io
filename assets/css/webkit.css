@@ -1,30 +1,61 @@
 ::-webkit-scrollbar {
-  background-color: var(--bg-1);
-  width: .3em;
+    background-color: var(--bg-1);
+    width: .3em;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--bg-0);
+    background-color: var(--bg-0);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: var(--bg-0);
+    background-color: var(--bg-0);
 }
 
 pre {
-  &::-webkit-scrollbar {
-    display: none;
-  }
+    &::-webkit-scrollbar {
+	display: none;
+    }
+}
+
+.book {
+    progress {
+	&::-webkit-progress-bar {
+	    border-radius: 5px;
+	}
+    }
 }
 
 progress {
-  -webkit-appearance: none;
+    -webkit-appearance: none;
 
-  &::-webkit-progress-bar {
-    background-color: var(--bg-0);
-  }
+    .green_bar
+    &::-webkit-progress-bar,
+    &::-webkit-progress-value {
+	border-radius: 5px;
+    }
 
-  &::-webkit-progress-value {
-    background-color: rgba(var(--ac-0), 1);
-  }
+    &::-webkit-progress-bar {
+	background-color: var(--bg-1);
+    }
+
+    &::-webkit-progress-value {
+	background-color: rgba(var(--ac-0), 1);
+    }
+
+    &.green_bar::-webkit-progress-value {
+	background-color: var(--green);
+    }
+
+    &.yellow_bar::-webkit-progress-value {
+	background-color: var(--yellow);
+    }
+}
+
+table {
+    & + progress {
+	border-radius: 0;
+	&::-webkit-progress-bar, &::-webkit-progress-value {
+	    border-radius: 0;
+	}
+    }
 }

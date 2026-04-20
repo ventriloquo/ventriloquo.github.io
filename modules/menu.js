@@ -1,32 +1,35 @@
 "use strict";
 
 import {
-  create_priv_page,
-  page_list,
-  tag
+    create_priv_page,
+    page_list,
+    tag
 } from "./common.js";
 
 export function menu() {
-  create_priv_page("mobile_menu", "Menu",
-    tag("div", {},
-      tag("ul", {"id":"mobile_menu"})
-    )
-  );
+    create_priv_page("mobile_menu", "Menu",
+		     tag("div", {},
+			 tag("ul", {"id":"mobile_menu"})
+			)
+		    );
 
-  let i = 0;
-  for (const page of page_list) {
-    document.getElementById("mobile_menu").appendChild(
-      tag("li", {"id":`menu_item_${i}`},
-        tag("a", {"href":page.id, "class":"blog_entry"}, page.title)
-      )
-    );
+    let i = 0;
+    for (const page of page_list) {
+	document.getElementById("mobile_menu").appendChild(
+	    tag("li", {"id":`menu_item_${i}`},
+		tag("a", {"href":page.id, "class":"blog_entry button"}, page.title)
+	       )
+	);
 
-    document.getElementById("desktop_menu").appendChild(
-      tag("a", {"href":page.id}, page.title)
-    )
+	document.getElementById("desktop_menu").appendChild(
+	    tag("a", {"href":page.id, "class":"button"}, page.title)
+	)
 
-    i++;
-  }
+	i++;
+    }
+
+    document.getElementById("menu_item_0").children[0].style.borderStartStartRadius = "5px"
+    document.getElementById("menu_item_0").children[0].style.borderStartEndRadius = "5px"
 }
 
 export default menu;

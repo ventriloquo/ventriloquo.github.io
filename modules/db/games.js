@@ -1,167 +1,167 @@
 export const game_colection = [
-  {
-    title: "Super Smash Bros: Ultimate",
-    cover: "super_smash_bros_ultimate.jpeg"
-  },
-  {
-    title: "Saints Row IV: Re-Elected",
-    cover: "saints_row_IV.jpeg"
-  },
+    {
+	title: "Super Smash Bros: Ultimate",
+	cover: "super_smash_bros_ultimate.jpeg"
+    },
+    {
+	title: "Saints Row IV: Re-Elected",
+	cover: "saints_row_IV.jpeg"
+    },
 
-  {
-    title: "Saints Row: The Third",
-    cover: "saints_row_III.jpeg"
-  },
+    {
+	title: "Saints Row: The Third",
+	cover: "saints_row_III.jpeg"
+    },
 
-  {
-    title: "Outlast",
-    cover: "outlast.jpeg"
-  },
+    {
+	title: "Outlast",
+	cover: "outlast.jpeg"
+    },
 
-  {
-    title: "Untitled Goose Game",
-    cover: "untitled_goose_game.jpeg"
-  },
+    {
+	title: "Untitled Goose Game",
+	cover: "untitled_goose_game.jpeg"
+    },
 
-  {
-    title: "Doom (2016)",
-    cover: "doom.jpeg"
-  },
+    {
+	title: "Doom (2016)",
+	cover: "doom.jpeg"
+    },
 
-  {
-    title: "The Legend of Zelda: Breath of the Wild",
-    cover: "zelda_botw.jpeg"
-  },
+    {
+	title: "The Legend of Zelda: Breath of the Wild",
+	cover: "zelda_botw.jpeg"
+    },
 
-  {
-    title: "Mario Kart 8: Deluxe",
-    cover: "mario_kart_8_deluxe.jpeg"
-  },
+    {
+	title: "Mario Kart 8: Deluxe",
+	cover: "mario_kart_8_deluxe.jpeg"
+    },
 
-  {
-    title: "Warhammer 40,000: Boltgun",
-    cover: "warhammer_40000_boltgun.jpg"
-  },
+    {
+	title: "Warhammer 40,000: Boltgun",
+	cover: "warhammer_40000_boltgun.jpg"
+    },
 
-  {
-    title: "Portal 2",
-    cover: "portal_2.jpeg"
-  },
+    {
+	title: "Portal 2",
+	cover: "portal_2.jpeg"
+    },
 
-  {
-    title: "Portal",
-    cover: "portal_1.jpeg"
-  },
+    {
+	title: "Portal",
+	cover: "portal_1.jpeg"
+    },
 
-  {
-    title: "Doom 1+2",
-    cover: "doom_1_2.jpeg"
-  },
+    {
+	title: "Doom 1+2",
+	cover: "doom_1_2.jpeg"
+    },
 
-  {
-    title: "Quake",
-    cover: "quake_1.jpeg"
-  },
+    {
+	title: "Quake",
+	cover: "quake_1.jpeg"
+    },
 
-  {
-    title: "Quake 2",
-    cover: "quake_2.jpeg"
-  },
+    {
+	title: "Quake 2",
+	cover: "quake_2.jpeg"
+    },
 
-  {
-    title: "Undertale",
-    cover: "undertale.jpeg"
-  },
+    {
+	title: "Undertale",
+	cover: "undertale.jpeg"
+    },
 
-  {
-    title: "Rain World",
-    cover: "rain_world.jpeg"
-  },
+    {
+	title: "Rain World",
+	cover: "rain_world.jpeg"
+    },
 
-  {
-    title: "Metal Gear Solid 3: Snake Eater",
-    cover: "mgs3.jpeg"
-  },
+    {
+	title: "Metal Gear Solid 3: Snake Eater",
+	cover: "mgs3.jpeg"
+    },
 
-  {
-    title: "Blasphemous",
-    cover: "blasphemous.jpeg"
-  },
+    {
+	title: "Blasphemous",
+	cover: "blasphemous.jpeg"
+    },
 
-  {
-    title: "Dragon Ball Fighterz",
-    cover: "dragon_ball_fighterz.jpeg"
-  },
+    {
+	title: "Dragon Ball Fighterz",
+	cover: "dragon_ball_fighterz.jpeg"
+    },
 
-  {
-    title: "Superhot",
-    cover: "superhot.jpeg"
-  },
+    {
+	title: "Superhot",
+	cover: "superhot.jpeg"
+    },
 
-  {
-    title: "Dead Cells",
-    cover: "dead_cells.jpeg"
-  },
+    {
+	title: "Dead Cells",
+	cover: "dead_cells.jpeg"
+    },
 
-  {
-    title: "Broforce",
-    cover: "broforce.jpeg"
-  },
+    {
+	title: "Broforce",
+	cover: "broforce.jpeg"
+    },
 
-  {
-    title: "Devil May Cry 3: Special Edition",
-    cover: "dmc3.jpeg"
-  },
+    {
+	title: "Devil May Cry 3: Special Edition",
+	cover: "dmc3.jpeg"
+    },
 
-  {
-    title: "Bioshock: Remastered",
-    cover: "bioshock_1.jpeg"
-  },
+    {
+	title: "Bioshock: Remastered",
+	cover: "bioshock_1.jpeg"
+    },
 
-  {
-    title: "Bioshock 2: Remastered",
-    cover: "bioshock_2.jpeg"
-  },
+    {
+	title: "Bioshock 2: Remastered",
+	cover: "bioshock_2.jpeg"
+    },
 
-  {
-    title: "Bioshock Infinite",
-    cover: "bioshock_infinite.jpeg"
-  },
+    {
+	title: "Bioshock Infinite",
+	cover: "bioshock_infinite.jpeg"
+    },
 
-  {
-    title: "Resident Evil 4",
-    cover: "re4.jpeg"
-  },
+    {
+	title: "Resident Evil 4",
+	cover: "re4.jpeg"
+    },
 
-  {
-    title: "Hotline Miami Collection",
-    cover: "hotline_miami_collection.jpeg"
-  },
+    {
+	title: "Hotline Miami Collection",
+	cover: "hotline_miami_collection.jpeg"
+    },
 
-  {
-    title: "Super Chicken Jumper",
-    cover: "super_chicken_jumper.jpeg"
-  },
+    {
+	title: "Super Chicken Jumper",
+	cover: "super_chicken_jumper.jpeg"
+    },
 
-  {
-    title: "Burnout Paradise: Remastered",
-    cover: "burnout_paradise.jpeg"
-  },
+    {
+	title: "Burnout Paradise: Remastered",
+	cover: "burnout_paradise.jpeg"
+    },
 
-  {
-    title: "Hades",
-    cover: "hades.jpeg"
-  },
+    {
+	title: "Hades",
+	cover: "hades.jpeg"
+    },
 
-  {
-    title: "Alan Wake: Remastered",
-    cover: "alan_wake.jpeg"
-  },
+    {
+	title: "Alan Wake: Remastered",
+	cover: "alan_wake.jpeg"
+    },
 
-  {
-    title: "Sonic Mania",
-    cover: "sonic_mania.jpeg"
-  },
+    {
+	title: "Sonic Mania",
+	cover: "sonic_mania.jpeg"
+    },
 
 ];
 

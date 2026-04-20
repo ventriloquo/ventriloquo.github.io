@@ -1,10 +1,88 @@
 "use strict";
 
 export const posts = [
-  {
-    title: "Backup de programas",
-    date: "27.03.2026",
-    content: `
+    {
+	title: "Raylib.ha - Como devo continuar?",
+	date: "20.04.2026",
+	content: `
+A quase dois anos eu tenho um projeto do qual eu deixo em hiato, retorno, e depois ponho na geladeira de novo: O [[https://codeberg.org/tukain/raylib.ha][Raylib.ha]].
+
+Ele se trata de <i>bindings</i> feitas à mão da linguagem [[https://harelang.org][Hare]] para a biblioteca [[https://raylib.com][Raylib]]. Sendo o objetivo deste projeto me introduzir ao mundo da programação, área da qual eu tenho muito interesse e que se aproximou de ser um Hobbie meu. Aprendi muita coisa com esse projeto, muita mesmo, porém, como eu tenho essa mania de deixa-lo congelado, com o tempo eu acabo perdendo parte do aprendizado e acabo tendo que reamprender algo que eu já deveria saber fazer com as mãos atadas.
+
+Eu não consigo seguir tutoriais de "como aprender a programar" a bastante tempo, mesmo antes de eu iniciar esse projeto. As impressões que eu tenho até hoje sempre que assisto um conteúdo do gênero são as seguintes:
+- Esse cara quer me vender um curso de R$600,00 não é?
+- Se fosse para usar Copilot eu nem sequer estaria assistindo um vídeo
+- Eu não vou ficar 2 horas assistindo um cara explicando como funciona um <code>if</code> <code>else</code>
+- Eu vim procurar saber como funciona o gerenciamento de memória manual, não ouvir uma palestra dos perigos de fazer isso e que [[https://rust-lang.org/pt-BR/][Rust]] é uma linguagem melhor
+
+Enfim. Eu aprendo muito mais assistindo um programador fazendo algo como um jogo simples ou testando alguma linguagem mais obscura do que assistindo esses tutoriais desnecessáriamente longos e com uma linguagem que se não te tratar feito um analfabeto funcional, te trata como um engenheiro de software com 30 anos de experiência e que já trabalhou no CERN.
+
+Essa é a minha impressão pelo menos (em relação a certos tutoriais). Claro que existem bons exemplos nesse bolo imenso, mas a massa gira em torno de cursos de a à z, <i>frameworks</i> que estão no hype, ou fica só no básico e poucas vezes mostram algo na prática.
+
+Não tenho certeza se é por conta disso que a minha motivação para continuar esse projeto surge e depois desaparece, na realidade eu duvido muito, mas pode ser que tenha alguma influência.
+
+#+begin_quote
+Essa questão é tão clara quanto fumaça de diesel.
+#+end_quote
+
+Apesar dos vários hiatos, hoje em dia, essas <i>bindings</i> são funcionais, incompletas, mas funcionais.
+
+Ela tem um "teste" que é basicamente aquela clássica animação do DVD batendo nos cantos da tela. Isso serve só para ver se você tem a Raylib e a Hare instaladas corretamente.
+
+Mas ainda faltam muitas coisas. Como forma de visualizar melhor isso, eu deixei várias funções da biblioteca original feita em C presentes como comentários nas <i>bindings</i>, como por exemplo:
+
+#+begin_src
+<span>Hare</span>
+// // Files management functions
+// *LoadFileData
+// UnloadFileData
+// SaveFileData
+// ExportDataAsCode
+// *LoadFileText
+// UnloadFileText
+@symbol("SaveFileText")	fn SaveFileText(filename: *c::char, text: *c::char) bool;
+export fn save_file_text(filename: str, text: str) bool = SaveFileText(c::fromstr(filename: str)!, c::fromstr(text: str)!);
+#+end_src
+
+Da seção de gerenciamento de arquivos, a única função que possui uma <i>binding</i> é a <code>SaveFileText</code>. Existem outros casos como este dentro do código das <i>bindings</i>, mas aos poucos eu vou preencher essas lacunas. O problema é quanto tempo isso vai levar.
+
+Essas <i>bindings</i> são como um quebra-cabeças enorme que ao mesmo tempo me dá entusiasmo de tentar resolver e também me dá preguiça de trabalhar encima. Sempre aparece algo mais "atrativo" para se fazer no meio do desenvolvimento disso, ou então, eu estou exausto demais para tocar no computador.
+
+Me pergunto como irei continuar esse projeto - *se* eu continuar ele. O que é um desejo meu, porém, se eu não tiver o empenho (e o ânimo) para continuar, ele vai novamente para a geladeira, e vai ficar cada vez mais no fundo dela.
+
+Uma coisa que eu tenho certeza: eu ainda tenho muito trabalho a fazer, pois eu nem comecei a fazer as <i>bindings</i> da [[https://www.raylib.com/cheatsheet/raymath_cheatsheet.html][Raymath]], a biblioteca de cálculos usada na Raylib.
+
+Veremos quanto tempo isso vai levar.
+`
+    },
+    {
+	title: "Existe privacidade na internet?",
+	date: "15.04.2026",
+	content: `
+A cada dia que passa, a cada hora, minuto que seja, me parece que o conceito de privacidade na internet é basicamente inexistente. No mundo real, é fácil distinguir quando você tem a privacidade para fazer algo ou não, por exemplo, se você pode andar tranquilamente de cueca na sua casa, é porquê você está certo de que não está sendo observado por ninguém e que você está em um espaço <b>privado</b>.
+
+Porém, a internet de hoje é quase como se você estivesse no Big Brother. Você tem que fazer um esforço extremo e por conta própria de esconder que é você que está andando pela casa de cueca, mas ainda assim, alguém, em algum lugar, sabe que tem um cara andando de cueca pela casa.
+
+A única forma de você ficar "invisível" é se você simplesmente nunca teve, e nem vá ter contato algum com a internet. Bom, pelo menos nenhum contato proposital, afinal de contas, para cada uma pessoa hoje em dia, tem de 2 a 4 câmeras no bolso dela, sem contar com as câmeras de segurança com conexão à internet que tem a cada estabelecimento qualquer.  Você basicamente ter que virar um <i>John Doe</i> ambulante.
+
+O que eu acho triste é que isso é algo impossível de solucionar, afinal de contas, faz parte da nossa evolução, e infelizmente, pode ser usado com más intenções. O que sinceramente não é novidade, aqui no Brasil por exemplo é cheio de parlamentar que parece ter tesão em censurar quem ele não gosta com um verniz de "justiça social".
+
+O jeito correto de encarar a internet na minha visão é vendo ela como uma grande praça pública que opera em paralelo ao Estado, mas que pode sofrer intervenções do mesmo. Existem áreas dessa praça que são bem reguladas e que seguem os regulamentos do Estado e morais impostos pela sociedade (Ex: Redes sociais), e também existem aquelas áreas que essas coisas são relativisadas ou até mesmo ignoradas (Ex: Dark Web). A única coisa que permanece a mesma nessas áreas é a de que mesmo se você esconder quem você é, alguém, em algum lugar, vai saber que uma pessoa passou por área <i>X</i>, em horário <i>Y</i>, e conversou com grupo <i>Z</i>.
+
+Sabe, eu sou uma pessoa muito pessimista, muito mesmo. E esse tipo de questionamento martela a minha cabeça e só piora a situação. Às vezes invejo os ignorantes, pois eles não precisam se preocupar com esse tipo de coisa. Na realidade, nem mesmo eu precisaria me preocupar com isso, afinal de contas não há o que eu possa fazer para mudar isso, e mesmo que eu pudesse, eu não sei quais seriam as consequências dessas mudanças. Só... é difícil ficar com isso preso na cabeça e saber que não há o que fazer, isso me entristece um pouco.
+
+Devo muito desse pessimismo à minha paranóia, da qual eu não sei a origem, mas sei que existe e que me afeta em diversos aspectos da minha vida, seja a pessoal, ou até da minha <i>persona</i> online.
+
+Estaria eu correto em assumir que privacidade na internet é um conceito inexistente? Ou isso seria obra da minha paranóia?
+
+Difícil dizer.
+`
+    },
+    
+    {
+	title: "Backup de programas",
+	date: "27.03.2026",
+	content: `
 Caramba, pelo jeito o buraco dessas leis de "Proteção à Criança" é <b>muito</b> mais profundo do que eu imaginei. Tem desde o [[https://www.legislation.gov.uk/ukpga/2023/50][Online Safety Act]] do Reino Unido, até umas propostas de lei na [[https://legiscan.com/CA/text/AB1043/id/3269704][Califórnia]] e Colorado, lá nos States.
 
 Algo em comúm que a Lei Felca tem com essas leis dos States, é a obrigação até mesmo do sistema operacional ter algum meio "eficiente" de verificar a idade do usuário, o que, caso não seja realizado, pode acarretar em penalidades extremas. Por conta disso temos exemplos de Distros Linux que simplesmente deixaram de operar no Brasil e nesses Estados dos States com leis parecidas, como o Arch Linux 32.
@@ -15,11 +93,11 @@ Como eu sou um cara bem paranóico (principalmente com esse tipo de coisa), eu c
 
 Isso é uma coisa que eu recomendo que qualquer um faça também, eu sei que no Debian dá para fazer isso também (por mais que não seja tão simples quanto no alpine), afinal, de pouco serve um computador sem nenhum programa útil, e ter que depender de um terceiro guardando uma biblioteca de pacotes (um repositório) para poder instalar os seus programas é algo que a qualquer dia vai se virar contra você algum dia.
 `
-  },
-  {
-    title: "Lei Felca",
-    date: "17.03.2026",
-    content: `
+    },
+    {
+	title: "Lei Felca",
+	date: "17.03.2026",
+	content: `
 Hoje entra em vigor a "Lei Felca" o "ECA Digital".
 
 Essa merda vai servir basicamente para censura e vigilância em massa. É só ver o estado que a Inglaterra está em relação a essas leis de "proteção da criança e do adolescente na internet".
@@ -38,11 +116,11 @@ Não é atoa que já tem distro que tá bloqueando o download no Brasil, quem é
 
 Cara, a solução do Brasil realmente é o aeroporto, puta que pariu.
 `
-  },
-  {
-    title: "Patinete Elétrico",
-    date: "10.03.2026",
-    content: `
+    },
+    {
+	title: "Patinete Elétrico",
+	date: "10.03.2026",
+	content: `
 A um certo tempo, eu estive pesquisando e procurando algum tipo de mobilidade elétrica da qual eu poderia utilizar para poder ir e vir do meu trabalho de forma mais tranquila (antes disso, eu ia pedalando, 10km indo e depois mais 10km voltando). Vi diversas opções, desde scooters elétricas que mais pareciam mobiletes tiradas dos Jetsons a bikes elétricas fazendo cosplay de Dirt Bike.
 
 Dentro desse monte de opções, as mais acessíveis tinham um problema crônico: eram muito baixas e pesadas para que eu ficasse subindo e descendo as escadas de casa.
@@ -60,11 +138,11 @@ Ralei meu cotovelo, o lado direito da minha cintura, fiquei com um inchaço no j
 Enfim, tô vivo kkkkkkkk
 
 Serei mais cuidadoso a partir de agora, até porquê eu não quero nem ir parar na fila do INSS e muito menos levar uma surra da minha namorada.`
-  },
-  {
-    title: "Ideias para o site",
-    date: "09.02.2026",
-    content: `
+    },
+    {
+	title: "Ideias para o site",
+	date: "09.02.2026",
+	content: `
 Se você acompanha o meu site, já deve ter percebido algumas coisas mudando de repente ou surgindo/sumindo. Isso acontece porquê eu não planejei de forma prévia o que faria parte do site, então como resultado ele fica em contante mudança.
 
 Porém, tem coisas que eu quero fazer com ele e que eu planejo a implementação antes de colocar no ar (convenhamos, esse é o mínimo esperado). Por exemplo, se você visitar esse site pelo computador, você verá uma "intro" antes de ter acesso à home. Eu quero poder fazer algo parecido para os visitantes mobile também.
@@ -77,11 +155,11 @@ Bom, se eu não fizer uma página desse tipo, no mínimo eu tenho que anotar iss
 
 Outra coisa que eu acho que já vou começar a implementar é um botão para enviar feedback de um post. Ele apareceria no final de cada post e nele teria um e-mail pré preenchido com algumas informações do post e pronto para que a pessoa simplesmente dê sua opinião e envie o e-mail. Essa sim é uma ideia fácil de implementar de forma satisfatória para computador e para mobile.
 `
-  },
-	{
-		title: "Chrome Devtools",
-		date: "25.01.2026",
-		content: `
+    },
+    {
+	title: "Chrome Devtools",
+	date: "25.01.2026",
+	content: `
 Vem cá, desde quando os navegadores que a gente usa todo santo dia se tornaram uma IDE também?
 
 Eu não tô brincando, se você tem um site escrito à mão (HTML, CSS e JS sem um processo de build, como em um SSG) você pode fazer esse teste:
@@ -114,11 +192,11 @@ Um site simples é infinitas vezes mais versátil do que qualquer outra coisa.
 A parte mais maneira desse <i>Workflow</i> é que você pode literalmente selecionar qualquer elemento do site, e ficar modificando o CSS, e então, salvar o arquivo! Para um site em que o CSS é extremamente relevante (como esse) isso é uma <i>Killer Feature</i>.
 <img loading='lazy' src='/assets/chrome_devtools_screenshot.png'>
 `
-	},
-  {
-    title: "Que preguiça",
-    date: "19.01.2026",
-    content: `
+    },
+    {
+	title: "Que preguiça",
+	date: "19.01.2026",
+	content: `
 Que preguiçaaaaaaaaaa
 
 Cara, eu nem tenho muito o que dizer aqui, só sei que a minha preguiça hoje tá em níveis jamais alcançados antes por este que vos escreve.
@@ -197,11 +275,11 @@ E outra coisa né, se eu me dei o trabalho de fazer uma "[[/modules/common.js][i
 
 Enfim, acho que já tá de bom tamanho por hoje. Até o próximo post!
 `
-  },
-  {
-    title: "Base16 e sincronização de temas com o Emacs",
-    date: "10.01.2026",
-    content: `
+    },
+    {
+	title: "Base16 e sincronização de temas com o Emacs",
+	date: "10.01.2026",
+	content: `
 Uma das coisas que eu mais gosto de fazer no meu setup é customizar a paleta de cores de tudo (como quase todo usuário Linux). Porém, às vezes isso é bem tediante.
 
 Cada programa tem o seu próprio jeito de configurar, o tipo de sistema de cores nem sempre segue um padrão (<code>RGB</code>, <code>RGBA</code>, <code>ARGB</code> e etc), enfim, muitas coisa para ter que lembrar e ajustar. Por conta disso, eu customava fazer um setup com um certo tema (por exemplo, [[https://github.com/sainnhe/everforest][everforest]]) e usar ele por pelo menos 1 ou 3 meses, já que a dor de cabeça de sair ajustando as cores de todos os programas que eu uso era grande demais para que eu fizesse isso com mais frequência.
@@ -283,11 +361,11 @@ Por enquanto, esse script que fiz só funciona perfeitamente com esse pacote.
 
 Com o tempo vou adicionar mais "templates" a esse script e também vou deixar ele mais robusto, mas por enquanto ele está praticamente perfeito (eu uso pouquíssimos programas de interface gráfica no meu setup, então só de configurar o meu terminal 90% das coisas que uso ficam tematizadas).
 `
-  },
-  {
-    title: "Emacs - O meu novo computador",
-    date: "25.12.2025",
-    content: `
+    },
+    {
+	title: "Emacs - O meu novo computador",
+	date: "25.12.2025",
+	content: `
 O Emacs é famoso por ser um programa que faz de <b>tudo</b>. E isso não é exagero (antes fosse!). Com ele você consegue fazer desde a tarefa mais básica que é editar texto, a planilhas, gestão de projetos, leitura de feeds RSS, comunicação via IRC, XMPP ou E-mail...
 
 Enfim, <b>muita</b> coisa.
@@ -487,11 +565,11 @@ Enfim, acho que já deu para entender um pouco sobre algumas das coisas que eu f
 
 Até o próximo post!
 `
-  },
-  {
-    title: "Blog.sh - O meu próprio SSG",
-    date: "20.12.2025",
-    content: `
+    },
+    {
+	title: "Blog.sh - O meu próprio SSG",
+	date: "20.12.2025",
+	content: `
 Ok, SSG é exagero. Esse carinha só serve para gerar um blog (por isso o nome blog.sh, quem diria).
 
 Ele é basicamente um Shell Script (o mais POSIX que eu conseguir) que gera snippets de HTML a partir de certos parâmetros, usa o smu para converter Markdown para HTML e no fim, junta os dois para criar páginas para posts e lista essas páginas em uma index organizada por ordem crescente.
@@ -508,11 +586,11 @@ Eu tava dando uma olhada em alguns repositórios antigos meus e ele tava no meio
 
 Enfim, ainda tem muito o que eu posso fazer para melhorar esse Script.
 `
-  },
-  {
-    title: "Gambiarras mostruosas com o Codeberg",
-    date: "16.12.2025",
-    content: `
+    },
+    {
+	title: "Gambiarras mostruosas com o Codeberg",
+	date: "16.12.2025",
+	content: `
 Se você, assim como eu, é um nerd que usa Linux, então você já ouviu falar do Github. Muito provavelmente você também tem uma conta lá e uma meia dúzia de repositórios.
 
 Mas, você já imaginou ter um repositório que faz um git push para outros repositórios de outros serviços de git hosting?
@@ -533,11 +611,11 @@ Resumindo, dá para criar uma corrente de repositórios ligados a um repositóri
 
 Já tô configurando meus outros repositórios para funcionarem da mesma forma, já que aí eu vou ter uma certa redundância com cada um, então em caso de um banimento por conta de moderação automática (tô falando de você Github, perdi umas 4 contas nessa brincadeira) eu ainda vou ter um backup do repositório em outro local.
 `
-  },
-  {
-    title: "Niri - O WM mais diferenciado que já usei",
-    date: "15.12.2025",
-    content: `
+    },
+    {
+	title: "Niri - O WM mais diferenciado que já usei",
+	date: "15.12.2025",
+	content: `
 Eu sou um usuário Linux a um bom tempo, a pelo menos uns 6/7 anos agora, e eu já usei diversos tipos de Desktop Environments e Window Managers. Desde o clássico XFCE4 ao DWM no X11, e no Wayland, do KDE ao Sway.
 
 Mas todos eles seguem certos arquétipos de ambientes de trabalho semelhantes ao Windows ou ao macOS (no caso dos WM's, eles seguem um padrão bem similar em relação a como eles gerenciam janelas, a diferença fica em o que você consegue modificar e como). Agora o Niri…
@@ -560,11 +638,11 @@ Eu tô amando a minha experiência com o Niri. É basicamente a junção das coi
 - Um arquivo de configuração poderosíssimo
 - Roda liso numa batata (meu notebook é um Celeron com 4Gb de RAM)
 `
-  },
-  {
-    title: "Boku no Hero acabou",
-    date: "14.12.2025",
-    content: `
+    },
+    {
+	title: "Boku no Hero acabou",
+	date: "14.12.2025",
+	content: `
 Cara… eu não consigo nem acreditar nisso… finalmente acabou!
 
 Eu não sei nem o que dizer direito, o sentimento está sendo o mesmo de quando eu terminei Fullmetal Alchemist Brotherhood, a ficha não caiu ainda.
@@ -577,11 +655,11 @@ E hoje, eu assisti o último episódio, da última temporada.
 
 É oficialmente um fim de um cíclo para mim. E foi algo prazeroso. Vou sentir saudades de aguardar todo final de semana para poder assistir um episódio novo.
 `
-  },
-  {
-    title: "Learn You A Haskell",
-    date: "10.12.2025",
-    content: `
+    },
+    {
+	title: "Learn You A Haskell",
+	date: "10.12.2025",
+	content: `
 Deixei um dos meus projetos hospedado aqui no meu site. O lyah (Learn You A Haskell)!
 
 Ele é uma restauração do site do livro "Learn You A Haskell For Great Good", só que feita usando o Jekyll.
@@ -590,11 +668,11 @@ Tentei deixar ele o mais próximo do site original (quando ele ainda estava de p
 
 Se você quiser ver ele, é só acessar "[[https://tukainpng.neocities.org/lyah][tukainpng.neocities.org/lyah]]"!
 `
-  },
-  {
-    title: "TGA 2025",
-    date: "06.12.2025",
-    content: `
+    },
+    {
+	title: "TGA 2025",
+	date: "06.12.2025",
+	content: `
 - Valve lança uma linha de Hardware
 - Valve já afirmou no passado que tem novos projetos de jogos em desenvolvimento
 - Referências a um certo jogo com as siglas "HEV" (Hazardous EnVironment Suit, a armadura do half-life) aparecem no código-fonte da Source 2
@@ -604,11 +682,11 @@ Se você quiser ver ele, é só acessar "[[https://tukainpng.neocities.org/lyah]
 
 VALVE, LANÇA HALF-LIFE 3 PELO AMOR DE DEEEUUUSS 😭😭😭😭
 `
-  },
-  {
-    title: "Final de ano já tá chegando",
-    date: "03.12.2025",
-    content: `
+    },
+    {
+	title: "Final de ano já tá chegando",
+	date: "03.12.2025",
+	content: `
 Nesse ano muita coisa aconteceu na minha vida (na de todo mundo na real né?), algumas boas, outras nem tanto. Mas num geral, acho que foi um ano relativamente bom. Principalmente se eu comparar com o tempo perdido que foi final de 2019, 2020, 2021 e o início de 2022.
 
 Fiz também bastante coisa nesse ano, criei muitas boas memórias.
@@ -624,11 +702,11 @@ Fiz também bastante coisa nesse ano, criei muitas boas memórias.
 
 Enfim, é muita coisa para tentar resumir.
 `
-  },
-  {
-    title: "F One Punch Man 🪦",
-    date: "28.11.2025",
-    content: `
+    },
+    {
+	title: "F One Punch Man 🪦",
+	date: "28.11.2025",
+	content: `
 Eu sei. Você sabe. Todos sabemos. A terceira temporada de One Punch Man está um completo desastre.
 
 Como que conseguiram a façanha de fazer uma animação pior que a da segunda? (ela já era uma bosta!)
@@ -641,11 +719,11 @@ Sinceramente, eu espero que esse treco seja cancelado. Dói só de ver os episó
 
 Descarta essas 2 últimas temporadas, põe esse treco no congelador e só tira se for para tacar na mão de um estúdio como a Bones ou Mad House.
 `
-  },
-  {
-    title: "Uma pequena curiosidade sobre o DOM",
-    date: "27.11.2025",
-    content: `
+    },
+    {
+	title: "Uma pequena curiosidade sobre o DOM",
+	date: "27.11.2025",
+	content: `
 Eu gosto muito de assistir as lives do Tsoding, e em uma das lives onde ele estava falando sobre JavaScript, ele mostrou uma coisa muito curiosa sobre o DOM.
 
 Basicamente, qualquer <code>ID</code> dado a um elemento no HTML pode ser acessado como uma variável no JavaScript.
@@ -664,11 +742,11 @@ Você pode, por exemplo, criar um elemento &lt;p&gt;, dar o <code>ID</code> "par
 &lt;/script&gt;
 #+end_src
 `
-  },
-  {
-    title: "Tédio",
-    date: "25.10.2025",
-    content: `
+    },
+    {
+	title: "Tédio",
+	date: "25.10.2025",
+	content: `
 Sabe uma coisa que eu ando sentindo ultimamente? É. Tédio. E por causa dele, eu percebi um padrão de comportamento meu que é muito similar ao da minha mãe. Minha mãe é que nem um tubarão
 
 Não sei se você conhece essa piadinha, mas ela é a seguinte:
@@ -697,11 +775,11 @@ Eu vou tentar me educar para que os meus estudos de programação sejam também 
 
 Enfim, vou indo nessa, até o próximo post!
 `
-  },
-  {
-    title: "A Nintendo fez uma das patentes mais idiotas do mundo",
-    date: "13.09.2025",
-    content: `Não é segredo para ninguém que a Nintendo (ou como o Lion do Canal Central diz: Metendo) é a encarnação da ganância e soberba. Ela tem franquias incríveis e também foi muito importante para <a href="https://pt.wikipedia.org/wiki/Crise_dos_jogos_eletr%C3%B4nicos_de_1983">salvar a indústria quando ela estava a beira de um colapso</a>, mas, não podemos negar que a Nintendo de hoje é algo completamente diferente do que a Nintendo dos anos 80/90.
+    },
+    {
+	title: "A Nintendo fez uma das patentes mais idiotas do mundo",
+	date: "13.09.2025",
+	content: `Não é segredo para ninguém que a Nintendo (ou como o Lion do Canal Central diz: Metendo) é a encarnação da ganância e soberba. Ela tem franquias incríveis e também foi muito importante para <a href="https://pt.wikipedia.org/wiki/Crise_dos_jogos_eletr%C3%B4nicos_de_1983">salvar a indústria quando ela estava a beira de um colapso</a>, mas, não podemos negar que a Nintendo de hoje é algo completamente diferente do que a Nintendo dos anos 80/90.
 
 #+begin_quote
 Principalmente depois que o Reggie saiu dela em 2019
@@ -734,12 +812,12 @@ Bom, agora a Metendo© tem uma patente que é infringida pelos jogos destas fran
 
 Mas, como já destacado pela <a href="https://www.ign.com/articles/nintendo-should-never-have-received-controversial-summon-character-and-let-it-fight-pokmon-patent-ip-lawyers-say#:~:text=However%2C%20Don%20McGowan,screen%20patent.%E2%80%9D">IGN</a> no artigo deles falando sobre o assunto, dificilmente alguém vai levar essa patente a sério, e isso foi algo que o antigo CLO da própria Nintendo disse! Essa patente é ridícula a esse ponto, nem um ex-funcionário põe fé nessa bosta.
 `
-  },
-  {
-    title: "Até que eu tô curtindo a Elisp",
-    date: "30.06.2025",
-    content:
-    `
+    },
+    {
+	title: "Até que eu tô curtindo a Elisp",
+	date: "30.06.2025",
+	content:
+	`
 Nos últimos dias eu não ando fazendo tanta coisa assim, além de trabalhar e estudar um pouco quando dá, mas uma coisa que eu venho experimentando cada vez mais (até no trabalho, quando tenho tempo) é a própria linguagem do Emacs, a Elisp.
 
 Se você me conhece, ou já viu meu perfil do Github, você já sabe que eu sou um usuário de drog- Emacs, e ele não só é configurado nessa linguagem, como é escrito nela e também interpreta ela! Só para colocar em perspectiva, um equivalente a isso seria um programa configurado em Python, que é escrito em Python e que interpreta Python.
@@ -780,7 +858,7 @@ E de primeira, isso é estranho para um cacete, mas depois de um tempo… contin
 
 Principalmente porquê, como eu já disse, a Elisp é parte do Emacs, então onde o Emacs pode ser usado, eu posso brincar com ela (ou até mesmo criar coisas úteis, o que é difícil de se imaginar vindo de mim).
     `
-  },
+    },
 ];
 
 export default posts;
