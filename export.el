@@ -28,14 +28,30 @@
 			    "\t--ac:\t"   accent_color	";\n"
 			    "}\n"
 			    (cond
-			     ((equal current_theme " base16-gruvbox-dark "	) (concat hl-line-as-background-0))
-			     ((equal current_theme " base16-gruvbox-light "	) (concat hl-line-as-background-0))
-			     ((equal current_theme " base16-nord "		) (concat hl-line-as-background-0))
-			     ((equal current_theme " base16-sakura "		) (concat cursor-color-as-accent-color hl-line-as-background-0))
-			     ((equal current_theme " modus-operandi "		) (concat ":root {--bg-0:#e0e0e0;--bg-1:#f2f2f2;--ac:#003497;}"))
-			     ((equal current_theme " modus-vivendi "		) (concat ":root {--bg-0:#303030;--bg-1:#1e1e1e;--ac:#ff9580;}"))
-			     ((equal current_theme " modus-vivendi-tinted "	) (concat ":root {--bg-1:#1d2235;}"))
-			     ((equal current_theme " modus-operandi-tinted "	) (concat ":root {--bg-0:#efe9dd;}"))
+			     ((equal current_theme " base16-gruvbox-dark ")
+			      (concat hl-line-as-background-0))
+			     ((equal current_theme " base16-gruvbox-light ")
+			      (concat hl-line-as-background-0))
+			     ((equal current_theme " base16-nord ")
+			      (concat hl-line-as-background-0))
+			     ((equal current_theme " base16-sakura ")
+			      (concat cursor-color-as-accent-color hl-line-as-background-0))
+			     ((equal current_theme " leuven ")
+			      (concat cursor-color-as-accent-color hl-line-as-background-1))
+			     ((equal current_theme " leuven-dark ")
+			      (concat hl-line-as-background-1))
+			     ((equal current_theme " modus-operandi ")
+			      (concat ":root {--bg-0:#e0e0e0;--bg-1:#f2f2f2;--ac:#003497;}"))
+			     ((equal current_theme " modus-vivendi ")
+			      (concat ":root {--bg-0:#303030;--bg-1:#1e1e1e;--ac:#ff9580;}"))
+			     ((equal current_theme " modus-vivendi-tinted ")
+			      (concat ":root {--bg-1:#1d2235;}"
+				      "h3 {color:#d2b580}"
+				      "h4 {color:#82b0ec}"))
+			     ((equal current_theme " modus-operandi-tinted ")
+			      (concat ":root {--bg-0:#efe9dd;}"
+				      "h3 {color:#624416}"
+				      "h4 {color:#193668}"))
 			     )
 			    "/*" current_theme "*/\n"
 			    "</style>")
