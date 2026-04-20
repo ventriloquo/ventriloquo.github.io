@@ -32,8 +32,10 @@
 			     ((equal current_theme " base16-gruvbox-light "	) (concat hl-line-as-background-0))
 			     ((equal current_theme " base16-nord "		) (concat hl-line-as-background-0))
 			     ((equal current_theme " base16-sakura "		) (concat cursor-color-as-accent-color hl-line-as-background-0))
-			     ((equal current_theme " modus-vivendi-tinted "	) (concat "\n:root {\n\t--bg-1:\t#1d2235\n}\n"))
-			     ((equal current_theme " modus-operandi-tinted "	) (concat "\n:root {\n\t--bg-0:\t#efe9dd\n}\n"))
+			     ((equal current_theme " modus-operandi "		) (concat ":root {--bg-0:#e0e0e0;--bg-1:#f2f2f2;--ac:#003497;}"))
+			     ((equal current_theme " modus-vivendi "		) (concat ":root {--bg-0:#303030;--bg-1:#1e1e1e;--ac:#ff9580;}"))
+			     ((equal current_theme " modus-vivendi-tinted "	) (concat ":root {--bg-1:#1d2235;}"))
+			     ((equal current_theme " modus-operandi-tinted "	) (concat ":root {--bg-0:#efe9dd;}"))
 			     )
 			    "/*" current_theme "*/\n"
 			    "</style>")
@@ -49,10 +51,8 @@
        org-html-postamble (concat
 			   "<footer>"
 			   "<p>Gerado com: %c</p>"
-			   "<p>Por: <a href='https://codeberg.org/tukain/'>Tukain</a></p>"
-			   "<p>"
-			   "Tema: " current_theme
-			   "</p>"
+			   "<p>Tema: " current_theme "</p>"
+			   "<p>Autor do site: <a href='https://codeberg.org/tukain/'>Tukain</a></p>"
 			   "</footer>")
 
        org-export-with-section-numbers	nil
