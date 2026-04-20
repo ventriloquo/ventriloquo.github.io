@@ -8,10 +8,10 @@
 	    (org-publish-find-title entry project))))
 
 (setq  current_theme	(format " %s " (nth 0 custom-enabled-themes))
-       accent_color	(face-attribute 'dired-directory  :foreground nil 'default)
-       background_01	(face-attribute 'dired-directory  :background nil 'default)
-       background_00	(face-attribute 'default :background)
-       foreground	(face-attribute 'default :foreground)
+       accent_color	(face-attribute 'dired-directory	:foreground nil 'default)
+       background_01	(face-attribute 'dired-directory	:background nil 'default)
+       background_00	(face-attribute 'default		:background)
+       foreground	(face-attribute 'default		:foreground)
 
        cursor-color-as-accent-color (concat "\n:root {\n\t--ac:\t"   (face-attribute 'cursor  :background nil 'default) ";\n}\n")
        hl-line-as-background-0	    (concat "\n:root {\n\t--bg-0:\t" (face-attribute 'hl-line :background nil 'default) ";\n}\n")
@@ -30,9 +30,10 @@
 			    (cond
 			     ((equal current_theme " base16-gruvbox-dark "	) (concat hl-line-as-background-0))
 			     ((equal current_theme " base16-gruvbox-light "	) (concat hl-line-as-background-0))
-			     ((equal current_theme " modus-operandi-tinted "	) (concat hl-line-as-background-0))
 			     ((equal current_theme " base16-nord "		) (concat hl-line-as-background-0))
 			     ((equal current_theme " base16-sakura "		) (concat cursor-color-as-accent-color hl-line-as-background-0))
+			     ((equal current_theme " modus-vivendi-tinted "	) (concat "\n:root {\n\t--bg-1:\t#1d2235\n}\n"))
+			     ((equal current_theme " modus-operandi-tinted "	) (concat "\n:root {\n\t--bg-0:\t#efe9dd\n}\n"))
 			     )
 			    "/*" current_theme "*/\n"
 			    "</style>")
@@ -56,13 +57,13 @@
 
        org-export-with-section-numbers	nil
        org-export-with-toc		3
-       org-export-default-language       "pt-br"
+       org-export-default-language      "pt-br"
        org-export-with-todo-keywords	t
-       org-confirm-babel-evaluate        nil
-       org-html-doctype                  "html5"
-       org-html-html5-fancy              t
-       org-html-head-include-scripts     nil
-       org-export-with-broken-links      t
+       org-confirm-babel-evaluate       nil
+       org-html-doctype                 "html5"
+       org-html-html5-fancy             t
+       org-html-head-include-scripts    nil
+       org-export-with-broken-links     t
 
        org-publish-project-alist '(("Caderno do Tukain"
 				    :base-directory "src"
