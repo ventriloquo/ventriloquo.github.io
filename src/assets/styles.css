@@ -408,7 +408,6 @@ p {
 	    linear-gradient(45deg, var(--bg-1) 25%, transparent 25%, transparent 75%, var(--bg-1) 75%);
 	background-size: 40px 40px;
 	background-position: 0 0, 20px 20px; /* Second gradient offset by half size */
-}
     }
 
     #preamble, #content, #postamble {
