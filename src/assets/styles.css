@@ -32,7 +32,6 @@ body {
     color: var(--fg);
     background-color: var(--bg-1);
     position: relative;
-    min-height: 100vh;
 }
 
 a {
@@ -384,6 +383,12 @@ p {
 	    }
 	}
     }
+
+    #postamble {
+	.buttons {
+	    display: none;
+	}
+    }
     
     body {
 	font-size: medium;
@@ -434,17 +439,19 @@ p {
     body {
 	display: grid;
 	grid-template-areas:
-	    "preamble content"
-	    "postamble content"
-	    "blank content";
+	    "preamble	content"
+	    "postamble	content"
+	    "blank	content";
 	grid-template-columns: 1fr 3fr;
 	grid-template-rows: .5fr .5fr 10fr;
 	gap: 5px;
 	padding: 3em;
 	background-color: var(--bg-0);
 	background-image: 
-	    linear-gradient(to right, var(--bg-1) 5px, transparent 1px),
-	    linear-gradient(to bottom, var(--bg-1) 5px, transparent 1px);
+	    linear-gradient(to bottom left, var(--bg-1) 5px, transparent 1px),
+	    linear-gradient(to bottom right, var(--bg-1) 5px, transparent 1px),
+	    linear-gradient(to top left, var(--bg-1) 5px, transparent 1px),
+	    linear-gradient(to top right, var(--bg-1) 5px, transparent 1px);
 	background-size: 40px 40px;
 	animation: move-grid 4s linear infinite;
     }
@@ -454,10 +461,20 @@ p {
 	border-radius: 5px;
 	background-color: var(--bg-1);
 	margin: 0;
+	height: fit-content;
     }
 
     #preamble {
 	grid-area: preamble;
+	header {
+	    flex-direction: column;
+	    div {
+		width: 100%;
+		a {
+		    display: block;
+		}
+	    }
+	}
     }
 
     #content {
@@ -467,17 +484,16 @@ p {
 
     #postamble {
 	grid-area: postamble;
-    }
+	border: none;
+	background-color: transparent;
+	padding: 0;
 
-    #preamble {
-	header {
-	    flex-direction: column;
-	    div {
-		width: 100%;
-		a {
-		    display: block;
-		}
-	    }
+	div {
+	    border: solid .3em var(--ac);
+	    border-radius: 5px;
+	    background-color: var(--bg-1);
+	    margin: 0 0 5px 0;
+	    padding: 5px;
 	}
     }
     

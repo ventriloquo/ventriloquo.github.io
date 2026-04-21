@@ -36,10 +36,8 @@
 			      (concat hl-line-as-background-0))
 			     ((equal current_theme " base16-sakura ")
 			      (concat cursor-color-as-accent-color hl-line-as-background-0))
-			     ((equal current_theme " leuven ")
+			     ((equal current_theme " srcery ")
 			      (concat cursor-color-as-accent-color hl-line-as-background-1))
-			     ((equal current_theme " leuven-dark ")
-			      (concat hl-line-as-background-1))
 			     ((equal current_theme " modus-operandi ")
 			      (concat ":root {--bg-0:#e0e0e0;--bg-1:#f2f2f2;--ac:#003497;}"))
 			     ((equal current_theme " modus-vivendi ")
@@ -63,7 +61,6 @@
 			  "<a href='/'>Início</a>"
 			  "</div>"
 			  "<div>"
-			  "<a target='_blank' href='https://github.com/ventriloquo'>Github</a>"
 			  "<a target='_blank' href='https://codeberg.org/tukain'>Codeberg</a>"
 			  "</div>"
 			  "</header>")
@@ -77,12 +74,14 @@
 			   "<a href='https://blanketfort.neocities.org/'><img loading='lazy' src='/assets/blanket_fort.gif'></a>"
 			   "<a href='https://dabric.xyz/'><img loading='lazy' src='/assets/dabric.png'></a>"
 			   "</div>"
-			   "<hr>"
-			   "<footer>"
+			   "<div>"
+			   "<img loading='lazy' style='margin: 0' src='/assets/under_construction.png'>"
+			   "</div>"
+			   "<div>"
 			   "<p>Gerado com: %c</p>"
 			   "<p>Tema: " current_theme "</p>"
 			   "<p>Autor do site: <a href='https://codeberg.org/tukain/'>Tukain</a></p>"
-			   "</footer>")
+			   "</div>")
 
        org-export-with-section-numbers	nil
        org-export-with-toc		3

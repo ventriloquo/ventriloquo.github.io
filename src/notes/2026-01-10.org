@@ -15,7 +15,7 @@ grande demais para que eu fizesse isso com mais frequência.
 Porém, como dito no meu [[file:2025-12-25.org][post anterior]]:
 #+begin_quote
 […] eu também consigo integrar a paleta de cor do tema que eu estou usando no
-Emacse aplicar ela no CSS do site!
+Emacs e aplicar ela no CSS do site!
 #+end_quote
 
 Isso se dá graças ao fato de que o Emacs consegue "descrever" as cores dos
