@@ -2,6 +2,10 @@
 #+DATE: <1970-01-01 qui>
 
 
+* Heading 1
+** Heading 2
+*** Heading 3
+
 * Text
 /Italic/ *Bold* _underline_ =Verbatim= +strikethrough+
 
@@ -22,13 +26,15 @@ Organized
 * Quotes
 
 #+begin_quote
-"The strength of JavaScript is that you can do anything. The weakness is that you will." - Reg Braithwaite
+"The strength of JavaScript is that you can do anything. The weakness is that you will."\\
+--- Reg Braithwaite
 #+end_quote
 
 #+begin_quote
 **TEST**
 
-"The strength of JavaScript is that you can do anything. The weakness is that you will." - Reg Braithwaite
+"The strength of JavaScript is that you can do anything. The weakness is that you will."\\
+--- Reg Braithwaite
 #+end_quote
 
 * Tables
@@ -74,7 +80,3 @@ int main(void) {
 (message "Hello, World!")
 #+end_src
 
-
-* Heading 1
-** Heading 2
-*** Heading 3

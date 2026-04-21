@@ -58,13 +58,26 @@
 
        org-html-preamble (concat
 			  "<header>"
+			  "<img loading='lazy' src='/assets/fav.png' height='100' style='border-radius: 5px'>"
+			  "<div>"
 			  "<a href='/'>Início</a>"
-			  "<div style='display: flex'>"
-			  "<span></span>"
+			  "</div>"
+			  "<div>"
+			  "<a target='_blank' href='https://github.com/ventriloquo'>Github</a>"
 			  "<a target='_blank' href='https://codeberg.org/tukain'>Codeberg</a>"
 			  "</div>"
 			  "</header>")
        org-html-postamble (concat
+			   "<div class='buttons'>"
+			   "<a href='https://dorival.neocities.org/'><img loading='lazy' src='/assets/dorival-button.gif'></a>"
+			   "<a href='https://kuroi.neocities.org/'><img loading='lazy' src='/assets/kuroi.png'></a>"
+			   "<a href='https://dudalog.neocities.org/'><img loading='lazy' src='/assets/dudalog.png'></a>"
+			   "<a href='https://fi-do-manin.neocities.org/'><img loading='lazy' src='/assets/fidomanin.png'></a>"
+			   "<a href='https://sqrsux.neocities.org/'><img loading='lazy' src='/assets/sqr.gif'></a>"
+			   "<a href='https://blanketfort.neocities.org/'><img loading='lazy' src='/assets/blanket_fort.gif'></a>"
+			   "<a href='https://dabric.xyz/'><img loading='lazy' src='/assets/dabric.png'></a>"
+			   "</div>"
+			   "<hr>"
 			   "<footer>"
 			   "<p>Gerado com: %c</p>"
 			   "<p>Tema: " current_theme "</p>"
