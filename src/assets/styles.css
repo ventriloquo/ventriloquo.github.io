@@ -435,9 +435,10 @@ p {
 	display: grid;
 	grid-template-areas:
 	    "preamble content"
-	    "postamble content";
+	    "postamble content"
+	    "blank content";
 	grid-template-columns: 1fr 3fr;
-	grid-template-rows: .5fr 3fr;
+	grid-template-rows: .5fr .5fr 10fr;
 	gap: 5px;
 	padding: 3em;
 	background-color: var(--bg-0);
@@ -462,7 +463,6 @@ p {
     #content {
 	grid-area: content;
 	width: 80ch;
-	min-height: 100vh;
     }
 
     #postamble {
