@@ -55,34 +55,38 @@
 			    "</style>")
 
        org-html-preamble (concat
-			  "<header>"
-			  "<img loading='lazy' src='/assets/fav.png' height='100' style='border-radius: 5px'>"
-			  "<div>"
-			  "<a href='/'>Início</a>"
+			  "<div class='container menu'>"
+			    "<img loading='lazy' src='/assets/fav.png' height='100' style='border-radius: 5px'>"
+			    "<div class='links'>"
+			        "<a href='/'>Início</a>"			      
+			      "<div>"
+			        "<a target='_blank' href='https://neocities.org/site/tukainpng'>Neocities</a>"
+			        "<a target='_blank' href='https://codeberg.org/tukain'>Codeberg</a>"
+			      "</div>"
+			    "</div>"
 			  "</div>"
-			  "<div>"
-			  "<a target='_blank' href='https://codeberg.org/tukain'>Codeberg</a>"
-			  "</div>"
-			  "</header>")
-       org-html-postamble (concat
-			   "<div class='buttons'>"
-			   "<a href='https://dorival.neocities.org/'><img loading='lazy' src='/assets/dorival-button.gif'></a>"
-			   "<a href='https://kuroi.neocities.org/'><img loading='lazy' src='/assets/kuroi.png'></a>"
-			   "<a href='https://dudalog.neocities.org/'><img loading='lazy' src='/assets/dudalog.png'></a>"
-			   "<a href='https://fi-do-manin.neocities.org/'><img loading='lazy' src='/assets/fidomanin.png'></a>"
-			   "<a href='https://sqrsux.neocities.org/'><img loading='lazy' src='/assets/sqr.gif'></a>"
-			   "<a href='https://blanketfort.neocities.org/'><img loading='lazy' src='/assets/blanket_fort.gif'></a>"
-			   "<a href='https://dabric.xyz/'><img loading='lazy' src='/assets/dabric.png'></a>"
-			   "</div>"
-			   "<div>"
-			   "<img loading='lazy' style='margin: 0' src='/assets/under_construction.png'>"
-			   "</div>"
-			   "<div>"
-			   "<p>Gerado com: %c</p>"
-			   "<p>Tema: " current_theme "</p>"
-			   "<p>Autor do site: <a href='https://codeberg.org/tukain/'>Tukain</a></p>"
-			   "</div>")
+			  "<div class='container'>"
+			    "<div class='buttons'>"
+			      "<a href='https://dorival.neocities.org/'><img loading='lazy' src='/assets/dorival-button.gif'></a>"
+			      "<a href='https://kuroi.neocities.org/'><img loading='lazy' src='/assets/kuroi.png'></a>"
+			      "<a href='https://dudalog.neocities.org/'><img loading='lazy' src='/assets/dudalog.png'></a>"
+			      "<a href='https://fi-do-manin.neocities.org/'><img loading='lazy' src='/assets/fidomanin.png'></a>"
+			      "<a href='https://sqrsux.neocities.org/'><img loading='lazy' src='/assets/sqr.gif'></a>"
+			      "<a href='https://blanketfort.neocities.org/'><img loading='lazy' src='/assets/blanket_fort.gif'></a>"
+			      "<a href='https://dabric.xyz/'><img loading='lazy' src='/assets/dabric.png'></a>"
+			    "</div>"
+			  "</div>")
 
+       org-html-postamble (concat
+			  "<div class='container'>"
+			    "<img loading='lazy' style='margin: 0' src='/assets/under_construction.png'>"
+			  "</div>"
+			  "<div class='container'>"
+			    "<p>Gerado com: %c</p>"
+			    "<p>Tema: " current_theme "</p>"
+			    "<p>Autor do site: <a href='https://codeberg.org/tukain/'>Tukain</a></p>"
+			  "</div>")
+       
        org-export-with-section-numbers	nil
        org-export-with-toc		3
        org-export-default-language      "pt-br"
