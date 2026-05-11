@@ -1,0 +1,22 @@
+---
+title: Lista de Leitura
+---
+
+<h1>Lista de Leitura</h1>
+<p>Essa é a minha coleção de livros e mangás</p>
+
+<h2>Coleção</h2><br><br>
+
+<div id="shelf" style="display: flex; flex-wrap: wrap; justify-content: center">
+{{ for book of books }}
+  <div style="margin: 5px; box-shadow: 0 0 5px 1px black" class="book">
+    <a href="#{{ (book.title).toLowerCase().replaceAll(" ", "_").replaceAll(",","").replaceAll(".","") }}">
+      <img loading="lazy" alt="{{ book.title }}" title="{{ book.title }}" src="/assets/img/books/{{ (book.cover) }}">
+    </a>
+    <div>
+      <progress value="{{ book.progress.current }}" max="{{ book.progress.maximum }}" class="green_bar"></progress>
+      <p style="margin: 0; text-align: center; font-family: 'code'">{{ book.progress.current }}/{{ book.progress.maximum }}</p>
+    </div>
+  </div>
+{{ /for }}
+</div>

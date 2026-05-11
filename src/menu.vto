@@ -1,0 +1,9 @@
+---
+title: Mobile Menu
+---
+
+<ul>
+  {{ for page of pages }}
+  <li><a class="blog_entry button" href="{{page.url}}">{{page.title}}</a></li>
+  {{ /for }}
+</ul>

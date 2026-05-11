@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport"     content="width=device-width, initial-scale=1" />
+    <meta name="author"       content="tukain" />
+    <meta name="description"  content="Um blog simples, feito com Lume" />
+    <meta name="generator"    content="Lume" />
+
+    <link rel="stylesheet"    href="/assets/css/styles.css" />
+    <!--<link rel="stylesheet"    media="only screen and (min-width: 1300px)" href="/assets/css/intro.css" />-->
+    <link rel="stylesheet"    media="only screen and (min-width: 1300px)" href="/assets/css/devices/desktop.css" />
+    <link rel="stylesheet"    media="only screen and (max-width: 1280px)" href="/assets/css/devices/mobile.css" />
+    <link rel="stylesheet"    media="print"                               href="/assets/css/devices/print.css" />
+
+    <link rel="icon" href="/assets/fav.png" />
+
+    <title>{{ title }} - Caderno do Tukain</title>
+  </head>
+  <body>
+  <header>
+    <nav>
+      <div class='desktop_menu'><a href='/'><img loading="lazy" src="/assets/fav.png" style="margin: 0 auto; border-radius: 5px" width="80" height="80"></a></div>
+      <div class='desktop_menu'>
+        {{ for page of pages }}
+        <a class="button" href="{{page.url}}">{{page.title}}</a>
+        {{ /for }}
+      </div>
+      <div class='mobile_menu'><a href='/'>Início</a></div>
+      <div class='mobile_menu'><a href='/menu'>Menu</a></div>
+    </nav>
+  </header>
+  <main>
+  {{ content }}
+  </main>
+  </body>
+</html>

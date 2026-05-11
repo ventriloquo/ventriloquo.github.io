@@ -1,0 +1,260 @@
+/* Dark Mode (Modus Vivendi Tinted) */
+:root {
+  --fg:   #ffffff;
+  --bg-0: #1d2235;
+  --bg-1: #0d0e1c;
+  --bg-2: #2b3045;
+
+  --red_rgb:    255,  95,   89;
+  --green_rgb:   68,  188,  68;
+  --yellow_rgb: 254,  196,  63;
+  --blue_rgb:    47,  175, 255;
+  --purple_rgb: 182,  160, 255;
+  --cyan_rgb:     0,  211, 208;
+
+  --ac-0: var(--purple_rgb);
+  --ac-1: var(--blue_rgb);
+
+  --red:    rgb(var(--red_rgb));
+  --green:  rgb(var(--green_rgb));
+  --yellow: rgb(var(--yellow_rgb));
+  --blue:   rgb(var(--blue_rgb));
+  --purple: rgb(var(--purple_rgb));
+  --cyan:   rgb(var(--cyan_rgb));
+}
+
+/* Light Mode (Modus Operandi Tinted) */
+@media only screen and (prefers-color-scheme: light) {
+  :root {
+    --fg:   #000000;
+    --bg-0: #efe9dd;
+    --bg-1: #fbf7f0;
+    --bg-2: #e0b6bf;
+
+    --red_rgb:    166,   0,   0;
+    --green_rgb:    0,  99,   0;
+    --yellow_rgb: 109,  80,   0;
+    --blue_rgb:     0,  49, 169;
+    --purple_rgb: 114,  16,  69;
+    --cyan_rgb:     0,  89, 139;
+
+    --ac-0: 160,  19,  47;
+    --ac-1: var(--cyan_rgb);
+  }
+
+  a.link_button, a.feedback_button, .book, details {
+    box-shadow: 0 0 5px 1px rgba(0,0,0,.4) !important
+  }
+
+  progress {
+    background-color: var(--bg-1) !important;
+  }
+}
+
+body {
+  background-color: var(--bg-1);
+  color: var(--fg);
+}
+
+a {
+  color: rgba(var(--ac-0), 1);
+
+  &:hover {
+    color: var(--bg-1);
+    background-color: rgba(var(--ac-0), 1);
+  }
+
+  &.blog_entry {
+    color: var(--fg);
+  }
+}
+
+nav {
+  background-color: var(--bg-0);
+}
+
+section {
+  background-color: var(--bg-1);
+}
+
+.button {
+  color: var(--fg);
+  background-color: var(--bg-0);
+
+  &:hover {
+    color: var(--fg);
+    background-color: var(--bg-2);
+  }
+}
+
+pre {
+  border-color: var(--fg);
+
+  &.src {
+    color: var(--fg);
+    background-color: var(--bg-0);
+  }
+
+  &.src,
+  &.example {
+    border-color: rgba(var(--ac-0), 1);
+  }
+
+  &.example {
+    color: var(--bg-1);
+    background-color: rgba(var(--ac-0), 1);
+  }
+
+  & span {
+    color: var(--bg-0);
+    background-color: rgba(var(--ac-0), 1);
+  }
+}
+
+details {
+  background-color: var(--bg-0);
+
+  &:hover {
+
+    .not_done,
+    .doing,
+    .done {
+      background-color: var(--bg-0);
+    }
+
+    .not_done {
+      color: var(--red);
+    }
+
+    .done {
+      color: var(--green);
+    }
+
+    .doing {
+      color: var(--yellow);
+    }
+  }
+
+  summary {
+    .status {
+      color: var(--bg-1);
+
+      &.done {
+        background-color: var(--green)
+      }
+
+      &.doing {
+        background-color: var(--yellow)
+      }
+
+      &.not_done {
+        background-color: var(--red)
+      }
+    }
+  }
+
+  &:has(.done):hover,
+  &:has(.doing):hover,
+  &:has(.not_done):hover {
+    color: var(--bg-1);
+
+    .done,
+    .doing,
+    .not_done {
+      background-color: var(--bg-0);
+    }
+  }
+
+  &:has(.done):hover {
+    background-color: var(--green)
+  }
+
+  &:has(.doing):hover {
+    background-color: var(--yellow)
+  }
+
+  &:has(.not_done):hover {
+    background-color: var(--red)
+  }
+
+  p {
+    background-color: var(--bg-0);
+    color: var(--fg);
+  }
+}
+
+blockquote {
+    color: rgba(var(--ac-0), 1);
+    background-color: rgba(var(--ac-0), 0.05);
+    border-color: rgba(var(--ac-0), 1);
+
+    & code {
+      background-color: rgba(var(--ac-0), 1);
+    }
+
+  &.note {
+    color: rgba(var(--ac-1), 1);
+    background-color: rgba(var(--ac-1), 0.05);
+    border-color: rgba(var(--ac-1), 1);
+
+    &::before {
+      color: var(--bg-1);
+      background-color: rgba(var(--ac-1), 1);
+    }
+
+    & code {
+      background-color: rgba(var(--ac-1), 1);
+    }
+  }
+
+  & span {
+    background-color: rgba(var(--ac-0), 1);
+    color: var(--bg-0);
+  }
+}
+
+p {
+  code {
+    color: var(--bg-1);
+    background-color: var(--fg);
+  }
+}
+
+progress {
+  background-color: var(--bg-0);
+}
+
+hr {
+  color: var(--bg-0);
+}
+
+table {
+  border-color: rgba(var(--ac-0), 1) !important;
+
+  th {
+    background-color: rgba(var(--ac-0), 1);
+    color: var(--bg-0);
+  }
+
+  tr {
+    background-color: var(--bg-0);
+
+    &:nth-child(even) {
+      background-color: var(--bg-1);
+    }
+  }
+
+  td {
+    &:nth-child(even) {
+      border-color: rgba(var(--ac-0), 1) !important;
+    }
+  }
+}
+
+.book {
+  background-color: var(--bg-2);
+
+  &:hover {
+    background-color: var(--bg-0);
+  }
+}

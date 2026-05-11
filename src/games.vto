@@ -1,0 +1,13 @@
+---
+title: Minha coleção de jogos
+---
+
+<h1>Minha coleção de jogos</h1><br>
+
+<div id="game_library" style="display: flex; flex-wrap: wrap; justify-content: center" class="game_collection">
+{{ for game of games }}
+  <div style='margin: 5px'>
+    <img loading="lazy" width="180" height="180" style="margin: 0" alt="{{ game.title }}" title="{{ game.title }}" src="/assets/img/games/{{ game.cover }}">
+  </div>
+{{ /for }}
+</div>
