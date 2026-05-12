@@ -109,37 +109,26 @@ pre {
   margin: 0;
   overflow: scroll;
   padding: 10px;
+  position: relative;
 
-  &.src {
+  &:has(+ &) {
+    margin-bottom: 1em;
+  }
+
+  &:has(.language-example) {
     position: relative;
-
-    &:has(+ &) {
-      margin-bottom: 1em;
-    }
-
-    & span {
-      display: block;
+    padding-top: 2.5em;
+    &::before {
+      content: "OUTPUT";
       position: absolute;
       top: 0;
       left: 0;
-      font-weight: normal;
-      padding: .2em 10px;
+      padding: .3em 10px;
       border-end-end-radius: 5px;
-      line-height: 1;
+      background-color: rgba(var(--ac-0));
+      color: var(--bg-0);
+
     }
-  }
-
-  &.src:has(+ &.example) {
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    border-bottom: none;
-    margin-bottom: 0;
-  }
-
-  &.src+&.example {
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    border-top: none;
   }
 }
 
@@ -230,31 +219,29 @@ blockquote {
   border-left: solid .3em;
   position: relative;
 
-  p:first-child {
-    margin-top: 3em;
-  }
-
-  &:has(span) {
+  &:has(strong strong) {
     min-height: 100px;
     align-content: center;
   }
 
-  &.note {
-    padding-top: 20px;
-    position: relative;
-
-    &::before {
-      content: "Nota";
-      padding: 2px 1em;
-      position: absolute;
-      top: 0;
-      left: 0;
-      border-end-end-radius: 5px;
+  &:has(strong em), &:has(strong strong) {
+    p {
+      margin-top: 2em
     }
-
   }
 
-  & span {
+  & strong em {
+    padding-top: 2em;
+    position: absolute;
+    padding: .3em 1em;
+    border-end-end-radius: 5px;
+    top: 0;
+    left: 0;
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  & strong strong {
     padding-top: 2em;
     position: absolute;
     padding: .3em 1em;
@@ -268,13 +255,11 @@ blockquote {
 h1,
 h3 {
   margin-block-start: 0;
-  margin-bottom: 0.3em;
   max-width: 100%;
 }
 
 h2 {
   font-size: x-large;
-  margin-bottom: -1em;
 }
 
 p {

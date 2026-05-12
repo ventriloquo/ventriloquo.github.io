@@ -1,0 +1,9 @@
+---
+title: Blog
+---
+
+<ul>
+  {{ for post of search.pages("type=post", "date=desc") }}
+    <li><a class="blog_entry button" href="{{ post.url }}">{{ post.date |> date("dd/MM/yyyy") }} - {{ post.title }}</a></li>
+  {{ /for }}
+</ul>

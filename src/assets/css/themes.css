@@ -88,27 +88,21 @@ section {
 }
 
 pre {
-  border-color: var(--fg);
+  border-color: rgba(var(--ac-0), 1);
+  color: var(--fg);
+  background-color: var(--bg-0);
 
-  &.src {
-    color: var(--fg);
-    background-color: var(--bg-0);
+  span {
+    &.token {
+      &.comment   { color: var(--purple) }
+      &.keyword   { color: var(--yellow) }
+      &.function  { color: var(--blue) }
+      &.string    { color: var(--green) }
+      &.operator, &.punctuation { color: var(--red) }
+      &.macro, &.property { color: var(--green); text-decoration: underline}
+   }
   }
 
-  &.src,
-  &.example {
-    border-color: rgba(var(--ac-0), 1);
-  }
-
-  &.example {
-    color: var(--bg-1);
-    background-color: rgba(var(--ac-0), 1);
-  }
-
-  & span {
-    color: var(--bg-0);
-    background-color: rgba(var(--ac-0), 1);
-  }
 }
 
 details {
@@ -184,30 +178,31 @@ details {
 }
 
 blockquote {
-    color: rgba(var(--ac-0), 1);
-    background-color: rgba(var(--ac-0), 0.05);
-    border-color: rgba(var(--ac-0), 1);
+  color: rgba(var(--ac-0), 1);
+  background-color: rgba(var(--ac-0), 0.05);
+  border-color: rgba(var(--ac-0), 1);
 
-    & code {
-      background-color: rgba(var(--ac-0), 1);
-    }
+  & code {
+    background-color: rgba(var(--ac-0), 1);
+  }
 
-  &.note {
+  &:has(strong em) {
     color: rgba(var(--ac-1), 1);
     background-color: rgba(var(--ac-1), 0.05);
     border-color: rgba(var(--ac-1), 1);
+  }
 
-    &::before {
-      color: var(--bg-1);
-      background-color: rgba(var(--ac-1), 1);
-    }
+  & strong em {
+    color: var(--bg-1);
+    background-color: rgba(var(--ac-1), 1);
+    border-color: rgba(var(--ac-1), 1);
 
     & code {
       background-color: rgba(var(--ac-1), 1);
     }
   }
 
-  & span {
+  & strong strong {
     background-color: rgba(var(--ac-0), 1);
     color: var(--bg-0);
   }

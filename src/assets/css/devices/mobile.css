@@ -21,8 +21,12 @@
   progress {
     width: 90%;
   }
+
 }
 
+.book_review {
+  display: none;
+}
 @media only screen and (max-width: 1280px) {
   section#intro {
     display: none;
