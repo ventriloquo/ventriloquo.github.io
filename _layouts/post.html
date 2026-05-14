@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+{% if page.thumb %}
+  <img style="background-color: var(--bg-0); border-radius: 5px; margin-top: 0; max-height: 400px; width: -webkit-fill-available; object-fit: cover" loading="lazy" src="{{ page.thumb }}">
+{% endif %}
+
+<h1>{{ page.title }}</h1>
+<h3><time>{{ page.date | date: '%d/%m/%Y' }}</time></h3>
+<hr>
+{{ content }}
+<hr>
+<a
+  class="button"
+  href="mailto:contato.nest604@passinbox.com?subject=Feedback: {{ page.title }}"
+>Feedback</a>

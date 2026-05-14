@@ -1,0 +1,79 @@
+:root {
+  --bg: white;
+  --fg: black;
+  --alt-1: #bbb;
+  --alt-2: gray;
+}
+
+header {
+  display: none;
+}
+
+body,
+section,
+div,
+blockquote,
+details,
+summary,
+li,
+p {
+  background-color: var(--bg);
+  color: var(--fg);
+}
+
+a {
+  color: var(--alt-2);
+}
+
+blockquote {
+  &.quote, &.note {
+    border-color: var(--alt-2);
+    background-color: var(--alt-1);
+    p {
+      background-color: inherit;
+      color: var(--fg);
+    }
+    span {
+      background-color: var(--alt-2);
+      color: var(--fg);
+    }
+  }
+}
+
+li > .blog_entry, .button {
+  background-color: var(--alt-1);
+  color: var(--fg);
+}
+
+p {
+  code {
+    background-color: var(--alt-1);
+    color: var(--fg);
+  }
+}
+
+pre {
+  &.src, &.example, span {
+    color: var(--fg);
+  }
+  &.src {
+    background-color: var(--alt-1);
+  }
+  &.example, span {
+    background-color: var(--alt-2);
+  }
+}
+
+table {
+  th {
+    background-color: var(--alt-1);
+    font-weight: bolder;
+  }
+
+  tr {
+    background-color: var(--alt-1);
+    &:nth-child(even) {
+      background-color: var(--alt-2);
+    }
+  }
+}

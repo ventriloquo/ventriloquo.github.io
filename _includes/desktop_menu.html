@@ -1,0 +1,18 @@
+<header>
+  <nav>
+    <div class="desktop_menu">
+      <a href="/"><img
+          loading="lazy"
+          src="/assets/fav.png"
+          style="margin: 0 auto; border-radius: 5px"
+          width="80"
+          height="80"
+        ></a>
+    </div>
+    <div class="desktop_menu">
+      {% for page in site.data.pages %}
+        <a class="button" href="{{page.url}}">{{ page.title }}</a>
+      {% endfor %}
+    </div>
+  </nav>
+</header>

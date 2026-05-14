@@ -1,0 +1,8 @@
+.git/**
+_site/
+src/
+etc/
+public/
+*Zone**
+*google*
+.jekyll*

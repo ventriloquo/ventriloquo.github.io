@@ -1,0 +1,75 @@
+<header>
+  <nav>
+    <div class="mobile_menu">
+      <a href="/">Início</a>
+    </div>
+    <div class="mobile_menu">
+      <a id="open_menu" href="#mobile_menu">Menu</a>
+      <a id="close_menu" href="#">Fechar</a>
+    </div>
+    <div id="mobile_menu">
+      <ul>
+        {% for page in site.data.pages %}
+          <li>
+            <a class="blog_entry button" href="{{page.url}}">{{
+              page.title
+            }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<style>
+  nav {
+    &:not(:has(#mobile_menu:target)) {
+      #open_menu {
+        display: block;
+      }
+      #close_menu {
+        display: none;
+      }
+    }
+
+    &:has(#mobile_menu:target) {
+      #open_menu {
+        display: none;
+      }
+      #close_menu {
+        display: block;
+      }
+    }
+  }
+
+  #mobile_menu {
+    display: none;
+
+    &:target {
+      display: block;
+      position: absolute;
+      z-index: 300;
+      top: 3em;
+      width: -webkit-fill-available;
+      background-color: var(--bg-0);
+      animation: slide-down 0.5s;
+
+      .button {
+        font-size: medium;
+        border-top: solid 0.1em var(--bg-1);
+      }
+    }
+  }
+
+  @keyframes slide-down {
+    from {
+      transform: translateY(-1em);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+</style>
