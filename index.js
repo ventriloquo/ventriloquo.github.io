@@ -1,6 +1,6 @@
 "use strict";
 
-import { tag } from './modules/common.js';
+import { tag } from "./modules/common.js";
 import { blog } from "./modules/blog.js";
 import { projects } from "./modules/projects.js";
 import { home } from "./modules/home.js";
@@ -14,42 +14,56 @@ import { ideias } from "./modules/ideias.js";
 import { pagina_de_testes } from "./modules/teste.js";
 
 function main() {
-    tag("header", {},
-	tag("nav", {},
-            tag("div", {"class":"desktop_menu"},
-		tag("a", {"href":"/#home"},
-		    tag("img",
-			{
-			    "loading":"lazy",
-			    "src":"/assets/fav.png",
-			    "style":"margin: 0 auto; border-radius: 5px",
-			    "width":"80",
-			    "height":"80",
-			}
-		       )
-		   )
-               ),
-            tag("div", {"class":"desktop_menu", "id":"desktop_menu"}),
-            tag("div", {"class":"mobile_menu"}, tag("a", {"href":"/#home"}, "Início")),
-            tag("div", {"class":"mobile_menu"}, tag("a", {"href":"/#mobile_menu"}, "Menu")),
-	   )
-       )
-    tag("main", {"id":"body"});
-    // remove o id `body` do primeiro elemento com esse id.
-    document.getElementById("body").removeAttribute("id")
+  tag(
+    "header",
+    {},
+    tag(
+      "nav",
+      {},
+      tag(
+        "div",
+        { "class": "desktop_menu" },
+        tag(
+          "a",
+          { "href": "/#home" },
+          tag("img", {
+            "loading": "lazy",
+            "src": "/assets/fav.png",
+            "style": "margin: 0 auto; border-radius: 5px",
+            "width": "80",
+            "height": "80",
+          }),
+        ),
+      ),
+      tag("div", { "class": "desktop_menu", "id": "desktop_menu" }),
+      tag(
+        "div",
+        { "class": "mobile_menu" },
+        tag("a", { "href": "/#home" }, "Início"),
+      ),
+      tag(
+        "div",
+        { "class": "mobile_menu" },
+        tag("a", { "href": "/#mobile_menu" }, "Menu"),
+      ),
+    ),
+  );
+  tag("main", { "id": "body" });
+  // remove o id `body` do primeiro elemento com esse id.
+  document.getElementById("body").removeAttribute("id");
 
-    home();
-    projects();
-    books();
-    games();
-    blog();
-    links();
-    ideias();
-    menu();
-    sitemap();
-    intro();
-    pagina_de_testes();
+  home();
+  projects();
+  blog();
+  books();
+  games();
+  links();
+  ideias();
+  menu();
+  sitemap();
+  intro();
+  pagina_de_testes();
 }
 
-main();
 
+main();

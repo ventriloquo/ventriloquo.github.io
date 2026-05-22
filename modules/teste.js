@@ -1,20 +1,16 @@
 "use strict";
 
-import {
-    tag,
-    markup,
-    create_priv_page
-} from "./common.js";
+import { create_priv_page, markup, tag } from "./common.js";
 
 export function pagina_de_testes() {
-    create_priv_page(
-	"testes",
-	"Página de testes",
-	tag(
-	    "p",
-	    {},
-	    markup(
-		`
+  create_priv_page(
+    "testes",
+    "Página de testes",
+    tag(
+      "p",
+      {},
+      markup(
+        `
 * Listas
 
 - Pera
@@ -56,14 +52,6 @@ Lorem Ipsum Dolor Sit Amet
 #+begin_example
 Lorem Ipsum Dolor Sit Amet
 #+end_example
-
-* Tabelas
-
-<table>
-  <tr>  <th>Lorem</th> <th>Ipsum</th> </tr>
-  <tr>  <td>Dolor</td> <td>Sit</td>   </tr>
-  <tr>  <td>Amet<td>                  </tr>
-</table>
 
 * Código dentro de parágrafo
 
@@ -107,8 +95,8 @@ Lorem [[https://www.lipsum.com/][Ipsum]] Dolor Sit Amet
 <a class="button" style="display: inline-block" href="#testes">teste</a>
 <a class="button" style="display: inline-block" href="#testes">teste</a>
 </div>
-`
-	    )
-	)
-    )
+`,
+      ),
+    ),
+  );
 }
