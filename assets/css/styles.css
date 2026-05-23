@@ -69,16 +69,6 @@
     --ac-0: var(--blue_rgb);
   }
 
-  a.link_button,
-  a.feedback_button,
-  .book > a > img,
-  .book_progress,
-  .close_button,
-  .game,
-  details {
-    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.4) !important;
-  }
-
   progress {
     background-color: var(--bg-1) !important;
   }

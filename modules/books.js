@@ -53,8 +53,8 @@ export function books() {
         ),
       ),
       tag("progress", {
-        "class":"book_progress_bar",
-        "style":"border: solid 1px rgb(var(--ac-0))",
+        "class": "book_progress_bar",
+        "style": "border: solid 1px rgb(var(--ac-0))",
         "value": `${livros_lidos}`,
         "max": `${total_de_livros}`,
       }),
@@ -113,7 +113,7 @@ export function books() {
         tag(
           "div",
           {
-            "class":"book_info_book",
+            "class": "book_info_book",
             "style":
               "background-color: var(--bg-0); padding: 10px; border-radius: 5px; width: fit-content; height: fit-content",
           },
@@ -138,17 +138,17 @@ export function books() {
         ),
         tag(
           "div",
-          { "class":"book_info_review" },
+          { "class": "book_info_review" },
           tag(
             "blockquote",
-            { "class": "quote", },
+            { "class": "quote" },
             `<span>Minha opinião</span><br>${markup(book.review)}`,
           ),
         ),
         tag(
           "p",
           {
-            "class":"book_info_rating",
+            "class": "book_info_rating",
             "style": "text-align: center",
             "id": `${slug(book.title)}_rating`,
           },
@@ -222,6 +222,9 @@ export function books() {
         progress_bar.classList.add("red_bar");
       }
     });
+
+    document.getElementById(`${slug(book.title)}_page_title`).style.textAlign =
+      "center";
   }
 }
 
