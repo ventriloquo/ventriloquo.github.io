@@ -43,6 +43,10 @@ export function sitemap() {
     ),
   );
 
+  document.getElementById("page_list").appendChild(
+    tag("li", {}, tag("a", { "href":"#sitemap" }, "#sitemap")),
+  );
+
   for (const page of page_list) {
     const page_index = page_list.indexOf(page);
     document.getElementById("page_list").appendChild(
@@ -58,7 +62,7 @@ export function sitemap() {
     const post_index = posts.indexOf(post);
     const post_iso_date = invert_date(post.date, ".").replaceAll(".", "/");
     const post_link = `/#blog/${post_iso_date}/${slug(post.title)}/`;
-    document.getElementById("page_item_3").appendChild(
+    document.getElementById("page_list").appendChild(
       tag("li", {}, tag("a", { "href": post_link }, post_link)),
     );
   }
