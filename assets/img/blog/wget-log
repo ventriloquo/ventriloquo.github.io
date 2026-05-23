@@ -1,6 +1,0 @@
---2026-05-20 15:37:26--  https://media.licdn.com/dms/image/v2/C5612AQHFZHGIi-yA2Q/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1606007740035?e=2147483647
-Resolving media.licdn.com (media.licdn.com)... 2a04:4e42:71::810, 146.75.7.42
-Connecting to media.licdn.com (media.licdn.com)|2a04:4e42:71::810|:443... connected.
-HTTP request sent, awaiting response... 403 deny-missing-version
-2026-05-20 15:37:26 ERROR 403: deny-missing-version.
-

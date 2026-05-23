@@ -1,97 +1,10 @@
-.post_date {
-  display: none;
-}
-.book {
-  text-align: center;
-  border-radius: 5px;
-  padding-bottom: 10px;
-  transition: all 200ms;
-  background-color: var(--bg-0);
-
-  &:hover {
-    background-color: var(--bg-1);
-  }
-
-  img {
-    width: 180px;
-    height: 280px;
-    object-fit: cover;
-    margin-top: 0;
-    border-start-start-radius: 5px;
-    border-start-end-radius: 5px;
-  }
-
-  .book_progress {
-    width: -webkit-fill-available;
-    margin: auto 10px;
-    justify-self: center;
-  }
-
-  &:not(:has(.book_review:target)) {
-    .book_review, .close_button, .info_cover {
-      display: none;
-    }
-  }
-
-  .book_review:target {
-    scroll-margin-top: 20em;
-  }
-
-  &:has(.book_review:target) {
-    animation: fall 1s;
-
-    a > img {
-      display: none;
-    }
-
-    .info {
-      padding: 10px;
-
-      img {
-        border-radius: 5px;
-      }
-
-      blockquote {
-        text-align: justify;
-      }
-
-      .book_progress {
-        margin-bottom: 20px;
-      }
-
-      .close_button {
-        box-shadow: none !important;
-        margin-top: 20px;
-
-        .button {
-          background-color: var(--red);
-          color: var(--bg-0);
-        }
-      }
-    }
-  }
-}
-
-@keyframes fall {
-  from {
-    scale: 1.2;
-    opacity: 0;
-  }
-  to {
-    scale: 1;
-    opacity: 1;
-  }
-}
-
 @media only screen and (max-width: 1280px) {
   section#intro {
     display: none;
   }
-
   section#home {
     display: block;
   }
-
   nav {
     display: flex;
     flex-direction: row;
@@ -106,6 +19,24 @@
 
     .desktop_menu {
       display: none;
+    }
+  }
+
+  .project {
+    img {
+      max-height: 300px;
+    }
+
+    .project_info {
+      max-width: -webkit-fill-available;
+    }
+  }
+
+  .book_info {
+    justify-content: center;
+
+    .quote {
+      max-width: -webkit-fill-available;
     }
   }
 }

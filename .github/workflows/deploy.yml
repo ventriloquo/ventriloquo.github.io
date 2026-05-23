@@ -16,12 +16,6 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: Setup Pages
-      uses: actions/configure-pages@v5
-
-    - name: Build page
-      uses: actions/jekyll-build-pages@v1
-
     - name: Deploy to neocities
       uses: bcomnes/deploy-to-neocities@v3
       with:
@@ -29,4 +23,4 @@ jobs:
         cleanup: true
         neocities_supporter: false
         preview_before_deploy: false
-        dist_dir: _site
+        dist_dir: .
