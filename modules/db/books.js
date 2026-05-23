@@ -98,6 +98,7 @@ Eu gosto muito do anime Hellsing Ultimate (difícil achar alguém que não goste
   {
     title: "Chainsaw Man, Vol. 1",
     cover: "chainsaw_man_01.jpg",
+    nota: 5,
 
     progress: {
       current: "192",

@@ -24,7 +24,11 @@ export function books() {
     tag(
       "div",
       {},
-      tag("p", {}, "Essa é a minha coleção de livros e mangás"),
+      tag(
+        "p",
+        {},
+        "Eu não sou o tipo de pessoa que curte muito ler, porém tem certas obras que me atraem (boa parte são mangás).",
+      ),
       tag("h3", {}, "Status"),
       tag(
         "table",
@@ -60,7 +64,7 @@ export function books() {
           `<span style='color: rgba(var(--ac-1), 1)'>${livros_lidos}</span> ` +
           "de " +
           `<span style='color: rgba(var(--ac-0), 1)'>${total_de_livros}</span> ` +
-          "livros da minha coleção.",
+          "items da minha coleção.",
       ),
       tag("h3", {}, "Coleção"),
       tag("div", {
@@ -72,7 +76,7 @@ export function books() {
 
   for (const book of bookshelf) {
     if (book.review === undefined) {
-      book.review = "<p style='color: var(--red)'>Sem review ainda</p>";
+      book.review = "<p>Não tenho uma opinião formada sobre isso ainda</p>";
     }
 
     switch (Number(book.nota)) {
@@ -97,8 +101,6 @@ export function books() {
         book.nota =
           "<br>&#9733;&#9733;&#9733;&#9733;&#9733;<br><img loading='lazy' width='112' height='112' style='object-fit: cover' src='/assets/absolute_cinema.webp'>";
         break;
-      default:
-        book.nota = "<span style='color: var(--red)'>Sem nota ainda</span>";
     }
 
     create_priv_page(
@@ -109,22 +111,27 @@ export function books() {
         { "class": "book_info" },
         tag(
           "div",
-          {},
+          {
+            "style":
+              "background-color: var(--bg-0); padding: 10px; margin-bottom: 1em; border-radius: 5px; height: fit-content",
+          },
           tag("img", {
             "loading": "lazy",
             "alt": book.title,
             "title": book.title,
             "width": "250",
             "height": "400",
-            "style": "object-fit: cover",
+            "style": "margin-top: 0; object-fit: cover",
             "src": `/assets/${book.cover}`,
           }),
           tag("progress", {
+            "class": "book_progress_bar",
             "value": `${book.progress.current}`,
             "max": `${book.progress.maximum}`,
           }),
           tag("p", {
-            "style": "font-family: 'code'; margin-top: 10px; text-align: center; font-size: larger",
+            "style":
+              "font-family: 'code'; margin-top: 10px; text-align: center; font-size: larger",
           }, `${book.progress.current}/${book.progress.maximum}`),
         ),
         tag(
@@ -132,14 +139,20 @@ export function books() {
           {},
           tag(
             "blockquote",
-            { "class": "quote" },
-            `<span>Review</span><br>${markup(book.review)}`,
+            {
+              "class": "quote",
+              "style":
+                "margin-top: 0; margin-left: 5px; margin-right: 5px; height: fit-content",
+            },
+            `<span>Minha opinião</span><br>${markup(book.review)}`,
           ),
         ),
         tag(
           "p",
-          { "style": "margin: auto; text-align: center" },
-          `A minha nota para esse treco é...<br>${book.nota}`,
+          {
+            "style": "margin: auto; text-align: center",
+            "id": `${slug(book.title)}_rating`,
+          },
         ),
         tag("a", {
           "class": "button",
@@ -175,6 +188,7 @@ export function books() {
           "div",
           { "class": "book_progress" },
           tag("progress", {
+            "class": "book_progress_bar",
             "value": book.progress.current,
             "max": book.progress.maximum,
           }),
@@ -187,22 +201,26 @@ export function books() {
       ),
     );
 
-    const books = document.querySelectorAll(".book");
-    books.forEach((book) => {
-      const progress_bar = book.children[1].children[0];
-      const progress_text = book.children[1].children[1];
+    const nota = document.getElementById(`${slug(book.title)}_rating`);
+    if (book.nota !== undefined) {
+      nota.innerHTML = `A minha nota para esse treco é...<br>${book.nota}`;
+    }
 
+    const progress_bar = document.querySelectorAll(".book_progress_bar");
+    progress_bar.forEach((progress_bar) => {
       if (progress_bar.value === progress_bar.max) {
         progress_bar.classList.add("green_bar");
       }
+
       if (
         0 < progress_bar.value &&
         progress_bar.value < progress_bar.max
       ) {
         progress_bar.classList.add("yellow_bar");
       }
+
       if (progress_bar.value === 0) {
-        progress_text.style.color = "var(--red)";
+        progress_bar.classList.add("red_bar");
       }
     });
   }

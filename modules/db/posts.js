@@ -2,6 +2,23 @@
 
 export const posts = [
   {
+    title: "Recuperei o meu site!",
+    date: "23.05.2026",
+    content: `
+Isso mesmo! Depois de 10 longos dias, eu finalmente consegui recuperar o meu site feito em JS! Eu sabia que eu tinha um um backup em algum lugar, eu só não sabia o quão antigo ele era.
+
+Para a minha sorte ele não era tão antigo assim, acho que ele tinha de 2 a 3 semanas apenas, então só precisei refazer as últimas mudanças que eu havia implementado no site, mudanças essas que estavam presentes na versão feita em Lume (e também na versão em Jekyll).
+
+#+begin_quote
+Mano, por quê que eu faço tantas versões alternativas para o mesmo site? Eu devo tá ficando maluco.
+#+end_quote
+
+Além disso, eu também aproveitei e dei umas incrementadas aqui e alí no código-fonte e também no design geral.
+
+Só sei que é muito satisfatório ter o meu site de volta! Queimei <b>muitos</b> neurônios fazendo isso aqui.
+`,
+  },
+  {
     title: "Eu sem querer deletei o meu site do Neocities 💀 ",
     date: "13.05.2026",
     content: `

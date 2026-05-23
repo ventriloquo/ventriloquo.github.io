@@ -11,6 +11,7 @@ import { links } from "./modules/links.js";
 import { sitemap } from "./modules/sitemap.js";
 import { intro } from "./modules/intro.js";
 import { ideias } from "./modules/ideias.js";
+import { about } from "./modules/about.js";
 import { pagina_de_testes } from "./modules/teste.js";
 
 function main() {
@@ -59,11 +60,11 @@ function main() {
   games();
   links();
   ideias();
+  about();
   menu();
   sitemap();
   intro();
   pagina_de_testes();
 }
-
 
 main();

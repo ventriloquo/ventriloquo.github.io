@@ -23,15 +23,6 @@ export function home() {
 `,
       ),
       tag("ul", { "id": "recent" }),
-      tag(
-        "p",
-        { "style": "text-align: center" },
-        tag("a", {
-          "href": "https://github.com/protesilaos/modus-themes",
-          "target": "_blank",
-          "class": "button",
-        }, "Paleta de cores utilizada no site"),
-      ),
     ),
   );
 

@@ -32,28 +32,55 @@
   }
 }
 
+/* Dark Mode (Gruvbox Dark) */
 :root {
-  --fg: #FCE8C3;
-  --bg-0: #1C1B19;
-  --bg-1: #121110;
-  --bg-2: #312F2C;
+  --fg: #ebdbb2;
+  --bg-0: #32302f;
+  --bg-1: #282828;
+  --bg-2: #3c3436;
 
-  --red_rgb: 239, 47, 39;
-  --green_rgb: 81, 159, 80;
-  --yellow_rgb: 251, 184, 41;
-  --blue_rgb: 44, 120, 191;
-  --magenta_rgb: 224, 44, 109;
-  --cyan_rgb: 10, 174, 179;
+  --red_rgb: 204, 36, 29;
+  --green_rgb: 152, 151, 26;
+  --yellow_rgb: 215, 153, 33;
+  --blue_rgb: 69, 133, 136;
+  --purple_rgb: 177, 98, 134;
+  --cyan_rgb: 104, 157, 106;
 
-  --ac-0: var(--magenta_rgb);
-  --ac-1: var(--yellow_rgb);
+  --ac-0: var(--green_rgb);
+  --ac-1: var(--blue_rgb);
 
   --red: rgb(var(--red_rgb));
   --green: rgb(var(--green_rgb));
   --yellow: rgb(var(--yellow_rgb));
   --blue: rgb(var(--blue_rgb));
-  --magenta: rgb(var(--magenta_rgb));
+  --purple: rgb(var(--purple_rgb));
   --cyan: rgb(var(--cyan_rgb));
+}
+
+/* Light Mode (Gruvbox light) */
+@media only screen and (prefers-color-scheme: light) {
+  :root {
+    --fg: #3c3436;
+    --bg-0: #f2e5bc;
+    --bg-1: #fbf1c7;
+    --bg-2: #ebdbb2;
+
+    --ac-1: var(--green_rgb);
+    --ac-0: var(--blue_rgb);
+  }
+
+  a.link_button,
+  a.feedback_button,
+  .book > a > img,
+  .book_progress,
+  .close_button,
+  details {
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.4) !important;
+  }
+
+  progress {
+    background-color: var(--bg-1) !important;
+  }
 }
 
 *::-webkit-scrollbar {
@@ -227,7 +254,7 @@ pre {
   }
 
   &.src, &.example {
-    border-color: rgba(var(--ac-0), 1);
+    border-color: var(--bg-2);
   }
 
   &.example {
@@ -249,8 +276,8 @@ pre {
   }
 
   & span {
-    color: var(--bg-0);
-    background-color: rgba(var(--ac-0), 1);
+    color: var(--fg);
+    background-color: var(--bg-2);
   }
 }
 
@@ -418,7 +445,7 @@ progress {
 
   -webkit-appearance: none;
 
-  .green_bar &::-webkit-progress-bar,
+  &::-webkit-progress-bar,
   &::-webkit-progress-value {
     border-radius: 5px;
   }
@@ -432,11 +459,15 @@ progress {
   }
 
   &.green_bar::-webkit-progress-value {
-    background-color: var(--green) !important;
+    background-color: var(--green);
   }
 
   &.yellow_bar::-webkit-progress-value {
     background-color: var(--yellow);
+  }
+
+  &.red_bar::-webkit-progress-bar {
+    background-color: var(--red);
   }
 }
 
@@ -531,6 +562,16 @@ table {
       border-end-start-radius: 5px;
       border-end-end-radius: 5px;
     }
+  }
+}
+
+.project {
+  img {
+    max-height: 250px;
+  }
+
+  .project_info {
+    max-width: 40ch;
   }
 }
 

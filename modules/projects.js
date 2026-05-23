@@ -28,18 +28,19 @@ export function projects() {
       tag(
         "div",
         {
+          "class": "project",
           "style":
             "display: flex; flex-wrap: wrap; flex-direction: row; justify-content: space-between;",
         },
         tag("img", {
           "title": cover,
           "loading": "lazy",
-          "style": "max-height: 250px; object-fit: cover",
+          "style": "; object-fit: cover",
           "src": project.icon,
         }),
         tag(
           "div",
-          {},
+          { "class": "project_info" },
           tag(
             "h2",
             {},
@@ -51,7 +52,7 @@ export function projects() {
           ),
           tag(
             "p",
-            { "style": "max-width: 40ch" },
+            {},
             project.description.replaceAll("\n", "<br>"),
           ),
           tag("hr"),

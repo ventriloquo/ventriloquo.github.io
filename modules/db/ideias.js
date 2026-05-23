@@ -2,6 +2,28 @@
 
 export const ideias = [
   {
+    title: "Melhorar a <code>markup()</code>",
+    stat: 0,
+    content: `
+A função <code>markup()</code> é a responsável por gerar strings HTML a partir de uma sintaxe para texto, tentando replicar a sintaxe do [[https://orgmode.org][Org Mode]].
+
+No momento, ela é "compatível" com estas sintaxes:
+
+- listas desordenadas ("- ")
+- citações ("#+begin_quote" e "#+end_quote")
+- exemplos ("#+begin_example" e "#+end_example")
+- blocos de código ("#+begin_src" e "#+end_src")
+- heading de nível 1 ("* ")
+- links ("&#91;&#91;https://google.com&#93;&#91;Google&#93;&#93;")
+
+Estas são as que eu desejo implementar:
+
+- texto em negrito ("*texto*")
+- texto itálico ("/texto/")
+- texto pré-formatado/código ("=texto=")
+`,
+  },
+  {
     title: "Botão para enviar feedback de um post",
     stat: 2,
     content: `

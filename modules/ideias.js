@@ -11,7 +11,11 @@ export function ideias() {
     tag(
       "div",
       { "id": "whiteboard" },
-      tag("h2", { "style": "margin-bottom: 1em" }, "Ideias para o meu site"),
+      tag(
+        "p",
+        { "style": "margin-bottom: 1em" },
+        "Este site está em constante desenvolvimento, mas nem sempre eu consigo implementar todas as ideias que tenho, então é bom ter um lugar onde elas podem ficar guardadas para que eu tente novamente no futuro.",
+      ),
     ),
   );
 
