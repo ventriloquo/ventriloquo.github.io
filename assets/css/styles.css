@@ -489,6 +489,7 @@ table {
 
   & + progress {
     border-radius: 0;
+
     &::-webkit-progress-bar, &::-webkit-progress-value {
       border-radius: 0;
     }
@@ -575,12 +576,15 @@ table {
     "book review"
     "rating rating"
     "exit exit";
-  grid-template-columns: 1.2fr 2fr;
+  grid-template-columns: 1fr 2fr;
   grid-template-rows: 2fr 1fr;
   gap: 10px;
 
   .book_info_book {
     grid-area: book;
+    img {
+      border-radius: 5px;
+    }
   }
 
   .book_info_review {

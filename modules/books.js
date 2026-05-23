@@ -32,7 +32,7 @@ export function books() {
       tag("h3", {}, "Status"),
       tag(
         "table",
-        { "style": "margin-bottom: -3px; border-bottom: 0" },
+        { "style": "margin-bottom: -5px" },
         tag(
           "tbody",
           {},
@@ -53,7 +53,8 @@ export function books() {
         ),
       ),
       tag("progress", {
-        "style": "border: solid .1em rgba(var(--ac-0), 1)",
+        "class":"book_progress_bar",
+        "style":"border: solid 1px rgb(var(--ac-0))",
         "value": `${livros_lidos}`,
         "max": `${total_de_livros}`,
       }),
@@ -114,7 +115,7 @@ export function books() {
           {
             "class":"book_info_book",
             "style":
-              "background-color: var(--bg-0); padding: 10px; margin-bottom: 1em; border-radius: 5px; height: fit-content",
+              "background-color: var(--bg-0); padding: 10px; border-radius: 5px; width: fit-content; height: fit-content",
           },
           tag("img", {
             "loading": "lazy",
