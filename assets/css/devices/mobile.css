@@ -34,6 +34,14 @@
 
   .book_info {
     justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    .book_info_book {
+      max-width: fit-content;
+      margin: auto;
+    }
 
     .quote {
       max-width: -webkit-fill-available;

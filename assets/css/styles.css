@@ -74,6 +74,7 @@
   .book > a > img,
   .book_progress,
   .close_button,
+  .game,
   details {
     box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.4) !important;
   }
@@ -130,6 +131,8 @@ a {
   &:hover {
     color: var(--bg-1);
     background-color: rgba(var(--ac-0), 1);
+    text-decoration: none;
+    border-radius: 5px;
   }
 
   &[href^="http"]::after {
@@ -429,6 +432,7 @@ p {
 
   code {
     font-family: "code", monospace;
+    font-size: medium;
     border-radius: 5px;
     padding: 2px 6px;
     display: inline-block;
@@ -565,27 +569,44 @@ table {
   }
 }
 
+.book_info {
+  display: grid;
+  grid-template-areas:
+    "book review"
+    "rating rating"
+    "exit exit";
+  grid-template-columns: 1.2fr 2fr;
+  grid-template-rows: 2fr 1fr;
+  gap: 10px;
+
+  .book_info_book {
+    grid-area: book;
+  }
+
+  .book_info_review {
+    grid-area: review;
+
+    blockquote {
+      margin: 0;
+    }
+  }
+
+  .book_info_rating {
+    grid-area: rating;
+  }
+
+  .book_info_exit {
+    grid-area: exit;
+  }
+}
+
+
 .project {
   img {
     max-height: 250px;
   }
 
   .project_info {
-    max-width: 40ch;
-  }
-}
-
-.book_info {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-between;
-
-  img {
-    border-radius: 5px;
-  }
-
-  blockquote {
     max-width: 40ch;
   }
 }
@@ -678,6 +699,22 @@ details {
 
   &:has(.not_done):hover {
     background-color: var(--red);
+  }
+
+  &:has(.done):hover,
+  &:has(.doing):hover,
+  &:has(.not_done):hover {
+    a {
+      border-radius: 5px;
+      text-decoration: none;
+      background-color: var(--bg-0);
+      color: rgb(var(--ac-0));
+
+      &:hover {
+        color: var(--bg-0);
+        background-color: rgb(var(--ac-0));
+      }
+    }
   }
 
   p {

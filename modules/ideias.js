@@ -20,25 +20,28 @@ export function ideias() {
   );
 
   for (const i of ideia) {
+    const details = (stat) => {
+      document.getElementById("whiteboard").appendChild(
+        tag(
+          "details",
+          {},
+          tag("summary", {}, `<span>${i.title}</span>${stat}`),
+          tag("p", {}, markup(i.content)),
+        ),
+      );
+    };
+
     switch (i.stat) {
       case 1:
-        i.stat = "<span class='status doing'>Parcialmente feito<span>";
+        details("<span class='status doing'>Parcialmente feito<span>");
         break;
       case 2:
-        i.stat = "<span class='status done'>Feito</span>";
+        details("<span class='status done'>Feito</span>");
         break;
       default:
-        i.stat = "<span class='status not_done'>Não feito</span>";
+        details("<span class='status not_done'>Não feito</span>");
         break;
     }
-    document.getElementById("whiteboard").appendChild(
-      tag(
-        "details",
-        {},
-        tag("summary", {}, `<span>${i.title}</span>${i.stat}`),
-        tag("p", {}, markup(i.content)),
-      ),
-    );
   }
 }
 export default ideias;

@@ -112,6 +112,7 @@ export function books() {
         tag(
           "div",
           {
+            "class":"book_info_book",
             "style":
               "background-color: var(--bg-0); padding: 10px; margin-bottom: 1em; border-radius: 5px; height: fit-content",
           },
@@ -136,26 +137,23 @@ export function books() {
         ),
         tag(
           "div",
-          {},
+          { "class":"book_info_review" },
           tag(
             "blockquote",
-            {
-              "class": "quote",
-              "style":
-                "margin-top: 0; margin-left: 5px; margin-right: 5px; height: fit-content",
-            },
+            { "class": "quote", },
             `<span>Minha opinião</span><br>${markup(book.review)}`,
           ),
         ),
         tag(
           "p",
           {
-            "style": "margin: auto; text-align: center",
+            "class":"book_info_rating",
+            "style": "text-align: center",
             "id": `${slug(book.title)}_rating`,
           },
         ),
         tag("a", {
-          "class": "button",
+          "class": "book_info_exit button",
           "style":
             "width: -webkit-fill-available; margin: auto; text-align: center",
           "href": "#bookshelf",

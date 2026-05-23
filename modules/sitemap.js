@@ -43,10 +43,6 @@ export function sitemap() {
     ),
   );
 
-  document.getElementById("page_list").appendChild(
-    tag("li", {}, tag("a", { "href":"#sitemap" }, "#sitemap")),
-  );
-
   for (const page of page_list) {
     const page_index = page_list.indexOf(page);
     document.getElementById("page_list").appendChild(
@@ -57,6 +53,10 @@ export function sitemap() {
       ),
     );
   }
+
+  document.getElementById("page_list").appendChild(
+    tag("li", {}, tag("a", { "href": "#sitemap" }, "#sitemap")),
+  );
 
   for (const post of posts) {
     const post_index = posts.indexOf(post);

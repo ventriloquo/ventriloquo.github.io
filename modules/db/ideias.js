@@ -9,18 +9,18 @@ A função <code>markup()</code> é a responsável por gerar strings HTML a part
 
 No momento, ela é "compatível" com estas sintaxes:
 
-- listas desordenadas ("- ")
-- citações ("#+begin_quote" e "#+end_quote")
-- exemplos ("#+begin_example" e "#+end_example")
-- blocos de código ("#+begin_src" e "#+end_src")
-- heading de nível 1 ("* ")
-- links ("&#91;&#91;https://google.com&#93;&#91;Google&#93;&#93;")
+- listas desordenadas (<code>-&nbsp;</code>)
+- citações (<code>#+begin_quote</code> e <code>#+end_quote</code>)
+- exemplos (<code>#+begin_example</code> e <code>#+end_example</code>)
+- blocos de código (<code>#+begin_src</code> e <code>#+end_src</code>)
+- heading de nível 1 (<code>*&nbsp;</code>)
+- links (<code>&#91;&#91;https://google.com&#93;&#91;Google&#93;&#93;</code>)
 
 Estas são as que eu desejo implementar:
 
-- texto em negrito ("*texto*")
-- texto itálico ("/texto/")
-- texto pré-formatado/código ("=texto=")
+- texto em negrito (<code>*texto*</code>)
+- texto itálico (<code>/texto/</code>)
+- texto pré-formatado/código (<code>=texto=</code>)
 `,
   },
   {
