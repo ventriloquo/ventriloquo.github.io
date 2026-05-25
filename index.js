@@ -78,4 +78,42 @@ navigation.addEventListener("currententrychange", (e) => {
   }, 0);
 });
 
+document.addEventListener("keydown", (e) => {
+  switch (e.key) {
+    case "p":
+      document.location = "#projetos";
+      break;
+    case "b":
+      document.location = "#blog";
+      break;
+    case "l":
+      document.location = "#bookshelf";
+      break;
+    case "j":
+      document.location = "#jogos";
+      break;
+    case "i":
+      document.location = "#ideias";
+      break;
+    case "L":
+      document.location = "#links";
+      break;
+    case "a":
+      document.location = "#about";
+      break;
+    case "t":
+      document.location = "#testes";
+      break;
+    case "m":
+      document.location = "#sitemap";
+      break;
+    case "h":
+      document.location = "#home";
+      break;
+    case "f":
+      document.location =
+        `mailto:contato.nest604@passinbox.com?subject=Feedback: ${document.title}`;
+  }
+});
+
 main();
