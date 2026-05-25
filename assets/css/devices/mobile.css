@@ -2,9 +2,20 @@
   section#intro {
     display: none;
   }
+
   section#home {
     display: block;
   }
+
+  body:has(section:target) {
+    section#home {
+      display: none;
+      &:target {
+        display: block;
+      }
+    }
+  }
+
   nav {
     display: flex;
     flex-direction: row;
