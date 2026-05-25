@@ -67,4 +67,15 @@ function main() {
   pagina_de_testes();
 }
 
+navigation.addEventListener("currententrychange", (e) => {
+  setTimeout(() => {
+    const sections = document.getElementsByTagName("section");
+    for (let s of sections) {
+      if (s.checkVisibility()) {
+        document.title = s.children[0].innerText;
+      }
+    }
+  }, 0);
+});
+
 main();
