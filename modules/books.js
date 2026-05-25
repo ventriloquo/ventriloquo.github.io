@@ -157,7 +157,7 @@ export function books() {
           "class": "book_info_exit button",
           "style":
             "width: -webkit-fill-available; margin: auto; text-align: center",
-          "onclick":"navigation.back()",
+          "onclick": "navigation.back()",
           "href": `#${slug(book.title)}_page`,
         }, "Voltar"),
       ),

@@ -52,7 +52,7 @@ As teclas de atalho são as seguintes:
 - <code>m</code> - Ir para o mapa do site
 - <code>h</code> - Ir para a home
 - <code>f</code> - Enviar um feedback sobre a página atual
-`
+`,
   },
   {
     title: "Recuperei o meu site!",

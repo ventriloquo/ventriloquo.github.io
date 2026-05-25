@@ -191,7 +191,7 @@ main {
 
 section {
   display: none;
-  width: 90%;
+  width: -webkit-fill-available;
   min-height: 100vh;
   padding: 1em;
   position: absolute;
@@ -621,7 +621,6 @@ table {
 details {
   padding: 0.3em;
   user-select: none;
-  width: 100%;
   cursor: pointer;
   border-radius: 5px;
   margin: 1em 0;

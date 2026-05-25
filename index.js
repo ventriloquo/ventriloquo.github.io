@@ -67,14 +67,39 @@ function main() {
   pagina_de_testes();
 }
 
+function active_page() {
+  const hash = `/${document.location.hash}_button`;
+  const active_button = document.getElementById(hash);
+
+  if (active_button) {
+    document.querySelectorAll(".active").forEach((e) => {
+      e.classList.remove("active");
+    });
+    document.getElementById(hash).classList.add("active");
+  }
+
+  switch (document.location.hash) {
+    case "#home":
+    case "#sitemap":
+    case "#intro":
+      document.querySelectorAll(".active").forEach((e) => {
+        e.classList.remove("active");
+      });
+      break;
+  }
+}
+
 navigation.addEventListener("currententrychange", (e) => {
   setTimeout(() => {
     const sections = document.getElementsByTagName("section");
+
     for (let s of sections) {
       if (s.checkVisibility()) {
         document.title = s.children[0].innerText;
       }
     }
+
+    active_page();
   }, 0);
 });
 

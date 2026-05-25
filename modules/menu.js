@@ -2,15 +2,6 @@
 
 import { create_priv_page, page_list, tag } from "./common.js";
 
-function active_page(id) {
-  document.querySelectorAll(".active").forEach((e) => {
-    e.classList.remove("active");
-  });
-  document.getElementById(id).classList.add("active");
-}
-
-navigator.active_page = active_page;
-
 export function menu() {
   create_priv_page(
     "mobile_menu",
@@ -28,7 +19,6 @@ export function menu() {
           "id": `${page.id}_button`,
           "href": page.id,
           "class": "blog_entry button",
-          "onclick": `navigator.active_page("${page.id}_button")`,
         }, page.title),
       ),
     );
@@ -38,7 +28,6 @@ export function menu() {
         "id": `${page.id}_button`,
         "href": page.id,
         "class": "button",
-        "onclick": `navigator.active_page("${page.id}_button")`,
       }, page.title),
     );
 
