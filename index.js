@@ -80,6 +80,7 @@ function active_page() {
 
   switch (document.location.hash) {
     case "#home":
+    case "#testes":
     case "#sitemap":
     case "#intro":
       document.querySelectorAll(".active").forEach((e) => {
