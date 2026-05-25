@@ -2,6 +2,15 @@
 
 export const ideias = [
   {
+    title: "Botão para trocar entre tema claro e escuro",
+    stat: 1,
+    content: `
+Um botão clicável/tocável para alternar entre tema claro e escuro.
+
+Atualmente, é possível alternar entre temas com a tecla <code>T</code>.
+    `
+  },
+  {
     title: "Melhorar a <code>markup()</code>",
     stat: 0,
     content: `

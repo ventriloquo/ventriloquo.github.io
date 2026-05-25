@@ -49,6 +49,7 @@ As teclas de atalho são as seguintes:
 - <code>L</code> - Ir para a página dos sites que eu acompanho
 - <code>a</code> - Ir para a página sobre mim
 - <code>t</code> - Ir para a página de testes
+- <code>T</code> - Trocar entre tema claro/escuro
 - <code>m</code> - Ir para o mapa do site
 - <code>h</code> - Ir para a home
 - <code>f</code> - Enviar um feedback sobre a página atual

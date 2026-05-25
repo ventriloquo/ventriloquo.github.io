@@ -32,12 +32,15 @@
   }
 }
 
-/* Dark Mode (Gruvbox Dark) */
+/* Light Mode (Gruvbox light) */
 :root {
-  --fg: #ebdbb2;
-  --bg-0: #32302f;
-  --bg-1: #282828;
-  --bg-2: #3c3436;
+  --fg: #3c3436;
+  --bg-0: #f2e5bc;
+  --bg-1: #fbf1c7;
+  --bg-2: #ebdbb2;
+
+  --ac-1: var(--green_rgb);
+  --ac-0: var(--blue_rgb);
 
   --red_rgb: 204, 36, 29;
   --green_rgb: 152, 151, 26;
@@ -45,9 +48,6 @@
   --blue_rgb: 69, 133, 136;
   --purple_rgb: 177, 98, 134;
   --cyan_rgb: 104, 157, 106;
-
-  --ac-0: var(--green_rgb);
-  --ac-1: var(--blue_rgb);
 
   --red: rgb(var(--red_rgb));
   --green: rgb(var(--green_rgb));
@@ -57,22 +57,17 @@
   --cyan: rgb(var(--cyan_rgb));
 }
 
-/* Light Mode (Gruvbox light) */
-@media only screen and (prefers-color-scheme: light) {
-  :root {
-    --fg: #3c3436;
-    --bg-0: #f2e5bc;
-    --bg-1: #fbf1c7;
-    --bg-2: #ebdbb2;
+/* Dark Mode (Gruvbox Dark) */
+:root.dark-mode {
+  --fg: #ebdbb2;
+  --bg-0: #32302f;
+  --bg-1: #282828;
+  --bg-2: #3c3436;
 
-    --ac-1: var(--green_rgb);
-    --ac-0: var(--blue_rgb);
-  }
-
-  progress {
-    background-color: var(--bg-1) !important;
-  }
+  --ac-0: var(--green_rgb);
+  --ac-1: var(--blue_rgb);
 }
+
 
 *::-webkit-scrollbar {
   background-color: var(--bg-1);

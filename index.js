@@ -130,6 +130,11 @@ document.addEventListener("keydown", (e) => {
     case "t":
       document.location = "#testes";
       break;
+    case "T":
+      document.documentElement.classList.toggle("dark-mode");
+      const isDark = document.documentElement.classList.contains("dark-mode");
+      localStorage.setItem("theme", isDark ? "dark" : "light");
+      break;
     case "m":
       document.location = "#sitemap";
       break;
@@ -141,5 +146,9 @@ document.addEventListener("keydown", (e) => {
         `mailto:contato.nest604@passinbox.com?subject=Feedback: ${document.title}`;
   }
 });
+
+if (localStorage.theme === "dark") {
+  document.documentElement.classList.add("dark-mode");
+}
 
 main();
