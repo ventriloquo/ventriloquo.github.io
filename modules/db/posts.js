@@ -2,6 +2,59 @@
 
 export const posts = [
   {
+    title: "O site agora tem teclas de atalho!",
+    date: "25.05.2026",
+    content: `
+O site agora tem teclas de atalho para navegação mais rápida com o teclado!
+
+Isso é só uma coisinha besta que eu pensei em fazer enquanto estava implementando a troca de título com base na página visível.
+
+#+begin_quote
+Se você não reparou, antes você poderia visitar qualquer página aqui, mas o título do site não mudava. Agora ele muda!
+#+end_quote
+
+Confesso que fiquei uma boa meia hora quebrando a cabeça tentado entender o porquê do título da página só mudar depois de acessar a página duas vezes, então fiquei mais uns 15 minutos checando com o Gemini quais eram as possíveis causas, só para no final o problema ser uma [[https://pt.wikipedia.org/wiki/Condi%C3%A7%C3%A3o_de_corrida#:~:text=Uma%20condi%C3%A7%C3%A3o%20de%20corrida%20%C3%A9%20uma%20falha%20num%20sistema%20ou%20processo%20em%20que%20o%20resultado%20do%20processo%20%C3%A9%20inesperadamente%20dependente%20da%20sequ%C3%AAncia%20ou%20sincronia%20doutros%20eventos.][<i>race condicion</i>]] entre a API <code>navigation</code> e o <code>DOM</code> 🤦.
+
+Basicamente, a página trocava mais rápido do que o <code>DOM</code> conseguia trocar o título do site. A solução? <b>Põe um timer nessa bomba</b>.
+
+#+begin_src
+<span>JS</span>
+navigation.addEventListener("currententrychange", (e) => {
+  <b>// Eu não tava de sacanagem</b>
+  setTimeout(() => {
+    const sections = document.getElementsByTagName("section");
+    for (let s of sections) {
+      if (s.checkVisibility()) {
+        document.title = s.children[0].innerText;
+      }
+    }
+  }, 0); <b>// É literalmente coisa de milésimos de diferença,</b>
+});<b>      // eu posso simplesmente fazer o processo aguardar</b>
+<b>         // "0 segundos" e só isso já resolve a <i>race condition</i>.</b>
+#+end_src
+
+Enfim, com a troca de título com base nas páginas funcionando, me veio a ideia de possibilitar o envio de feedback sobre qualquer página do site sem ser com um botão em cada página (como são os posts do blog). Então a solução foi bem simples: é só colocar um <code>eventListener</code> verificando o teclado!
+
+#+begin_quote
+<span>Explicação rápida</span>
+Agora o site checa quais teclas estão sendo pressionadas, quando alguma tecla específica é apertada (pox exemplo: <code>h</code>), ele faz uma ação (por exemplo: ir para a tela inicial do site)
+#+end_quote
+
+As teclas de atalho são as seguintes:
+- <code>p</code> - Ir para a página dos meus projetos
+- <code>b</code> - Ir para a página do meu blog
+- <code>l</code> - Ir para a página da minha lista de leitura
+- <code>j</code> - Ir para a página dos meus jogos
+- <code>i</code> - Ir para a página das minhas ideias
+- <code>L</code> - Ir para a página dos sites que eu acompanho
+- <code>a</code> - Ir para a página sobre mim
+- <code>t</code> - Ir para a página de testes
+- <code>m</code> - Ir para o mapa do site
+- <code>h</code> - Ir para a home
+- <code>f</code> - Enviar um feedback sobre a página atual
+`
+  },
+  {
     title: "Recuperei o meu site!",
     date: "23.05.2026",
     content: `
