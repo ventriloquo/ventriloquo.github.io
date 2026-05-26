@@ -3,7 +3,7 @@
 export const ideias = [
   {
     title: "Botão para trocar entre tema claro e escuro",
-    stat: 1,
+    stat: 2,
     content: `
 Um botão clicável/tocável para alternar entre tema claro e escuro.
 
