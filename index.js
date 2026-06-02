@@ -90,19 +90,28 @@ function active_page() {
   }
 }
 
-navigation.addEventListener("currententrychange", (e) => {
-  setTimeout(() => {
-    const sections = document.getElementsByTagName("section");
-
-    for (let s of sections) {
-      if (s.checkVisibility()) {
-        document.title = s.children[0].innerText;
+const sections = document.querySelectorAll("section");
+const io = new IntersectionObserver((entries) => {
+  for (const entry of entries) {
+    if (entry.isIntersecting) {
+      const firstChild = entry.target.children[0];
+      if (firstChild && firstChild.innerText) {
+        document.title = firstChild.innerText;
       }
     }
+  }
+}, { threshold: 0.5 });
 
+sections.forEach(s => io.observe(s));
+
+function handleNavigation() {
+  setTimeout(() => {
     active_page();
   }, 0);
-});
+}
+
+window.addEventListener("popstate", handleNavigation);
+window.addEventListener("hashchange", handleNavigation);
 
 document.addEventListener("keydown", (e) => {
   switch (e.key) {
