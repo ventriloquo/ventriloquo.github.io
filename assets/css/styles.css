@@ -430,7 +430,7 @@ progress {
   border-radius: 5px;
   width: 100%;
   border: none;
-  background-color: var(--bg-0);
+  background-color: var(--bg-1);
 
   -webkit-appearance: none;
 
@@ -447,15 +447,15 @@ progress {
     background-color: rgba(var(--ac-0), 1);
   }
 
-  &.green_bar::-webkit-progress-value {
+  &.green_bar::-webkit-progress-value, &.green_bar::-moz-progress-bar {
     background-color: var(--green);
   }
 
-  &.yellow_bar::-webkit-progress-value {
+  &.yellow_bar::-webkit-progress-value, &.yellow_bar::-moz-progress-bar  {
     background-color: var(--yellow);
   }
 
-  &.red_bar::-webkit-progress-bar {
+  &.red_bar::-webkit-progress-bar, &.red_bar::-moz-progress-bar  {
     background-color: var(--red);
   }
 }
@@ -590,12 +590,14 @@ table {
 }
 
 .project {
+  align-items: center;
   img {
-    max-height: 250px;
+    max-width: 200px;
   }
 
   .project_info {
-    max-width: 40ch;
+    max-width: 50ch;
+    margin-left: 2em;
   }
 }
 
