@@ -27,11 +27,17 @@ navigation.addEventListener("currententrychange", (e) => {
       if (s.checkVisibility()) {
         document.title = s.children[0].innerText;
       }
-    }
-  }, 0); <b>// É literalmente coisa de milésimos de diferença,</b>
-});<b>      // eu posso simplesmente fazer o processo aguardar</b>
-<b>         // "0 segundos" e só isso já resolve a <i>race condition</i>.</b>
+    }    <b>// É literalmente coisa de milésimos de diferença,</b>
+  }, 0); <b>// eu posso simplesmente fazer o processo aguardar</b>
+});      <b>// "0 segundos" e só isso já resolve a <i>race condition</i>.</b>
+<b>
 #+end_src
+
+#+begin_note
+O código responsável por fazer essa função não é mais esse. Já que essa API se tornou mainline a pouco tempo, é muito fácil ter algum navegador que não é compatível com ela, fazendo com que o site fique inacessível.
+
+Então eu taquei esse código no GPT-5 e pedi pra ele me dar algo mais compatível com browsers mais antigos. Nos meus testes está tudo funcionando numa boa, pelo menos por enquanto.
+#+end_note
 
 Enfim, com a troca de título com base nas páginas funcionando, me veio a ideia de possibilitar o envio de feedback sobre qualquer página do site sem ser com um botão em cada página (como são os posts do blog). Então a solução foi bem simples: é só colocar um <code>eventListener</code> verificando o teclado!
 

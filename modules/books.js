@@ -54,7 +54,7 @@ export function books() {
       ),
       tag("progress", {
         "class": "book_progress_bar",
-        "style": "border: solid 1px rgb(var(--ac-0))",
+        "style": "width: -moz-available; width: -webkit-fill-available; border: solid 1px rgb(var(--ac-0))",
         "value": `${livros_lidos}`,
         "max": `${total_de_livros}`,
       }),
@@ -156,7 +156,7 @@ export function books() {
         tag("a", {
           "class": "book_info_exit button",
           "style":
-            "width: -webkit-fill-available; margin: auto; text-align: center",
+            "width: -moz-available; width: -webkit-fill-available; margin: auto; text-align: center",
           "onclick": "navigation.back()",
           "href": `#${slug(book.title)}_page`,
         }, "Voltar"),

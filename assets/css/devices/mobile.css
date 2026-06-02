@@ -36,10 +36,14 @@
   .project {
     img {
       max-height: 300px;
+      display: block;
+      margin: auto !important;
     }
 
     .project_info {
       max-width: -webkit-fill-available;
+      max-width: -moz-available;
+      margin: auto;
     }
   }
 
