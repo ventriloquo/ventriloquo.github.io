@@ -54,7 +54,8 @@ export function books() {
       ),
       tag("progress", {
         "class": "book_progress_bar",
-        "style": "width: -moz-available; width: -webkit-fill-available; border: solid 1px rgb(var(--ac-0))",
+        "style":
+          "width: -moz-available; width: -webkit-fill-available; border: solid 1px rgb(var(--ac-0))",
         "value": `${livros_lidos}`,
         "max": `${total_de_livros}`,
       }),

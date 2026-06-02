@@ -67,6 +67,8 @@ function main() {
   pagina_de_testes();
 }
 
+main();
+
 function active_page() {
   const hash = `/${document.location.hash}_button`;
   const active_button = document.getElementById(hash);
@@ -102,7 +104,7 @@ const io = new IntersectionObserver((entries) => {
   }
 }, { threshold: 0.5 });
 
-sections.forEach(s => io.observe(s));
+sections.forEach((s) => io.observe(s));
 
 function handleNavigation() {
   setTimeout(() => {
@@ -112,6 +114,34 @@ function handleNavigation() {
 
 window.addEventListener("popstate", handleNavigation);
 window.addEventListener("hashchange", handleNavigation);
+
+const switch_theme = {
+  sun: "<img loading='lazy' width='24' height='24' src='/assets/sun.svg'>",
+  moon: "<img loading='lazy' width='24' height='24' src='/assets/moon.svg'>",
+
+  theme_switcher: document.getElementById("theme_switcher"),
+
+  change_icon() {
+    if (localStorage.theme === "dark") {
+      this.theme_switcher.innerHTML = this.sun;
+    } else {
+      this.theme_switcher.innerHTML = this.moon;
+    }
+  },
+
+  toggle_dark_mode() {
+    document.documentElement.classList.toggle("dark-mode");
+    const isDark = document.documentElement.classList.contains("dark-mode");
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+    this.change_icon();
+  },
+};
+
+switch_theme.change_icon();
+
+document.getElementById("theme_switcher").addEventListener("click", () => {
+  switch_theme.toggle_dark_mode();
+})
 
 document.addEventListener("keydown", (e) => {
   switch (e.key) {
@@ -140,9 +170,7 @@ document.addEventListener("keydown", (e) => {
       document.location = "#testes";
       break;
     case "T":
-      document.documentElement.classList.toggle("dark-mode");
-      const isDark = document.documentElement.classList.contains("dark-mode");
-      localStorage.setItem("theme", isDark ? "dark" : "light");
+      switch_theme.toggle_dark_mode();
       break;
     case "m":
       document.location = "#sitemap";
@@ -160,4 +188,3 @@ if (localStorage.theme === "dark") {
   document.documentElement.classList.add("dark-mode");
 }
 
-main();

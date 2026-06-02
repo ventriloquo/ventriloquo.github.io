@@ -68,7 +68,6 @@
   --ac-1: var(--blue_rgb);
 }
 
-
 *::-webkit-scrollbar {
   background-color: var(--bg-1);
   width: 0.3em;
@@ -452,11 +451,11 @@ progress {
     background-color: var(--green);
   }
 
-  &.yellow_bar::-webkit-progress-value, &.yellow_bar::-moz-progress-bar  {
+  &.yellow_bar::-webkit-progress-value, &.yellow_bar::-moz-progress-bar {
     background-color: var(--yellow);
   }
 
-  &.red_bar::-webkit-progress-bar, &.red_bar::-moz-progress-bar  {
+  &.red_bar::-webkit-progress-bar, &.red_bar::-moz-progress-bar {
     background-color: var(--red);
   }
 }
