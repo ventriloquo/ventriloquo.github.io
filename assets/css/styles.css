@@ -455,7 +455,7 @@ progress {
     background-color: var(--yellow);
   }
 
-  &.red_bar::-webkit-progress-bar, &.red_bar::-moz-progress-bar {
+  &.red_bar::-webkit-progress-bar, &.red_bar {
     background-color: var(--red);
   }
 }
