@@ -35,7 +35,7 @@ export function projects() {
         tag("img", {
           "title": cover,
           "loading": "lazy",
-          "style": "; object-fit: cover",
+          "style": "object-fit: cover",
           "src": project.icon,
         }),
         tag(
