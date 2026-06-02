@@ -187,6 +187,7 @@ main {
 section {
   display: none;
   width: -webkit-fill-available;
+  width: -moz-available;
   min-height: 100vh;
   padding: 1em;
   position: absolute;
