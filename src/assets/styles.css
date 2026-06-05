@@ -38,6 +38,7 @@ a {
     text-decoration: none;
     text-underline-offset: .3em;
     color: var(--ac);
+    display: inline-block;
     
     &:hover {
 	color: var(--bg-1);
