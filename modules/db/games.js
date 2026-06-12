@@ -1,5 +1,13 @@
 export const game_colection = [
   {
+    title: "Resident Evil: 6",
+    cover: "re6.jpg",
+  },
+  {
+    title: "Human Fall Flat",
+    cover: "human_fall_flat.jpg",
+  },
+  {
     title: "Batman Arkham City",
     cover: "batman_arkham_city.jpeg",
   },
