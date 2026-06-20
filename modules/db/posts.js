@@ -2,6 +2,20 @@
 
 export const posts = [
   {
+    title: "Slackware",
+    date: "20.06.2026",
+    content: `
+Ok, isso aqui não foi algo que eu esperava fazer nem em 1 milhão de anos. Mas é oficial: eu estou usando o [[https://slackware.com][Slackware]]!
+
+Motivos? Deu vontade.
+
+Na realidade o que me incentivou a fazer isso foi toda a "arquitetura" em volta dele, o init system, consumo de RAM, qual a lógica dos pacotes, etc.
+
+Ainda estou me adaptando com ele, mas o que eu já posso dizer é que ele me lembra (muito) o OpenBSD.
+<img loading='lazy' src='/assets/3cc9c2980af43d306f77f6210a094129.png'>
+`
+  },
+  {
     title: "O site agora tem teclas de atalho!",
     date: "25.05.2026",
     content: `
