@@ -9,10 +9,36 @@ Ok, isso aqui não foi algo que eu esperava fazer nem em 1 milhão de anos. Mas 
 
 Motivos? Deu vontade.
 
-Na realidade o que me incentivou a fazer isso foi toda a "arquitetura" em volta dele, o init system, consumo de RAM, qual a lógica dos pacotes, etc.
+Na realidade o que me incentivou a fazer isso foi toda a "arquitetura" em volta dele, o init system, consumo de RAM, etc.
 
-Ainda estou me adaptando com ele, mas o que eu já posso dizer é que ele me lembra (muito) o OpenBSD.
+Ainda estou me adaptando a ele, mas o que eu já posso dizer é que ele me lembra (muito) o OpenBSD.
 <img loading='lazy' src='/assets/3cc9c2980af43d306f77f6210a094129.png'>
+
+* Gerenciamento de pacotes
+
+Os meus melhores amigos no uso desse sistema estão sendo os [[https://appimage.org][AppImages]], [[https://suckless.org][Softwares Suckless]] (ou [[https://suckless.org/rocks][endossados por eles]]) e o [[https://github.com/xplshn/dbin][dbin]] (um gerenciador de pacotes estáticos agnóstico). Com os AppImages e o dbin eu consigo lidar com a falta de softwares disponíveis nos repositórios do Slackware (basicamente só tem algumas coisas relacionadas ao X.org, KDE e XFCE) e os Softwares Suckless são simples por natureza e extremamente fáceis de serem compilados em diversos sistemas.
+
+O Frankenstein resultante disso é um sistema Linux com uma base relativamente estática, já que eu faço questão de instalar os meus apps no diretório <code>~/.local/bin</code> para mexer o mínimo com a raíz do sistema, tanto por questão de segurança, quanto por conveniência, afinal, sem um gerenciador de pacotes convencional, seria um saco saber o que foi que eu instalei e o que já veio com o sistema.
+
+* Coisas que estou gostando
+
+O que me surpreendeu foi o uso muito baixo de recursos do Hardware, como o consumo de memória RAM, que oscila na casa dos <b>180mb</b>! Talvez eu conseguisse replicar isso no Alpine, mas eu teria muito serviço para fazer e arriscaria quebrar alguma coisa ainda por cima. O Slackware fica assim só de você fazer uma instalação enxuta, desmarcando as seleções de pacotes do KDE e do XFCE no instalador (inclusive, o processo de instalação do Slackware é muito fácil, o que me pegou de surpresa).
+
+A melhor coisa nele até agora para mim é o [[http://www.slackware.com/config/init.php][Init System]] dele. Os serviços são só um bando de Shell Scripts. É sério. Quer fazer o Emacs rodar como servidor durante o Boot da sua máquina? Faz um Shell Script em <code>/etc/rc.d</code> com o nome tendo <code>rd.</code> no início, dê permissão de execução e pronto! A próxima vez que você iniciar a sua máquina, esse Shell Script vai ser executado. Ou então, se você não quer fazer vários Scripts separados e ter o risco deles não serem executados em uma ordem específica, você pode pôr tudo no Script <code>rc.local</code>. Ele vai ser executado por último, então não tem risco de algum comando seu não funcionar corretamente porquê ele foi executado fora de ordem.
+
+Eu coloquei alguns comandos para configurar minha placa Wi-Fi e pôr o <code>wpa_supplicant</code> para funcionar no <code>/etc/rc.d/rc.local</code>. Sempre funciona exatamente como eu quis. Eu não quero nem começar a falar da dor de cabeça que era fazer o <code>wpa_supplicant</code> funcionar consistentemente no Alpine, principalmente quando eu tinha que levar meu notebook para outro lugar e precisava conectar em uma outra rede Wi-Fi (meu notebook não tem entrada RJ45). Então acabava tendo que usar o NetworkManager só para ter uma conexão consistente e poder mudar de Wi-Fi (o que eu detesto).
+
+* Coisas que não gostei
+
+Devo dizer que é extremamente satisfatório quando eu baixo o código-fonte de algo e ele simplesmente compila sem problemas ou coisas faltando. Isso é, quando ele compila. Tanto pela falta de pacotes nos repositórios quanto pelo fato do gerenciador de pacotes não baixar automaticamente as dependências de um pacotes, a experiência de compilar/instalar algo externo é quase que uma roleta russa. Se você estiver compilando algo que segue +/- a [[https://suckless.org/philosophy/][filosofia Suckless]], então você tem menos chances de não conseguir compilar algo (mas isso não é impossível, eu mesmo não consegui compilar o [[https://codeberg.org/nsxiv/nsxiv][NSXIV]] porquê o Slackware não tem a biblioteca <code>Imlib2</code> disponível, então tive que usar um visualizador de imagem diferente, o [[https://www.johnhawthorn.com/meh/][meh]]).
+
+Isso é algo que é sim chato, mas como eu já disse anteriormente, eu já tenho as soluções para esses problemas.
+
+* Enfim...
+
+Acho que por enquanto isso é tudo o que eu tenho a falar. Ainda tem muita coisa que eu tenho que aprender no Slackware antes de ter uma opinião concreta sobre ele. Mas estou gostando da experiência.
+
+Até o próximo post!
 `
   },
   {
