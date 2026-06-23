@@ -626,7 +626,7 @@ table {
   padding: 10px 8px;
   margin: auto 5px;
   width: -webkit-fill-available;
-  width: -moz-fill-available;
+  width: -moz-available;
   font-size: large;
 }
 
