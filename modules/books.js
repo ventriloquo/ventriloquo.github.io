@@ -106,7 +106,7 @@ export function books() {
     }
 
     create_priv_page(
-      `#${slug(book.title)}_page`,
+      `#bookshelf/${slug(book.title)}`,
       `${book.title}`,
       tag(
         "div",
@@ -159,12 +159,12 @@ export function books() {
           "style":
             "width: -moz-available; width: -webkit-fill-available; margin: auto; text-align: center",
           "onclick": "history.back()",
-          "href": `#${slug(book.title)}_page`,
+          "href": `#bookshelf/${slug(book.title)}`,
         }, "Voltar"),
       ),
     );
 
-    document.getElementById(`${slug(book.title)}_page`).classList.add(
+    document.getElementById(`bookshelf/${slug(book.title)}`).classList.add(
       "book_page",
     );
 
@@ -174,7 +174,7 @@ export function books() {
         { "class": "book", "id": `#${slug(book.title)}` },
         tag(
           "a",
-          { "href": `#${slug(book.title)}_page` },
+          { "href": `#bookshelf/${slug(book.title)}` },
           tag("img", {
             "loading": "lazy",
             "alt": book.title,
@@ -225,7 +225,7 @@ export function books() {
       }
     });
 
-    document.getElementById(`${slug(book.title)}_page_title`).style.textAlign =
+    document.getElementById(`bookshelf/${slug(book.title)}_title`).style.textAlign =
       "center";
   }
 }

@@ -69,7 +69,7 @@ export function sitemap() {
 
   for (const book of bookshelf) {
     const book_index = bookshelf.indexOf(book);
-    const book_link = `/#${slug(book.title)}_page`;
+    const book_link = `/#bookshelf/${slug(book.title)}`;
     document.getElementById("page_list").appendChild(
       tag("li", {}, tag("a", { "href": book_link }, book_link)),
     );

@@ -89,16 +89,18 @@ Agora o site checa quais teclas estão sendo pressionadas, quando alguma tecla e
 As teclas de atalho são as seguintes:
 - <code>p</code> - Ir para a página dos meus projetos
 - <code>b</code> - Ir para a página do meu blog
-- <code>l</code> - Ir para a página da minha lista de leitura
-- <code>j</code> - Ir para a página dos meus jogos
+- <code>s</code> - Ir para a página da minha lista de leitura
+- <code>g</code> - Ir para a página dos meus jogos
 - <code>i</code> - Ir para a página das minhas ideias
-- <code>L</code> - Ir para a página dos sites que eu acompanho
+- <code>w</code> - Ir para a página dos sites que eu acompanho
 - <code>a</code> - Ir para a página sobre mim
 - <code>t</code> - Ir para a página de testes
-- <code>T</code> - Trocar entre tema claro/escuro
+- <code>d</code> - Trocar entre tema claro/escuro
 - <code>m</code> - Ir para o mapa do site
 - <code>h</code> - Ir para a home
 - <code>f</code> - Enviar um feedback sobre a página atual
+- <code>j</code> - Descer página
+- <code>k</code> - Subir página
 `,
   },
   {
