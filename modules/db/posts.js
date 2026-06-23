@@ -70,7 +70,6 @@ navigation.addEventListener("currententrychange", (e) => {
     }    <b>// É literalmente coisa de milésimos de diferença,</b>
   }, 0); <b>// eu posso simplesmente fazer o processo aguardar</b>
 });      <b>// "0 segundos" e só isso já resolve a <i>race condition</i>.</b>
-<b>
 #+end_src
 
 #+begin_note
