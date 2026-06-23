@@ -32,40 +32,41 @@
   }
 }
 
-/* Light Mode (Gruvbox light) */
+/* Light Mode (Flattened Light) */
 :root {
-  --fg: #3c3436;
-  --bg-0: #f2e5bc;
-  --bg-1: #fbf1c7;
-  --bg-2: #ebdbb2;
+  --fg:           #073642;
+  --bg-0:         #eee8d5;
+  --bg-1:         #fdf6e3;
+  --bg-2:         #93a1a1;
 
-  --ac-1: var(--green_rgb);
-  --ac-0: var(--blue_rgb);
+  --ac-1:         var(--yellow_rgb);
+  --ac-0:         var(--cyan_rgb);
 
-  --red_rgb: 204, 36, 29;
-  --green_rgb: 152, 151, 26;
-  --yellow_rgb: 215, 153, 33;
-  --blue_rgb: 69, 133, 136;
-  --purple_rgb: 177, 98, 134;
-  --cyan_rgb: 104, 157, 106;
+  --red_rgb:      203,  75,  22;
+  --green_rgb:    133, 153,   0;
+  --yellow_rgb:   181, 137,   0;
+  --blue_rgb:     131, 148, 150;
+  --purple_rgb:   108, 113, 196;
+  --cyan_rgb:      42, 161, 152;
 
-  --red: rgb(var(--red_rgb));
-  --green: rgb(var(--green_rgb));
-  --yellow: rgb(var(--yellow_rgb));
-  --blue: rgb(var(--blue_rgb));
-  --purple: rgb(var(--purple_rgb));
-  --cyan: rgb(var(--cyan_rgb));
+  --red:          rgb(var(--red_rgb));
+  --green:        rgb(var(--green_rgb));
+  --yellow:       rgb(var(--yellow_rgb));
+  --blue:         rgb(var(--blue_rgb));
+  --purple:       rgb(var(--purple_rgb));
+  --cyan:         rgb(var(--cyan_rgb));
 }
 
-/* Dark Mode (Gruvbox Dark) */
+/* Dark Mode (Flattened Dark) */
 :root.dark-mode {
-  --fg: #ebdbb2;
-  --bg-0: #32302f;
-  --bg-1: #282828;
-  --bg-2: #3c3436;
+  --fg:           #eee8d5;
+  --bg-0:         #184753;
+  --bg-1:         #073642;
+  --bg-2:         #002b36;
 
-  --ac-0: var(--green_rgb);
-  --ac-1: var(--blue_rgb);
+  --red_rgb:      220,  50,  47;
+  --blue_rgb:      38, 139, 210;
+  --purple_rgb:   211,  54, 130;
 }
 
 *::-webkit-scrollbar {
@@ -449,15 +450,15 @@ progress {
     background-color: rgba(var(--ac-0), 1);
   }
 
-  &.green_bar::-webkit-progress-value, &.green_bar::-moz-progress-bar {
+  &.green_bar::-webkit-progress-value {
     background-color: var(--green);
   }
 
-  &.yellow_bar::-webkit-progress-value, &.yellow_bar::-moz-progress-bar {
+  &.yellow_bar::-webkit-progress-value {
     background-color: var(--yellow);
   }
 
-  &.red_bar::-webkit-progress-bar, &.red_bar {
+  &.red_bar::-webkit-progress-bar {
     background-color: var(--red);
   }
 }
