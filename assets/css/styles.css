@@ -618,6 +618,18 @@ table {
   }
 }
 
+#searchBox {
+  background-color: var(--bg-0);
+  color: var(--fg);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 8px;
+  margin: auto 5px;
+  width: -webkit-fill-available;
+  width: -moz-fill-available;
+  font-size: large;
+}
+
 details {
   padding: 0.3em;
   user-select: none;

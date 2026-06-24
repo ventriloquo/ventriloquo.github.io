@@ -45,6 +45,10 @@ Até o próximo post!
     title: "O site agora tem teclas de atalho!",
     date: "25.05.2026",
     content: `
+#+begin_note
+No momento as teclas de atalho estão desativadas até que eu dê um jeito delas funcionarem sem entrar em conflito com o campo de pesquisa do blog.
+#+end_note
+
 O site agora tem teclas de atalho para navegação mais rápida com o teclado!
 
 Isso é só uma coisinha besta que eu pensei em fazer enquanto estava implementando a troca de título com base na página visível.

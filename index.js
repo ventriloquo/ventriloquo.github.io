@@ -143,60 +143,60 @@ document.getElementById("theme_switcher").addEventListener("click", () => {
   switch_theme.toggle_dark_mode();
 })
 
-document.addEventListener("keydown", (e) => {
-  switch (e.key) {
-    case "p":
-      document.location = "#projetos";
-      break;
-    case "b":
-      document.location = "#blog";
-      break;
-    case "s":
-      document.location = "#bookshelf";
-      break;
-    case "g":
-      document.location = "#jogos";
-      break;
-    case "i":
-      document.location = "#ideias";
-      break;
-    case "w":
-      document.location = "#links";
-      break;
-    case "a":
-      document.location = "#about";
-      break;
-    case "t":
-      document.location = "#testes";
-      break;
-    case "d":
-      switch_theme.toggle_dark_mode();
-      break;
-    case "m":
-      document.location = "#sitemap";
-      break;
-    case "H":
-      document.location = "#home";
-      break;
-    case "f":
-      document.location =
-        `mailto:contato.nest604@passinbox.com?subject=Feedback: ${document.title}`;
-      break;
-    case "h":
-      history.back();
-      break;
-    case "j":
-      window.scrollBy({ top: 100, behavior: 'smooth' });
-      break;
-    case "k":
-      window.scrollBy({ top: -100, behavior: 'smooth' });
-      break;
-    case "l":
-      history.forward();
-      break;
-  }
-});
-
+//document.addEventListener("keydown", (e) => {
+//  switch (e.key) {
+//    case "p":
+//      document.location = "#projetos";
+//      break;
+//    case "b":
+//      document.location = "#blog";
+//      break;
+//    case "s":
+//      document.location = "#bookshelf";
+//      break;
+//    case "g":
+//      document.location = "#jogos";
+//      break;
+//    case "i":
+//      document.location = "#ideias";
+//      break;
+//    case "w":
+//      document.location = "#links";
+//      break;
+//    case "a":
+//      document.location = "#about";
+//      break;
+//    case "t":
+//      document.location = "#testes";
+//      break;
+//    case "d":
+//      switch_theme.toggle_dark_mode();
+//      break;
+//    case "m":
+//      document.location = "#sitemap";
+//      break;
+//    case "H":
+//      document.location = "#home";
+//      break;
+//    case "f":
+//      document.location =
+//        `mailto:contato.nest604@passinbox.com?subject=Feedback: ${document.title}`;
+//      break;
+//    case "h":
+//      history.back();
+//      break;
+//    case "j":
+//      window.scrollBy({ top: 100, behavior: 'smooth' });
+//      break;
+//    case "k":
+//      window.scrollBy({ top: -100, behavior: 'smooth' });
+//      break;
+//    case "l":
+//      history.forward();
+//      break;
+//  }
+//});
+//
 if (localStorage.theme === "dark") {
   document.documentElement.classList.add("dark-mode");
 }
