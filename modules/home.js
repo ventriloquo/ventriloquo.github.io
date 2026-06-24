@@ -2,7 +2,6 @@
 
 import { create_priv_page, markup, tag } from "./common.js";
 
-import { posts } from "./db/posts.js";
 import { list_entries } from "./blog.js";
 
 export function home() {

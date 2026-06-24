@@ -17,7 +17,6 @@ export function list_entries(limit, list_name = "entry_list") {
     if (l === Number(limit)) break;
     const post_iso_date = invert_date(post.date, ".").replaceAll(".", "/");
     const id = `blog/${post_iso_date}/${slug(post.title)}/`;
-    const id_index = `post_${posts.indexOf(post)}`;
 
     document.getElementById(list_name).appendChild(
       tag(

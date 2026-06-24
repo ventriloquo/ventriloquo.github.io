@@ -112,8 +112,8 @@ function handleNavigation() {
   }, 0);
 }
 
-window.addEventListener("popstate", handleNavigation);
-window.addEventListener("hashchange", handleNavigation);
+globalThis.addEventListener("popstate", handleNavigation);
+globalThis.addEventListener("hashchange", handleNavigation);
 
 const switch_theme = {
   sun: "<img loading='lazy' width='24' height='24' src='/assets/sun.svg'>",

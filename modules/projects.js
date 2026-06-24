@@ -21,8 +21,6 @@ export function projects() {
 
   for (const project of project_list) {
     const cover = `${slug(project.title)}_cover`;
-    const title = `${slug(project.title)}_title`;
-    const content = `${slug(project.title)}_content`;
 
     document.getElementById("projetos").appendChild(
       tag(

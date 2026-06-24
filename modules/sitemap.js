@@ -59,7 +59,6 @@ export function sitemap() {
   );
 
   for (const post of posts) {
-    const post_index = posts.indexOf(post);
     const post_iso_date = invert_date(post.date, ".").replaceAll(".", "/");
     const post_link = `/#blog/${post_iso_date}/${slug(post.title)}/`;
     document.getElementById("page_list").appendChild(
@@ -68,7 +67,6 @@ export function sitemap() {
   }
 
   for (const book of bookshelf) {
-    const book_index = bookshelf.indexOf(book);
     const book_link = `/#bookshelf/${slug(book.title)}`;
     document.getElementById("page_list").appendChild(
       tag("li", {}, tag("a", { "href": book_link }, book_link)),
