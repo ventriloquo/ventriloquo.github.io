@@ -34,39 +34,39 @@
 
 /* Light Mode (Flattened Light) */
 :root {
-  --fg:           #073642;
-  --bg-0:         #eee8d5;
-  --bg-1:         #fdf6e3;
-  --bg-2:         #93a1a1;
+  --fg: #073642;
+  --bg-0: #eee8d5;
+  --bg-1: #fdf6e3;
+  --bg-2: #93a1a1;
 
-  --ac-1:         var(--yellow_rgb);
-  --ac-0:         var(--cyan_rgb);
+  --ac-1: var(--yellow_rgb);
+  --ac-0: var(--cyan_rgb);
 
-  --red_rgb:      203,  75,  22;
-  --green_rgb:    133, 153,   0;
-  --yellow_rgb:   181, 137,   0;
-  --blue_rgb:     131, 148, 150;
-  --purple_rgb:   108, 113, 196;
-  --cyan_rgb:      42, 161, 152;
+  --red_rgb: 203, 75, 22;
+  --green_rgb: 133, 153, 0;
+  --yellow_rgb: 181, 137, 0;
+  --blue_rgb: 131, 148, 150;
+  --purple_rgb: 108, 113, 196;
+  --cyan_rgb: 42, 161, 152;
 
-  --red:          rgb(var(--red_rgb));
-  --green:        rgb(var(--green_rgb));
-  --yellow:       rgb(var(--yellow_rgb));
-  --blue:         rgb(var(--blue_rgb));
-  --purple:       rgb(var(--purple_rgb));
-  --cyan:         rgb(var(--cyan_rgb));
+  --red: rgb(var(--red_rgb));
+  --green: rgb(var(--green_rgb));
+  --yellow: rgb(var(--yellow_rgb));
+  --blue: rgb(var(--blue_rgb));
+  --purple: rgb(var(--purple_rgb));
+  --cyan: rgb(var(--cyan_rgb));
 }
 
 /* Dark Mode (Flattened Dark) */
 :root.dark-mode {
-  --fg:           #eee8d5;
-  --bg-0:         #184753;
-  --bg-1:         #073642;
-  --bg-2:         #002b36;
+  --fg: #eee8d5;
+  --bg-0: #184753;
+  --bg-1: #073642;
+  --bg-2: #002b36;
 
-  --red_rgb:      220,  50,  47;
-  --blue_rgb:      38, 139, 210;
-  --purple_rgb:   211,  54, 130;
+  --red_rgb: 220, 50, 47;
+  --blue_rgb: 38, 139, 210;
+  --purple_rgb: 211, 54, 130;
 }
 
 *::-webkit-scrollbar {

@@ -70,7 +70,8 @@ Também gosto de customizar a aparência do meu desktop e brincar com CSS.
           tag("a", {
             "style": "text-align: center; margin-top: 1em",
             "class": "blog_entry button",
-            "href": "https://github.com/romainl/flattened#solarized-without-the-bullshit",
+            "href":
+              "https://github.com/romainl/flattened#solarized-without-the-bullshit",
             "target": "_blank",
           }, "Paleta de cores utilizada no site"),
         ),

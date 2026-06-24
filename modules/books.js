@@ -225,8 +225,8 @@ export function books() {
       }
     });
 
-    document.getElementById(`bookshelf/${slug(book.title)}_title`).style.textAlign =
-      "center";
+    document.getElementById(`bookshelf/${slug(book.title)}_title`).style
+      .textAlign = "center";
   }
 }
 

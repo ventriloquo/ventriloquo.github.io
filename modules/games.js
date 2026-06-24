@@ -46,22 +46,22 @@ Essa é a minha atual coleção de jogos, do meu Nintendo Switch.`,
     tag(
       "p",
       {
-        "style":`
+        "style": `
           padding: 6px 3px;
           border-radius: 5px;
           background-color: var(--bg-0);
-        `
+        `,
       },
       "Total de jogos: ",
       tag(
         "span",
         {
-          "style":`
+          "style": `
             padding: 2px 5px;
             border-radius: 5px;
             background-color: rgba(var(--purple_rgb), .2);
             color: var(--purple);
-          `
+          `,
         },
         `${game_colection.length}`,
       ),

@@ -27,7 +27,8 @@ export function home() {
       tag("a", {
         "id": "theme_switcher",
         "class": "button",
-        "style": "user-select: none; display: inline-block; text-align: center; padding: 0px 24px",
+        "style":
+          "user-select: none; display: inline-block; text-align: center; padding: 0px 24px",
       }),
     ),
   );

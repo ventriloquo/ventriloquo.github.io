@@ -141,7 +141,7 @@ switch_theme.change_icon();
 
 document.getElementById("theme_switcher").addEventListener("click", () => {
   switch_theme.toggle_dark_mode();
-})
+});
 
 //document.addEventListener("keydown", (e) => {
 //  switch (e.key) {
@@ -200,4 +200,3 @@ document.getElementById("theme_switcher").addEventListener("click", () => {
 if (localStorage.theme === "dark") {
   document.documentElement.classList.add("dark-mode");
 }
-

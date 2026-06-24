@@ -39,7 +39,7 @@ Isso é algo que é sim chato, mas como eu já disse anteriormente, eu já tenho
 Acho que por enquanto isso é tudo o que eu tenho a falar. Ainda tem muita coisa que eu tenho que aprender no Slackware antes de ter uma opinião concreta sobre ele. Mas estou gostando da experiência.
 
 Até o próximo post!
-`
+`,
   },
   {
     title: "O site agora tem teclas de atalho!",

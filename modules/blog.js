@@ -89,29 +89,34 @@ export function blog() {
         "style": "position: absolute; right: 0; bottom: 0; font-size: large",
       }, `${posts.length} posts`),
     ),
-    tag("input", { "type":"text", "id":"searchBox", "placeholder":"Pesquisar" }),
+    tag("input", {
+      "type": "text",
+      "id": "searchBox",
+      "placeholder": "Pesquisar",
+    }),
     tag("ul", { "id": "entry_list" }),
   );
 
   create_post();
 
-  const searchBox = document.getElementById('searchBox');
-  const resultsContainer = document.getElementById('entry_list');
+  const searchBox = document.getElementById("searchBox");
+  const resultsContainer = document.getElementById("entry_list");
 
   function displayPosts(filteredPosts) {
-      resultsContainer.innerHTML = filteredPosts.map(post => `
-          <li><a href="#blog/${invert_date(post.date, ".").replaceAll(".", "/")}/${slug(post.title)}/" class="blog_entry button">${post.title}</a></li>
-      `).join('');
+    resultsContainer.innerHTML = filteredPosts.map((post) => `
+          <li><a href="#blog/${
+      invert_date(post.date, ".").replaceAll(".", "/")
+    }/${slug(post.title)}/" class="blog_entry button">${post.title}</a></li>
+      `).join("");
   }
 
-  searchBox.addEventListener('input', (e) => {
-      const query = e.target.value.toLowerCase();
-      const filtered = posts.filter(post => 
-          post.content.toLowerCase().includes(query)
-      );
-      displayPosts(filtered);
+  searchBox.addEventListener("input", (e) => {
+    const query = e.target.value.toLowerCase();
+    const filtered = posts.filter((post) =>
+      post.content.toLowerCase().includes(query)
+    );
+    displayPosts(filtered);
   });
 
   displayPosts(posts);
-  
 }
