@@ -18,9 +18,6 @@ O traço, os enquadramentos, tudo. Simplesmente foda.
   {
     title: "Jujutsu Kaisen, Vol. 2",
     cover: "jujutsu_02.jpg",
-    review: `
-Comprei esse volume junto com o Vol. 1. E eu achei ele igualmente foda.
-    `,
     nota: 5,
 
     progress: {
@@ -31,6 +28,7 @@ Comprei esse volume junto com o Vol. 1. E eu achei ele igualmente foda.
   {
     title: "Jujutsu Kaisen, Vol. 3",
     cover: "jujutsu_03.jpg",
+    nota: 5,
 
     progress: {
       current: "192",
@@ -63,6 +61,7 @@ Eu lia esse volume sempre que dava na minha casa e também na escola (saudades d
   {
     title: "Akira, Vol. 2",
     cover: "akira_02.jpg",
+    nota: 5,
 
     progress: {
       current: "304",

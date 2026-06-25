@@ -78,7 +78,7 @@ export function books() {
 
   for (const book of bookshelf) {
     if (book.review === undefined) {
-      book.review = "<p>Não tenho uma opinião formada sobre isso ainda</p>";
+      book.review = "nadaAinda";
     }
 
     switch (Number(book.nota)) {
@@ -115,6 +115,7 @@ export function books() {
           "div",
           {
             "class": "book_info_book",
+            "id": `${slug(book.title)}_info_book`,
             "style":
               "background-color: var(--bg-0); padding: 10px; border-radius: 5px; width: fit-content; height: fit-content",
           },
@@ -139,7 +140,10 @@ export function books() {
         ),
         tag(
           "div",
-          { "class": "book_info_review" },
+          {
+            "class": "book_info_review",
+            "id": `${slug(book.title)}_info_review`,
+          },
           tag(
             "blockquote",
             { "class": "quote" },
@@ -156,6 +160,7 @@ export function books() {
         ),
         tag("a", {
           "class": "book_info_exit button",
+          "id": `${slug(book.title)}_exit_button`,
           "style":
             "width: -moz-available; width: -webkit-fill-available; margin: auto; text-align: center",
           "onclick": "history.back()",
@@ -227,6 +232,25 @@ export function books() {
 
     document.getElementById(`bookshelf/${slug(book.title)}_title`).style
       .textAlign = "center";
+
+    if (
+      document.getElementById(`${slug(book.title)}_info_review`).innerText
+        .includes("nadaAinda")
+    ) {
+      document.getElementById(`${slug(book.title)}_info_review`).style.display =
+        "none";
+      document.getElementById(`${slug(book.title)}_info_book`).style.gridArea =
+        "review";
+    }
+
+    if (
+      document.getElementById(`${slug(book.title)}_rating`).innerText === ""
+    ) {
+      document.getElementById(`${slug(book.title)}_rating`).style.display =
+        "none";
+      document.getElementById(`${slug(book.title)}_exit_button`).style
+        .gridArea = "rating";
+    }
   }
 }
 
