@@ -86,7 +86,7 @@ export function blog() {
       tag("span", {
         "id": "entry_count",
         "style": "position: absolute; right: 0; bottom: 0; font-size: large",
-      }, `${posts.length} posts`),
+      }, `<span style="opacity: 0">|</span> ${posts.length} posts`),
     ),
     tag("input", {
       "type": "text",
