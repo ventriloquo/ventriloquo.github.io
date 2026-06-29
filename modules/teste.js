@@ -24,107 +24,11 @@ export function pagina_de_testes() {
 
 * Texto pré-formatado
 
-#+begin_src
-#include "raylib.h"
-
-typedef enum GameScreen { LOGO = 0, TITLE, GAMEPLAY, ENDING } GameScreen;
-
-int main(void)
-{
-    const int screenWidth = 800;
-    const int screenHeight = 450;
-
-    InitWindow(screenWidth, screenHeight, "raylib [core] example − basic screen manager");
-
-    GameScreen currentScreen = LOGO;
-
-    int framesCounter = 0;          
-
-    SetTargetFPS(60);               
-
-    while (!WindowShouldClose())    
-    {
-        switch (currentScreen)
-        {
-            case LOGO:
-            {
-                framesCounter++;    
-
-                if (framesCounter > 120)
-                {
-                    currentScreen = TITLE;
-                }
-            } break;
-
-            case TITLE:
-            {
-                if (IsKeyPressed(KEY_ENTER) || IsGestureDetected(GESTURE_TAP))
-                {
-                    currentScreen = GAMEPLAY;
-                }
-            } break;
-
-            case GAMEPLAY:
-            {
-                if (IsKeyPressed(KEY_ENTER) || IsGestureDetected(GESTURE_TAP))
-                {
-                    currentScreen = ENDING;
-                }
-            } break;
-
-            case ENDING:
-            {
-                if (IsKeyPressed(KEY_ENTER) || IsGestureDetected(GESTURE_TAP))
-                {
-                    currentScreen = TITLE;
-                }
-            } break;
-
-            default: break;
-        }
-
-        BeginDrawing();
-            ClearBackground(RAYWHITE);
-            switch(currentScreen)
-            {
-                case LOGO:
-                {
-                    DrawText("LOGO SCREEN", 20, 20, 40, LIGHTGRAY);
-                    DrawText("WAIT for 2 SECONDS...", 290, 220, 20, GRAY);
-                } break;
-
-                case TITLE:
-                {
-                    DrawRectangle(0, 0, screenWidth, screenHeight, GREEN);
-                    DrawText("TITLE SCREEN", 20, 20, 40, DARKGREEN);
-                    DrawText("PRESS ENTER or TAP to JUMP to GAMEPLAY SCREEN", 120, 220, 20, DARKGREEN);
-                } break;
-
-                case GAMEPLAY:
-                {
-                    DrawRectangle(0, 0, screenWidth, screenHeight, PURPLE);
-                    DrawText("GAMEPLAY SCREEN", 20, 20, 40, MAROON);
-                    DrawText("PRESS ENTER or TAP to JUMP to ENDING SCREEN", 130, 220, 20, MAROON);
-                } break;
-
-                case ENDING:
-                {
-                    DrawRectangle(0, 0, screenWidth, screenHeight, BLUE);
-                    DrawText("ENDING SCREEN", 20, 20, 40, DARKBLUE);
-                    DrawText("PRESS ENTER or TAP to RETURN to TITLE SCREEN", 120, 220, 20, DARKBLUE);
-                } break;
-
-                default: break;
-            }
-
-        EndDrawing();
-    }
-
-    CloseWindow();
-
-    return 0;
-}
-#+end_src
+#+begin_note
+Na moral, que saco é lidar com **regex** cara. Só vou tentar fazer um
+**syntax highlighting** pra C, qualquer outra coisa eu simplesmente não vou
+ligar. (foi mal ae, Hare, mas você tá inclusa nesse bolo).
+#+end_note
 
 #+begin_src
 // Macros
@@ -132,25 +36,83 @@ int main(void)
 #pragma once
 #define NOB_IMPLEMENTATION
 
-// Attributes
-@symbol("SetTargetFPS")	fn set_target_fps(fps: int) void;
-
 // Types
 true false char volatile static signed unsigned short int long float
 double void _Bool _Complex _Imaginary size_t ptrdiff_t int8_t int16_t
 int32_t int64_t uint8_t uint16_t uint32_t uint64_t intptr_t uintptr_t
-i8 i16 i32 i64 f32 f64 size opaque rune uint uintptr null nullable
 
 // Keywords
 auto break case const continue default do else enum extern for goto
-if inline register return struct switch typedef union while def defer done
-fn type use yield
+if inline register return struct switch typedef union while 
 
 // Built-ins
-sizeof len as is abort free insert append alloc assert delete align
+sizeof typeof offsetof
 
 // Etc
-nomem offset vaarg vaend valist vastart NULL
+NULL
+#+end_src
+
+#+begin_src
+#include <stdio.h>
+#include <stdbool.h>
+
+int main(void) {
+  if (true) {
+    puts("C is based AF");
+  }
+  return 0;
+}
+#+end_src
+
+#+begin_src
+#if SUPPORT_COMPRESSION_API
+    // Compress data and generate a valid DEFLATE stream
+    struct sdefl *sdefl = (struct sdefl *)RL_CALLOC(1, sizeof(struct sdefl));   // WARNING: Possible stack overflow, struct sdefl is almost 1MB
+    int bounds = sdefl_bound(dataSize);
+    compData = (unsigned char *)RL_CALLOC(bounds, 1);
+
+    *compDataSize = sdeflate(sdefl, compData, data, dataSize, COMPRESSION_QUALITY_DEFLATE);   // Compression level 8, same as stbiw
+    RL_FREE(sdefl);
+
+    TRACELOG(LOG_INFO, "SYSTEM: Compress data: Original size: %i -> Comp. size: %i", dataSize, *compDataSize);
+#endif
+
+// Unload directory filepaths
+// WARNING: files.count is not reseted to 0 after unloading
+void UnloadDirectoryFiles(FilePathList files)
+{
+    if (files.paths != NULL)
+    {
+        for (unsigned int i = 0; i < files.count; i++) RL_FREE(files.paths[i]);
+
+        RL_FREE(files.paths);
+    }
+}
+
+
+// Change working directory, returns true on success
+int ChangeDirectory(const char *dirPath)
+{
+    // NOTE: On success, CHDIR() return 0; on error, returns -1 and errno is set to indicate the error,
+    // depending on the filesystem, other errors can be returned
+    int result = CHDIR(dirPath);
+
+    if (result != 0) TRACELOG(LOG_WARNING, "SYSTEM: Failed to change to directory: %s", dirPath);
+    else TRACELOG(LOG_INFO, "SYSTEM: Working Directory: %s", dirPath);
+
+    return result;
+}
+
+
+// Check if given path point to a file
+bool IsPathFile(const char *path)
+{
+    struct stat result = { 0 };
+    stat(path, &result);
+
+    return S_ISREG(result.st_mode);
+}
+
 #+end_src
 
 #+begin_example

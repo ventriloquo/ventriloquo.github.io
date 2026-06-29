@@ -39,58 +39,6 @@ export function slug(text) {
 export function markup(text) {
   // Jesus Cristo, como que eu iria fazer um bloco desses sem IA?
   const htmlEntities = {
-    // Hare-like
-    "use": "<span class='red'>use</span>",
-    "defer": "<span class='red'>defer</span>",
-    "type": "<span class='red'>type</span>",
-    "fn": "<span class='red'>fn</span>",
-    "let": "<span class='red'>let</span>",
-    "yield": "<span class='red'>yield</span>",
-    "export": "<span class='red'>export</span>",
-    "match": "<span class='red'>match</span>",
-    "align": "<span class='red'></span>",
-    "alloc": "<span class='red'></span>",
-    "def": "<span class='red'></span>",
-    "done": "<span class='red'></span>",
-
-    "::": "<span class='purple'>::</span>",
-    "nomem": "<span class='purple'>nomem</span>",
-    "offset": "<span class='purple'>offset</span>",
-    "vaarg": "<span class='purple'>vaarg</span>",
-    "vaend": "<span class='purple'>vaend</span>",
-    "valist": "<span class='purple'>valist</span>",
-    "vastart": "<span class='purple'>vastart</span>",
-
-    "len": "<span class='blue'>len</span>",
-    "as": "<span class='blue'>as</span>",
-    "is": "<span class='blue'>is</span>",
-    "append": "<span class='blue'>append</span>",
-    "assert": "<span class='blue'>assert</span>",
-    "free": "<span class='blue'>free</span>",
-    "insert": "<span class='blue'>insert</span>",
-    "abort": "<span class='blue'>abort</span>",
-    "delete": "<span class='blue'>delete</span>",
-
-    "i8": "<span class='yellow'>i8</span>",
-    "i16": "<span class='yellow'>i16</span>",
-    "i32": "<span class='yellow'>i32</span>",
-    "i64": "<span class='yellow'>i64</span>",
-    "u8": "<span class='yellow'>u8</span>",
-    "u16": "<span class='yellow'>u16</span>",
-    "u32": "<span class='yellow'>u32</span>",
-    "u64": "<span class='yellow'>u64</span>",
-    "f32": "<span class='yellow'>f32</span>",
-    "f64": "<span class='yellow'>f64</span>",
-    "size": "<span class='yellow'>size</span>",
-    "opaque": "<span class='yellow'>opaque</span>",
-    "never": "<span class='yellow'>never</span>",
-    "str": "<span class='yellow'>str</span>",
-    "null": "<span class='yellow'>null</span>",
-    "nullable": "<span class='yellow'>nullable</span>",
-    "rune": "<span class='yellow'>rune</span>",
-    "uint": "<span class='yellow'>uint</span>",
-    "uintptr": "<span class='yellow'>uintptr</span>",
-    // C-like
     "int": "<span class='yellow'>int</span>",
     "char": "<span class='yellow'>char</span>",
     "unsigned": "<span class='yellow'>unsigned</span>",
@@ -151,8 +99,9 @@ export function markup(text) {
     "NULL": "<span class='purple'>NULL</span>",
 
     "sizeof": "<span class='blue'>sizeof</span>",
+    "typeof": "<span class='blue'>typeof</span>",
+    "offsetof": "<span class='blue'>offsetof</span>",
 
-    " ": "&#32;",
     "//": "<span class='dark-grey'>//",
     "\n": "</span>&#10;",
     "\t": "&#9;",
@@ -160,7 +109,6 @@ export function markup(text) {
     "&": "&#38;",
     "#": "&#35;",
     "$": "&#36;",
-    "`": "&#39;",
     "%": "&#37;",
     "(": "&#40;",
     ")": "&#41;",
@@ -172,21 +120,20 @@ export function markup(text) {
     "~": "<span class='red'>&#126;</span>",
     "+": "<span class='red'>&#43;</span>",
     "-": "<span class='red'>&#8722;</span>",
-    ".": "&#46;",
     ",": "&#44;",
     ":": "&#58;",
     ";": "<span class='grey'>&#59;</span>",
-    "!": "<span class='red'>&#33;</span>",
-    "?": "<span class='red'>&#63;</span>",
     "@": "&#64;",
     "<": "<span class='red'>&#60;</span>",
     "=": "<span class='red'>&#61;</span>",
     ">": "<span class='red'>&#62;</span>",
     '"': "&#34;",
     "'": "&#39;",
-    "_": "&#39;",
+    "`": "&#96;",
     "/": "<span class='red'>&#47;</span>",
     "*": "<span class='red'>&#42;</span>",
+    "!": "<span class='red'>&#33;</span>",
+    "?": "<span class='red'>&#63;</span>",
     "0x": "<span class='purple'>&#48;x</span>",
     "0": "<span class='purple'>&#48;</span>",
     "1": "<span class='purple'>&#49;</span>",
@@ -201,10 +148,10 @@ export function markup(text) {
   };
 
   const escapedText = text.replaceAll(
-    /#\+begin_(src|example)([\s\S]*?)#\+end_(src|example)/g,
-    (match, blockType1, content, blockType2) => {
+    /#\+begin_(src)([\s\S]*?)#\+end_(src)/g,
+    (_, blockType1, content, blockType2) => {
       const escapedContent = content.replace(
-        /0x|[0-9]|\bstr\b|\bnever\b|\bopaque\b|\bi8\b|\bi16\b|\bi32\b|\bi64\b|\bf32\b|\bf64\b|\bsize\b|\buse\b|\bdefer\b|\btype\b|\blen\b|\bas\b|\bfn\b|\bexport\b|::|\blet\b|\byield\b|\bchar\b|\bunsigned\b|\bsigned\b|\bint\b|\bshort\b|\blong\b|\blong long\b|\bfloat\b|\bdouble\b|\blong double\b|\bbool\b|\b_Bool\b|\b_Complex\b|\b_Imaginary\b|\bsize_t\b|\bptrdiff_t\b|\bint8_t\b|\bint16_t\b|\bint32_t\b|\bint64_t\b|\buint8_t\b|\buint16_t\b|\buint32_t\b|\buint64_t\b|\bintptr_t\b|\buintptr_t\b|\bvoid\b|\bArray\b|\bPointer\b|\bstruct\b|\bunion\b|\benum\b|\btypedef\b|\bconst\b|\bauto\b|\breturn\b|\bwhile\b|\bfor\b|\bswitch\b|\bcase\b|\bmatch\b|\bcontinue\b|\bdefault\b|\bdo\b|\bbreak\b|\bgoto\b|\binline\b|\bregister\b|\bstatic\b|\bvolatile\b|\btrue\b|\bfalse\b|\brune\b|\buint\b|\buintptr\b|\bnullable\b|\bnull\b|\bNULL\b|\bdone\b|\bdef\b|\babort\b|\bfree\b|\binsert\b|\bappend\b|\balloc\b|\bassert\b|\bdelete\b|\balign\b|\belse\b|\bvaarg\b|\bvalist\b|\bvastart\b|\bvaend\b|\boffset\b|\bnomem\b|\bis\b|\bextern\b|\bif\b|\bsizeof\b|\/\/|[ \|\n\t\\&#$`%()\[\]\{\}\-+.,;:!?@<=>'"*/]/g,
+        /0x|[0-9]|\bchar\b|\bunsigned\b|\bsigned\b|\bint\b|\bshort\b|\blong\b|\blong long\b|\bfloat\b|\bdouble\b|\blong double\b|\bbool\b|\b_Bool\b|\b_Complex\b|\b_Imaginary\b|\bsize_t\b|\bptrdiff_t\b|\bint8_t\b|\bint16_t\b|\bint32_t\b|\bint64_t\b|\buint8_t\b|\buint16_t\b|\buint32_t\b|\buint64_t\b|\bintptr_t\b|\buintptr_t\b|\bvoid\b|\bArray\b|\bPointer\b|\bstruct\b|\bunion\b|\benum\b|\btypedef\b|\bconst\b|\bauto\b|\breturn\b|\bwhile\b|\bfor\b|\bswitch\b|\bcase\b|\bcontinue\b|\bdefault\b|\bdo\b|\bbreak\b|\bgoto\b|\binline\b|\bregister\b|\bstatic\b|\bvolatile\b|\btrue\b|\bfalse\b|\bNULL\b|\belse\b|\bextern\b|\bif\b|\bsizeof\b|\btypeof\b|\boffsetof\b|\/\/|[\|\n\t\\&#$`%()\[\]\{\}\-+,;:!\?@<=>'"*/]/g,
         (char) => htmlEntities[char],
       );
       return `#+begin_${blockType1}${escapedContent}#+end_${blockType2}`;
@@ -218,8 +165,6 @@ export function markup(text) {
     )
     .replaceAll("#+begin_src", "<pre class='src'>")
     .replaceAll("#+end_src", "</pre>")
-    .replaceAll(/(&#34;[^&#34;]*&#34;)/gm, "<span class='green'>$1</span>")
-    .replaceAll(/(&#60;.*&#62;)/gm, "<span>$1</span>")
     .replaceAll(/(&#64;\w+)/gm, "<span class='orange'>$1</span>")
     .replaceAll(/(&#35;\w+)/gm, "<span class='orange'>$1</span>")
     .replaceAll("#+begin_example", "<pre class='example'>")
