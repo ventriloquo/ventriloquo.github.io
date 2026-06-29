@@ -1,4 +1,18 @@
 "use strict";
+const isFirefox = navigator.userAgent.toLowerCase().includes("firefox");
+const errorMsg = `ATENÇÃO:
+Este site não é completamente otimizado para o Firefox.
+
+Algumas partes do site podem ser renderizadas de forma incorreta ou falhar em renderizar por completo.
+
+Desculpe pelo transtorno.
+    -- Tukain
+`;
+
+if (isFirefox) {
+  alert(errorMsg);
+  console.error(errorMsg);
+}
 
 import { tag } from "./modules/common.js";
 import { blog } from "./modules/blog.js";
@@ -12,6 +26,7 @@ import { sitemap } from "./modules/sitemap.js";
 import { intro } from "./modules/intro.js";
 import { ideias } from "./modules/ideias.js";
 import { about } from "./modules/about.js";
+import { etc } from "./modules/etc.js";
 import { pagina_de_testes } from "./modules/teste.js";
 
 function main() {
@@ -50,7 +65,7 @@ function main() {
     ),
   );
   tag("main", { "id": "body" });
-  // remove o id `body` do primeiro elemento com esse id.
+  // Remove o id `body` do primeiro elemento com esse id.
   document.getElementById("body").removeAttribute("id");
 
   home();
@@ -61,6 +76,9 @@ function main() {
   links();
   ideias();
   about();
+  etc();
+
+  // Não aparecem na navbar
   menu();
   sitemap();
   intro();
@@ -115,33 +133,90 @@ function handleNavigation() {
 globalThis.addEventListener("popstate", handleNavigation);
 globalThis.addEventListener("hashchange", handleNavigation);
 
-const switch_theme = {
-  sun: "<img loading='lazy' width='24' height='24' src='/assets/sun.svg'>",
-  moon: "<img loading='lazy' width='24' height='24' src='/assets/moon.svg'>",
+const theme_switcher_desktop = tag("a", {
+  "id": "theme_switcher_desktop",
+  "class": "button",
+  "style": `
+    user-select: none;
+    display: inline-block;
+    text-align: center;
+    padding: 0px 24px;
+  `,
+});
 
-  theme_switcher: document.getElementById("theme_switcher"),
+const theme_switcher_mobile = tag("a", {
+  "id": "theme_switcher_mobile",
+  "class": "button",
+  "style": `
+    user-select: none;
+    display: inline-block;
+    text-align: center;
+    display: block;
+    width: -webkit-fill-available;
+    margin-top: 1px;
+    border-start-start-radius: 0;
+    border-start-end-radius: 0;
+  `,
+});
+
+document.getElementById("desktop_menu").appendChild(theme_switcher_desktop);
+document.getElementById("mobile_menu").appendChild(theme_switcher_mobile);
+
+const switch_theme = {
+  sun: `<img
+          title='Light Mode'
+          loading='lazy'
+          width='24'
+          height='24'
+          src='/assets/sun.svg'>`,
+  moon: `<img
+            title='Dark Mode'
+            loading='lazy'
+            width='24'
+            height='24'
+            src='/assets/moon.svg'>`,
+
+  theme_switcher: [
+    document.getElementById("theme_switcher_desktop"),
+    document.getElementById("theme_switcher_mobile"),
+  ],
 
   change_icon() {
-    if (localStorage.theme === "dark") {
-      this.theme_switcher.innerHTML = this.sun;
+    if (localStorage.theme === "light") {
+      this.theme_switcher[0].innerHTML = this.moon;
+      this.theme_switcher[1].innerHTML = this.moon;
     } else {
-      this.theme_switcher.innerHTML = this.moon;
+      this.theme_switcher[0].innerHTML = this.sun;
+      this.theme_switcher[1].innerHTML = this.sun;
     }
   },
 
   toggle_dark_mode() {
-    document.documentElement.classList.toggle("dark-mode");
-    const isDark = document.documentElement.classList.contains("dark-mode");
-    localStorage.setItem("theme", isDark ? "dark" : "light");
+    document.documentElement.classList.toggle("light-mode");
+    const isLight = document.documentElement.classList.contains("light-mode");
+    localStorage.setItem("theme", isLight ? "light" : "dark");
     this.change_icon();
   },
 };
 
 switch_theme.change_icon();
 
-document.getElementById("theme_switcher").addEventListener("click", () => {
-  switch_theme.toggle_dark_mode();
-});
+document.getElementById("theme_switcher_desktop").addEventListener(
+  "click",
+  () => {
+    switch_theme.toggle_dark_mode();
+  },
+);
+document.getElementById("theme_switcher_mobile").addEventListener(
+  "click",
+  () => {
+    switch_theme.toggle_dark_mode();
+  },
+);
+
+if (localStorage.theme === "light") {
+  document.documentElement.classList.add("light-mode");
+}
 
 //document.addEventListener("keydown", (e) => {
 //  switch (e.key) {
@@ -197,6 +272,3 @@ document.getElementById("theme_switcher").addEventListener("click", () => {
 //  }
 //});
 //
-if (localStorage.theme === "dark") {
-  document.documentElement.classList.add("dark-mode");
-}

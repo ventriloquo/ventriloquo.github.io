@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caderno do Tukain - /etc/</title>
+    <meta name="description" content="Outros sites fiz">
+    <link href="/assets/css/styles.css" rel="stylesheet" type="text/css"
+      media="all">
+    <link rel="icon" href="/assets/fav.png">
+  </head>
+  <style type="text/css" media="all">
+  body {
+    background-color: var(--bg-1);
+    background-image: linear-gradient(to bottom left, var(--bg-0) 5px, transparent
+      1px),
+      linear-gradient(to bottom right, var(--bg-0) 5px, transparent 1px),
+      linear-gradient(to top left, var(--bg-0) 5px, transparent 1px),
+      linear-gradient(to top right, var(--bg-0) 5px, transparent 1px);
+    background-size: 40px 40px;
+    animation: move-grid 4s linear infinite;
+  }
+  @keyframes move-grid {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 40px 40px;
+    }
+  }
+
+  main {
+    padding: 1em;
+    border-radius: 5px;
+    backdrop-filter: blur(10px);
+  }
+  </style>
+  <body>
+    <br>
+    <main>
+      <a style="font-size: large; text-align: center; -webkit-fill-available; margin-left: auto; margin-right: auto"
+        class="blog_entry button" href="/#home">Voltar ao início</a>
+      <h1 style="background-color: rgb(var(--ac-0)); color: var(--bg-1); display: block; width: -webkit-fill-available; border-radius: 5px; padding: 8px 5px; margin-bottom: 5px; text-align: center">/etc/</h1>
+      <p
+        style="font-size: large; background-color: rgb(var(--ac-1)); color: var(--bg-1); display: block; width: -webkit-fill-available; border-radius: 5px; padding: 8px 5px; margin-top: 0">
+        Estes são alguns outros sites que fiz e que mantenho no ar.
+      </p>
+      <ul>
+        <li><a class="blog_entry button" href="./guapita/">O site que fiz para minha namorada</a></li>
+        <li><a class="blog_entry button" href="https://ventriloquo.github.io/learnyouahaskell">"Learn You A Haskell"</a></li>
+        <li><a class="blog_entry button" href="https://tukain.codeberg.page">Uma versão alternativa do meu site, feita com o Org-mode</a></li>
+      </ul>
+    </main>
+    <script>
+    if (localStorage.theme === "light") {
+      document.documentElement.classList.add("light-mode");
+    }
+    </script>
+  </body>
+</html>

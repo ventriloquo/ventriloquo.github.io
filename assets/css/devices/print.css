@@ -3,7 +3,8 @@
     display: none;
   }
 
-  body, section {
+  body,
+  section {
     background-color: white;
     color: black;
   }

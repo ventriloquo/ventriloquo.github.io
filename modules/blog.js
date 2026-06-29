@@ -25,7 +25,7 @@ export function list_entries(limit, list_name = "entry_list") {
         tag(
           "a",
           { "class": "blog_entry button", "href": `#${id}` },
-          `${post.date} - ${post.title}`,
+          `${post.title}`,
         ),
       ),
     );

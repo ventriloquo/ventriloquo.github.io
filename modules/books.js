@@ -55,7 +55,7 @@ export function books() {
       tag("progress", {
         "class": "book_progress_bar",
         "style":
-          "width: -moz-available; width: -webkit-fill-available; border: solid 1px rgb(var(--ac-0))",
+          "width: -webkit-fill-available; border: solid 1px rgb(var(--ac-0))",
         "value": `${livros_lidos}`,
         "max": `${total_de_livros}`,
       }),
@@ -147,7 +147,7 @@ export function books() {
           tag(
             "blockquote",
             { "class": "quote" },
-            `<span>Minha opinião</span><br>${markup(book.review)}`,
+            `<span>Minha opinião</span><br><br>${markup(book.review)}`,
           ),
         ),
         tag(
@@ -162,7 +162,7 @@ export function books() {
           "class": "book_info_exit button",
           "id": `${slug(book.title)}_exit_button`,
           "style":
-            "width: -moz-available; width: -webkit-fill-available; margin: auto; text-align: center",
+            "width: -webkit-fill-available; margin: auto; text-align: center",
           "onclick": "history.back()",
           "href": `#bookshelf/${slug(book.title)}`,
         }, "Voltar"),

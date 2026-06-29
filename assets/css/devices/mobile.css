@@ -42,7 +42,6 @@
 
     .project_info {
       max-width: -webkit-fill-available;
-      max-width: -moz-available;
       margin: auto;
     }
   }

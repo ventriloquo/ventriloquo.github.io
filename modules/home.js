@@ -22,13 +22,6 @@ export function home() {
 `,
       ),
       tag("ul", { "id": "recent" }),
-      tag("hr"),
-      tag("a", {
-        "id": "theme_switcher",
-        "class": "button",
-        "style":
-          "user-select: none; display: inline-block; text-align: center; padding: 0px 24px",
-      }),
     ),
   );
 
