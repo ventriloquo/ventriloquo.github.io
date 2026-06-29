@@ -63,6 +63,9 @@ int main(void) {
   return 0;
 }
 #+end_src
+#+begin_example
+C is based AF
+#+end_example
 
 #+begin_src
 #if SUPPORT_COMPRESSION_API
@@ -114,10 +117,6 @@ bool IsPathFile(const char *path)
 }
 
 #+end_src
-
-#+begin_example
-Lorem Ipsum Dolor Sit Amet
-#+end_example
 
 * Código dentro de parágrafo
 
