@@ -291,7 +291,6 @@ várias funções da biblioteca original feita em C presentes como comentários 
 <i>bindings</i>, como por exemplo:
 
 #+begin_src
-// // Files management functions
 // *LoadFileData
 // UnloadFileData
 // SaveFileData

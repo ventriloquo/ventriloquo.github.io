@@ -127,66 +127,32 @@ int main(void)
 #+end_src
 
 #+begin_src
-// Input-related functions: keyboard
-export @symbol("IsKeyPressed")		fn is_key_pressed(key: int) bool;
-export @symbol("IsKeyPressedRepeat")	fn is_key_pressed_repeat(key: int) bool;
-export @symbol("IsKeyDown")		fn is_key_down(key: int) bool;
-export @symbol("IsKeyReleased")		fn is_key_released(key: int) bool;
-export @symbol("IsKeyUp")		fn is_key_up(key: int) bool;
-export @symbol("GetKeyPressed")		fn get_key_pressed() int;
-export @symbol("GetCharPressed")	fn get_char_pressed() int;
-export @symbol("SetExitKey")		fn set_exit_key(key: int) void;
+// Macros
+#include <stdio.h>
+#pragma once
+#define NOB_IMPLEMENTATION
+
+// Attributes
+@symbol("SetTargetFPS")	fn set_target_fps(fps: int) void;
+
+// Types
+true false char volatile static signed unsigned short int long float
+double void _Bool _Complex _Imaginary size_t ptrdiff_t int8_t int16_t
+int32_t int64_t uint8_t uint16_t uint32_t uint64_t intptr_t uintptr_t
+i8 i16 i32 i64 f32 f64 size opaque rune uint uintptr null nullable
+
+// Keywords
+auto break case const continue default do else enum extern for goto
+if inline register return struct switch typedef union while def defer done
+fn type use yield
+
+// Built-ins
+sizeof len as is abort free insert append alloc assert delete align
+
+// Etc
+nomem offset vaarg vaend valist vastart NULL
 #+end_src
 
-#+begin_src
-use raylib::*;
-
-export fn main() int = {
-	const screen_width: int = 800;
-	const screen_height: int = 450;
-
-	const bg = Color {
-		r=0x18,
-		g=0x18,
-		b=0x18,
-		a=0xFF,
-	};
-
-	const fg = Color {
-		r=0xEE,
-		g=0xEE,
-		b=0xEE,
-		a=0xFF,
-	};
-
-	init_window(screen_width, screen_height, "Raylib [core] example - basic window");
-	set_target_fps(60);
-
-	const text: str = "Raylib Rocks";
-	const font_size: int = 30;
-
-	for (!window_should_close()) {
-		begin_drawing();
-		clear_background(bg);
-		draw_text(text, screen_width / 2 - (measure_text(text, font_size) / 2), screen_height / 2, font_size, fg);
-		end_drawing();
-	};
-
-	close_window();
-
-	return 0;
-
-};
-
-#+end_src
-
-#+begin_example
-Lorem Ipsum Dolor Sit Amet
-#+end_example
-
-#+begin_src
-Lorem Ipsum Dolor Sit Amet
-#+end_src
 #+begin_example
 Lorem Ipsum Dolor Sit Amet
 #+end_example
