@@ -1320,10 +1320,10 @@ Você pode, por exemplo, criar um elemento &lt;p&gt;, dar o <code>ID</code>
 +/- assim:
 
 #+begin_src
-&lt;p id="paragrafo"&gt;&lt;/p&gt;
-&lt;script&gt;
+<p id="paragrafo"></p>
+<script>
   paragrafo.innerText = "Adicionando texto!"
-&lt;/script&gt;
+</script>
 #+end_src
 `,
   },
