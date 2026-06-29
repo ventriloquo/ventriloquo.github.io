@@ -218,7 +218,7 @@ export function markup(text) {
     )
     .replaceAll("#+begin_src", "<pre class='src'>")
     .replaceAll("#+end_src", "</pre>")
-    .replaceAll(/(&#34;.*&#34;)/gm, "<span class='green'>$1</span>")
+    .replaceAll(/(&#34;[^&#34;]*&#34;)/gm, "<span class='green'>$1</span>")
     .replaceAll(/(&#60;.*&#62;)/gm, "<span>$1</span>")
     .replaceAll(/(&#64;\w+)/gm, "<span class='orange'>$1</span>")
     .replaceAll(/(&#35;\w+)/gm, "<span class='orange'>$1</span>")
