@@ -151,7 +151,7 @@ export function markup(text) {
     /#\+begin_(src)([\s\S]*?)#\+end_(src)/g,
     (_, blockType1, content, blockType2) => {
       const escapedContent = content.replace(
-        /0x|[0-9]|\bchar\b|\bunsigned\b|\bsigned\b|\bint\b|\bshort\b|\blong\b|\blong long\b|\bfloat\b|\bdouble\b|\blong double\b|\bbool\b|\b_Bool\b|\b_Complex\b|\b_Imaginary\b|\bsize_t\b|\bptrdiff_t\b|\bint8_t\b|\bint16_t\b|\bint32_t\b|\bint64_t\b|\buint8_t\b|\buint16_t\b|\buint32_t\b|\buint64_t\b|\bintptr_t\b|\buintptr_t\b|\bvoid\b|\bArray\b|\bPointer\b|\bstruct\b|\bunion\b|\benum\b|\btypedef\b|\bconst\b|\bauto\b|\breturn\b|\bwhile\b|\bfor\b|\bswitch\b|\bcase\b|\bcontinue\b|\bdefault\b|\bdo\b|\bbreak\b|\bgoto\b|\binline\b|\bregister\b|\bstatic\b|\bvolatile\b|\btrue\b|\bfalse\b|\bNULL\b|\belse\b|\bextern\b|\bif\b|\bsizeof\b|\btypeof\b|\boffsetof\b|\/\/|[\|\n\t\\&#$`%()\[\]\{\}\-+,;:!\?@<=>'"*/]/g,
+        /0x|[0-9]|\bchar\b|\bunsigned\b|\bsigned\b|\bint\b|\bshort\b|\blong\b|\blong long\b|\bfloat\b|\bdouble\b|\blong double\b|\bbool\b|\b_Bool\b|\b_Complex\b|\b_Imaginary\b|\bsize_t\b|\bptrdiff_t\b|\bint8_t\b|\bint16_t\b|\bint32_t\b|\bint64_t\b|\buint8_t\b|\buint16_t\b|\buint32_t\b|\buint64_t\b|\bintptr_t\b|\buintptr_t\b|\bvoid\b|\bArray\b|\bPointer\b|\bstruct\b|\bunion\b|\benum\b|\btypedef\b|\bconst\b|\bauto\b|\breturn\b|\bwhile\b|\bfor\b|\bswitch\b|\bcase\b|\bcontinue\b|\bdefault\b|\bdo\b|\bbreak\b|\bgoto\b|\binline\b|\bregister\b|\bstatic\b|\bvolatile\b|\btrue\b|\bfalse\b|\bNULL\b|\b(?<!#)else\b|\bextern\b|\b(?<!#)if\b|\bsizeof\b|\btypeof\b|\boffsetof\b|\/\/|[\|\n\t\\&#$`%()\[\]\{\}\-+,;:!\?@<=>'"*/]/g,
         (char) => htmlEntities[char],
       );
       return `#+begin_${blockType1}${escapedContent}#+end_${blockType2}`;
@@ -165,7 +165,12 @@ export function markup(text) {
     )
     .replaceAll("#+begin_src", "<pre class='src'>")
     .replaceAll("#+end_src", "</pre>")
-    .replaceAll(/(&#64;\w+)/gm, "<span class='orange'>$1</span>")
+    .replaceAll(
+      /(\w+)(&#40;)(.*?)(&#41;)/gm,
+      "<span class='green'>$1</span><span class='grey'>$2</span>$3<span class='grey'>$4</span>",
+    )
+    .replaceAll(/(&#40;)/g, "<span class='grey'>$1</span>")
+    .replaceAll(/(&#41;)/g, "<span class='grey'>$1</span>")
     .replaceAll(/(&#35;\w+)/gm, "<span class='orange'>$1</span>")
     .replaceAll("#+begin_example", "<pre class='example'>")
     .replaceAll("#+end_example", "</pre>")
@@ -183,6 +188,7 @@ export function markup(text) {
     )
     .replaceAll(/\*\*\*(.*?)\*\*\*/g, "<b><i>$1</i></b>")
     .replaceAll(/\*\*(.*?)\*\*/g, "<i>$1</i>")
+    .replaceAll(/\*(.*?)\*/g, "<b>$1</b>")
     .replaceAll(/\*(.*?)\*/g, "<b>$1</b>")
     .replaceAll(/\n- (.*)/gm, "<li>$1</li>")
     .replaceAll(/\n\* (.*$\n)/gm, "<h2>$1</h2>")

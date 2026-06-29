@@ -30,7 +30,7 @@ natureza e extremamente fáceis de serem compilados em diversos sistemas.
 
 O Frankenstein resultante disso é um sistema Linux com uma base relativamente
 estática, já que eu faço questão de instalar os meus apps no diretório
-<code>~/.local/bin</code> para mexer o mínimo com a raíz do sistema, tanto por
+=~/.local/bin= para mexer o mínimo com a raíz do sistema, tanto por
 questão de segurança, quanto por conveniência, afinal, sem um gerenciador de
 pacotes convencional, seria um saco saber o que foi que eu instalei e o que já
 veio com o sistema.
