@@ -40,9 +40,6 @@ export function markup(text) {
   // Jesus Cristo, como que eu iria fazer um bloco desses sem IA?
   const htmlEntities = {
     // Hare-like
-    "@symbol": "<span class='orange'>@symbol</span>",
-    "@init": "<span class='orange'>@init</span>",
-    "@fini": "<span class='orange'>@fini</span>",
     "use": "<span class='red'>use</span>",
     "::": "<span class='purple'>::</span>",
     "fn": "<span class='red'>fn</span>",
@@ -62,9 +59,6 @@ export function markup(text) {
     "opaque": "<span class='green'>opaque</span>",
     "never": "<span class='green'>never</span>",
     // C-like
-    "#include": "<span class='orange'>#include</span>",
-    "#define": "<span class='orange'>#define</span>",
-
     "int": "<span class='green'>int</span>",
     "char": "<span class='green'>char</span>",
     "unsigned char": "<span class='green'>unsigned char</span>",
@@ -107,8 +101,8 @@ export function markup(text) {
     "$": "&#36;",
     "`": "&#39;",
     "%": "&#37;",
-    "(": "<span class='grey'>&#40;",
-    ")": "<span class='grey'>&#41;</span></span>",
+    "(": "&#40;",
+    ")": "&#41;",
     "[": "<span class='grey'>&#91;</span>",
     "]": "<span class='grey'>&#93;</span>",
     "{": "<span class='grey'>&#123;</span>",
@@ -127,18 +121,28 @@ export function markup(text) {
     "<": "<span class='red'>&#60;</span>",
     "=": "<span class='red'>&#61;</span>",
     ">": "<span class='red'>&#62;</span>",
-    '"': "&#34;",
     "'": "&#39;",
     "_": "&#39;",
     "/": "<span class='red'>&#47;</span>",
     "*": "<span class='red'>&#42;</span>",
+    "0x": "<span class='purple'>&#48;x</span>",
+    "0": "<span class='purple'>&#48;</span>",
+    "1": "<span class='purple'>&#49;</span>",
+    "2": "<span class='purple'>&#50;</span>",
+    "3": "<span class='purple'>&#51;</span>",
+    "4": "<span class='purple'>&#52;</span>",
+    "5": "<span class='purple'>&#53;</span>",
+    "6": "<span class='purple'>&#54;</span>",
+    "7": "<span class='purple'>&#55;</span>",
+    "8": "<span class='purple'>&#56;</span>",
+    "9": "<span class='purple'>&#57;</span>",
   };
 
   const escapedText = text.replaceAll(
     /#\+begin_(src|example)([\s\S]*?)#\+end_(src|example)/g,
     (match, blockType1, content, blockType2) => {
       const escapedContent = content.replace(
-        /@symbol|@init|@fini|use|fn|export|::|let|yield|\/\/|#include|#define|char|unsigned char|int|unsigned int|short|unsigned short|long|unsigned long|long long|unsigned long long|float|double|long double|bool|void|Array|Pointer|struct|union|enum|typedef|const|return|while|for|switch|case|break|if|sizeof|[ \|\n\t\\&#$`%()\[\]\{\}\-+.,;:!?@<=>"'/*]/g,
+        /0x|[0-9]|\buse\b|\bfn\b|\bexport\b|::|\blet\b|\byield\b|\b\/\/\b|\bchar\b|\bunsigned char\b|\bint\b|\bunsigned int\b|\bshort\b|\bunsigned short\b|\blong\b|\bunsigned long\b|\blong long\b|\bunsigned long long\b|\bfloat\b|\bdouble\b|\blong double\b|\bbool\b|\bvoid\b|\bArray\b|\bPointer\b|\bstruct\b|\bunion\b|\benum\b|\btypedef\b|\bconst\b|\breturn\b|\bwhile\b|\bfor\b|\bswitch\b|\bcase\b|\bbreak\b|\bif\b|\bsizeof\b|\/\/|[ \|\n\t\\&#$`%()\[\]\{\}\-+.,;:!?@<=>'*/]/g,
         (char) => htmlEntities[char],
       );
       return `#+begin_${blockType1}${escapedContent}#+end_${blockType2}`;
@@ -152,6 +156,9 @@ export function markup(text) {
     )
     .replaceAll("#+begin_src", "<pre class='src'>")
     .replaceAll("#+end_src", "</pre>")
+    .replaceAll(/("[^"]*")/gm, "<span class='green'>$1</span>")
+    .replaceAll(/(&#64;\w+)/gm, "<span class='orange'>$1</span>")
+    .replaceAll(/(&#35;\w+)/gm, "<span class='orange'>$1</span>")
     .replaceAll("#+begin_example", "<pre class='example'>")
     .replaceAll("#+end_example", "</pre>")
     .replaceAll(

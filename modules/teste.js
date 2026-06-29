@@ -25,24 +25,6 @@ export function pagina_de_testes() {
 * Texto pré-formatado
 
 #+begin_src
-use fmt;
-
-export fn main() void = {
-  let a: int = 0;
-  let b: int = 1;
-
-  for (a < 100_000_000)
-  {
-    let c: int = a + b;
-    a = b;
-    b = c;
-
-    fmt::printfln("{}", a)!;
-  };
-};
-#+end_src
-
-#+begin_src
 #include "raylib.h"
 
 typedef enum GameScreen { LOGO = 0, TITLE, GAMEPLAY, ENDING } GameScreen;
@@ -52,7 +34,7 @@ int main(void)
     const int screenWidth = 800;
     const int screenHeight = 450;
 
-    InitWindow(screenWidth, screenHeight, "raylib [core] example - basic screen manager");
+    InitWindow(screenWidth, screenHeight, "raylib [core] example − basic screen manager");
 
     GameScreen currentScreen = LOGO;
 
@@ -142,6 +124,60 @@ int main(void)
 
     return 0;
 }
+#+end_src
+
+#+begin_src
+// Input-related functions: keyboard
+export @symbol("IsKeyPressed")		fn is_key_pressed(key: int) bool;
+export @symbol("IsKeyPressedRepeat")	fn is_key_pressed_repeat(key: int) bool;
+export @symbol("IsKeyDown")		fn is_key_down(key: int) bool;
+export @symbol("IsKeyReleased")		fn is_key_released(key: int) bool;
+export @symbol("IsKeyUp")		fn is_key_up(key: int) bool;
+export @symbol("GetKeyPressed")		fn get_key_pressed() int;
+export @symbol("GetCharPressed")	fn get_char_pressed() int;
+export @symbol("SetExitKey")		fn set_exit_key(key: int) void;
+#+end_src
+
+#+begin_src
+use raylib::*;
+
+export fn main() int = {
+	const screen_width: int = 800;
+	const screen_height: int = 450;
+
+	const bg = Color {
+		r=0x18,
+		g=0x18,
+		b=0x18,
+		a=0xFF,
+	};
+
+	const fg = Color {
+		r=0xEE,
+		g=0xEE,
+		b=0xEE,
+		a=0xFF,
+	};
+
+	init_window(screen_width, screen_height, "Raylib [core] example - basic window");
+	set_target_fps(60);
+
+	const text: str = "Raylib Rocks";
+	const font_size: int = 30;
+
+	for (!window_should_close()) {
+		begin_drawing();
+		clear_background(bg);
+		draw_text(text, screen_width / 2 - (measure_text(text, font_size) / 2), screen_height / 2, font_size, fg);
+		end_drawing();
+	};
+
+	close_window();
+
+	return 0;
+
+};
+
 #+end_src
 
 #+begin_example

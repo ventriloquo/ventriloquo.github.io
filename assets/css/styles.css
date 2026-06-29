@@ -260,6 +260,12 @@ pre {
   .yellow    { color: #FFD866; }
   .grey      { color: #C1C0C0; }
   .dark-grey { color: #939293; }
+
+  span {
+    span {
+      color: inherit !important;
+    }
+  }
 )}
 
 li {
