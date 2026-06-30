@@ -62,18 +62,14 @@ Também gosto de customizar a aparência do meu desktop e brincar com CSS.
         ),
       ),
       tag(
-        "ul",
+        "p",
         {},
-        tag(
-          "li",
-          {},
-          tag("a", {
-            "style": "text-align: center; margin-top: 1em",
-            "class": "blog_entry button",
-            "href": "https://monokai.pro/",
-            "target": "_blank",
-          }, "Paleta de cores utilizada no site"),
-        ),
+        markup(`
+* Paletas de cores utilizadas no site
+
+- Dark mode: [[https://monokai.pro][Monokai Pro]]
+- Light mode: [[https://everforest.vercel.app][Everforest Light Hard]]
+          `),
       ),
       tag(
         "div",

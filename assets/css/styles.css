@@ -57,14 +57,22 @@
   --cyan: rgb(var(--cyan_rgb));
 }
 
-/* Light Mode (Monokai Pro Light) */
+/* Light Mode (Everfores Light Hard) */
 :root.light-mode {
-  --fg: #19181A;
-  --bg-0: #faf4f2;
-  --bg-1: #fefaf9;
-  --bg-2: #ede7e5;
-  --ac-0: var(--purple_rgb);
-  --ac-1: var(--blue_rgb);
+  --fg: #5C6A72;
+  --bg-0: #F2EFDF;
+  --bg-1: #FFFBEF;
+  --bg-2: #F8F5E4;
+
+  --red_rgb:    248, 85, 82;
+  --green_rgb:  141, 161, 1;
+  --yellow_rgb: 223, 160, 0;
+  --blue_rgb:   58, 148, 197;
+  --purple_rgb: 223, 105, 186;
+  --cyan_rgb:   53, 167, 124;
+
+  --ac-0: var(--cyan_rgb);
+  --ac-1: var(--red_rgb);
 }
 
 *::-webkit-scrollbar {
