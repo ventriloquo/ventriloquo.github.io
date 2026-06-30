@@ -39,8 +39,8 @@
   --bg-1: #221F22;
   --bg-2: #403E41;
 
+  --ac-0: var(--purple_rgb);
   --ac-1: var(--yellow_rgb);
-  --ac-0: var(--cyan_rgb);
 
   --red_rgb: 255, 97, 136;
   --green_rgb: 169, 220, 118;
