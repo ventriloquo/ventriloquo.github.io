@@ -2,6 +2,75 @@
 
 export const posts = [
   {
+    title: "Detesto a utilidade do Github",
+    date: "30.06.2026",
+    content: `
+O Github é um serviço que é *muito* utilizado pelos mais diversos tipos de
+projetos/desenvolvedores. Isso é um fato. Porém, também é fato que ele foi
+[[https://news.microsoft.com/announcement/microsoft-acquires-github/][comprado pela Microsoft]],
+e desde então o serviço vem sofrendo um lento (mas contante) processo de
+[[https://pt.wikipedia.org/wiki/Merdifica%C3%A7%C3%A3o][merdificação]].
+
+- Quedas de serviços
+- Encarecimento de preços
+- Roubo de código para treinar o Copilot (ignorando licenças como a GPLv3)
+
+Tudo isso são coisas que se tornaram o padrão no Github. Ah, e tem também os
+bots de IA que enchem o saco nas issues de projetos populares, como o Curl, mas
+nesse caso a culpa não é do Github em si, mas sim da indústria de IA.
+
+Porém, apesar disso tudo (e de outros problemas também), ele é útil.
+
+Isso não é crédito da Microsoft, até porquê ela comprou um serviço que estava em
+ascenção.
+
+A conveniência, usabilidade, enfim, coisas que te fazem querer usar algum
+serviço, estão presentes nele. E ele também tem as suas "armadilhas" que te
+prendem nele e dificultam o processo de migrar para outro **git-host** (como o
+[[https://codeberg.org][Codeberg]] por exemplo), como os
+[[https://github.com/features/actions?locale=pt-br][Github Actions]], o
+[[https://docs.github.com/en/issues/tracking-your-work-with-issues][Issue Tracker]],
+[[https://docs.github.com/pt/communities/documenting-your-project-with-wikis/about-wikis][Wiki]],
+enfim, todas essas coisas não são portáveis para outros serviços, o que pode ser
+desde uma incoveniência para alguns, até impedir que outros consigam pensar em
+sair dele, dependendo somente do quanto você usa alguma dessas ferramentas.
+
+Eu, por exemplo, uso constantemente o Github Actions para gerar um "espelho" do
+meu site do Neocities para o [[https://pages.github.com/][Github Pages]]
+(outro serviço que serve como [[https://pt.wikipedia.org/wiki/Aprisionamento_tecnol%C3%B3gico][**vendor lock-in**]]).
+
+Essa ferramenta ,,yellow:em específico,, é o que me faz ter uma conta no Github. Ela é
+simples de usar, prática, gratuita, e além de tudo isso, eu posso criar uma
+**action** em qualquer repositório e gerar um site para esse repositório em
+específico. E além de tudo usa o [[https://jekyllrb.com][Jekyll]], um [[https://en.wikipedia.org/wiki/Static_site_generator][SSG]], 
+ou seja, você pode criar um site estático complexo sem muita dor de cabeça (por
+muito tempo o meu próprio site era feito em Jekyll).
+
+- Precisa de um site de documentação para uma biblioteca que você criou? É só criar uma **branch** ''gh-pages'' e colocar um site feito em Jekyll nela!
+- Quer vender sites? Você pode criar um repositório dedicado para cada cliente, colocar um site nele, e usar um domínio personalisado rapidinho
+- Quer criar um pacote Docker? É só criar uma Action em ''.github/workflows'' e pronto!
+
+Toda essa conveniência é o que te prende no Github. E mesmo que eu tenha uma
+[[https://codeberg.org/tukain][conta no Codeberg]], ele não tem tudo isso a
+oferecer (ou então não são tão intuitivas quanto no Github).
+
+O meu sentimento em relação ao Github é pior até que o que eu sinto com IA. No
+caso da IA, ela é igualmente útil e inútil para mim, independente se eu tô
+usando o Gemini, ChatGPT ou Claude (inclusive, eu recomendo você usar o
+[[https://duck.ai][Duck.ai]], assim você pode dar uma checada em qualquer uma
+dessas IAs sem precisar criar uma conta nelas). Se o problema envolve algo
+objetivo (como código), ela é ,,green:útil,,, se for subjetivo (como uma ilustração),
+,,red:inútil,,.
+
+No caso do Github, ele tem algumas poucas **features** que são muito úteis para
+mim, e todo o resto do serviço é uma bosta, mas não tem (ou pelo menos eu não
+conheço) nenhuma alternativa que ofereça uma transição 1:1 dessas **features**,
+e por conta disso, eu preciso ter uma conta nele.
+
+E por isso, eu ,,red:detesto a utilidade do Github,,.
+`,
+  },
+  {
     title: "Slackware",
     date: "20.06.2026",
     content: `
