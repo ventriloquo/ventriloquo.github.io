@@ -45,7 +45,7 @@ No momento, ela é "compatível" com estas sintaxes:
 - texto em negrito (<code>&#42;texto&#42;</code>)
 - texto itálico (<code>&#42;&#42;texto&#42;&#42;</code>)
 - texto negrito e itálico (<code>&#42;&#42;&#42;texto&#42;&#42;&#42;</code>)
-- texto pré-formatado/código (<code>''texto''</code>)
+- texto pré-formatado/código (<code>&#39;&#39;texto&#39;&#39;</code>)
 - tabelas ([[https://www.markdownguide.org/extended-syntax/#tables][Que nem no Markdown]])
 `,
   },
