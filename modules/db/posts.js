@@ -48,18 +48,18 @@ me pegou de surpresa).
 A melhor coisa nele até agora para mim é o [[http://www.slackware.com/config/init.php][Init System]]
 dele. Os serviços são só um bando de Shell Scripts. É sério. Quer fazer o
 Emacs rodar como servidor durante o Boot da sua máquina? Faz um Shell Script em
-<code>/etc/rc.d</code> com o nome tendo <code>rd.</code> no início, dê permissão
+''/etc/rc.d'' com o nome tendo ''rd.'' no início, dê permissão
 de execução e pronto! A próxima vez que você iniciar a sua máquina, esse Shell
 Script vai ser executado. Ou então, se você não quer fazer vários Scripts separados
 e ter o risco deles não serem executados em uma ordem específica, você pode pôr
-tudo no Script <code>rc.local</code>. Ele vai ser executado por último, então
+tudo no Script ''rc.local''. Ele vai ser executado por último, então
 não tem risco de algum comando seu não funcionar corretamente porquê ele foi
 executado fora de ordem.
 
 Eu coloquei alguns comandos para configurar minha placa Wi-Fi e pôr o
-<code>wpa_supplicant</code> para funcionar no <code>/etc/rc.d/rc.local</code>.
+''wpa_supplicant'' para funcionar no ''/etc/rc.d/rc.local''.
 Sempre funciona exatamente como eu quis. Eu não quero nem começar a falar da
-dor de cabeça que era fazer o <code>wpa_supplicant</code> funcionar consistentemente
+dor de cabeça que era fazer o ''wpa_supplicant'' funcionar consistentemente
 no Alpine, principalmente quando eu tinha que levar meu notebook para outro
 lugar e precisava conectar em uma outra rede Wi-Fi (meu notebook não tem entrada
 RJ45). Então acabava tendo que usar o NetworkManager só para ter uma conexão
@@ -75,7 +75,7 @@ a experiência de compilar/instalar algo externo é quase que uma roleta russa.
 Se você estiver compilando algo que segue +/- a [[https://suckless.org/philosophy/][filosofia Suckless]],
 então você tem menos chances de não conseguir compilar algo (mas isso não é
 impossível, eu mesmo não consegui compilar o [[https://codeberg.org/nsxiv/nsxiv][NSXIV]]
-porquê o Slackware não tem a biblioteca <code>Imlib2</code> disponível, então
+porquê o Slackware não tem a biblioteca ''Imlib2'' disponível, então
 tive que usar um visualizador de imagem diferente, o [[https://www.johnhawthorn.com/meh/][meh]]).
 
 Isso é algo que é sim chato, mas como eu já disse anteriormente, eu já tenho as
@@ -114,9 +114,9 @@ do título da página só mudar depois de acessar a página duas vezes, então f
 uns 15 minutos checando com o Gemini quais eram as possíveis causas, só para no
 final o problema ser uma
 [[https://pt.wikipedia.org/wiki/Condi%C3%A7%C3%A3o_de_corrida#:~:text=Uma%20condi%C3%A7%C3%A3o%20de%20corrida%20%C3%A9%20uma%20falha%20num%20sistema%20ou%20processo%20em%20que%20o%20resultado%20do%20processo%20%C3%A9%20inesperadamente%20dependente%20da%20sequ%C3%AAncia%20ou%20sincronia%20doutros%20eventos.][<i>race condicion</i>]]
-entre a API <code>navigation</code> e o <code>DOM</code> 🤦.
+entre a API ''navigation'' e o ''DOM'' 🤦.
 
-Basicamente, a página trocava mais rápido do que o <code>DOM</code> conseguia
+Basicamente, a página trocava mais rápido do que o ''DOM'' conseguia
 trocar o título do site. A solução? <b>Põe um timer nessa bomba</b>.
 
 #+begin_src
@@ -146,30 +146,30 @@ pelo menos por enquanto.
 Enfim, com a troca de título com base nas páginas funcionando, me veio a
 ideia de possibilitar o envio de feedback sobre qualquer página do site sem
 ser com um botão em cada página (como são os posts do blog). Então a solução foi
-bem simples: é só colocar um <code>eventListener</code> verificando o teclado!
+bem simples: é só colocar um ''eventListener'' verificando o teclado!
 
 #+begin_quote
 <span>Explicação rápida</span>
 Agora o site checa quais teclas estão sendo pressionadas, quando alguma tecla
-específica é apertada (pox exemplo: <code>h</code>), ele faz uma ação (por
+específica é apertada (pox exemplo: ''h''), ele faz uma ação (por
 exemplo: ir para a tela inicial do site)
 #+end_quote
 
 As teclas de atalho são as seguintes:
-- <code>p</code> - Ir para a página dos meus projetos
-- <code>b</code> - Ir para a página do meu blog
-- <code>s</code> - Ir para a página da minha lista de leitura
-- <code>g</code> - Ir para a página dos meus jogos
-- <code>i</code> - Ir para a página das minhas ideias
-- <code>w</code> - Ir para a página dos sites que eu acompanho
-- <code>a</code> - Ir para a página sobre mim
-- <code>t</code> - Ir para a página de testes
-- <code>d</code> - Trocar entre tema claro/escuro
-- <code>m</code> - Ir para o mapa do site
-- <code>h</code> - Ir para a home
-- <code>f</code> - Enviar um feedback sobre a página atual
-- <code>j</code> - Descer página
-- <code>k</code> - Subir página
+- ''p'' - Ir para a página dos meus projetos
+- ''b'' - Ir para a página do meu blog
+- ''s'' - Ir para a página da minha lista de leitura
+- ''g'' - Ir para a página dos meus jogos
+- ''i'' - Ir para a página das minhas ideias
+- ''w'' - Ir para a página dos sites que eu acompanho
+- ''a'' - Ir para a página sobre mim
+- ''t'' - Ir para a página de testes
+- ''d'' - Trocar entre tema claro/escuro
+- ''m'' - Ir para o mapa do site
+- ''h'' - Ir para a home
+- ''f'' - Enviar um feedback sobre a página atual
+- ''j'' - Descer página
+- ''k'' - Subir página
 `,
   },
   {
@@ -257,7 +257,7 @@ mesmo antes de eu iniciar esse projeto. As impressões que eu tenho até hoje
 sempre que assisto um conteúdo do gênero são as seguintes:
 - Esse cara quer me vender um curso de R$600,00 não é?
 - Se fosse para usar Copilot eu nem sequer estaria assistindo um vídeo
-- Eu não vou ficar 2 horas assistindo um cara explicando como funciona um <code>if</code> <code>else</code>
+- Eu não vou ficar 2 horas assistindo um cara explicando como funciona um ''if'' ''else''
 - Eu vim procurar saber como funciona o gerenciamento de memória manual, não ouvir uma palestra dos perigos de fazer isso e que [[https://rust-lang.org/pt-BR/][Rust]] é uma linguagem melhor
 
 Enfim. Eu aprendo muito mais assistindo um programador fazendo algo como um
@@ -302,7 +302,7 @@ export fn save_file_text(filename: str, text: str) bool = SaveFileText(c::fromst
 #+end_src
 
 Da seção de gerenciamento de arquivos, a única função que possui uma
-<i>binding</i> é a <code>SaveFileText</code>. Existem outros casos como este
+<i>binding</i> é a ''SaveFileText''. Existem outros casos como este
 dentro do código das <i>bindings</i>, mas aos poucos eu vou preencher essas
 lacunas. O problema é quanto tempo isso vai levar.
 
@@ -407,7 +407,7 @@ sinceramente, é justo).
 Como eu sou um cara bem paranóico (principalmente com esse tipo de coisa), eu
 comecei a fazer backup de uma porrada de programa que eu uso. Como a minha
 "main distro" é o Alpine, isso é bem fácil, é só questão de executar um
-<code>apk fetch -R *programa*</code> e já era, ele pega o programa e todas as
+''apk fetch -R programa'' e já era, ele pega o programa e todas as
 dependências dele e baixa os pacotes no diretório atual. Fiz isso com o
 [[https://gnome.org][GNOME]] e outros programas, como o
 [[https://librewolf.net][Librewolf]]. Basicamente, eu tenho como instalar
@@ -546,7 +546,7 @@ uma IDE também?
 Eu não tô brincando, se você tem um site escrito à mão (HTML, CSS e JS sem um
 processo de build, como em um SSG) você pode fazer esse teste:
 - Abrir o site no navegador
-- Apertar a tecla <code>F12</code>
+- Apertar a tecla ''F12''
 - Clicar em "Sources", depois Workspace
 - "Add folder manually"
 - Colocar a pasta do site, e... pronto, você tem uma IDE para editar o seu site. Sem precisar instalar mais nenhum programa externo.
@@ -704,7 +704,7 @@ hein.
 #+begin_note
 Como apontado pelo [[https://neocities.org/site/sob-o-sol][sob-o-sol]]
 ([[https://neocities.org/site/tukainpng?event_id=6239969][aqui]]), a razão
-disso se deve ao fato de que o <code>len</code> da Hare calcula o tamanho de
+disso se deve ao fato de que o ''len'' da Hare calcula o tamanho de
 uma string byte por byte, e por conta disso o valor retornado é 12 ao invés de
 11, já que caracteres como "á" são representados com mais de 1 byte.
 #+end_note
@@ -729,8 +729,9 @@ cores de tudo (como quase todo usuário Linux). Porém, às vezes isso é bem
 tediante.
 
 Cada programa tem o seu próprio jeito de configurar, o tipo de sistema de cores
-nem sempre segue um padrão (<code>RGB</code>, <code>RGBA</code>,
-<code>ARGB</code> e etc), enfim, muitas coisa para ter que lembrar e ajustar.
+nem sempre segue um padrão (''RGB'', ''RGBA'', ''ARGB'' e etc), enfim,
+muitas coisa para ter que lembrar e ajustar.
+
 Por conta disso, eu customava fazer um setup com um certo tema (por exemplo,
 [[https://github.com/sainnhe/everforest][everforest]]) e usar ele por pelo
 menos 1 ou 3 meses, já que a dor de cabeça de sair ajustando as cores de todos
@@ -760,14 +761,14 @@ Levando isso em consideração, eu pensei o seguinte: se eu consigo fazer essa
 integração com o meu site, então eu consigo fazer isso com as configurações
 do meu setup!
 
-E então, depois de umas duas horas +/-, eu fiz um script em <code>Elisp</code>
+E então, depois de umas duas horas +/-, eu fiz um script em ''Elisp''
 que gera esses arquivos de configuração para mim e deixei ele pronto para
 executar sempre que o Emacs é aberto.
 
 <img loading="lazy" src="/assets/theme_switcher.gif">
 
 A forma como ele funciona é bem simples: eu defini algumas variáveis contendo
-as cores que vou utilizar nas configurações (por exemplo, <code>red</code>) e
+as cores que vou utilizar nas configurações (por exemplo, ''red'') e
 escrevo o seguinte para criar os arquivos de configuração:
 
 #+begin_src
@@ -781,8 +782,8 @@ escrevo o seguinte para criar os arquivos de configuração:
 		 "}")
 #+end_src
 
-<code>generate-config</code> é na realidade um <i>Macro</i> de uma função que
-fiz chamada <code>new-buffer</code>.
+''generate-config'' é na realidade um <i>Macro</i> de uma função que
+fiz chamada ''new-buffer''.
 
 A definição dessa função é a seguinte:
 
@@ -802,7 +803,7 @@ A definição dessa função é a seguinte:
 
 Sim, eu sei, esse treco tá feio que dói. Maaass, funciona. Essa função funciona
 como um "<i>Helper</i>" para criar <i>buffers</i> com um conteúdo pre-definido
-e salvar esse buffer para o arquivo especificado em <code>filepath</code>.
+e salvar esse buffer para o arquivo especificado em ''filepath''.
 
 A definição do <i>Macro</i> é bem simples:
 
@@ -812,7 +813,7 @@ A definição do <i>Macro</i> é bem simples:
 #+end_src
 
 Basicamente, para usar ele você dá uma <i>string</i> contendo o caminho para o
-arquivo que será escrito (ex: <code>~/.config/rofi/themes/colors.rasi</code>)
+arquivo que será escrito (ex: ''~/.config/rofi/themes/colors.rasi'')
 e em seguida, qualquer número de strings desejadas para serem colocadas no
 arquivo. Isso permite que você use <i>strings</i> contidas em variáveis, como
 uma cor em hexadecimal por exemplo.
@@ -828,7 +829,7 @@ das <i>guidelines</i> desse <i>framework</i> é que as cores
 [[https://en.wikipedia.org/wiki/ANSI_escape_code#Colors][ansi]] também são
 modificadas. Dessa forma fica fácil extrair a cor vemelha por exemplo, porque
 eu não preciso procurar ela dentro da lista de cores do Emacs, eu só preciso do
-atributo <code>ansi-color-red</code>.
+atributo ''ansi-color-red''.
 
 Por enquanto, esse script que fiz só funciona perfeitamente com esse pacote.
 
@@ -863,9 +864,9 @@ pré-instalado do Emacs).
 
 Além disso, usei um snippet do pessoal do
 [[https://systemcrafters.net][System Crafters]] para conseguir usar com mais
-facilidade a funcionalidade de leitura de arquivos <code>gpg</code>, o nome da
+facilidade a funcionalidade de leitura de arquivos ''gpg'', o nome da
 função é meio estranho, mas basicamente, eu só preciso chamar ela e dar como um
-argumento uma chave presente no arquivo <code>.authinfo</code> e ela me
+argumento uma chave presente no arquivo ''.authinfo'' e ela me
 retornará a senha correspondente à essa chave.
 
 Como por exemplo:
@@ -908,7 +909,7 @@ Sendo assim, eu consigo fazer esse tipo de coisa aqui:
 
 * Meu novo site
 
-Também reescrevi meu site usando o <code>ox-publish</code>, a funcionalidade de
+Também reescrevi meu site usando o ''ox-publish'', a funcionalidade de
 publicação de documentos nativa do Emacs! Quando configurado de uma certa forma,
 ele não fica muito diferente de um [[https://jekyllrb.com][SSG]] ou
 [[https://codeberg.org/tukain/blog.sh][algo do gênero]].
@@ -931,7 +932,7 @@ pode ser que seja útil para demonstrar algo que aprendi a fazer na
 
 O que eu sei é que o desenvolvimento do site passa a ser algo centralizado no
 Emacs. Algo que tem seus lados positivos, mas também tem seus negativos. O que
-eu posso fazer é tirar proveito dos <code>git submodules</code> para conseguir
+eu posso fazer é tirar proveito dos ''git submodules'' para conseguir
 gerenciar um repositório com o "código-fonte" do site e o site "compilado" de
 forma facilitada (o que eu [[https://codeberg.org/tukain/site][já]]
 [[https://codeberg.org/tukain/pages][fazia]] na realidade).
@@ -939,7 +940,7 @@ forma facilitada (o que eu [[https://codeberg.org/tukain/site][já]]
 Ah, mais uma coisa que eu lembrei agora: cada página desse site funciona de
 forma "independente" das outras. Basicamente, todas as páginas já incluem toda
 a estilização necessária para ter a aparência do site (todas elas incluem uma
-<i>tag</i> <code>&lt;style&gt;</code> com o CSS do site :P).
+<i>tag</i> ''&lt;style&gt;''com o CSS do site :P).
 
 Além disso, eu também consigo integrar a paleta de cor do tema que eu estou
 usando no Emacs e aplicar ela no CSS do site!
@@ -964,7 +965,7 @@ precise definir elas manualmente!
 
 * Organização financeira
 
-O <code>org-mode</code> também tem a funcionalidade de gerir planilhas, com
+O ''org-mode'' também tem a funcionalidade de gerir planilhas, com
 fórmulas e tudo!
 
 Por exemplo, digamos que eu esteja gerendo uma planilha contendo os meus gastos
@@ -983,7 +984,7 @@ mensais com planos de assinatura/contas recorrentes. Eu poderia fazer isso aqui:
 É, a sintáxe não é lá aquelas coisas... mas é funcional. Para coisas simples
 ela é relativamente intuitiva (+/- né). O maneiro mesmo é escrever essas tabelas,
 por quê? Porque o Emacs formata automagicamente elas! É só começar uma tabela
-com <code>| nome</code> e apertar <code>tab</code>!
+com ''| nome'' e apertar ''tab''!
 
 Além disso, também existe a tecla de atalho =Ctrl c }= que exibe alguns
 marcadores na tabela para poder facilitar o processo de escrever as fórmulas.
@@ -1003,11 +1004,11 @@ I*2 |-------------+-----------------+------------|
 Como eu estou tentando diminuir o meu uso no celular, isso pode ser o tipo de
 coisa que pode me ajudar. Dessa forma eu vou ter um jeito de gerenciar as minhas
 finanças sem depender de aplicativos no meu celular. Até porque eu posso criar
-<i>deadlines</i> no <code>org-mode</code> e visualizar meus afazeres usando a
+<i>deadlines</i> no ''org-mode'' e visualizar meus afazeres usando a
 agenda integrada dele!
 
 #+begin_quote
-Devo que admitir que não sei ainda como se usa o <code>org-agenda</code>, mas
+Devo que admitir que não sei ainda como se usa o ''org-agenda'', mas
 pelo o que eu li no [[https://orgmode.org/features.html#agendas][site oficial]]
 parece ser muito bacana!
 #+end_quote
@@ -1030,10 +1031,10 @@ Então você pode, por exemplo, testar um "plugin" que dá <i>syntax highlightin
 (colorização de código) para alguma linguagem de programação que não é suportada
 por padrão pelo Emacs, como a [[https://harelang.org][Hare]], por exemplo.
 
-Também tem o <code>compile-mode</code>... Meu Deus, por que isso não é um
+Também tem o ''compile-mode''... Meu Deus, por que isso não é um
 padrão de indústria?
 
-Basicamente, o <code>compile-mode</code> serve para executar um comando
+Basicamente, o ''compile-mode'' serve para executar um comando
 especificado por você no diretório em que você estava e, caso aconteça erros,
 ele cria "links" com base nas linhas/colunas especificadas pela mensagem de erro.
 
@@ -1056,7 +1057,7 @@ teste.ha:2:16: error: Unknown object 'println'
 harec for /tmp/teste.ha exited with status 4
 #+end_example
 
-A parte escrita com <code>teste.ha:2:16:</code> viraria um link, onde se eu
+A parte escrita com ''teste.ha:2:16:'' viraria um link, onde se eu
 clicar, o Emacs abriria o arquivo onde o erro ocorreu e deixaria o ponteiro do
 editor na linha e na coluna especificada pelo erro.
 
@@ -1309,12 +1310,12 @@ for para tacar na mão de um estúdio como a Bones ou Mad House.
 Eu gosto muito de assistir as lives do Tsoding, e em uma das lives onde ele
 estava falando sobre JavaScript, ele mostrou uma coisa muito curiosa sobre o DOM.
 
-Basicamente, qualquer <code>ID</code> dado a um elemento no HTML pode ser
+Basicamente, qualquer ''ID'' dado a um elemento no HTML pode ser
 acessado como uma variável no JavaScript.
 
 Bacana né?
 
-Você pode, por exemplo, criar um elemento &lt;p&gt;, dar o <code>ID</code>
+Você pode, por exemplo, criar um elemento &lt;p&gt;, dar o ''ID''
 "paragrafo" e usar o JavaScript para adicionar texto a ele!
 
 +/- assim:

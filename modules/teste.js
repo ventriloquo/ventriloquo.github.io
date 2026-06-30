@@ -13,7 +13,7 @@ export function pagina_de_testes() {
         `
 * Formatação básica
 
-*Negrito*, **Itálico**, ***Negrito e Itálico***
+*Negrito*, **Itálico**, ***Negrito e Itálico***, ''código inline''
 
 * Listas
 
@@ -21,6 +21,13 @@ export function pagina_de_testes() {
 - Uva
 - Maçã
 - Salada Mista
+
+* Tabelas
+
+| Item | Valor |
+| --- | --- |
+| 1kg de maçã | R$19,99 |
+| 1kg de pera | R$27,99 |
 
 * Texto pré-formatado
 
@@ -55,6 +62,11 @@ NULL
 #+begin_src
 #include <stdio.h>
 #include <stdbool.h>
+
+typedef struct {
+  char* name;
+  int age;
+} Pessoa;
 
 int main(void) {
   if (true) {

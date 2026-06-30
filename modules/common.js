@@ -36,72 +36,101 @@ export function slug(text) {
     .replaceAll("ç", "c");
 }
 
+/**
+ * Takes text and formats it. Also does syntax-highlighting
+ * @example
+ * // Returns '<a href="https://google.com">Google</a>'
+ * markup("[[https://google.com][Google]]");
+ * @param {string} text - Text to be formatted
+ * @returns {string} formattedText
+ */
 export function markup(text) {
-  // Jesus Cristo, como que eu iria fazer um bloco desses sem IA?
+  const types = [
+    "int",
+    "char",
+    "unsigned",
+    "signed",
+    "short",
+    "long",
+    "long long",
+    "float",
+    "double",
+    "long double",
+    "bool",
+    "void",
+    "intptr_t",
+    "uintptr_t",
+    "int64_t",
+    "int32_t",
+    "int16_t",
+    "int8_t",
+    "uint64_t",
+    "uint32_t",
+    "uint16_t",
+    "uint8_t",
+    "ptrdiff_t",
+    "size_t",
+    "_Imaginary",
+    "_Complex",
+    "_Bool",
+    "static",
+    "volatile",
+    "true",
+    "false",
+  ];
+
+  const keywords = [
+    "Array",
+    "Pointer",
+    "struct",
+    "union",
+    "enum",
+    "typedef",
+    "const",
+    "auto",
+    "return",
+    "while",
+    "for",
+    "switch",
+    "case",
+    "continue",
+    "default",
+    "break",
+    "do",
+    "else",
+    "register",
+    "inline",
+    "goto",
+    "extern",
+    "if",
+  ];
+
+  const builtins = ["sizeof", "typeof", "offsetof"];
+
+  const ponctuation = ["[", "]", "{", "}", ";"];
+
+  const etc = ["NULL", "0x", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+
   const htmlEntities = {
-    "int": "<span class='yellow'>int</span>",
-    "char": "<span class='yellow'>char</span>",
-    "unsigned": "<span class='yellow'>unsigned</span>",
-    "signed": "<span class='yellow'>signed</span>",
-    "short": "<span class='yellow'>short</span>",
-    "long": "<span class='yellow'>long</span>",
-    "long long": "<span class='yellow'>long long</span>",
-    "float": "<span class='yellow'>float</span>",
-    "double": "<span class='yellow'>double</span>",
-    "long double": "<span class='yellow'>long double</span>",
-    "bool": "<span class='yellow'>bool</span>",
-    "void": "<span class='yellow'>void</span>",
-    "void": "<span class='yellow'>void</span>",
-    "intptr_t": "<span class='yellow'>intptr_t</span>",
-    "uintptr_t": "<span class='yellow'>uintptr_t</span>",
-    "int64_t": "<span class='yellow'>int64_t</span>",
-    "int32_t": "<span class='yellow'>int32_t</span>",
-    "int16_t": "<span class='yellow'>int16_t</span>",
-    "int8_t": "<span class='yellow'>int8_t</span>",
-    "uint64_t": "<span class='yellow'>uint64_t</span>",
-    "uint32_t": "<span class='yellow'>uint32_t</span>",
-    "uint16_t": "<span class='yellow'>uint16_t</span>",
-    "uint8_t": "<span class='yellow'>uint8_t</span>",
-    "ptrdiff_t": "<span class='yellow'>ptrdiff_t</span>",
-    "size_t": "<span class='yellow'>size_t</span>",
-    "_Imaginary": "<span class='yellow'>_Imaginary</span>",
-    "_Complex": "<span class='yellow'>_Complex</span>",
-    "_Bool": "<span class='yellow'>_Bool</span>",
-    "static": "<span class='yellow'>static</span>",
-    "volatile": "<span class='yellow'>volatile</span>",
-    "true": "<span class='yellow'>true</span>",
-    "false": "<span class='yellow'>false</span>",
-
-    "Array": "<span class='red'>Array</span>",
-    "Pointer": "<span class='red'>Pointer</span>",
-    "struct": "<span class='red'>struct</span>",
-    "union": "<span class='red'>union</span>",
-    "enum": "<span class='red'>enum</span>",
-    "typedef": "<span class='red'>typedef</span>",
-    "const": "<span class='red'>const</span>",
-    "auto": "<span class='red'>auto</span>",
-    "return": "<span class='red'>return</span>",
-    "while": "<span class='red'>while</span>",
-    "for": "<span class='red'>for</span>",
-    "switch": "<span class='red'>switch</span>",
-    "case": "<span class='red'>case</span>",
-    "continue": "<span class='red'>continue</span>",
-    "default": "<span class='red'>default</span>",
-    "break": "<span class='red'>break</span>",
-    "do": "<span class='red'>do</span>",
-    "else": "<span class='red'>else</span>",
-    "register": "<span class='red'>register</span>",
-    "inline": "<span class='red'>inline</span>",
-    "goto": "<span class='red'>goto</span>",
-    "extern": "<span class='red'>extern</span>",
-    "if": "<span class='red'>if</span>",
-
-    "NULL": "<span class='purple'>NULL</span>",
-
-    "sizeof": "<span class='blue'>sizeof</span>",
-    "typeof": "<span class='blue'>typeof</span>",
-    "offsetof": "<span class='blue'>offsetof</span>",
-
+    ...Object.fromEntries(
+      types.map((k) => [k, `<span class='yellow'>${k}</span>`]),
+    ),
+    ...Object.fromEntries(
+      keywords.map((k) => [k, `<span class='red'>${k}</span>`]),
+    ),
+    ...Object.fromEntries(
+      builtins.map((k) => [k, `<span class='blue'>${k}</span>`]),
+    ),
+    ...Object.fromEntries(
+      ponctuation.map(
+        (k) => [k, `<span class='grey'>&#${k.charCodeAt(0)};</span>`],
+      ),
+    ),
+    ...Object.fromEntries(etc.map((k) => {
+      if (k === "NULL") return [k, "<span class='purple'>NULL</span>"];
+      if (k === "0x") return [k, "<span class='purple'>&#48;x</span>"];
+      return [k, `<span class='purple'>&#${48 + parseInt(k)};</span>`];
+    })),
     "//": "<span class='dark-grey'>//",
     "\n": "</span>&#10;",
     "\t": "&#9;",
@@ -112,17 +141,12 @@ export function markup(text) {
     "%": "&#37;",
     "(": "&#40;",
     ")": "&#41;",
-    "[": "<span class='grey'>&#91;</span>",
-    "]": "<span class='grey'>&#93;</span>",
-    "{": "<span class='grey'>&#123;</span>",
-    "}": "<span class='grey'>&#125;</span>",
     "|": "<span class='red'>&#124;</span>",
     "~": "<span class='red'>&#126;</span>",
     "+": "<span class='red'>&#43;</span>",
     "-": "<span class='red'>&#8722;</span>",
     ",": "&#44;",
     ":": "&#58;",
-    ";": "<span class='grey'>&#59;</span>",
     "@": "&#64;",
     "<": "<span class='red'>&#60;</span>",
     "=": "<span class='red'>&#61;</span>",
@@ -134,31 +158,63 @@ export function markup(text) {
     "*": "<span class='red'>&#42;</span>",
     "!": "<span class='red'>&#33;</span>",
     "?": "<span class='red'>&#63;</span>",
-    "0x": "<span class='purple'>&#48;x</span>",
-    "0": "<span class='purple'>&#48;</span>",
-    "1": "<span class='purple'>&#49;</span>",
-    "2": "<span class='purple'>&#50;</span>",
-    "3": "<span class='purple'>&#51;</span>",
-    "4": "<span class='purple'>&#52;</span>",
-    "5": "<span class='purple'>&#53;</span>",
-    "6": "<span class='purple'>&#54;</span>",
-    "7": "<span class='purple'>&#55;</span>",
-    "8": "<span class='purple'>&#56;</span>",
-    "9": "<span class='purple'>&#57;</span>",
   };
+
+  const words = [
+    ...types,
+    ...keywords.filter((k) => k !== "if" && k !== "else"),
+    ...builtins,
+    "NULL",
+  ].map((k) => `\\b${k}\\b`);
+  const tokenRegex = new RegExp(
+    `"(?:[^"\\\\]|\\\\.)*"|'[^']*'|0x|[0-9]|//|${
+      words.join("|")
+    }|\\b(?<!#)else\\b|\\b(?<!#)if\\b|[\\|\\n\\t\\\\&#$\`%()\\[\\]\\{\\}\\-+,;:!\\?@<=>'"*/]`,
+    "g",
+  );
 
   const escapedText = text.replaceAll(
     /#\+begin_(src)([\s\S]*?)#\+end_(src)/g,
-    (_, blockType1, content, blockType2) => {
-      const escapedContent = content.replace(
-        /0x|[0-9]|\bchar\b|\bunsigned\b|\bsigned\b|\bint\b|\bshort\b|\blong\b|\blong long\b|\bfloat\b|\bdouble\b|\blong double\b|\bbool\b|\b_Bool\b|\b_Complex\b|\b_Imaginary\b|\bsize_t\b|\bptrdiff_t\b|\bint8_t\b|\bint16_t\b|\bint32_t\b|\bint64_t\b|\buint8_t\b|\buint16_t\b|\buint32_t\b|\buint64_t\b|\bintptr_t\b|\buintptr_t\b|\bvoid\b|\bArray\b|\bPointer\b|\bstruct\b|\bunion\b|\benum\b|\btypedef\b|\bconst\b|\bauto\b|\breturn\b|\bwhile\b|\bfor\b|\bswitch\b|\bcase\b|\bcontinue\b|\bdefault\b|\bdo\b|\bbreak\b|\bgoto\b|\binline\b|\bregister\b|\bstatic\b|\bvolatile\b|\btrue\b|\bfalse\b|\bNULL\b|\b(?<!#)else\b|\bextern\b|\b(?<!#)if\b|\bsizeof\b|\btypeof\b|\boffsetof\b|\/\/|[\|\n\t\\&#$`%()\[\]\{\}\-+,;:!\?@<=>'"*/]/g,
-        (char) => htmlEntities[char],
-      );
-      return `#+begin_${blockType1}${escapedContent}#+end_${blockType2}`;
+    (_, b1, content, b2) => {
+      return `#+begin_${b1}${
+        content.replace(tokenRegex, (char) => {
+          if (char.startsWith('"') || char.startsWith("'")) {
+            return `<span class='orange'>${char}</span>`;
+          }
+          return htmlEntities[char] || char;
+        })
+      }#+end_${b2}`;
     },
   );
 
-  return escapedText
+  const parsedTables = escapedText.replace(
+    /(?:(?:^|\n)\|[^\n]*)+(?:\n|$)/g,
+    (match) => {
+      const lines = match.trim().split("\n");
+      if (lines.length < 2) return match;
+      const hasSeparator = lines[1].includes("|") &&
+        /^[|:\-\s]+$/.test(lines[1]);
+      const startIndex = hasSeparator ? 2 : 0;
+      let html = "<table>";
+      if (hasSeparator) {
+        const headers = lines[0].split("|").slice(1, -1);
+        html += "<thead><tr>" + headers.map((h) =>
+          `<th>${h.trim()}</th>`
+        ).join("") + "</tr></thead>";
+      }
+      html += "<tbody>";
+      for (let i = startIndex; i < lines.length; i++) {
+        if (lines[i].trim() === "") continue;
+        const cells = lines[i].split("|").slice(1, -1);
+        html += "<tr>" + cells.map((c) => `<td>${c.trim()}</td>`).join("") +
+          "</tr>";
+      }
+      html += "</tbody></table>";
+      return html;
+    },
+  );
+
+  return parsedTables
     .replaceAll(
       /^$/gm,
       "<span id='padding' style='display: block; margin-top: 1em'></span>",
@@ -169,8 +225,7 @@ export function markup(text) {
       /(\w+)(&#40;)(.*?)(&#41;)/gm,
       "<span class='green'>$1</span><span class='grey'>$2</span>$3<span class='grey'>$4</span>",
     )
-    .replaceAll(/(&#40;)/g, "<span class='grey'>$1</span>")
-    .replaceAll(/(&#41;)/g, "<span class='grey'>$1</span>")
+    .replaceAll(/(&#40;|&#41;)/g, "<span class='grey'>$1</span>")
     .replaceAll(/(&#35;\w+)/gm, "<span class='orange'>$1</span>")
     .replaceAll("#+begin_example", "<pre class='example'>")
     .replaceAll("#+end_example", "</pre>")
@@ -189,7 +244,7 @@ export function markup(text) {
     .replaceAll(/\*\*\*(.*?)\*\*\*/g, "<b><i>$1</i></b>")
     .replaceAll(/\*\*(.*?)\*\*/g, "<i>$1</i>")
     .replaceAll(/\*(.*?)\*/g, "<b>$1</b>")
-    .replaceAll(/\*(.*?)\*/g, "<b>$1</b>")
+    .replaceAll(/''([^'\n]+)''/g, "<code>$1</code>")
     .replaceAll(/\n- (.*)/gm, "<li>$1</li>")
     .replaceAll(/\n\* (.*$\n)/gm, "<h2>$1</h2>")
     .replaceAll("[[", "<a target='_blank' href='")

@@ -27,7 +27,7 @@ Atualmente, é possível alternar entre temas com a tecla <code>T</code>.
   },
   {
     title: "Melhorar a <code>markup()</code>",
-    stat: 1,
+    stat: 2,
     content: `
 A função <code>markup()</code> é a responsável por gerar strings HTML a partir
 de uma sintaxe para texto, tentando replicar a sintaxe do
@@ -45,11 +45,8 @@ No momento, ela é "compatível" com estas sintaxes:
 - texto em negrito (<code>&#42;texto&#42;</code>)
 - texto itálico (<code>&#42;&#42;texto&#42;&#42;</code>)
 - texto negrito e itálico (<code>&#42;&#42;&#42;texto&#42;&#42;&#42;</code>)
-
-Estas são as que eu desejo implementar:
-
-- texto pré-formatado/código (<code>=texto=</code>)
-- tabelas
+- texto pré-formatado/código (<code>''texto''</code>)
+- tabelas ([[https://www.markdownguide.org/extended-syntax/#tables][Que nem no Markdown]])
 `,
   },
   {
